@@ -1,1 +1,0 @@
-I like to pick my best smile.
