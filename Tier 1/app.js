@@ -22,8 +22,18 @@ window.app = {
 
     // Public API methods
     async init() {
-        await dataLoader.loadQuestions(this);
-        await dataLoader.loadNotes(this);
+        try {
+            console.log('🔄 App initializing...');
+            await dataLoader.loadQuestions(this);
+            console.log(`✓ Loaded ${this.allQuestions.length} questions`);
+            await dataLoader.loadNotes(this);
+            console.log(`✓ Loaded ${this.allNotes.length} notes`);
+            const subjects = [...new Set(this.allNotes.map(n => n.subject))].sort();
+            console.log(`✓ Available subjects: ${subjects.join(', ')}`);
+        } catch (error) {
+            console.error('✗ Initialization failed:', error);
+            throw error;
+        }
     },
 
     selectMode(mode) {

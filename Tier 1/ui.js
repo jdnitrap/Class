@@ -34,8 +34,21 @@ export const ui = {
     },
 
     renderSubjectSelection(app) {
+        console.log('📚 Rendering exam subject selection...');
+        if (!app.allQuestions || app.allQuestions.length === 0) {
+            console.error('✗ ERROR: allQuestions is empty! Data not loaded.');
+            return;
+        }
+
         const subjects = dataFilter.getUniqueQuestionsSubjects(app.allQuestions);
+        console.log(`  → Found ${subjects.length} subjects: ${subjects.join(', ')}`);
+
         const container = document.getElementById('subjectButtonsContainer');
+        if (!container) {
+            console.error('✗ ERROR: subjectButtonsContainer not found in DOM');
+            return;
+        }
+
         uiUtils.clearContainer('subjectButtonsContainer');
 
         subjects.forEach(subject => {
@@ -51,8 +64,21 @@ export const ui = {
     },
 
     renderNotesSelection(app) {
+        console.log('📝 Rendering notes selection...');
+        if (!app.allNotes || app.allNotes.length === 0) {
+            console.error('✗ ERROR: allNotes is empty! Data not loaded.');
+            return;
+        }
+
         const subjects = dataFilter.getUniqueNotesSubjects(app.allNotes);
+        console.log(`  → Found ${subjects.length} subjects: ${subjects.join(', ')}`);
+
         const container = document.getElementById('notesSubjectButtonsContainer');
+        if (!container) {
+            console.error('✗ ERROR: notesSubjectButtonsContainer not found in DOM');
+            return;
+        }
+
         uiUtils.clearContainer('notesSubjectButtonsContainer');
 
         subjects.forEach(subject => {

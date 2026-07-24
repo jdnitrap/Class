@@ -5,6 +5,7 @@ export const dataLoader = {
         app.allQuestions = [];
         try {
             const response = await fetch('Tier 2/questions.json?v=' + Date.now());
+            if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const data = await response.json();
             if (data.questions && Array.isArray(data.questions)) {
                 // Load questions from their text files
@@ -14,7 +15,8 @@ export const dataLoader = {
                 }
             }
         } catch (error) {
-            console.warn('Questions not loaded:', error);
+            console.error('✗ Failed to load questions:', error.message);
+            throw error;
         }
         document.getElementById('questionsCount').textContent = app.allQuestions.length;
         document.getElementById('subjectsCount').textContent = new Set(app.allQuestions.map(q => q.subject)).size;
@@ -23,6 +25,7 @@ export const dataLoader = {
     async getQuestionsFromFile(contentFile) {
         try {
             const response = await fetch(contentFile);
+            if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const text = await response.text();
             const questions = [];
 
@@ -37,14 +40,14 @@ export const dataLoader = {
                             const questionJson = JSON.parse(lines[i + 1].trim());
                             questions.push(questionJson);
                         } catch (e) {
-                            console.warn('Failed to parse question:', e);
+                            console.warn(`⚠ Failed to parse question in ${contentFile} at line ${i + 1}:`, e.message);
                         }
                     }
                 }
             }
             return questions;
         } catch (error) {
-            console.warn('Error loading questions from file:', contentFile, error);
+            console.error(`✗ Error loading questions from ${contentFile}:`, error.message);
             return [];
         }
     },
@@ -53,13 +56,46 @@ export const dataLoader = {
         app.allNotes = [];
         try {
             const response = await fetch('Tier 2/notes.json?v=' + Date.now());
+            if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const data = await response.json();
             if (data.notes && Array.isArray(data.notes)) {
                 app.allNotes = data.notes;
             }
         } catch (error) {
-            console.warn('Notes not loaded:', error);
+            console.error('✗ Failed to load notes:', error.message);
+            throw error;
         }
-        document.getElementById('notesSubjectsCount').textContent = new Set(app.allNotes.map(n => n.subject)).size;
+        const noteCount = app.allNotes.length;
+        const subjectCount = new Set(app.allNotes.map(n => n.subject)).size;
+        document.getElementById('notesSubjectsCount').textContent = subjectCount;
+        console.log(`  → ${noteCount} notes across ${subjectCount} subjects`);
+    },
+
+    async getNoteContent(note) {
+        if (!note.contentFile) {
+            console.warn(`⚠ Note ${note.id} has no contentFile property`);
+            return 'Content file not specified';
+        }
+
+        try {
+            const response = await fetch(note.contentFile);
+            if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            const text = await response.text();
+
+            // Find [Note ID: X] section
+            const pattern = new RegExp(`\\[Note ID: ${note.id}\\][\\s\\S]*?(?=\\[Note ID:|$)`);
+            const match = text.match(pattern);
+
+            if (match) {
+                return match[0]
+                    .replace(`[Note ID: ${note.id}]`, '')
+                    .trim();
+            }
+            console.warn(`⚠ Note ID ${note.id} not found in ${note.contentFile}`);
+            return 'Content not found';
+        } catch (error) {
+            console.error(`✗ Error loading content for note ${note.id}:`, error.message);
+            return `Error loading content: ${error.message}`;
+        }
     }
 };
