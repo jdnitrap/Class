@@ -113,6 +113,10 @@ window.app = {
         await flashcard.nextCard(this);
     },
 
+    previousQuestion() {
+        exam.previousQuestion(this);
+    },
+
     nextQuestion() {
         exam.nextQuestion(this);
     },

@@ -94,6 +94,13 @@ export const exam = {
         });
     },
 
+    previousQuestion(app) {
+        if (app.currentQuestionIndex > 0) {
+            app.currentQuestionIndex--;
+            this.showQuestion(app);
+        }
+    },
+
     nextQuestion(app) {
         if (app.currentQuestionIndex < app.answers.length - 1) {
             app.currentQuestionIndex++;
