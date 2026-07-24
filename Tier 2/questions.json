@@ -2,31 +2,31 @@
   "questions": [
     {
       "subject": "CP01",
-      "contentFile": "topics/CP01_questions.txt"
+      "contentFile": "Tier 3/CP01_questions.txt"
     },
     {
       "subject": "TH01",
-      "contentFile": "topics/TH01_questions.txt"
+      "contentFile": "Tier 3/TH01_questions.txt"
     },
     {
       "subject": "TH02",
-      "contentFile": "topics/TH02_questions.txt"
+      "contentFile": "Tier 3/TH02_questions.txt"
     },
     {
       "subject": "TH03",
-      "contentFile": "topics/TH03_questions.txt"
+      "contentFile": "Tier 3/TH03_questions.txt"
     },
     {
       "subject": "TH04",
-      "contentFile": "topics/TH04_questions.txt"
+      "contentFile": "Tier 3/TH04_questions.txt"
     },
     {
       "subject": "TH05",
-      "contentFile": "topics/TH05_questions.txt"
+      "contentFile": "Tier 3/TH05_questions.txt"
     },
     {
       "subject": "Fluid Flow (TH06B)",
-      "contentFile": "topics/Fluid_Flow_TH06B__questions.txt"
+      "contentFile": "Tier 3/Fluid_Flow_TH06B__questions.txt"
     }
   ]
 }
