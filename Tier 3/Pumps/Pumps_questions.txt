@@ -1,0 +1,59 @@
+[Question ID: 1]
+{"text": "What is the primary function of a pump?", "options": ["To move fluids and overcome flow resistance", "To measure fluid pressure", "To filter impurities from fluids", "To regulate fluid temperature"], "correct": 0, "explanation": "The fundamental purpose of all pumps is to move a given volume flow rate of fluid at a specific pressure from one level to another, overcoming all flow resistance encountered between the fluid levels."}
+
+[Question ID: 2]
+{"text": "Which type of pump is best for moving large volumes at relatively low pressure?", "options": ["Kinetic (centrifugal) pump", "Positive displacement pump", "Reciprocating pump", "Gear pump"], "correct": 0, "explanation": "Kinetic or dynamic pumps use rotating impellers to impart velocity to fluid and are best for moving large volumes at moderate to low pressures. Centrifugal pumps are the most common kinetic type."}
+
+[Question ID: 3]
+{"text": "How does a positive displacement pump differ from a kinetic pump?", "options": ["It traps fixed volumes and forces them through, not velocity-based", "It uses rotating impellers to gain velocity", "It operates only at low pressure", "It cannot handle viscous fluids"], "correct": 0, "explanation": "Positive displacement pumps trap a fixed volume of fluid and force it into the discharge line. They work by volume displacement rather than velocity conversion, making them ideal for high-pressure or viscous fluid applications."}
+
+[Question ID: 4]
+{"text": "What is pump capacity typically measured in?", "options": ["Gallons per minute (gpm) or cubic feet per second (cfs)", "Feet of water column", "Horsepower", "Revolutions per minute (rpm)"], "correct": 0, "explanation": "Pump capacities are normally expressed in gallons per minute (gpm) or cubic feet per second (cfs). The rated volumetric flow rate for a specific set of parameters is the pump's capacity."}
+
+[Question ID: 5]
+{"text": "Static head is best described as:", "options": ["The difference in fluid levels (elevation head)", "The energy to set fluid in motion", "The pressure drop due to friction", "The total developed pressure"], "correct": 0, "explanation": "Static head is a difference in fluid levels (elevation head), normally stated in feet of water column. It represents the pressure energy needed to lift fluid vertically against gravity."}
+
+[Question ID: 6]
+{"text": "Dynamic head includes which of the following components?", "options": ["Velocity head and friction head", "Only static pressure", "Only elevation difference", "Temperature effects only"], "correct": 0, "explanation": "Dynamic head is the energy required to set the fluid in motion and overcome resistance, including velocity head (kinetic energy) and friction head (energy lost to friction in pipes and fittings)."}
+
+[Question ID: 7]
+{"text": "Total suction head becomes negative when:", "options": ["The fluid source is below the pump centerline (suction lift)", "The pump discharge is restricted", "Cavitation begins to occur", "The discharge head exceeds 30 feet"], "correct": 0, "explanation": "When the suction source fluid level is below the pump centerline, the pump must 'lift' the fluid, creating a negative suction head called 'suction lift'. This increases the demand on the pump and increases cavitation risk."}
+
+[Question ID: 8]
+{"text": "Using the formula Hs = hs – hfs + ps, what does 'hfs' represent?", "options": ["Pressure drop in suction line (dynamic head)", "Static suction head", "Vacuum or pressure in tank", "Total suction head"], "correct": 0, "explanation": "In the total suction head equation, hfs represents the pressure drop in the suction line due to friction and velocity effects. This dynamic head component reduces available pressure at the pump suction."}
+
+[Question ID: 9]
+{"text": "Total discharge head (Ht) does NOT include:", "options": ["The static suction head of the source tank", "Static discharge head (elevation)", "Pressure drop in discharge line", "Pressure in discharge tank if pressurized"], "correct": 0, "explanation": "Total discharge head (Ht = ht + hft + pt) includes static discharge head, friction losses in discharge piping, and tank pressure. It does not include suction head, which is part of the total head calculation separately."}
+
+[Question ID: 10]
+{"text": "If a pump has Ht = 40 ft and Hs = -5 ft, what is the total head (H)?", "options": ["45 feet", "35 feet", "40 feet", "5 feet"], "correct": 0, "explanation": "Using the equation H = Ht – (+Hs): H = 40 – (+(-5)) = 40 + 5 = 45 feet. Total head is the pressure rise the pump must develop to move fluid through the system."}
+
+[Question ID: 11]
+{"text": "Net Positive Suction Head (NPSH) is the difference between:", "options": ["Absolute suction pressure and saturation (vapor) pressure", "Total head and static head", "Discharge pressure and suction pressure", "Capacity and required pressure"], "correct": 0, "explanation": "NPSH = Psuction – Psat, where Psat is the saturation pressure (vapor pressure) of the fluid. NPSH determines whether cavitation will occur and is critical for safe pump operation."}
+
+[Question ID: 12]
+{"text": "Cavitation occurs when:", "options": ["Pump suction pressure drops to saturation pressure of the fluid", "Discharge pressure exceeds design limits", "Flow rate increases above rated capacity", "Suction lift exceeds 25 feet"], "correct": 0, "explanation": "Cavitation occurs when pump suction pressure approaches the saturation pressure of the fluid, causing vapor bubbles to form. These bubbles can cause severe damage to the pump impeller and reduce capacity."}
+
+[Question ID: 13]
+{"text": "Which of the following is NOT a consequence of cavitation?", "options": ["Increased fluid filtration", "Pitting and erosion of the impeller", "Flow oscillations and discharge pressure fluctuations", "Excessive pump vibration"], "correct": 0, "explanation": "Cavitation causes pitting and erosion, flow oscillations, excessive vibration, pump overheating, and reduced flow. It does not improve filtration; in fact, it can create more contamination from erosion debris."}
+
+[Question ID: 14]
+{"text": "A pump that sounds like it is pumping rocks most likely indicates:", "options": ["Cavitation is occurring", "Normal pump operation", "Bearing wear", "Impeller imbalance from manufacturing"], "correct": 0, "explanation": "Distinctive noise that sounds like pumping rocks is a primary indicator of cavitation. Other indicators include vibration, motor current fluctuations, and pressure/flow variations. This noise warrants immediate investigation."}
+
+[Question ID: 15]
+{"text": "Which method does NOT prevent cavitation?", "options": ["Increasing discharge pressure limit beyond design rating", "Using a head tank to create static pressure", "Using large diameter suction piping", "Reducing fluid temperature"], "correct": 0, "explanation": "Proper cavitation prevention methods include head tanks, booster pumps, large-diameter suction piping, temperature reduction, and proper system design. Increasing discharge pressure beyond design limits is dangerous and won't solve suction-side cavitation problems."}
+
+[Question ID: 16]
+{"text": "What must be done to suction lines before pump startup to prevent cavitation?", "options": ["Air must be vented and suction lines completely filled with fluid", "Suction strainers must be installed", "System pressure must be reduced", "Discharge valve must be fully open"], "correct": 0, "explanation": "Vapor bubbles and free air are much more compressible than liquid, leading to flow instability and cavitation risk. All air must be vented from suction lines before startup and lines completely filled with fluid."}
+
+[Question ID: 17]
+{"text": "The operating point of a pump occurs where:", "options": ["The pump performance curve intersects the system resistance curve", "Flow rate equals zero", "Maximum discharge pressure is reached", "Cavitation just begins to occur"], "correct": 0, "explanation": "The pump's operating point occurs at the intersection of the pump performance curve (provided by manufacturer) and the system head curve (determined by system design). This is where actual pump performance meets system requirements."}
+
+[Question ID: 18]
+{"text": "Pump efficiency typically decreases when:", "options": ["Flow rate deviates significantly from design point", "Discharge pressure increases", "Suction head is positive", "Fluid temperature decreases"], "correct": 0, "explanation": "Most pumps operate at peak efficiency in a specific range of flow rates and heads. Operating outside this design range wastes energy, accelerates wear, reduces efficiency significantly, and can lead to cavitation. Part-load operation is particularly inefficient."}
+
+[Question ID: 19]
+{"text": "How does fluid temperature affect pump operation?", "options": ["Higher temperature increases saturation pressure and decreases viscosity, affecting NPSH and flow resistance", "Temperature has no effect on pump performance", "Lower temperature always improves pump reliability", "Temperature only affects motor, not pump performance"], "correct": 0, "explanation": "As temperature increases, viscosity decreases (easier flow) but saturation pressure increases (higher cavitation risk). Temperature affects fluid properties, NPSH, and overall pump performance. Regular temperature monitoring is important."}
+
+[Question ID: 20]
+{"text": "For safe and reliable pump operation, operators must:", "options": ["Understand pump theory and recognize abnormal conditions early", "Never check pump vibration or temperature", "Run pumps continuously at maximum discharge pressure", "Ignore slight performance changes"], "correct": 0, "explanation": "Operators trained in pump theory can diagnose problems early and take corrective action. Understanding pump operation, monitoring vibration, thermal performance, and fluid condition enables preventive maintenance and ensures reliable operation throughout the pump's service life."}

@@ -31,6 +31,10 @@
     {
       "subject": "TH07B",
       "contentFile": "Tier 3/TH07B/TH07B_questions.txt"
+    },
+    {
+      "subject": "Pumps",
+      "contentFile": "Tier 3/Pumps/Pumps_questions.txt"
     }
   ]
 }

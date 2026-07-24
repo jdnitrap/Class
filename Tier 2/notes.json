@@ -691,6 +691,186 @@
       "subject": "TH07B",
       "title": "Example: Effect of Tube Plugging on Tavg",
       "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+    },
+    {
+      "id": 114,
+      "subject": "Pumps",
+      "title": "Definition: Pumps and Flow Resistance",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 115,
+      "subject": "Pumps",
+      "title": "Pump Purpose: Moving Fluids Through Systems",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 116,
+      "subject": "Pumps",
+      "title": "Diverse Pump Applications and Functions",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 117,
+      "subject": "Pumps",
+      "title": "Pump Classification: Kinetic vs Positive Displacement",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 118,
+      "subject": "Pumps",
+      "title": "Kinetic (Dynamic) Pumps - Centrifugal Type",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 119,
+      "subject": "Pumps",
+      "title": "Positive Displacement Pumps - Fixed Volume",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 120,
+      "subject": "Pumps",
+      "title": "Pump Capacity - Volumetric Flow Rate",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 121,
+      "subject": "Pumps",
+      "title": "Static Head - Elevation Difference",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 122,
+      "subject": "Pumps",
+      "title": "Dynamic Head - Velocity and Friction Effects",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 123,
+      "subject": "Pumps",
+      "title": "Total Suction Head (Hs) - Equation and Components",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 124,
+      "subject": "Pumps",
+      "title": "Suction Head Formula and Pressure Considerations",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 125,
+      "subject": "Pumps",
+      "title": "Total Discharge Head (Ht) - Equation and Components",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 126,
+      "subject": "Pumps",
+      "title": "Discharge Head Formula and Tank Pressure",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 127,
+      "subject": "Pumps",
+      "title": "Total Head (H) - Pressure Difference Calculation",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 128,
+      "subject": "Pumps",
+      "title": "Head Calculation Example - Suction and Discharge",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 129,
+      "subject": "Pumps",
+      "title": "Net Positive Suction Head (NPSH) Definition",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 130,
+      "subject": "Pumps",
+      "title": "NPSH Equation and Saturation Pressure",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 131,
+      "subject": "Pumps",
+      "title": "Cavitation - Formation and Vapor Bubbles",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 132,
+      "subject": "Pumps",
+      "title": "Cavitation Effects - Damage and Performance Loss",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 133,
+      "subject": "Pumps",
+      "title": "Cavitation Indicators - Noise and Vibration",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 134,
+      "subject": "Pumps",
+      "title": "Cavitation Prevention Methods",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 135,
+      "subject": "Pumps",
+      "title": "System Preparation to Prevent Cavitation",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 136,
+      "subject": "Pumps",
+      "title": "System Design Features for Cavitation Prevention",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 137,
+      "subject": "Pumps",
+      "title": "Pump Performance Curves and Operating Points",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 138,
+      "subject": "Pumps",
+      "title": "Pump Efficiency and Design Operating Range",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 139,
+      "subject": "Pumps",
+      "title": "Fluid Properties and Temperature Effects on Pumps",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 140,
+      "subject": "Pumps",
+      "title": "Centrifugal Pump Impeller Designs",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 141,
+      "subject": "Pumps",
+      "title": "Positive Displacement Pumps - Types and Applications",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 142,
+      "subject": "Pumps",
+      "title": "Pump Reliability and Preventive Maintenance",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 143,
+      "subject": "Pumps",
+      "title": "Pump Theory Application - Key Concepts Summary",
+      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
     }
   ]
 }
