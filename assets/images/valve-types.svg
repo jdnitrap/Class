@@ -1,0 +1,133 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .valve-box { stroke: #333; stroke-width: 2; fill: #f9f9f9; }
+      .valve-title { font-size: 13px; font-weight: bold; font-family: Arial; }
+      .valve-desc { font-size: 11px; font-family: Arial; }
+      .function-box { fill: #e6f2ff; stroke: #0066cc; stroke-width: 1; }
+      .use-box { fill: #fff0e6; stroke: #ff6600; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <text x="450" y="25" class="valve-title" text-anchor="middle" font-size="16">Common Valve Types and Applications</text>
+
+  <!-- Row 1: Gate & Globe Valves -->
+  <!-- Gate Valve -->
+  <rect x="20" y="60" width="200" height="140" class="valve-box"/>
+  <text x="120" y="80" class="valve-title" text-anchor="middle">GATE VALVE</text>
+  <rect x="30" y="90" width="180" height="50" class="function-box"/>
+  <text x="120" y="105" class="valve-desc" text-anchor="middle" font-weight="bold">Functions:</text>
+  <text x="120" y="120" class="valve-desc" text-anchor="middle">Isolation (On/Off)</text>
+  <text x="120" y="135" class="valve-desc" text-anchor="middle">Poor throttling</text>
+  <rect x="30" y="145" width="180" height="50" class="use-box"/>
+  <text x="120" y="160" class="valve-desc" text-anchor="middle" font-weight="bold">Best for:</text>
+  <text x="120" y="175" class="valve-desc" text-anchor="middle">Full stop/start</text>
+  <text x="120" y="190" class="valve-desc" text-anchor="middle">Infrequent use</text>
+
+  <!-- Globe Valve -->
+  <rect x="240" y="60" width="200" height="140" class="valve-box"/>
+  <text x="340" y="80" class="valve-title" text-anchor="middle">GLOBE VALVE</text>
+  <rect x="250" y="90" width="180" height="50" class="function-box"/>
+  <text x="340" y="105" class="valve-desc" text-anchor="middle" font-weight="bold">Functions:</text>
+  <text x="340" y="120" class="valve-desc" text-anchor="middle">Good throttling</text>
+  <text x="340" y="135" class="valve-desc" text-anchor="middle">90° disk seating</text>
+  <rect x="250" y="145" width="180" height="50" class="use-box"/>
+  <text x="340" y="160" class="valve-desc" text-anchor="middle" font-weight="bold">Best for:</text>
+  <text x="340" y="175" class="valve-desc" text-anchor="middle">Flow control</text>
+  <text x="340" y="190" class="valve-desc" text-anchor="middle">Frequent use</text>
+
+  <!-- Ball Valve -->
+  <rect x="460" y="60" width="200" height="140" class="valve-box"/>
+  <text x="560" y="80" class="valve-title" text-anchor="middle">BALL VALVE</text>
+  <rect x="470" y="90" width="180" height="50" class="function-box"/>
+  <text x="560" y="105" class="valve-desc" text-anchor="middle" font-weight="bold">Functions:</text>
+  <text x="560" y="120" class="valve-desc" text-anchor="middle">Quick on/off</text>
+  <text x="560" y="135" class="valve-desc" text-anchor="middle">Cannot throttle</text>
+  <rect x="470" y="145" width="180" height="50" class="use-box"/>
+  <text x="560" y="160" class="valve-desc" text-anchor="middle" font-weight="bold">Best for:</text>
+  <text x="560" y="175" class="valve-desc" text-anchor="middle">Isolation</text>
+  <text x="560" y="190" class="valve-desc" text-anchor="middle">Quick response</text>
+
+  <!-- Butterfly Valve -->
+  <rect x="680" y="60" width="200" height="140" class="valve-box"/>
+  <text x="780" y="80" class="valve-title" text-anchor="middle">BUTTERFLY VALVE</text>
+  <rect x="690" y="90" width="180" height="50" class="function-box"/>
+  <text x="780" y="105" class="valve-desc" text-anchor="middle" font-weight="bold">Functions:</text>
+  <text x="780" y="120" class="valve-desc" text-anchor="middle">Large flow</text>
+  <text x="780" y="135" class="valve-desc" text-anchor="middle">Low pressure</text>
+  <rect x="690" y="145" width="180" height="50" class="use-box"/>
+  <text x="780" y="160" class="valve-desc" text-anchor="middle" font-weight="bold">Best for:</text>
+  <text x="780" y="175" class="valve-desc" text-anchor="middle">Large diameter</text>
+  <text x="780" y="190" class="valve-desc" text-anchor="middle">Low pressure</text>
+
+  <!-- Row 2: Check, Relief, & Special Valves -->
+  <!-- Check Valve -->
+  <rect x="20" y="220" width="200" height="140" class="valve-box"/>
+  <text x="120" y="240" class="valve-title" text-anchor="middle">CHECK VALVE</text>
+  <rect x="30" y="250" width="180" height="50" class="function-box"/>
+  <text x="120" y="265" class="valve-desc" text-anchor="middle" font-weight="bold">Functions:</text>
+  <text x="120" y="280" class="valve-desc" text-anchor="middle">Allows forward</text>
+  <text x="120" y="295" class="valve-desc" text-anchor="middle">Prevents backflow</text>
+  <rect x="30" y="305" width="180" height="50" class="use-box"/>
+  <text x="120" y="320" class="valve-desc" text-anchor="middle" font-weight="bold">Best for:</text>
+  <text x="120" y="335" class="valve-desc" text-anchor="middle">One-way flow</text>
+  <text x="120" y="350" class="valve-desc" text-anchor="middle">Automatic</text>
+
+  <!-- Relief Valve -->
+  <rect x="240" y="220" width="200" height="140" class="valve-box"/>
+  <text x="340" y="240" class="valve-title" text-anchor="middle">RELIEF VALVE</text>
+  <rect x="250" y="250" width="180" height="50" class="function-box"/>
+  <text x="340" y="265" class="valve-desc" text-anchor="middle" font-weight="bold">Functions:</text>
+  <text x="340" y="280" class="valve-desc" text-anchor="middle">Gradually opens</text>
+  <text x="340" y="295" class="valve-desc" text-anchor="middle">Protects system</text>
+  <rect x="250" y="305" width="180" height="50" class="use-box"/>
+  <text x="340" y="320" class="valve-desc" text-anchor="middle" font-weight="bold">Best for:</text>
+  <text x="340" y="335" class="valve-desc" text-anchor="middle">Overpressure</text>
+  <text x="340" y="350" class="valve-desc" text-anchor="middle">protection (liquid)</text>
+
+  <!-- Safety Valve -->
+  <rect x="460" y="220" width="200" height="140" class="valve-box"/>
+  <text x="560" y="240" class="valve-title" text-anchor="middle">SAFETY VALVE</text>
+  <rect x="470" y="250" width="180" height="50" class="function-box"/>
+  <text x="560" y="265" class="valve-desc" text-anchor="middle" font-weight="bold">Functions:</text>
+  <text x="560" y="280" class="valve-desc" text-anchor="middle">Pops fully open</text>
+  <text x="560" y="295" class="valve-desc" text-anchor="middle">Protects system</text>
+  <rect x="470" y="305" width="180" height="50" class="use-box"/>
+  <text x="560" y="320" class="valve-desc" text-anchor="middle" font-weight="bold">Best for:</text>
+  <text x="560" y="335" class="valve-desc" text-anchor="middle">Overpressure</text>
+  <text x="560" y="350" class="valve-desc" text-anchor="middle">(steam/gas)</text>
+
+  <!-- Needle Valve -->
+  <rect x="680" y="220" width="200" height="140" class="valve-box"/>
+  <text x="780" y="240" class="valve-title" text-anchor="middle">NEEDLE VALVE</text>
+  <rect x="690" y="250" width="180" height="50" class="function-box"/>
+  <text x="780" y="265" class="valve-desc" text-anchor="middle" font-weight="bold">Functions:</text>
+  <text x="780" y="280" class="valve-desc" text-anchor="middle">Precise control</text>
+  <text x="780" y="295" class="valve-desc" text-anchor="middle">Fine adjustment</text>
+  <rect x="690" y="305" width="180" height="50" class="use-box"/>
+  <text x="780" y="320" class="valve-desc" text-anchor="middle" font-weight="bold">Best for:</text>
+  <text x="780" y="335" class="valve-desc" text-anchor="middle">Low flow</text>
+  <text x="780" y="350" class="valve-desc" text-anchor="middle">Fine tuning</text>
+
+  <!-- Summary boxes at bottom -->
+  <rect x="20" y="385" width="425" height="200" fill="#e6ffe6" stroke="#009900" stroke-width="2"/>
+  <text x="230" y="405" class="valve-title" text-anchor="middle" font-size="14">Throttling vs. Isolation</text>
+  <text x="30" y="430" class="valve-desc">THROTTLING VALVES:</text>
+  <text x="30" y="450" class="valve-desc">• Globe valves: Disk at 90° angle to flow</text>
+  <text x="30" y="470" class="valve-desc">• Needle valves: Long cone-shaped tip</text>
+  <text x="30" y="490" class="valve-desc">• Good for controlling flow rate</text>
+  <text x="30" y="510" class="valve-desc" font-weight="bold">• Can be used frequently</text>
+
+  <text x="30" y="540" class="valve-desc">ISOLATION VALVES:</text>
+  <text x="30" y="560" class="valve-desc">• Gate, ball, plug valves: On/off only</text>
+
+  <rect x="455" y="385" width="425" height="200" fill="#ffffcc" stroke="#ff6600" stroke-width="2"/>
+  <text x="665" y="405" class="valve-title" text-anchor="middle" font-size="14">Actuator Types</text>
+  <text x="465" y="430" class="valve-desc">MANUAL ACTUATORS:</text>
+  <text x="465" y="450" class="valve-desc">• Handwheel or lever operation</text>
+  <text x="465" y="470" class="valve-desc">• Reach rods for distant operation</text>
+
+  <text x="465" y="510" class="valve-desc">AUTOMATIC ACTUATORS:</text>
+  <text x="465" y="530" class="valve-desc">• Electric (Motor Operated Valves)</text>
+  <text x="465" y="550" class="valve-desc">• Pneumatic or hydraulic for fast response</text>
+</svg>

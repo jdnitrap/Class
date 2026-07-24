@@ -4,7 +4,7 @@ export const dataLoader = {
     async loadQuestions(app) {
         app.allQuestions = [];
         try {
-            const response = await fetch('questions.json?v=' + Date.now());
+            const response = await fetch('data/questions.json?v=' + Date.now());
             const data = await response.json();
             if (data.questions && Array.isArray(data.questions)) {
                 // Load questions from their text files
@@ -17,7 +17,7 @@ export const dataLoader = {
             console.warn('Main questions.json not loaded or empty:', error);
         }
         try {
-            const response2 = await fetch('th07b_questions.json');
+            const response2 = await fetch('data/th07b_questions.json?v=' + Date.now());
             const data2 = await response2.json();
             if (data2.questions && Array.isArray(data2.questions)) {
                 for (const qRef of data2.questions) {
@@ -64,7 +64,7 @@ export const dataLoader = {
     async loadNotes(app) {
         app.allNotes = [];
         try {
-            const response = await fetch('notes.json?v=' + Date.now());
+            const response = await fetch('data/notes.json?v=' + Date.now());
             const data = await response.json();
             if (data.notes && Array.isArray(data.notes)) {
                 app.allNotes = data.notes;
@@ -73,7 +73,7 @@ export const dataLoader = {
             console.warn('Main notes.json not loaded or empty:', error);
         }
         try {
-            const response2 = await fetch('th07b_notes.json');
+            const response2 = await fetch('data/th07b_notes.json?v=' + Date.now());
             const data2 = await response2.json();
             if (data2.notes && Array.isArray(data2.notes)) {
                 app.allNotes = app.allNotes.concat(data2.notes);

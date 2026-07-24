@@ -11,7 +11,7 @@
       "subject": "CP01",
       "title": "Valve Functions and Basic Construction",
       "contentFile": "topics/CP01_notes.txt",
-      "image": "bnt/images/images/valve-types.svg",
+      "image": "assets/images/valve-types.svg",
       "imageLabel": "Common Valve Types and Applications"
     },
     {
@@ -19,7 +19,7 @@
       "subject": "CP01",
       "title": "Pressure Types and Relationships",
       "contentFile": "topics/CP01_notes.txt",
-      "image": "bnt/images/images/pressure-types.svg",
+      "image": "assets/images/pressure-types.svg",
       "imageLabel": "Types of Pressure and Relationships"
     },
     {
@@ -45,7 +45,7 @@
       "subject": "TH01",
       "title": "Temperature Scales Comparison",
       "contentFile": "topics/TH01_notes.txt",
-      "image": "bnt/images/images/temperature-scales.svg",
+      "image": "assets/images/temperature-scales.svg",
       "imageLabel": "Temperature Scales Comparison"
     },
     {
@@ -77,7 +77,7 @@
       "subject": "TH03",
       "title": "States, Phases, and Phase Diagrams",
       "contentFile": "topics/TH03_notes.txt",
-      "image": "bnt/images/images/pt-phase-diagram.svg",
+      "image": "assets/images/pt-phase-diagram.svg",
       "imageLabel": "P-T Phase Diagram"
     },
     {
@@ -85,7 +85,7 @@
       "subject": "TH03",
       "title": "Five States of Water",
       "contentFile": "topics/TH03_notes.txt",
-      "image": "bnt/images/images/five-states-water.svg",
+      "image": "assets/images/five-states-water.svg",
       "imageLabel": "Five States of Water"
     },
     {
@@ -129,7 +129,7 @@
       "subject": "TH05",
       "title": "The Carnot Cycle",
       "contentFile": "topics/TH05_notes.txt",
-      "image": "bnt/images/images/carnot-cycle.svg",
+      "image": "assets/images/carnot-cycle.svg",
       "imageLabel": "Carnot Cycle on P-V Diagram"
     },
     {
@@ -137,7 +137,7 @@
       "subject": "TH05",
       "title": "Rankine Cycle - Realistic Steam Cycle",
       "contentFile": "topics/TH05_notes.txt",
-      "image": "bnt/images/images/rankine-cycle.svg",
+      "image": "assets/images/rankine-cycle.svg",
       "imageLabel": "Rankine Cycle Schematic"
     },
     {

@@ -1,0 +1,55 @@
+<svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .axis-line { stroke: #000; stroke-width: 2; }
+      .curve { stroke: #0066cc; stroke-width: 2.5; fill: none; }
+      .region-text { font-size: 14px; font-family: Arial; font-weight: bold; }
+      .label { font-size: 12px; font-family: Arial; }
+      .point-label { font-size: 11px; font-family: Arial; }
+    </style>
+  </defs>
+
+  <!-- Background regions -->
+  <rect x="80" y="50" width="450" height="150" fill="#e6f2ff" opacity="0.5"/>
+  <text x="250" y="110" class="region-text" text-anchor="middle" fill="#0066cc">SOLID</text>
+
+  <rect x="80" y="200" width="450" height="100" fill="#fff0e6" opacity="0.5"/>
+  <text x="250" y="250" class="region-text" text-anchor="middle" fill="#ff6600">LIQUID</text>
+
+  <rect x="80" y="300" width="450" height="150" fill="#e6ffe6" opacity="0.5"/>
+  <text x="350" y="370" class="region-text" text-anchor="middle" fill="#00aa00">VAPOR/GAS</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="450" x2="530" y2="450" class="axis-line"/>
+  <line x1="80" y1="50" x2="80" y2="450" class="axis-line"/>
+
+  <!-- Axis labels -->
+  <text x="555" y="455" class="label">Temperature</text>
+  <text x="50" y="250" class="label" text-anchor="middle" transform="rotate(-90 50 250)">Pressure</text>
+
+  <!-- Phase boundary curves -->
+  <!-- Sublimation line -->
+  <path d="M 100 420 Q 120 350 140 250" class="curve"/>
+  <text x="110" y="380" class="point-label" fill="#0066cc">Sublimation</text>
+
+  <!-- Fusion line -->
+  <path d="M 140 250 L 200 50" class="curve"/>
+  <text x="145" y="200" class="point-label" fill="#0066cc">Fusion</text>
+
+  <!-- Vaporization line -->
+  <path d="M 140 250 Q 280 200 420 80" class="curve"/>
+  <text x="250" y="220" class="point-label" fill="#0066cc">Vaporization</text>
+
+  <!-- Critical point -->
+  <circle cx="420" cy="80" r="4" fill="#cc0000"/>
+  <text x="425" y="75" class="point-label" fill="#cc0000">Critical Point</text>
+
+  <!-- Triple point -->
+  <circle cx="140" cy="250" r="4" fill="#009900"/>
+  <text x="145" y="265" class="point-label" fill="#009900">Triple Point</text>
+
+  <!-- Grid lines (faint) -->
+  <line x1="80" y1="200" x2="530" y2="200" stroke="#ccc" stroke-width="0.5" stroke-dasharray="5,5"/>
+  <line x1="200" y1="50" x2="200" y2="450" stroke="#ccc" stroke-width="0.5" stroke-dasharray="5,5"/>
+  <line x1="350" y1="50" x2="350" y2="450" stroke="#ccc" stroke-width="0.5" stroke-dasharray="5,5"/>
+</svg>

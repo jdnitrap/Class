@@ -1,0 +1,72 @@
+<svg viewBox="0 0 700 550" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .process { stroke-width: 2.5; fill: none; }
+      .axis { stroke: #000; stroke-width: 2; }
+      .label { font-size: 13px; font-family: Arial; font-weight: bold; }
+      .small-label { font-size: 11px; font-family: Arial; }
+      .point { fill: #cc0000; }
+    </style>
+  </defs>
+
+  <text x="350" y="25" class="label" text-anchor="middle">Carnot Cycle on P-V Diagram</text>
+
+  <!-- Axes -->
+  <line x1="100" y1="450" x2="600" y2="450" class="axis"/>
+  <line x1="100" y1="100" x2="100" y2="450" class="axis"/>
+
+  <!-- Axis labels -->
+  <text x="620" y="455" class="small-label">Volume (V)</text>
+  <text x="50" y="250" class="small-label" text-anchor="middle" transform="rotate(-90 50 250)">Pressure (P)</text>
+
+  <!-- Carnot cycle processes -->
+  <!-- Process 1-2: Isothermal Expansion (curved line) -->
+  <path d="M 150 300 Q 250 250 350 220" class="process" stroke="#0066cc"/>
+
+  <!-- Process 2-3: Adiabatic Expansion (steeper curved line) -->
+  <path d="M 350 220 Q 420 180 480 150" class="process" stroke="#ff6600"/>
+
+  <!-- Process 3-4: Isothermal Compression (curved line) -->
+  <path d="M 480 150 Q 380 200 280 230" class="process" stroke="#009900"/>
+
+  <!-- Process 4-1: Adiabatic Compression (steeper curved line) -->
+  <path d="M 280 230 Q 210 270 150 300" class="process" stroke="#cc0000"/>
+
+  <!-- State points -->
+  <circle cx="150" cy="300" r="5" class="point"/>
+  <circle cx="350" cy="220" r="5" class="point"/>
+  <circle cx="480" cy="150" r="5" class="point"/>
+  <circle cx="280" cy="230" r="5" class="point"/>
+
+  <!-- State labels -->
+  <text x="140" y="325" class="small-label" fill="#cc0000">State 1</text>
+  <text x="350" y="245" class="small-label" fill="#cc0000">State 2</text>
+  <text x="485" y="135" class="small-label" fill="#cc0000">State 3</text>
+  <text x="280" y="255" class="small-label" fill="#cc0000">State 4</text>
+
+  <!-- Process descriptions -->
+  <text x="240" y="270" class="small-label" fill="#0066cc">1→2: Isothermal</text>
+  <text x="240" y="285" class="small-label" fill="#0066cc">Expansion</text>
+  <text x="240" y="300" class="small-label" fill="#0066cc">(Heat Add)</text>
+
+  <text x="400" y="160" class="small-label" fill="#ff6600">2→3: Adiabatic</text>
+  <text x="400" y="175" class="small-label" fill="#ff6600">Expansion</text>
+  <text x="400" y="190" class="small-label" fill="#ff6600">(No Heat)</text>
+
+  <text x="310" y="100" class="small-label" fill="#009900">3→4: Isothermal</text>
+  <text x="310" y="115" class="small-label" fill="#009900">Compression</text>
+  <text x="310" y="130" class="small-label" fill="#009900">(Heat Reject)</text>
+
+  <text x="120" y="180" class="small-label" fill="#cc0000">4→1: Adiabatic</text>
+  <text x="120" y="195" class="small-label" fill="#cc0000">Compression</text>
+  <text x="120" y="210" class="small-label" fill="#cc0000">(No Heat)</text>
+
+  <!-- Temperature annotations -->
+  <text x="500" y="80" class="label" fill="#0066cc">T_hot</text>
+  <text x="500" y="360" class="label" fill="#0066cc">T_cold</text>
+
+  <!-- Efficiency formula -->
+  <rect x="80" y="480" width="540" height="50" fill="#f0f0f0" stroke="#333" stroke-width="1"/>
+  <text x="350" y="500" class="label" text-anchor="middle">Carnot Efficiency: η = 1 - (T_cold / T_hot) = (T_hot - T_cold) / T_hot</text>
+  <text x="350" y="520" class="small-label" text-anchor="middle" fill="#666">Depends ONLY on temperature ratio, independent of working fluid</text>
+</svg>

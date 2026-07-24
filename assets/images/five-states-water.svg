@@ -1,0 +1,77 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .state-box { stroke: #333; stroke-width: 2; fill: #f9f9f9; }
+      .state-title { font-size: 14px; font-weight: bold; font-family: Arial; }
+      .state-desc { font-size: 11px; font-family: Arial; }
+      .separator { stroke: #0066cc; stroke-width: 2; }
+      .temperature-bar { fill: #ff6600; }
+      .temp-scale { font-size: 10px; font-family: Arial; }
+    </style>
+  </defs>
+
+  <!-- Temperature scale header -->
+  <text x="400" y="20" class="state-title" text-anchor="middle">States of Water at Constant Pressure (as Temperature Increases)</text>
+
+  <!-- State 1: Subcooled Liquid -->
+  <rect x="20" y="50" width="140" height="220" class="state-box"/>
+  <rect x="25" y="55" width="130" height="25" fill="#4da6ff"/>
+  <text x="90" y="72" class="state-title" text-anchor="middle" fill="white">Subcooled Liquid</text>
+  <text x="90" y="95" class="state-desc" text-anchor="middle">Below saturation</text>
+  <text x="90" y="110" class="state-desc" text-anchor="middle">Temperature</text>
+  <text x="90" y="140" class="state-desc" text-anchor="middle" fill="#0066cc">Solid structure</text>
+  <text x="90" y="155" class="state-desc" text-anchor="middle" fill="#0066cc">Incompressible</text>
+  <text x="90" y="170" class="state-desc" text-anchor="middle" fill="#0066cc">Ready to boil</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 160 160 L 190 160" stroke="#ff6600" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="175" y="155" class="temp-scale" text-anchor="middle" fill="#ff6600">HEAT</text>
+
+  <!-- State 2: Saturated Liquid -->
+  <rect x="200" y="50" width="140" height="220" class="state-box"/>
+  <rect x="205" y="55" width="130" height="25" fill="#0066cc"/>
+  <text x="270" y="72" class="state-title" text-anchor="middle" fill="white">Saturated Liquid</text>
+  <text x="270" y="95" class="state-desc" text-anchor="middle">At boiling point</text>
+  <text x="270" y="110" class="state-desc" text-anchor="middle">100% Liquid</text>
+  <text x="270" y="140" class="state-desc" text-anchor="middle" fill="#0066cc">Ready to</text>
+  <text x="270" y="155" class="state-desc" text-anchor="middle" fill="#0066cc">vaporize</text>
+  <text x="270" y="170" class="state-desc" text-anchor="middle" fill="#0066cc">X = 0%</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 340 160 L 370 160" stroke="#ff6600" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="355" y="155" class="temp-scale" text-anchor="middle" fill="#ff6600">HEAT</text>
+
+  <!-- State 3: Wet Vapor -->
+  <rect x="380" y="50" width="140" height="220" class="state-box"/>
+  <rect x="385" y="55" width="130" height="25" fill="#ff9900"/>
+  <text x="450" y="72" class="state-title" text-anchor="middle" fill="white">Wet Vapor</text>
+  <text x="450" y="95" class="state-desc" text-anchor="middle">Liquid + Vapor</text>
+  <text x="450" y="110" class="state-desc" text-anchor="middle">Mixture</text>
+  <text x="450" y="140" class="state-desc" text-anchor="middle" fill="#0066cc">Both phases</text>
+  <text x="450" y="155" class="state-desc" text-anchor="middle" fill="#0066cc">coexist</text>
+  <text x="450" y="170" class="state-desc" text-anchor="middle" fill="#0066cc">0% < X < 100%</text>
+
+  <!-- Arrow 3 -->
+  <path d="M 520 160 L 550 160" stroke="#ff6600" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="535" y="155" class="temp-scale" text-anchor="middle" fill="#ff6600">HEAT</text>
+
+  <!-- State 4: Saturated Vapor -->
+  <rect x="560" y="50" width="140" height="220" class="state-box"/>
+  <rect x="565" y="55" width="130" height="25" fill="#ff6600"/>
+  <text x="630" y="72" class="state-title" text-anchor="middle" fill="white">Saturated Vapor</text>
+  <text x="630" y="95" class="state-desc" text-anchor="middle">All vapor</text>
+  <text x="630" y="110" class="state-desc" text-anchor="middle">At boiling point</text>
+  <text x="630" y="140" class="state-desc" text-anchor="middle" fill="#0066cc">Last drop of</text>
+  <text x="630" y="155" class="state-desc" text-anchor="middle" fill="#0066cc">liquid just gone</text>
+  <text x="630" y="170" class="state-desc" text-anchor="middle" fill="#0066cc">X = 100%</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ff6600"/>
+    </marker>
+  </defs>
+
+  <!-- Note at bottom -->
+  <text x="400" y="295" class="state-desc" text-anchor="middle" fill="#666">At constant pressure, temperature remains constant during phase changes (Latent Heat)</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .scale-bar { stroke: #333; stroke-width: 2; fill: none; }
+      .scale-label { font-size: 12px; font-family: Arial; font-weight: bold; }
+      .tick-label { font-size: 11px; font-family: Arial; }
+      .title { font-size: 16px; font-family: Arial; font-weight: bold; }
+      .highlight { fill: #ffff00; opacity: 0.3; }
+      .important { font-weight: bold; fill: #cc0000; }
+    </style>
+  </defs>
+
+  <text x="400" y="30" class="title" text-anchor="middle">Temperature Scales Comparison</text>
+
+  <!-- Four vertical scales -->
+  <!-- Fahrenheit scale -->
+  <line x1="80" y1="80" x2="80" y2="420" class="scale-bar"/>
+  <text x="80" y="60" class="scale-label" text-anchor="middle" fill="#0066cc">Fahrenheit (F)</text>
+  <text x="80" y="450" class="scale-label" text-anchor="middle" fill="#0066cc">Relative Scale</text>
+
+  <!-- Celsius scale -->
+  <line x1="220" y1="80" x2="220" y2="420" class="scale-bar"/>
+  <text x="220" y="60" class="scale-label" text-anchor="middle" fill="#ff6600">Celsius (C)</text>
+  <text x="220" y="450" class="scale-label" text-anchor="middle" fill="#ff6600">Relative Scale</text>
+
+  <!-- Rankine scale -->
+  <line x1="420" y1="80" x2="420" y2="420" class="scale-bar"/>
+  <text x="420" y="60" class="scale-label" text-anchor="middle" fill="#009900">Rankine (R)</text>
+  <text x="420" y="450" class="scale-label" text-anchor="middle" fill="#009900">Absolute Scale</text>
+
+  <!-- Kelvin scale -->
+  <line x1="560" y1="80" x2="560" y2="420" class="scale-bar"/>
+  <text x="560" y="60" class="scale-label" text-anchor="middle" fill="#9900cc">Kelvin (K)</text>
+  <text x="560" y="450" class="scale-label" text-anchor="middle" fill="#9900cc">Absolute Scale</text>
+
+  <!-- Boiling point water (100C = 212F = 672R = 373K) -->
+  <rect x="10" y="130" width="740" height="2" fill="#ff6600" opacity="0.5"/>
+  <text x="95" y="125" class="tick-label" text-anchor="middle">212°F</text>
+  <text x="235" y="125" class="tick-label" text-anchor="middle">100°C</text>
+  <text x="435" y="125" class="tick-label" text-anchor="middle">672°R</text>
+  <text x="575" y="125" class="tick-label" text-anchor="middle">373K</text>
+  <text x="700" y="145" class="tick-label" fill="#ff6600">← Boiling Water</text>
+
+  <!-- Freezing point water (0C = 32F = 492R = 273K) -->
+  <rect x="10" y="270" width="740" height="2" fill="#4da6ff" opacity="0.5"/>
+  <text x="95" y="265" class="tick-label" text-anchor="middle">32°F</text>
+  <text x="235" y="265" class="tick-label" text-anchor="middle">0°C</text>
+  <text x="435" y="265" class="tick-label" text-anchor="middle">492°R</text>
+  <text x="575" y="265" class="tick-label" text-anchor="middle">273K</text>
+  <text x="700" y="285" class="tick-label" fill="#4da6ff">← Freezing Water</text>
+
+  <!-- Absolute zero (-459.67F = -273.15C = 0R = 0K) -->
+  <rect x="10" y="410" width="740" height="2" fill="#cc0000" opacity="0.5"/>
+  <text x="95" y="402" class="tick-label" text-anchor="middle">-459.67°F</text>
+  <text x="235" y="402" class="tick-label" text-anchor="middle">-273.15°C</text>
+  <text x="435" y="402" class="tick-label" text-anchor="middle">0°R</text>
+  <text x="575" y="402" class="tick-label" text-anchor="middle">0K</text>
+  <text x="700" y="422" class="tick-label" fill="#cc0000">← Absolute Zero</text>
+
+  <!-- Conversion formulas box -->
+  <rect x="50" y="475" width="700" height="20" fill="#f0f0f0" stroke="#333" stroke-width="1"/>
+  <text x="400" y="491" class="tick-label" text-anchor="middle">
+    <tspan class="important">Conversions:</tspan>
+    C = (F - 32) / 1.8  |  K = C + 273.15  |  R = F + 459.67  |  R = K × 1.8
+  </text>
+</svg>

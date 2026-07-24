@@ -1,0 +1,90 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .type-box { stroke: #333; stroke-width: 2; }
+      .label { font-size: 14px; font-family: Arial; font-weight: bold; }
+      .desc { font-size: 12px; font-family: Arial; }
+      .gauge-scale { font-size: 11px; font-family: Arial; }
+      .meter-line { stroke: #333; stroke-width: 2; }
+      .formula-box { fill: #f0f0f0; stroke: #333; stroke-width: 1; }
+      .highlight { fill: #ffff00; opacity: 0.4; }
+    </style>
+  </defs>
+
+  <text x="400" y="30" class="label" text-anchor="middle" font-size="16">Types of Pressure and Relationships</text>
+
+  <!-- Atmospheric Pressure Context -->
+  <rect x="50" y="60" width="300" height="80" fill="#e6f2ff" stroke="#0066cc" stroke-width="2"/>
+  <text x="200" y="85" class="label" text-anchor="middle" fill="#0066cc">Atmospheric Pressure</text>
+  <text x="60" y="110" class="desc">Standard sea-level atmospheric pressure:</text>
+  <text x="70" y="130" class="desc" font-weight="bold">P_atm = 14.7 psia = 101.3 kPa</text>
+
+  <!-- Absolute Pressure -->
+  <rect x="450" y="60" width="300" height="80" fill="#ffe6e6" stroke="#cc0000" stroke-width="2"/>
+  <text x="600" y="85" class="label" text-anchor="middle" fill="#cc0000">Absolute Pressure</text>
+  <text x="460" y="110" class="desc">Measured from perfect vacuum (zero):</text>
+  <text x="470" y="130" class="desc" font-weight="bold">Used in all thermodynamic equations</text>
+
+  <!-- Pressure Gauge Visualization -->
+  <text x="400" y="180" class="label" text-anchor="middle" font-size="15">Pressure Gauge Reading Examples</text>
+
+  <!-- Example 1: Above Atmospheric (Gage Pressure) -->
+  <g id="gauge1">
+    <rect x="50" y="210" width="300" height="140" class="type-box" fill="#fff0e6"/>
+    <text x="200" y="235" class="label" text-anchor="middle">GAGE PRESSURE (psig)</text>
+
+    <rect x="60" y="245" width="280" height="30" fill="#e6e6e6"/>
+    <line x1="65" y1="245" x2="65" y2="275" class="meter-line"/>
+    <line x1="85" y1="245" x2="85" y2="275" class="meter-line"/>
+    <line x1="200" y1="245" x2="200" y2="280" class="meter-line" stroke="#ff6600" stroke-width="3"/>
+    <line x1="320" y1="245" x2="320" y2="275" class="meter-line"/>
+    <text x="70" y="295" class="gauge-scale" text-anchor="middle">0</text>
+    <text x="200" y="295" class="gauge-scale" text-anchor="middle" fill="#ff6600" font-weight="bold">10 psig</text>
+    <text x="320" y="295" class="gauge-scale" text-anchor="middle">Max</text>
+
+    <text x="200" y="320" class="desc" text-anchor="middle">Pressure ABOVE atmospheric</text>
+    <text x="200" y="338" class="desc" text-anchor="middle" font-weight="bold">P_abs = P_gage + P_atm</text>
+    <text x="200" y="356" class="desc" text-anchor="middle">= 10 + 14.7 = 24.7 psia</text>
+  </g>
+
+  <!-- Example 2: Below Atmospheric (Vacuum Pressure) -->
+  <g id="gauge2">
+    <rect x="450" y="210" width="300" height="140" class="type-box" fill="#e6ffe6"/>
+    <text x="600" y="235" class="label" text-anchor="middle">VACUUM PRESSURE (in Hg)</text>
+
+    <rect x="460" y="245" width="280" height="30" fill="#e6e6e6"/>
+    <line x1="485" y1="245" x2="485" y2="275" class="meter-line"/>
+    <line x1="550" y1="245" x2="550" y2="280" class="meter-line" stroke="#0066cc" stroke-width="3"/>
+    <line x1="610" y1="245" x2="610" y2="275" class="meter-line"/>
+    <line x1="720" y1="245" x2="720" y2="275" class="meter-line"/>
+    <text x="490" y="295" class="gauge-scale" text-anchor="middle">0</text>
+    <text x="550" y="295" class="gauge-scale" text-anchor="middle" fill="#0066cc" font-weight="bold">5 in Hg</text>
+    <text x="610" y="295" class="gauge-scale" text-anchor="middle">15</text>
+    <text x="720" y="295" class="gauge-scale" text-anchor="middle">29.9</text>
+
+    <text x="600" y="320" class="desc" text-anchor="middle">Pressure BELOW atmospheric</text>
+    <text x="600" y="338" class="desc" text-anchor="middle" font-weight="bold">P_abs = P_atm - P_vac</text>
+    <text x="600" y="356" class="desc" text-anchor="middle">= 14.7 - 5 = 9.7 psia</text>
+  </g>
+
+  <!-- Pressure Relationships Summary -->
+  <rect x="50" y="380" width="700" height="180" class="formula-box"/>
+  <text x="400" y="405" class="label" text-anchor="middle">Key Pressure Relationships</text>
+
+  <rect x="60" y="420" width="680" height="20" fill="#fff0cc"/>
+  <text x="70" y="435" class="desc" font-weight="bold">ABSOLUTE PRESSURE (Required for thermodynamic equations):</text>
+
+  <text x="70" y="460" class="desc">P_absolute = P_gage + P_atmospheric    OR    P_absolute = P_atmospheric - P_vacuum</text>
+  <text x="70" y="478" class="desc">Example: If gauge reads 50 psig → P_abs = 50 + 14.7 = 64.7 psia</text>
+
+  <rect x="60" y="500" width="680" height="20" fill="#e6f2ff"/>
+  <text x="70" y="515" class="desc" font-weight="bold">DIFFERENTIAL PRESSURE (Pressure difference between two points):</text>
+
+  <text x="70" y="540" class="desc">ΔP = P₁ - P₂    (Used for filter pressure drop, valve throttling, level measurement)</text>
+
+  <!-- Common Pressure Conversions -->
+  <rect x="50" y="385" width="700" height="175" class="formula-box" y="385"/>
+  <text x="400" y="410" class="label" text-anchor="middle">Common Pressure Conversions</text>
+  <text x="70" y="435" class="desc">1 psi = 6.895 kPa  |  1 bar = 14.5 psia  |  1 atm = 14.7 psia = 101.3 kPa</text>
+  <text x="70" y="455" class="desc">Vacuum: 1 psia = ~29 inches of mercury  |  1 bar absolute = 100 kPa</text>
+</svg>
