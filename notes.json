@@ -421,6 +421,156 @@
       "subject": "Fluid Flow (TH06B)",
       "title": "Key Operator Focus: Monitoring and Understanding Flow",
       "contentFile": "topics/Fluid_Flow_notes.txt"
+    },
+    {
+      "id": 69,
+      "subject": "CP06",
+      "title": "Heat Exchangers - Introduction",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 70,
+      "subject": "CP06",
+      "title": "Direct vs Indirect Contact Heat Exchangers",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 71,
+      "subject": "CP06",
+      "title": "Cooling Towers - Types and Configuration",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 72,
+      "subject": "CP06",
+      "title": "Cooling Tower Design and Materials",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 73,
+      "subject": "CP06",
+      "title": "Crossflow Heat Exchangers",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 74,
+      "subject": "CP06",
+      "title": "Parallel Flow Heat Exchangers",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 75,
+      "subject": "CP06",
+      "title": "Counter Flow Heat Exchangers",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 76,
+      "subject": "CP06",
+      "title": "U-Tube Heat Exchangers",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 77,
+      "subject": "CP06",
+      "title": "Regenerative vs Non-Regenerative Heat Exchangers",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 78,
+      "subject": "CP06",
+      "title": "Heat Exchanger Components",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 79,
+      "subject": "CP06",
+      "title": "Heat Exchanger Tubes and Expansion",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 80,
+      "subject": "CP06",
+      "title": "Heat Exchanger Tube Arrangements",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 81,
+      "subject": "CP06",
+      "title": "Heat Exchanger Tube Surfaces",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 82,
+      "subject": "CP06",
+      "title": "Heat Exchanger Shells and Passes",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 83,
+      "subject": "CP06",
+      "title": "Heat Exchanger Baffles",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 84,
+      "subject": "CP06",
+      "title": "Heat Exchanger Startup - Thermal Shock and Water Hammer",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 85,
+      "subject": "CP06",
+      "title": "Heat Exchanger Startup Procedure",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 86,
+      "subject": "CP06",
+      "title": "Heat Exchanger Shutdown",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 87,
+      "subject": "CP06",
+      "title": "Heat Exchanger Dynamics and Performance",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 88,
+      "subject": "CP06",
+      "title": "Heat Exchanger Flow Control",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 89,
+      "subject": "CP06",
+      "title": "Heat Exchanger Flow Rate Effects - Laminar vs Turbulent",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 90,
+      "subject": "CP06",
+      "title": "Heat Exchanger Fouling and Deposits",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 91,
+      "subject": "CP06",
+      "title": "Heat Exchanger Tube Failure Consequences",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 92,
+      "subject": "CP06",
+      "title": "Main Condenser Function and Design",
+      "contentFile": "topics/CP06_notes.txt"
+    },
+    {
+      "id": 93,
+      "subject": "CP06",
+      "title": "Condenser Operation and Cooling Requirements",
+      "contentFile": "topics/CP06_notes.txt"
     }
   ]
 }
