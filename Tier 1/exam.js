@@ -60,9 +60,14 @@ export const exam = {
     },
 
     showQuestion(app) {
+        console.log(`showQuestion called: index=${app.currentQuestionIndex}, total=${app.answers.length}`);
         const question = app.answers[app.currentQuestionIndex];
-        if (!question) return;
+        if (!question) {
+            console.error(`No question found at index ${app.currentQuestionIndex}`);
+            return;
+        }
 
+        console.log(`Displaying question: "${question.text.substring(0, 50)}..."`);
         document.getElementById('questionNumber').textContent = app.currentQuestionIndex + 1;
         document.getElementById('questionTotal').textContent = app.answers.length;
         document.getElementById('questionText').textContent = question.text;
