@@ -12,24 +12,43 @@ export const notes = {
         if (note.contentFile) {
             try {
                 const response = await fetch(note.contentFile);
+                if (!response.ok) {
+                    console.error(`✗ HTTP ${response.status}: Failed to load ${note.contentFile}`);
+                    return `Error: Could not load content (HTTP ${response.status})`;
+                }
                 const text = await response.text();
                 const pattern = new RegExp(`\\[Note ID: ${note.id}\\][\\s\\S]*?(?=\\[Note ID:|$)`);
                 const match = text.match(pattern);
                 if (match) {
                     return match[0].replace(`[Note ID: ${note.id}]`, '').trim();
                 }
-                return "Content not found";
+                console.warn(`⚠ Note ID ${note.id} not found in ${note.contentFile}`);
+                return "Content not found in file";
             } catch (error) {
+                console.error(`✗ Error loading content for note ${note.id}:`, error.message);
                 return "Error loading content: " + error.message;
             }
         }
-        return "No content available";
+        return "No content file specified";
     },
 
     async viewNotes(app) {
-        const notesForSubject = dataFilter.filterNotesBySubject(app.allNotes, app.currentNotesSubject);
-        uiUtils.clearContainer('notesListContainer');
+        if (!app.currentNotesSubject) {
+            console.error('✗ ERROR: currentNotesSubject not set!');
+            return;
+        }
+        console.log(`📖 Loading notes for subject: ${app.currentNotesSubject}`);
 
+        const notesForSubject = dataFilter.filterNotesBySubject(app.allNotes, app.currentNotesSubject);
+        console.log(`  → Found ${notesForSubject.length} notes for ${app.currentNotesSubject}`);
+
+        if (notesForSubject.length === 0) {
+            console.error(`✗ ERROR: No notes found for subject "${app.currentNotesSubject}"`);
+            console.log('Available subjects:', [...new Set(app.allNotes.map(n => n.subject))].sort());
+            return;
+        }
+
+        uiUtils.clearContainer('notesListContainer');
         document.getElementById('notesViewTitle').textContent = app.currentNotesSubject + ' Notes';
         document.getElementById('notesCountDisplay').textContent = notesForSubject.length;
 
@@ -48,6 +67,7 @@ export const notes = {
             uiUtils.appendToContainer('notesListContainer', noteDiv);
         }
 
+        console.log(`✓ Rendered ${notesForSubject.length} notes`);
         uiUtils.showScreen('notesScreen');
     }
 };

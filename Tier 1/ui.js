@@ -114,13 +114,20 @@ export const ui = {
     },
 
     selectNotesSubject(app, subject) {
+        console.log(`🔄 Selecting notes subject: ${subject}, mode: ${app.currentMode}`);
         app.currentNotesSubject = subject;
-        document.getElementById('selectedNotesSubjectName').textContent = subject;
+        const subjectNameEl = document.getElementById('selectedNotesSubjectName');
+        if (!subjectNameEl) {
+            console.error('✗ ERROR: selectedNotesSubjectName element not found');
+            return;
+        }
+        subjectNameEl.textContent = subject;
         document.querySelectorAll('#notesSubjectButtonsContainer .subject-btn').forEach(btn => {
             btn.classList.toggle('active', btn.textContent === subject);
         });
         const buttonText = app.currentMode === 'flashcard' ? 'Start Flashcards' : 'View Notes';
         document.getElementById('studyModeButtonText').textContent = buttonText;
+        console.log(`✓ Subject selected: ${subject}`);
     },
 
     startStudyMode(app) {

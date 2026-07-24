@@ -123,4 +123,22 @@ window.app = {
 };
 
 // Initialize on page load
-window.addEventListener('load', () => window.app.init());
+window.addEventListener('load', async () => {
+    console.log('==========================================');
+    console.log('🚀 STARTING APP INITIALIZATION');
+    console.log('==========================================');
+    try {
+        await window.app.init();
+        console.log('==========================================');
+        console.log('✅ INITIALIZATION COMPLETE');
+        console.log('==========================================');
+        console.log('Test: Open browser DevTools Console (F12) and paste this:');
+        console.log('window.app.allNotes.filter(n=>n.subject==="Pumps").length');
+        console.log('Should show: 30');
+    } catch (err) {
+        console.log('==========================================');
+        console.error('❌ INITIALIZATION FAILED');
+        console.log('==========================================');
+        console.error(err);
+    }
+});
