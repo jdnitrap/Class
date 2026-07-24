@@ -27,6 +27,10 @@
     {
       "subject": "Fluid Flow (TH06B)",
       "contentFile": "Tier 3/Fluid_Flow_TH06B__questions.txt"
+    },
+    {
+      "subject": "TH07B",
+      "contentFile": "Tier 3/TH07B_questions.txt"
     }
   ]
 }

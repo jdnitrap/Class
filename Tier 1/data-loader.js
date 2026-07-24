@@ -14,19 +14,7 @@ export const dataLoader = {
                 }
             }
         } catch (error) {
-            console.warn('Main questions.json not loaded or empty:', error);
-        }
-        try {
-            const response2 = await fetch('Tier 2/th07b_questions.json?v=' + Date.now());
-            const data2 = await response2.json();
-            if (data2.questions && Array.isArray(data2.questions)) {
-                for (const qRef of data2.questions) {
-                    const questions = await this.getQuestionsFromFile(qRef.contentFile);
-                    app.allQuestions = app.allQuestions.concat(questions);
-                }
-            }
-        } catch (error) {
-            console.warn('TH07B questions not loaded:', error);
+            console.warn('Questions not loaded:', error);
         }
         document.getElementById('questionsCount').textContent = app.allQuestions.length;
         document.getElementById('subjectsCount').textContent = new Set(app.allQuestions.map(q => q.subject)).size;
@@ -70,16 +58,7 @@ export const dataLoader = {
                 app.allNotes = data.notes;
             }
         } catch (error) {
-            console.warn('Main notes.json not loaded or empty:', error);
-        }
-        try {
-            const response2 = await fetch('Tier 2/th07b_notes.json?v=' + Date.now());
-            const data2 = await response2.json();
-            if (data2.notes && Array.isArray(data2.notes)) {
-                app.allNotes = app.allNotes.concat(data2.notes);
-            }
-        } catch (error) {
-            console.warn('TH07B notes not loaded:', error);
+            console.warn('Notes not loaded:', error);
         }
         document.getElementById('notesSubjectsCount').textContent = new Set(app.allNotes.map(n => n.subject)).size;
     }

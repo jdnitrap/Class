@@ -1,0 +1,59 @@
+[Note ID: 1]
+Heat transfer is the transfer of energy due to a temperature difference, flowing from higher to lower temperature. Three basic modes: conduction (molecular interactions), convection (bulk fluid motion), radiation (electromagnetic waves). In PWR plants, conduction and convection dominate; radiation is negligible during normal operation but significant in accident conditions.
+
+[Note ID: 2]
+Specific heat capacity cp is the heat required to raise one unit mass of substance by one degree. Formula: Q = m × cp × ΔT. For flowing systems: Q-dot = m-dot × cp × ΔT. One Btu raises 1 lbm of water by 1°F at standard conditions.
+
+[Note ID: 3]
+Conduction transfers kinetic energy via molecular collisions. Factors affecting rate: temperature difference (ΔT), thermal conductivity (k), cross-sectional area (A), material thickness (x). Equation: Q = kAΔT / x. Higher k or A increases rate; higher x decreases rate. Metals conduct well; gases and ceramics poorly.
+
+[Note ID: 4]
+Copper: 133.0, Iron: 39.0, 90-10 CuNi: 23, 416 SS: 14, 316 SS: 9.4, Inconel 600: 8.6, Inconel 690: 7.8, Zr alloys: ~12, Concrete: 0.2-0.7, Air: 0.0145, Sat Steam @600°F: 0.0301, Rock Wool: 0.03 Btu/hr-ft-°F. Higher k = better conductor.
+
+[Note ID: 5]
+Convection transfers heat between fluid and surface via circulation/mixing. Boundary layer is thin stagnant film next to surface. Heat crosses by conduction-like process plus mechanical motion. Natural convection: density-driven. Forced convection: pump-driven. Most plant convection is forced.
+
+[Note ID: 6]
+hf = kf / xf where kf is boundary layer conductivity and xf is thickness. Factors affecting hf: temperature (higher T thins layer), flow rate (higher flow thins layer), surface roughness (rough increases thickness), boiling (bubbles thin layer and add latent heat).
+
+[Note ID: 7]
+Heat exchanger transfer: convection hot fluid to tube, conduction through tube wall, convection tube to cold fluid. All three layers in series. Total resistance = sum of individual resistances. Uo = 1 / total resistance. Monitors degradation from fouling.
+
+[Note ID: 8]
+Uo encompasses thermal conductivities and thicknesses of tube wall plus both boundary layers. Equation: Q = Uo × Ao × ΔTo. Monitoring Uo detects fouling/corrosion early. Fouling adds extra layer, dramatically reducing Uo (e.g., 2 mil scale can drop Uo ~30%).
+
+[Note ID: 9]
+Radiation transfers heat via electromagnetic waves, no medium needed. Stefan-Boltzmann: Q = σ × A × ε × (T^4). Requires extremely high ΔT for significant heat due to T^4. Not workable for normal PWR operation but critical in accident conditions with steam-blanketed core.
+
+[Note ID: 10]
+Single-phase: both fluids remain liquid or gas. Two-phase: one fluid changes phase (condenser, steam generator, feedwater heaters). Heat transfer: convection to tube, conduction across tube, convection to other fluid. Performance equations: single-phase Q = m cp ΔT; phase change Q = m Δh.
+
+[Note ID: 11]
+CTP = heat input rate from core to RCS. Two methods: RCS heat balance Q = m × cp × ΔT (TH-TC), secondary heat balance Q = m × Δh (hSteam - hFeedwater). Process computer normally calculates; operator can calculate manually if needed.
+
+[Note ID: 12]
+Secondary balance accounts for blowdown, ambient losses, RCP heat input. Condensate depression = Tsat - Tcondensate. Few degrees prevents pump cavitation. Excessive depression wastes heat and increases corrosion. Optimal ~10-20°F.
+
+[Note ID: 13]
+Centerline → pellet edge (conduction, ~1000°F drop, low k UO2) → helium gap (conduction, ~200°F drop) → cladding (conduction, ~150°F drop) → coolant film (convection, ~50°F drop). Pellet centerline limited to 1800-2500°F to prevent melting or cladding damage.
+
+[Note ID: 14]
+Rapid oxidation of zirconium cladding with steam at high temperature, producing heat and hydrogen. Begins ~1800°F, becomes self-sustaining ~2200°F. Can auto-catalyze and weaken cladding. DNB raises cladding temperature, risking initiation.
+
+[Note ID: 15]
+Heat flux = Q/A (Btu/hr-ft²). DNB (departure from nucleate boiling) causes sharp cladding temperature rise. When Uo too small or heat flux too high, cladding T approaches zirc-water initiation. Must be prevented for cladding integrity.
+
+[Note ID: 16]
+Natural: density-driven, occurs even with RCPs off. Forced: pump-driven, more efficient, easier to control. Virtually all convection in nuclear plants is forced convection for better heat transfer and flow control.
+
+[Note ID: 17]
+Nucleate boiling improves heat transfer: bubbles create turbulence thinning boundary layer, plus latent heat absorption. But in single-phase designed exchangers, bulk boiling blocks flow and blankets surfaces, dramatically reducing heat transfer.
+
+[Note ID: 18]
+Fouling: scale/slime layer adds resistance, reduces Uo. Air/non-condensables: block flow, reduce heat transfer. Tube restrictions: cause localized flashing. Bulk boiling in single-phase HX: blocks flow, poor heat transfer. Vent during startup to remove air.
+
+[Note ID: 19]
+Percent reactor power = actual CTP / rated CTP × 100%. Nuclear instrumentation indicates this value. Accuracy depends on sensor number, type, location, and power distribution shape. Fast response time is advantage over heat balance.
+
+[Note ID: 20]
+2% SG tubes plugged, Uo unchanged, same power: ΔT must increase 2% to maintain Q. Original Tavg 585°F, Tsteam 532°F, ΔT=53°F → new ΔT=54.1°F, new Tavg=586.1°F. Primary temperature program is compromise between primary and secondary effects.

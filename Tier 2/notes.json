@@ -571,6 +571,126 @@
       "subject": "CP06",
       "title": "Condenser Operation and Cooling Requirements",
       "contentFile": "Tier 3/CP06_notes.txt"
+    },
+    {
+      "id": 94,
+      "subject": "TH07B",
+      "title": "Heat Transfer Definition and Modes",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 95,
+      "subject": "TH07B",
+      "title": "Specific Heat Capacity (cp)",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 96,
+      "subject": "TH07B",
+      "title": "Conduction Heat Transfer",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 97,
+      "subject": "TH07B",
+      "title": "Thermal Conductivity Values",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 98,
+      "subject": "TH07B",
+      "title": "Convection Heat Transfer",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 99,
+      "subject": "TH07B",
+      "title": "Film Convection Coefficient (hf)",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 100,
+      "subject": "TH07B",
+      "title": "Combined Heat Transfer in Heat Exchangers",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 101,
+      "subject": "TH07B",
+      "title": "Overall Heat Transfer Coefficient (Uo)",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 102,
+      "subject": "TH07B",
+      "title": "Radiation Heat Transfer",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 103,
+      "subject": "TH07B",
+      "title": "Heat Exchanger Types and Operation",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 104,
+      "subject": "TH07B",
+      "title": "Core Thermal Power (CTP) Calculation",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 105,
+      "subject": "TH07B",
+      "title": "Secondary Heat Balance and Condensate Depression",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 106,
+      "subject": "TH07B",
+      "title": "Nuclear Fuel Heat Transfer Path",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 107,
+      "subject": "TH07B",
+      "title": "Zirc-Water Reaction",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 108,
+      "subject": "TH07B",
+      "title": "Heat Flux and DNB",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 109,
+      "subject": "TH07B",
+      "title": "Natural vs Forced Convection in Plants",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 110,
+      "subject": "TH07B",
+      "title": "Nucleate Boiling Effect on Heat Transfer",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 111,
+      "subject": "TH07B",
+      "title": "Heat Exchanger Degradation Mechanisms",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 112,
+      "subject": "TH07B",
+      "title": "Percent Reactor Power and NI Indication",
+      "contentFile": "Tier 3/TH07B_notes.txt"
+    },
+    {
+      "id": 113,
+      "subject": "TH07B",
+      "title": "Example: Effect of Tube Plugging on Tavg",
+      "contentFile": "Tier 3/TH07B_notes.txt"
     }
   ]
 }
