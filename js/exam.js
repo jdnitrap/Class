@@ -1,6 +1,8 @@
 // Exam module - handles all exam-related logic
 
 import { ui } from './ui.js';
+import { uiUtils } from './ui-utils.js';
+import { dataFilter } from './data-filter.js';
 
 export const exam = {
     startTopicExamSelection(app) {
@@ -14,7 +16,6 @@ export const exam = {
     },
 
     prepareComprehensiveExam(app) {
-        const allTopics = [...new Set(app.allQuestions.map(q => q.subject))];
         const totalQuestions = app.allQuestions.length;
         document.getElementById('maxQuestions').textContent = totalQuestions;
         document.getElementById('questionCount').max = totalQuestions;
@@ -26,23 +27,23 @@ export const exam = {
         document.getElementById('questionCountContainer').style.display = 'block';
 
         app.isComprehensiveExam = true;
-        ui.showScreen('subjectScreen');
+        uiUtils.showScreen('subjectScreen');
     },
 
     startExam(app) {
-        const allQuestions = app.allQuestions.filter(q => q.subject === app.currentSubject);
-        const questionCountInput = parseInt(document.getElementById('questionCount').value) || 10;
+        const allQuestions = dataFilter.filterQuestionsBySubject(app.allQuestions, app.currentSubject);
+        const questionCountInput = uiUtils.getInputNumberValue('questionCount') || 10;
         const questionCount = Math.min(questionCountInput, allQuestions.length);
 
         app.answers = this.getRandomQuestions(allQuestions, questionCount);
         app.currentQuestionIndex = 0;
         app.selectedAnswers = {};
         this.showQuestion(app);
-        ui.showScreen('examScreen');
+        uiUtils.showScreen('examScreen');
     },
 
     startComprehensiveExam(app) {
-        const questionCountInput = parseInt(document.getElementById('comprehensiveQuestionCount').value) || 10;
+        const questionCountInput = uiUtils.getInputNumberValue('comprehensiveQuestionCount') || 10;
         const questionCount = Math.min(questionCountInput, app.allQuestions.length);
 
         app.answers = this.getRandomQuestions(app.allQuestions, questionCount);
@@ -50,7 +51,7 @@ export const exam = {
         app.selectedAnswers = {};
         app.isComprehensiveExam = true;
         this.showQuestion(app);
-        ui.showScreen('examScreen');
+        uiUtils.showScreen('examScreen');
     },
 
     getRandomQuestions(questions, count) {
@@ -66,11 +67,11 @@ export const exam = {
         document.getElementById('questionTotal').textContent = app.answers.length;
         document.getElementById('questionText').textContent = question.text;
 
-        const progress = Math.round(((app.currentQuestionIndex + 1) / app.answers.length) * 100);
+        const progress = uiUtils.getProgressPercentage(app.currentQuestionIndex, app.answers.length);
         document.getElementById('progressFill').style.width = progress + '%';
 
         const container = document.getElementById('optionsContainer');
-        container.innerHTML = '';
+        uiUtils.clearContainer('optionsContainer');
 
         question.options.forEach(option => {
             const label = document.createElement('label');
@@ -125,6 +126,6 @@ export const exam = {
             document.getElementById('scoreMessage').textContent = '💪 Keep practicing! You\'ll get better!';
         }
 
-        ui.showScreen('resultsScreen');
+        uiUtils.showScreen('resultsScreen');
     }
 };

@@ -1,4 +1,4 @@
-// Data loading module - handles fetching questions, notes, and content from files
+// Data loading module - handles fetching questions and notes from JSON files
 
 export const dataLoader = {
     async loadQuestions(app) {
@@ -46,26 +46,5 @@ export const dataLoader = {
             console.warn('TH07B notes not loaded:', error);
         }
         document.getElementById('notesSubjectsCount').textContent = new Set(app.allNotes.map(n => n.subject)).size;
-    },
-
-    async getNoteContent(note) {
-        if (note.content) {
-            return note.content;
-        }
-        if (note.contentFile) {
-            try {
-                const response = await fetch(note.contentFile);
-                const text = await response.text();
-                const pattern = new RegExp(`\\[Note ID: ${note.id}\\][\\s\\S]*?(?=\\[Note ID:|$)`);
-                const match = text.match(pattern);
-                if (match) {
-                    return match[0].replace(`[Note ID: ${note.id}]`, '').trim();
-                }
-                return "Content not found";
-            } catch (error) {
-                return "Error loading content: " + error.message;
-            }
-        }
-        return "No content available";
     }
 };

@@ -1,11 +1,11 @@
 // UI module - handles screen navigation and DOM management
 
+import { uiUtils } from './ui-utils.js';
+import { dataFilter } from './data-filter.js';
+
 export const ui = {
     showScreen(screenId) {
-        document.querySelectorAll('#app > .container > .content, #app > .container > div[id$="Screen"]').forEach(el => {
-            el.classList.add('hidden');
-        });
-        document.getElementById(screenId).classList.remove('hidden');
+        uiUtils.showScreen(screenId);
     },
 
     goHome(app) {
@@ -34,9 +34,9 @@ export const ui = {
     },
 
     renderSubjectSelection(app) {
-        const subjects = [...new Set(app.allQuestions.map(q => q.subject))].sort();
+        const subjects = dataFilter.getUniqueQuestionsSubjects(app.allQuestions);
         const container = document.getElementById('subjectButtonsContainer');
-        container.innerHTML = '';
+        uiUtils.clearContainer('subjectButtonsContainer');
 
         subjects.forEach(subject => {
             const btn = document.createElement('button');
@@ -51,9 +51,9 @@ export const ui = {
     },
 
     renderNotesSelection(app) {
-        const subjects = [...new Set(app.allNotes.map(n => n.subject))].sort();
+        const subjects = dataFilter.getUniqueNotesSubjects(app.allNotes);
         const container = document.getElementById('notesSubjectButtonsContainer');
-        container.innerHTML = '';
+        uiUtils.clearContainer('notesSubjectButtonsContainer');
 
         subjects.forEach(subject => {
             const btn = document.createElement('button');
@@ -76,7 +76,7 @@ export const ui = {
         });
 
         if (app.currentMode === 'exam') {
-            const subjectQuestions = app.allQuestions.filter(q => q.subject === subject);
+            const subjectQuestions = dataFilter.filterQuestionsBySubject(app.allQuestions, subject);
             const maxQuestions = subjectQuestions.length;
             document.getElementById('maxQuestions').textContent = maxQuestions;
             document.getElementById('questionCount').max = maxQuestions;
