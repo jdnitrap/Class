@@ -95,9 +95,13 @@ export const exam = {
     },
 
     previousQuestion(app) {
+        console.log(`Current question index: ${app.currentQuestionIndex}`);
         if (app.currentQuestionIndex > 0) {
             app.currentQuestionIndex--;
+            console.log(`Moved to previous question: ${app.currentQuestionIndex + 1}`);
             this.showQuestion(app);
+        } else {
+            console.log('Already at first question, cannot go back');
         }
     },
 

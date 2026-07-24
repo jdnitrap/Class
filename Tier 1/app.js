@@ -114,6 +114,7 @@ window.app = {
     },
 
     previousQuestion() {
+        console.log('🔙 previousQuestion called');
         exam.previousQuestion(this);
     },
 
