@@ -1,0 +1,48 @@
+[Question ID: 31]
+{"id":31,"subject":"TH02","text":"The First Law of Thermodynamics states that energy:","options":[{"letter":"a","text":"Always decreases in any process","correct":false},{"letter":"b","text":"Cannot be created or destroyed, only converted from one form to another","correct":true},{"letter":"c","text":"Can only flow from hot to cold","correct":false},{"letter":"d","text":"Is lost as heat in all processes","correct":false}],"explanation":"The First Law (Energy Conservation): Energy entering a system equals energy stored in or leaving it. E in = E stored + E out."}
+
+[Question ID: 32]
+{"id":32,"subject":"TH02","text":"Heat and work are best classified as which type of energy?","options":[{"letter":"a","text":"Stored energy forms","correct":false},{"letter":"b","text":"Transient (energy in transit) forms of energy","correct":true},{"letter":"c","text":"Potential energy","correct":false},{"letter":"d","text":"Kinetic energy","correct":false}],"explanation":"Heat and work are transient energy forms—energy in transit. They exist only during energy transfer between systems and surroundings."}
+
+[Question ID: 33]
+{"id":33,"subject":"TH02","text":"Which equation correctly defines enthalpy (H)?","options":[{"letter":"a","text":"H = U - PV","correct":false},{"letter":"b","text":"H = U + PV","correct":true},{"letter":"c","text":"H = U/PV","correct":false},{"letter":"d","text":"H = PV - U","correct":false}],"explanation":"Enthalpy H = U + PV, where U is internal energy and PV is flow energy. This is a fundamental thermodynamic property."}
+
+[Question ID: 34]
+{"id":34,"subject":"TH02","text":"What is the term for energy a substance possesses due to its position or height relative to a reference point?","options":[{"letter":"a","text":"Kinetic Energy","correct":false},{"letter":"b","text":"Internal Energy","correct":false},{"letter":"c","text":"Potential Energy","correct":true},{"letter":"d","text":"Flow Energy","correct":false}],"explanation":"Potential Energy (PE) depends on position. PE = mzg/gc, where z is height above a reference point."}
+
+[Question ID: 35]
+{"id":35,"subject":"TH02","text":"What is the term for energy a substance possesses due to its motion?","options":[{"letter":"a","text":"Potential Energy","correct":false},{"letter":"b","text":"Kinetic Energy","correct":true},{"letter":"c","text":"Internal Energy","correct":false},{"letter":"d","text":"Thermal Energy","correct":false}],"explanation":"Kinetic Energy (KE) = mv²/2gc. It depends on the velocity of the substance."}
+
+[Question ID: 36]
+{"id":36,"subject":"TH02","text":"Internal energy is best described as which of the following?","options":[{"letter":"a","text":"Energy from chemical reactions","correct":false},{"letter":"b","text":"The sum of the microscopic energy forms (molecular rotation, vibration, and translation) within a substance","correct":true},{"letter":"c","text":"Energy stored in compressed springs","correct":false},{"letter":"d","text":"Energy from electrical sources","correct":false}],"explanation":"Internal energy (U) is the sum of all microscopic forms: molecular rotation, vibration, and translational kinetic energy."}
+
+[Question ID: 37]
+{"id":37,"subject":"TH02","text":"Which equation correctly defines specific enthalpy (h)?","options":[{"letter":"a","text":"h = u - Pv","correct":false},{"letter":"b","text":"h = u + Pv","correct":true},{"letter":"c","text":"h = u/Pv","correct":false},{"letter":"d","text":"h = Pv - u","correct":false}],"explanation":"Specific enthalpy h = u + Pv. It represents energy per unit mass of fluid."}
+
+[Question ID: 38]
+{"id":38,"subject":"TH02","text":"For a closed system with no change in potential or kinetic energy, the General Energy Equation reduces to which relationship?","options":[{"letter":"a","text":"Q = W","correct":false},{"letter":"b","text":"ΔU = Q + W","correct":false},{"letter":"c","text":"Change in enthalpy = heat transferred to the system minus work done by the system (Δh = q - w)","correct":true},{"letter":"d","text":"Q = U + PV","correct":false}],"explanation":"For closed systems with no PE/KE change: Δh = q - w. This is the simplified First Law energy equation."}
+
+[Question ID: 39]
+{"id":39,"subject":"TH02","text":"Which term describes the rate at which work is done?","options":[{"letter":"a","text":"Force","correct":false},{"letter":"b","text":"Torque","correct":false},{"letter":"c","text":"Power","correct":true},{"letter":"d","text":"Momentum","correct":false}],"explanation":"Power is work per unit time: P = W/t, measured in watts (J/s) or horsepower (hp)."}
+
+[Question ID: 86]
+{"id":86,"subject":"TH02","text":"The mechanical equivalent of heat (Joule's constant) is:","options":[{"letter":"a","text":"1 Btu = 3600 J","correct":false},{"letter":"b","text":"1 Btu = 778 ft-lbf","correct":true},{"letter":"c","text":"1 Btu = 1000 cal","correct":false},{"letter":"d","text":"1 Btu = 4.184 J","correct":false}],"explanation":"Joule's constant: 1 Btu = 778 ft-lbf. This converts between heat (Btu) and mechanical work (ft-lbf)."}
+
+[Question ID: 87]
+{"id":87,"subject":"TH02","text":"Flow work (PV energy) is the energy a fluid possesses due to:","options":[{"letter":"a","text":"Its internal molecular motion","correct":false},{"letter":"b","text":"Its position above a reference point","correct":false},{"letter":"c","text":"Its pressure and volume (the work required to push the fluid into a system)","correct":true},{"letter":"d","text":"Its velocity","correct":false}],"explanation":"Flow energy (PV) is the work required to push a fluid of volume V at pressure P into a system. It equals P×v per unit mass."}
+
+[Question ID: 88]
+{"id":88,"subject":"TH02","text":"In thermodynamic sign conventions, when heat is removed from a system, Q is considered:","options":[{"letter":"a","text":"Positive","correct":false},{"letter":"b","text":"Negative","correct":true},{"letter":"c","text":"Zero","correct":false},{"letter":"d","text":"Undefined","correct":false}],"explanation":"Sign convention: Q added (into system) = positive; Q removed (out of system) = negative. Similarly, W done by system = positive, W done on system = negative."}
+
+[Question ID: 89]
+{"id":89,"subject":"TH02","text":"When work is done ON a system (compression), the work value is considered:","options":[{"letter":"a","text":"Positive","correct":false},{"letter":"b","text":"Negative","correct":true},{"letter":"c","text":"Zero","correct":false},{"letter":"d","text":"Depends on the gas type","correct":false}],"explanation":"Sign convention: Work done BY the system (expansion, turbine) = positive. Work done ON the system (compression, pump) = negative."}
+
+[Question ID: 90]
+{"id":90,"subject":"TH02","text":"Entropy (S) is best described as:","options":[{"letter":"a","text":"The total energy in a system","correct":false},{"letter":"b","text":"A measure of the unavailable energy in a fluid at a given state; increases with irreversibility","correct":true},{"letter":"c","text":"The rate of heat transfer","correct":false},{"letter":"d","text":"The mechanical work output","correct":false}],"explanation":"Entropy (S) measures disorder and unavailable energy. Specific entropy (s) has units of Btu/lbm-R. Total entropy increases in real processes."}
+
+[Question ID: 91]
+{"id":91,"subject":"TH02","text":"What is the relationship between enthalpy, internal energy, and specific volume in the definition of specific enthalpy?","options":[{"letter":"a","text":"h = u - Pv","correct":false},{"letter":"b","text":"h = u + Pv","correct":true},{"letter":"c","text":"h = u × Pv","correct":false},{"letter":"d","text":"h = u / (Pv)","correct":false}],"explanation":"Specific enthalpy h = u + Pv combines internal energy u and flow energy Pv. This property simplifies energy analysis of control volumes."}
+
+[Question ID: 92]
+{"id":92,"subject":"TH02","text":"In a steady flow process, what remains constant by definition?","options":[{"letter":"a","text":"Temperature throughout the system","correct":false},{"letter":"b","text":"The mass flow rate in equals mass flow rate out, and working-fluid properties are constant at any location","correct":true},{"letter":"c","text":"All pressures in the system","correct":false},{"letter":"d","text":"All velocities in the system","correct":false}],"explanation":"Steady flow: constant mass flow rate in/out, constant properties at each location over time, constant heat/work transfer rates. Most power equipment operates in steady flow."}
+

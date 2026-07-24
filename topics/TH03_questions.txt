@@ -1,0 +1,48 @@
+[Question ID: 40]
+{"id":40,"subject":"TH03","text":"What is the term for a liquid existing at a temperature below its saturation temperature for a given pressure?","options":[{"letter":"a","text":"Saturated liquid","correct":false},{"letter":"b","text":"Subcooled (or compressed) liquid","correct":true},{"letter":"c","text":"Superheated liquid","correct":false},{"letter":"d","text":"Critical liquid","correct":false}],"explanation":"Subcooled (or compressed) liquid is below saturation temperature for its pressure, meaning it could absorb heat and vaporize."}
+
+[Question ID: 41]
+{"id":41,"subject":"TH03","text":"What is the term for steam that is 100% vapor at its boiling temperature, with no liquid remaining?","options":[{"letter":"a","text":"Saturated vapor","correct":true},{"letter":"b","text":"Superheated vapor","correct":false},{"letter":"c","text":"Wet vapor","correct":false},{"letter":"d","text":"Critical vapor","correct":false}],"explanation":"Saturated vapor (dry steam) is at saturation temperature with quality X = 100%. Any further heating produces superheated steam."}
+
+[Question ID: 42]
+{"id":42,"subject":"TH03","text":"What is the term for vapor that exists above its boiling (saturation) temperature?","options":[{"letter":"a","text":"Saturated vapor","correct":false},{"letter":"b","text":"Superheated vapor","correct":true},{"letter":"c","text":"Dry vapor","correct":false},{"letter":"d","text":"Compressed vapor","correct":false}],"explanation":"Superheated vapor is above saturation temperature. The degrees of superheat = actual T - saturation T."}
+
+[Question ID: 43]
+{"id":43,"subject":"TH03","text":"Heat that changes a substance's phase without changing its temperature is called:","options":[{"letter":"a","text":"Sensible heat","correct":false},{"letter":"b","text":"Specific heat","correct":false},{"letter":"c","text":"Latent heat","correct":true},{"letter":"d","text":"Internal heat","correct":false}],"explanation":"Latent heat is phase-change heat (melting, vaporization) that doesn't change temperature. Sensible heat does change temperature."}
+
+[Question ID: 44]
+{"id":44,"subject":"TH03","text":"What term describes the fraction of vapor present in a wet steam mixture?","options":[{"letter":"a","text":"Moisture content","correct":false},{"letter":"b","text":"Steam quality","correct":true},{"letter":"c","text":"Void fraction","correct":false},{"letter":"d","text":"Dryness fraction","correct":false}],"explanation":"Steam quality (X) = fraction of vapor in wet steam mixture. Moisture content (M) = liquid fraction. X + M = 100%."}
+
+[Question ID: 45]
+{"id":45,"subject":"TH03","text":"On a P-T diagram, the point at which the solid, liquid, and gas phases can all exist in equilibrium simultaneously is called:","options":[{"letter":"a","text":"Critical Point","correct":false},{"letter":"b","text":"Triple Point","correct":true},{"letter":"c","text":"Saturation Point","correct":false},{"letter":"d","text":"Equilibrium Point","correct":false}],"explanation":"The Triple Point is where solid, liquid, and gas coexist. For water: 0.01°C, 0.006 atm."}
+
+[Question ID: 46]
+{"id":46,"subject":"TH03","text":"According to Charles' Law, at constant pressure, the volume of a gas is:","options":[{"letter":"a","text":"Inversely proportional to its absolute temperature","correct":false},{"letter":"b","text":"Directly proportional to its absolute temperature","correct":true},{"letter":"c","text":"Independent of temperature","correct":false},{"letter":"d","text":"Proportional to the square of temperature","correct":false}],"explanation":"Charles' Law: V ∝ T at constant P. V₁/T₁ = V₂/T₂ (using absolute temperature)."}
+
+[Question ID: 47]
+{"id":47,"subject":"TH03","text":"According to Boyle's Law, at constant temperature, the volume of a gas is:","options":[{"letter":"a","text":"Directly proportional to its absolute pressure","correct":false},{"letter":"b","text":"Inversely proportional to its absolute pressure","correct":true},{"letter":"c","text":"Independent of pressure","correct":false},{"letter":"d","text":"Proportional to the square of pressure","correct":false}],"explanation":"Boyle's Law: V ∝ 1/P at constant T. P₁V₁ = P₂V₂."}
+
+[Question ID: 48]
+{"id":48,"subject":"TH03","text":"Why should the Ideal Gas Law not be used to determine the properties of steam?","options":[{"letter":"a","text":"Steam is always at high pressure","correct":false},{"letter":"b","text":"Steam's behavior is considerably more complex than an ideal gas, so steam tables (experimentally derived data) must be used instead","correct":true},{"letter":"c","text":"The Ideal Gas Law only works for perfect gases","correct":false},{"letter":"d","text":"Steam has no molecules","correct":false}],"explanation":"Steam deviates significantly from ideal gas behavior, especially near saturation. Steam tables provide experimentally accurate properties."}
+
+[Question ID: 93]
+{"id":93,"subject":"TH03","text":"What is the fraction of liquid in a wet steam mixture called?","options":[{"letter":"a","text":"Steam quality","correct":false},{"letter":"b","text":"Dryness fraction","correct":false},{"letter":"c","text":"Moisture content","correct":true},{"letter":"d","text":"Void fraction","correct":false}],"explanation":"Moisture content (M) = liquid fraction. Quality (X) = vapor fraction. X + M = 100% or 1.0."}
+
+[Question ID: 94]
+{"id":94,"subject":"TH03","text":"What does the 'void fraction' represent in two-phase flow?","options":[{"letter":"a","text":"The mass fraction of vapor","correct":false},{"letter":"b","text":"The volumetric fraction of vapor (gas) in the mixture","correct":true},{"letter":"c","text":"The quality of the steam","correct":false},{"letter":"d","text":"The density difference","correct":false}],"explanation":"Void fraction is the volume fraction of vapor (gas) in a two-phase mixture. Different from quality, which is mass fraction."}
+
+[Question ID: 95]
+{"id":95,"subject":"TH03","text":"On a P-T diagram, what is the significance of the Critical Point?","options":[{"letter":"a","text":"The highest pressure at which solid can exist","correct":false},{"letter":"b","text":"The highest temperature and pressure at which liquid and gas can exist as distinguishable phases","correct":true},{"letter":"c","text":"The point where all phases coexist","correct":false},{"letter":"d","text":"The freezing point of the substance","correct":false}],"explanation":"At the Critical Point, the distinction between liquid and gas phases disappears. Above the critical point, only a supercritical fluid exists."}
+
+[Question ID: 96]
+{"id":96,"subject":"TH03","text":"What are 'degrees of superheat' in a thermodynamic process?","options":[{"letter":"a","text":"The absolute temperature of the vapor","correct":false},{"letter":"b","text":"The difference between the actual temperature and the saturation temperature of the vapor","correct":true},{"letter":"c","text":"The heat added to the system","correct":false},{"letter":"d","text":"The pressure above saturation","correct":false}],"explanation":"Degrees of superheat = T_actual - T_saturation. For example, if steam is at 350°F when saturation is 300°F, superheat = 50°F."}
+
+[Question ID: 97]
+{"id":97,"subject":"TH03","text":"What are 'degrees of subcooling' for a liquid?","options":[{"letter":"a","text":"The absolute temperature of the liquid","correct":false},{"letter":"b","text":"The difference between the saturation temperature and the actual (lower) temperature of the liquid","correct":true},{"letter":"c","text":"The pressure below saturation","correct":false},{"letter":"d","text":"The density of the liquid","correct":false}],"explanation":"Degrees of subcooling = T_saturation - T_actual. Condensate at 100°F when saturation is 110°F has 10°F of subcooling."}
+
+[Question ID: 98]
+{"id":98,"subject":"TH03","text":"Why does cavitation occur in a pump?","options":[{"letter":"a","text":"Excessive temperature in the system","correct":false},{"letter":"b","text":"The liquid pressure drops below saturation pressure, causing vapor bubbles to form; they collapse later, causing erosion and damage","correct":true},{"letter":"c","text":"Too much flow through the pump","correct":false},{"letter":"d","text":"Worn pump bearings","correct":false}],"explanation":"Cavitation: local pressure < saturation pressure → vapor bubbles form → downstream, pressure increases → bubbles collapse violently → erosion and vibration."}
+
+[Question ID: 99]
+{"id":99,"subject":"TH03","text":"In the context of steam table usage, what is a 'saturated steam table' indexed by?","options":[{"letter":"a","text":"Only by saturation pressure","correct":false},{"letter":"b","text":"Either by saturation temperature or saturation pressure (corresponding conditions)","correct":true},{"letter":"c","text":"Only by enthalpy","correct":false},{"letter":"d","text":"Only by entropy","correct":false}],"explanation":"Saturated steam tables list properties indexed by either saturation temperature or saturation pressure; the two are uniquely related."}
+

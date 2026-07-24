@@ -1,4 +1,4 @@
-// Data loading module - handles fetching questions and notes from JSON files
+// Data loading module - handles fetching questions and notes from JSON and text files
 
 export const dataLoader = {
     async loadQuestions(app) {
@@ -7,7 +7,11 @@ export const dataLoader = {
             const response = await fetch('questions.json?v=' + Date.now());
             const data = await response.json();
             if (data.questions && Array.isArray(data.questions)) {
-                app.allQuestions = data.questions;
+                // Load questions from their text files
+                for (const qRef of data.questions) {
+                    const questions = await this.getQuestionsFromFile(qRef.contentFile);
+                    app.allQuestions = app.allQuestions.concat(questions);
+                }
             }
         } catch (error) {
             console.warn('Main questions.json not loaded or empty:', error);
@@ -16,13 +20,45 @@ export const dataLoader = {
             const response2 = await fetch('th07b_questions.json');
             const data2 = await response2.json();
             if (data2.questions && Array.isArray(data2.questions)) {
-                app.allQuestions = app.allQuestions.concat(data2.questions);
+                for (const qRef of data2.questions) {
+                    const questions = await this.getQuestionsFromFile(qRef.contentFile);
+                    app.allQuestions = app.allQuestions.concat(questions);
+                }
             }
         } catch (error) {
             console.warn('TH07B questions not loaded:', error);
         }
         document.getElementById('questionsCount').textContent = app.allQuestions.length;
         document.getElementById('subjectsCount').textContent = new Set(app.allQuestions.map(q => q.subject)).size;
+    },
+
+    async getQuestionsFromFile(contentFile) {
+        try {
+            const response = await fetch(contentFile);
+            const text = await response.text();
+            const questions = [];
+
+            // Parse questions - each starts with [Question ID: X]
+            const lines = text.split('\n');
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line.startsWith('[Question ID:')) {
+                    // Next line should have the JSON
+                    if (i + 1 < lines.length) {
+                        try {
+                            const questionJson = JSON.parse(lines[i + 1].trim());
+                            questions.push(questionJson);
+                        } catch (e) {
+                            console.warn('Failed to parse question:', e);
+                        }
+                    }
+                }
+            }
+            return questions;
+        } catch (error) {
+            console.warn('Error loading questions from file:', contentFile, error);
+            return [];
+        }
     },
 
     async loadNotes(app) {

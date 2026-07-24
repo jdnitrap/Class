@@ -1,0 +1,90 @@
+[Question ID: 1]
+{"id":1,"subject":"CP01","text":"What is the primary purpose of piping in a power plant?","options":[{"letter":"a","text":"To transport fluids from one piece of equipment to another","correct":true},{"letter":"b","text":"To regulate system pressure","correct":false},{"letter":"c","text":"To store fluids for later use","correct":false},{"letter":"d","text":"To measure fluid temperature","correct":false}],"explanation":"Piping serves as the housing to transport fluids (and sometimes fluid/solid mixtures) between equipment in power plant systems."}
+
+[Question ID: 2]
+{"id":2,"subject":"CP01","text":"Which piping material is typically used for high-temperature applications due to greater resistance to wear, fatigue, and corrosion?","options":[{"letter":"a","text":"Low-Carbon Steel","correct":false},{"letter":"b","text":"Low Alloy Steel","correct":true},{"letter":"c","text":"Stainless Steel","correct":false},{"letter":"d","text":"Copper Alloy","correct":false}],"explanation":"Low alloy steel is preferred for high-temperature applications due to its superior resistance to wear, fatigue, and corrosion."}
+
+[Question ID: 3]
+{"id":3,"subject":"CP01","text":"Which piping material is normally chosen for systems connected to the reactor because corrosion product generation must be minimized?","options":[{"letter":"a","text":"Low-Carbon Steel","correct":false},{"letter":"b","text":"Low Alloy Steel","correct":false},{"letter":"c","text":"Stainless Steel","correct":true},{"letter":"d","text":"Nickel Alloy","correct":false}],"explanation":"Stainless steel is used in reactor systems where corrosion product buildup must be minimized to protect system integrity."}
+
+[Question ID: 4]
+{"id":4,"subject":"CP01","text":"Which of the following is NOT one of the five principal functions of valves?","options":[{"letter":"a","text":"Starting/stopping flow","correct":false},{"letter":"b","text":"Throttling flow","correct":false},{"letter":"c","text":"Increasing system pressure","correct":true},{"letter":"d","text":"Relieving pressure","correct":false}],"explanation":"The five principal valve functions are: starting/stopping, throttling, controlling flow direction, regulating pressure, and relieving pressure. Increasing system pressure is not a valve function."}
+
+[Question ID: 5]
+{"id":5,"subject":"CP01","text":"What is the primary function of the backseat in a valve?","options":[{"letter":"a","text":"To seal the valve seat","correct":false},{"letter":"b","text":"To remove system pressure from the packing to allow packing replacement while the system is pressurized","correct":true},{"letter":"c","text":"To increase valve strength","correct":false},{"letter":"d","text":"To regulate flow rate","correct":false}],"explanation":"The backseat is a critical safety feature that removes system pressure from the packing, allowing maintenance without depressurizing the system."}
+
+[Question ID: 6]
+{"id":6,"subject":"CP01","text":"Gate valves are primarily used as isolation valves rather than for throttling because:","options":[{"letter":"a","text":"They are more expensive than globe valves","correct":false},{"letter":"b","text":"Positioning the disk in the flow stream causes turbulence and accelerated wear","correct":true},{"letter":"c","text":"They cannot withstand high pressures","correct":false},{"letter":"d","text":"They are harder to operate","correct":false}],"explanation":"Gate valves are unsuitable for throttling because disk positioning in the flow causes turbulence and accelerated wear, damaging the valve."}
+
+[Question ID: 7]
+{"id":7,"subject":"CP01","text":"Why are globe valves preferred for throttling?","options":[{"letter":"a","text":"They are cheaper than gate valves","correct":false},{"letter":"b","text":"The disk is beveled and seats at nearly right angles to the flow path","correct":true},{"letter":"c","text":"They operate faster than other valves","correct":false},{"letter":"d","text":"They require less maintenance","correct":false}],"explanation":"Globe valves are ideal for throttling because the beveled disk seating at right angles to flow allows smooth, controlled flow regulation."}
+
+[Question ID: 8]
+{"id":8,"subject":"CP01","text":"Which statement is true about Kerotest valves?","options":[{"letter":"a","text":"They go from full closed to full open in approximately 1¼ turns","correct":true},{"letter":"b","text":"They are best for isolation applications only","correct":false},{"letter":"c","text":"They cannot be used for throttling","correct":false},{"letter":"d","text":"They have a packing gland design","correct":false}],"explanation":"Kerotest valves are pack-less globe valves designed to go from full closed to full open in approximately 1¼ turns."}
+
+[Question ID: 9]
+{"id":9,"subject":"CP01","text":"Why should operators avoid over-torquing a Kerotest valve?","options":[{"letter":"a","text":"It wastes energy","correct":false},{"letter":"b","text":"Excessive torque can crush or deform the disk, preventing the valve from opening later","correct":true},{"letter":"c","text":"It causes the valve to leak","correct":false},{"letter":"d","text":"It damages the stem threads","correct":false}],"explanation":"Over-torquing a Kerotest valve can crush or deform the disk, potentially making the valve impossible to open later."}
+
+[Question ID: 10]
+{"id":10,"subject":"CP01","text":"What feature makes a needle valve suitable for precise flow control?","options":[{"letter":"a","text":"Its large bore diameter","correct":false},{"letter":"b","text":"Its long, narrow, cone-shaped stem tip","correct":true},{"letter":"c","text":"Its high flow capacity","correct":false},{"letter":"d","text":"Its multiple disk design","correct":false}],"explanation":"A needle valve's long, narrow, cone-shaped stem tip allows fine, precise adjustment of flow rate."}
+
+[Question ID: 11]
+{"id":11,"subject":"CP01","text":"Butterfly valves are typically used in:","options":[{"letter":"a","text":"Small diameter, high pressure applications","correct":false},{"letter":"b","text":"Large diameter, high flow, low pressure applications (e.g., circulating water)","correct":true},{"letter":"c","text":"Cryogenic systems","correct":false},{"letter":"d","text":"Nuclear coolant piping","correct":false}],"explanation":"Butterfly valves are ideal for large diameter, high flow, low pressure service such as circulating water systems."}
+
+[Question ID: 12]
+{"id":12,"subject":"CP01","text":"What is the main advantage of a diaphragm valve with radioactive or corrosive fluids?","options":[{"letter":"a","text":"It can handle very high pressures","correct":false},{"letter":"b","text":"The fluid is completely separated from the moving parts, resulting in zero stem leakage","correct":true},{"letter":"c","text":"It operates faster than other valves","correct":false},{"letter":"d","text":"It requires no maintenance","correct":false}],"explanation":"Diaphragm valves completely separate the fluid from moving parts, preventing stem leakage and protecting against contamination."}
+
+[Question ID: 13]
+{"id":13,"subject":"CP01","text":"What is the primary purpose of check valves?","options":[{"letter":"a","text":"To throttle fluid flow","correct":false},{"letter":"b","text":"To allow flow in only one direction and prevent reverse flow","correct":true},{"letter":"c","text":"To reduce system pressure","correct":false},{"letter":"d","text":"To isolate equipment","correct":false}],"explanation":"Check valves are one-way devices that permit flow in the intended direction while preventing backflow."}
+
+[Question ID: 14]
+{"id":14,"subject":"CP01","text":"What is the key difference between a safety valve and a relief valve?","options":[{"letter":"a","text":"Safety valves are used for liquids, relief valves for gases","correct":false},{"letter":"b","text":"Safety valves pop fully open with little or no accumulation, while relief valves require accumulation","correct":true},{"letter":"c","text":"Relief valves pop fully open, safety valves open gradually","correct":false},{"letter":"d","text":"There is no practical difference","correct":false}],"explanation":"Safety valves pop fully open at setpoint with minimal accumulation, while relief valves open gradually as pressure rises above setpoint."}
+
+[Question ID: 15]
+{"id":15,"subject":"CP01","text":"What is the primary function of a vacuum breaker?","options":[{"letter":"a","text":"To prevent excessive pressure buildup","correct":false},{"letter":"b","text":"To protect a tank or vessel from collapsing due to low internal pressure","correct":true},{"letter":"c","text":"To measure vacuum in the system","correct":false},{"letter":"d","text":"To regulate flow rate","correct":false}],"explanation":"A vacuum breaker is a safety device that protects vessels from structural collapse under low internal pressure conditions."}
+
+[Question ID: 16]
+{"id":16,"subject":"CP01","text":"What is the correct definition of 'Fail As Is' for valve actuators?","options":[{"letter":"a","text":"The valve opens when power is lost","correct":false},{"letter":"b","text":"The valve closes when power is lost","correct":false},{"letter":"c","text":"The valve remains in its current position when the actuating medium is lost","correct":true},{"letter":"d","text":"The valve springs to a safe position","correct":false}],"explanation":"Fail As Is (most common in Motor Operated Valves) means the valve maintains its current position when actuating power is lost."}
+
+[Question ID: 17]
+{"id":17,"subject":"CP01","text":"Key precaution when manually operating a Motor Operated Valve (MOV):","options":[{"letter":"a","text":"Always tag out the power supply to the motor before using the handwheel (when feasible)","correct":true},{"letter":"b","text":"Use a wrench to increase torque application","correct":false},{"letter":"c","text":"Operate it as quickly as possible","correct":false},{"letter":"d","text":"Do not verify the position afterward","correct":false}],"explanation":"Tagging out the motor power prevents inadvertent power application during manual valve operation, ensuring operator safety."}
+
+[Question ID: 18]
+{"id":18,"subject":"CP01","text":"When verifying position of a manual valve locally, operators should first attempt to turn the handwheel in which direction?","options":[{"letter":"a","text":"Open direction","correct":false},{"letter":"b","text":"Closed direction (negligible effect if already closed)","correct":true},{"letter":"c","text":"It doesn't matter","correct":false},{"letter":"d","text":"Clockwise only","correct":false}],"explanation":"Testing closure direction is safe because if the valve is already closed, the handwheel won't move, causing no system impact."}
+
+[Question ID: 19]
+{"id":19,"subject":"CP01","text":"According to SOER 85-2, one primary method to prevent valve mispositioning is:","options":[{"letter":"a","text":"Install redundant valve position indicators","correct":false},{"letter":"b","text":"Verify that all local and remote indications reflect actual plant conditions before and after manipulation","correct":true},{"letter":"c","text":"Color-code all valve handwheels","correct":false},{"letter":"d","text":"Limit operator access to valves","correct":false}],"explanation":"Verification of all indications before and after valve operation is essential to prevent dangerous mispositioning events."}
+
+[Question ID: 20]
+{"id":20,"subject":"CP01","text":"What is a major failure mechanism of gate valves discussed in the lesson?","options":[{"letter":"a","text":"Corrosion of the bonnet","correct":false},{"letter":"b","text":"Thermal binding or pressure locking","correct":true},{"letter":"c","text":"Disk warping from heat","correct":false},{"letter":"d","text":"Stem rupture","correct":false}],"explanation":"Thermal binding (differential cooling contraction) and pressure locking (trapped liquid expansion) are critical gate valve failure mechanisms."}
+
+[Question ID: 70]
+{"id":70,"subject":"CP01","text":"What is the primary design consideration for piping in a power plant system?","options":[{"letter":"a","text":"Color of the pipe paint","correct":false},{"letter":"b","text":"Fluid temperature, fluid pressure, flow rate/velocity, chemical/physical properties, and shock loads","correct":true},{"letter":"c","text":"Number of flanges used","correct":false},{"letter":"d","text":"Proximity to the building exit","correct":false}],"explanation":"Piping design must account for operating conditions: temperature, pressure, flow rate, fluid properties, contamination, and dynamic loads like water hammer and seismic motion."}
+
+[Question ID: 71]
+{"id":71,"subject":"CP01","text":"Copper alloys are typically chosen for which piping application?","options":[{"letter":"a","text":"High-temperature steam lines","correct":false},{"letter":"b","text":"Corrosive seawater or cooling water systems where corrosion resistance and conductivity are needed","correct":true},{"letter":"c","text":"Radioactive fluid transport","correct":false},{"letter":"d","text":"High-pressure systems","correct":false}],"explanation":"Copper alloys provide excellent corrosion resistance and thermal conductivity, ideal for seawater, condensate, and cooling water systems."}
+
+[Question ID: 72]
+{"id":72,"subject":"CP01","text":"Which type of pipe support is designed to limit seismic motion while allowing thermal growth?","options":[{"letter":"a","text":"Rigid restraint","correct":false},{"letter":"b","text":"Spring hanger","correct":false},{"letter":"c","text":"Snubber","correct":true},{"letter":"d","text":"Clamp","correct":false}],"explanation":"Snubbers limit large seismic displacements while allowing normal thermal expansion/contraction of piping systems."}
+
+[Question ID: 73]
+{"id":73,"subject":"CP01","text":"What is the purpose of thermal insulation on piping?","options":[{"letter":"a","text":"To increase flow velocity","correct":false},{"letter":"b","text":"To protect personnel from hot surfaces and reduce heat loss, also protecting equipment from thermal shock","correct":true},{"letter":"c","text":"To reduce fluid pressure","correct":false},{"letter":"d","text":"To change fluid temperature","correct":false}],"explanation":"Thermal insulation provides worker protection and energy efficiency by minimizing heat transfer between the pipe and environment."}
+
+[Question ID: 74]
+{"id":74,"subject":"CP01","text":"What is thermal binding in valves?","options":[{"letter":"a","text":"The bonnet expanding and blocking the stem","correct":false},{"letter":"b","text":"Differential thermal contraction between the valve body and disk, potentially binding the disk to the seat","correct":true},{"letter":"c","text":"Heat causing the disk to warp","correct":false},{"letter":"d","text":"Stem corrosion during shutdown","correct":false}],"explanation":"Thermal binding occurs when the valve body cools faster than the disk, causing the disk to bind against the seat. Prevention: crack open periodically during cooldown."}
+
+[Question ID: 75]
+{"id":75,"subject":"CP01","text":"What is pressure locking in a valve?","options":[{"letter":"a","text":"External pressure preventing the valve from opening","correct":false},{"letter":"b","text":"Liquid trapped in the valve bonnet pressurizing as it heats, preventing the valve from opening","correct":true},{"letter":"c","text":"The disk corroding to the seat","correct":false},{"letter":"d","text":"Excessive handwheel torque","correct":false}],"explanation":"Pressure locking occurs when trapped liquid in the bonnet heats and pressurizes, making the valve impossible to open. Prevention: provide bonnet relief or vent paths."}
+
+[Question ID: 76]
+{"id":76,"subject":"CP01","text":"What is the primary design characteristic of a swing check valve versus a lift check valve?","options":[{"letter":"a","text":"Swing check has a hinged disk; lift check has a globe-like body with higher D/P","correct":true},{"letter":"b","text":"Both have identical performance","correct":false},{"letter":"c","text":"Lift check is used only for liquids","correct":false},{"letter":"d","text":"Swing check cannot prevent backflow","correct":false}],"explanation":"Swing check: hinged disk, low pressure drop when open. Lift check: globe-like, higher D/P but better upstream isolation."}
+
+[Question ID: 77]
+{"id":77,"subject":"CP01","text":"What is a stop check valve designed to do?","options":[{"letter":"a","text":"Prevent flow in all directions","correct":false},{"letter":"b","text":"Allow normal check function but also can be forcibly closed by an external actuator, combining check and isolation functions","correct":true},{"letter":"c","text":"Relieve pressure when exceeded","correct":false},{"letter":"d","text":"Control flow rate","correct":false}],"explanation":"Stop check valves combine a check valve's backflow prevention with a globe valve's isolation capability via external actuation."}
+
+[Question ID: 78]
+{"id":78,"subject":"CP01","text":"Which type of actuator is most associated with MOVs (Motor Operated Valves)?","options":[{"letter":"a","text":"Pneumatic","correct":false},{"letter":"b","text":"Hydraulic","correct":false},{"letter":"c","text":"Fail As Is with gear reduction and declutch lever","correct":true},{"letter":"d","text":"Spring-loaded","correct":false}],"explanation":"MOVs are electric motors with gear reduction and a declutch lever allowing manual/motor engagement; they typically fail as-is (maintain position)."}
+
+[Question ID: 79]
+{"id":79,"subject":"CP01","text":"What hazard can result from using a wrench or valve wrench on an MOV handwheel?","options":[{"letter":"a","text":"Minor inconvenience","correct":false},{"letter":"b","text":"Exceeding mechanical advantage can overstress the actuator gearing/casing, causing catastrophic failure","correct":true},{"letter":"c","text":"It speeds up valve operation","correct":false},{"letter":"d","text":"It prevents the motor from engaging","correct":false}],"explanation":"Applying excessive torque via wrenches to MOV handwheels can catastrophically damage the actuator gear train. Operating procedures prohibit this."}
+
