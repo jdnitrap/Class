@@ -25,31 +25,83 @@ export const loader = {
 
     async getQuestionsFromFile(contentFile) {
         try {
-            const response = await fetch(contentFile);
+            const response = await fetch(contentFile + '?v=' + Date.now());
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const text = await response.text();
             const questions = [];
 
-            const lines = text.split('\n');
-            for (let i = 0; i < lines.length; i++) {
-                const line = lines[i].trim();
-                if (line.startsWith('[Question ID:')) {
-                    if (i + 1 < lines.length) {
-                        try {
-                            const questionJson = JSON.parse(lines[i + 1].trim());
-                            questionJson.contentFile = contentFile;
-                            questions.push(questionJson);
-                        } catch (e) {
-                            console.warn(`⚠ Failed to parse question in ${contentFile} at line ${i + 1}:`, e.message);
+            // Detect file format
+            const isMarkdown = contentFile.endsWith('.md');
+
+            if (isMarkdown) {
+                // Parse markdown format (## Question ID: X)
+                questions.push(...this.parseMarkdownQuestions(text, contentFile));
+            } else {
+                // Parse text format ([Question ID: X] followed by JSON)
+                const lines = text.split('\n');
+                for (let i = 0; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (line.startsWith('[Question ID:')) {
+                        if (i + 1 < lines.length) {
+                            try {
+                                const questionJson = JSON.parse(lines[i + 1].trim());
+                                questionJson.contentFile = contentFile;
+                                questions.push(questionJson);
+                            } catch (e) {
+                                console.warn(`⚠ Failed to parse question in ${contentFile} at line ${i + 1}:`, e.message);
+                            }
                         }
                     }
                 }
             }
+
             return questions;
         } catch (error) {
             console.error(`✗ Error loading questions from ${contentFile}:`, error.message);
             return [];
         }
+    },
+
+    parseMarkdownQuestions(markdown, contentFile) {
+        const questions = [];
+        const qPattern = /^##\s+(?:Question\s+)?ID:\s*(\d+)/mi;
+        const blocks = markdown.split(qPattern);
+
+        for (let i = 1; i < blocks.length; i += 2) {
+            const id = blocks[i].trim();
+            const content = blocks[i + 1];
+
+            if (!content) continue;
+
+            const questionMatch = content.match(/^###\s+Question:\s*(.+?)(?:\n|$)/m);
+            const questionText = questionMatch ? questionMatch[1].trim() : '';
+
+            const optionMatches = content.match(/^-\s+([a-d]\))\s+(.+?)$/gm) || [];
+            const options = optionMatches.map(opt => {
+                const match = opt.match(/^-\s+([a-d])\)\s+(.+?)$/m);
+                return {
+                    letter: match[1],
+                    text: match[2].trim()
+                };
+            });
+
+            const correctMatch = content.match(/\*\*Correct:\*\*\s+([a-d])/m);
+            const correctAnswer = correctMatch ? correctMatch[1] : null;
+
+            const explanationMatch = content.match(/\*\*Explanation:\*\*\s+(.+?)(?=\n\n---|\n*$)/s);
+            const explanation = explanationMatch ? explanationMatch[1].trim() : '';
+
+            questions.push({
+                id: parseInt(id),
+                text: questionText,
+                options: options,
+                correct: correctAnswer,
+                explanation: explanation,
+                contentFile: contentFile
+            });
+        }
+
+        return questions;
     },
 
     async loadNotes(state) {
@@ -94,32 +146,43 @@ export const loader = {
 
     async getFlashcardsFromFile(contentFile, subject) {
         try {
-            const response = await fetch(contentFile);
+            const response = await fetch(contentFile + '?v=' + Date.now());
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const text = await response.text();
             const flashcards = [];
 
-            const lines = text.split('\n');
-            for (let i = 0; i < lines.length; i++) {
-                const line = lines[i].trim();
-                if (line.startsWith('[Note ID:')) {
-                    const idMatch = line.match(/\[Note ID:\s*(\d+)\]/);
-                    if (idMatch) {
-                        const id = parseInt(idMatch[1]);
-                        let content = '';
-                        let j = i + 1;
-                        while (j < lines.length && !lines[j].trim().startsWith('[Note ID:')) {
-                            if (content || lines[j].trim()) {
-                                content += (content ? '\n' : '') + lines[j];
+            // Detect file format
+            const isMarkdown = contentFile.endsWith('.md');
+
+            if (isMarkdown) {
+                // Parse markdown format (## Flashcard ID: X)
+                const parsed = this.parseMarkdownFlashcards(text, subject, contentFile);
+                return parsed;
+            } else {
+                // Parse text format ([Note ID: X])
+                const lines = text.split('\n');
+                for (let i = 0; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (line.startsWith('[Note ID:')) {
+                        const idMatch = line.match(/\[Note ID:\s*(\d+)\]/);
+                        if (idMatch) {
+                            const id = parseInt(idMatch[1]);
+                            let content = '';
+                            let j = i + 1;
+                            while (j < lines.length && !lines[j].trim().startsWith('[Note ID:')) {
+                                if (content || lines[j].trim()) {
+                                    content += (content ? '\n' : '') + lines[j];
+                                }
+                                j++;
                             }
-                            j++;
-                        }
-                        if (content.trim()) {
-                            flashcards.push({
-                                id: id,
-                                subject: subject,
-                                content: content.trim()
-                            });
+                            if (content.trim()) {
+                                flashcards.push({
+                                    id: id,
+                                    subject: subject,
+                                    contentFile: contentFile,
+                                    content: content.trim()
+                                });
+                            }
                         }
                     }
                 }
@@ -131,6 +194,35 @@ export const loader = {
         }
     },
 
+    parseMarkdownFlashcards(markdown, subject, contentFile) {
+        const flashcards = [];
+        const cardPattern = /^##\s+(?:Flashcard\s+)?ID:\s*(\d+)/mi;
+        const blocks = markdown.split(cardPattern);
+
+        for (let i = 1; i < blocks.length; i += 2) {
+            const id = blocks[i].trim();
+            const content = blocks[i + 1];
+
+            if (!content) continue;
+
+            const frontMatch = content.match(/^###\s+Question:\s*(.+?)(?:\n|$)/m);
+            const front = frontMatch ? frontMatch[1].trim() : `Card ${id}`;
+
+            let back = content.substring(content.indexOf('\n') + 1);
+            back = back.split(/^##\s+/m)[0].trim();
+
+            flashcards.push({
+                id: parseInt(id),
+                front: front,
+                back: back,
+                subject: subject,
+                contentFile: contentFile
+            });
+        }
+
+        return flashcards;
+    },
+
     async getNoteContent(note) {
         if (!note.contentFile) {
             console.warn(`⚠ Note ${note.id} has no contentFile property`);
@@ -138,20 +230,46 @@ export const loader = {
         }
 
         try {
-            const response = await fetch(note.contentFile);
+            const response = await fetch(note.contentFile + '?v=' + Date.now());
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const text = await response.text();
 
-            const pattern = new RegExp(`\\[Note ID: ${note.id}\\][\\s\\S]*?(?=\\[Note ID:|$)`);
-            const match = text.match(pattern);
+            // Detect file format
+            const isMarkdown = note.contentFile.endsWith('.md');
 
-            if (match) {
-                return match[0]
-                    .replace(`[Note ID: ${note.id}]`, '')
-                    .trim();
+            if (isMarkdown) {
+                // Parse markdown format (## Note ID: X)
+                const notePattern = /^##\s+(?:Note\s+)?ID:\s*(\d+(?:\.\d+)?)/mi;
+                const blocks = text.split(notePattern);
+
+                for (let i = 1; i < blocks.length; i += 2) {
+                    const id = parseFloat(blocks[i].trim());
+                    if (id === note.id) {
+                        const content = blocks[i + 1];
+                        if (content) {
+                            // Remove title line (### ...) and clean up
+                            const cleaned = content
+                                .replace(/^###\s+.+?\n/, '')
+                                .trim();
+                            return cleaned;
+                        }
+                    }
+                }
+                console.warn(`⚠ Note ID ${note.id} not found in ${note.contentFile}`);
+                return 'Content not found';
+            } else {
+                // Parse text format ([Note ID: X])
+                const pattern = new RegExp(`\\[Note ID: ${note.id}\\][\\s\\S]*?(?=\\[Note ID:|$)`);
+                const match = text.match(pattern);
+
+                if (match) {
+                    return match[0]
+                        .replace(`[Note ID: ${note.id}]`, '')
+                        .trim();
+                }
+                console.warn(`⚠ Note ID ${note.id} not found in ${note.contentFile}`);
+                return 'Content not found';
             }
-            console.warn(`⚠ Note ID ${note.id} not found in ${note.contentFile}`);
-            return 'Content not found';
         } catch (error) {
             console.error(`✗ Error loading content for note ${note.id}:`, error.message);
             return `Error loading content: ${error.message}`;
