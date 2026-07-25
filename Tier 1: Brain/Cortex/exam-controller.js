@@ -33,7 +33,7 @@ export const exam = {
 
     prepareComprehensiveExam(state) {
         state.isComprehensiveExam = true;
-        state.startComprehensiveExam();
+        this.startComprehensiveExam(state);
     },
 
     getRandomQuestions(questions, count) {

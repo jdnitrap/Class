@@ -5,6 +5,45 @@ import { processor } from '../Limbic/processor.js';
 import { helpers } from '../Senses/helpers.js';
 
 export const flashcard = {
+    extractFrontBack(content) {
+        const lines = content.split('\n').filter(l => l.trim());
+        let front = '';
+        let back = '';
+
+        // Check for explicit FRONT:/BACK: format
+        let hasFrontBack = false;
+        for (const line of lines) {
+            if (line.includes('FRONT:') || line.includes('BACK:')) {
+                hasFrontBack = true;
+                break;
+            }
+        }
+
+        if (hasFrontBack) {
+            // Explicit FRONT:/BACK: format
+            for (const line of lines) {
+                if (line.includes('FRONT:')) {
+                    front = line.replace(/^.*?FRONT:\s*/, '').trim();
+                } else if (line.includes('BACK:')) {
+                    back = line.replace(/^.*?BACK:\s*/, '').trim();
+                } else if (back) {
+                    back += '\n' + line;
+                }
+            }
+        } else {
+            // Implicit format: first line is question, rest is answer
+            if (lines.length > 0) {
+                front = lines[0];
+                back = lines.slice(1).join('\n');
+            }
+        }
+
+        return {
+            front: front || 'Flashcard',
+            back: back.trim() || 'No answer'
+        };
+    },
+
     async startFlashcards(state) {
         const flashcardsForSubject = processor.filterFlashcardsBySubject(state.allFlashcards, state.currentNotesSubject);
         state.answers = flashcardsForSubject;
@@ -25,11 +64,8 @@ export const flashcard = {
         document.getElementById('cardProgressFill').style.width = progress + '%';
 
         state.cardFlipped = false;
-        const contentLines = card.content.split('\n');
-        const frontText = contentLines[0].length > 100
-            ? contentLines[0].substring(0, 100) + '...'
-            : contentLines[0];
-        document.getElementById('cardContent').textContent = frontText || 'Flashcard ' + card.id;
+        const { front } = this.extractFrontBack(card.content);
+        document.getElementById('cardContent').textContent = front;
     },
 
     flipCard(state) {
@@ -37,14 +73,12 @@ export const flashcard = {
         if (!card) return;
 
         state.cardFlipped = !state.cardFlipped;
+        const { front, back } = this.extractFrontBack(card.content);
+
         if (state.cardFlipped) {
-            document.getElementById('cardContent').textContent = card.content;
+            document.getElementById('cardContent').textContent = back;
         } else {
-            const contentLines = card.content.split('\n');
-            const frontText = contentLines[0].length > 100
-                ? contentLines[0].substring(0, 100) + '...'
-                : contentLines[0];
-            document.getElementById('cardContent').textContent = frontText || 'Flashcard ' + card.id;
+            document.getElementById('cardContent').textContent = front;
         }
     },
 
