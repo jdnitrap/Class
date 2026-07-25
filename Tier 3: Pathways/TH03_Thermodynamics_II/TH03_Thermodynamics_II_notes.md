@@ -1,0 +1,672 @@
+# TH03_Thermodynamics_II - Comprehensive Study Notes
+
+## Note ID: 12
+### THERMODYNAMIC STATE AND PHASE CHARACTERISTICS:
+
+DEFINITION OF STATE:
+A substance is in a specific thermodynamic state when its condition is uniquely defined by two independent intensive properties.
+Once ANY TWO independent properties are known, ALL other properties can be determined.
+
+PRINCIPLE OF STATE:
+Two properties required because any substance has multiple properties:
+Temperature, Pressure, Density, Specific volume, Internal energy, Enthalpy, Entropy, etc.
+
+Not all pairs work equally:
+• GOOD PAIRS (independent): (P, T), (P, v), (T, v), (P, h), (T, s)
+• BAD PAIRS (not independent): (P, x) in wet region - pressure and quality NOT independent for saturation
+• Avoid if possible: Using h and s together - less direct table access
+
+PRACTICAL STATE DETERMINATION:
+Given state → Look up other properties in tables (steam tables for water)
+Example: If you know P = 100 psia and T = 350°F
+  → Look in superheated steam tables at 100 psia, 350°F
+  → Read off: v, u, h, s, and all other properties
+
+PHASE: DESCRIPTION OF MOLECULAR STRUCTURE
+
+Definition: Physical condition determined by intermolecular forces and molecular spacing.
+
+FOUR PHASES OF MATTER:
+
+1. SOLID STATE:
+   Molecular Characteristics:
+   • Molecules vibrate in fixed positions (tight bonds)
+   • Intermolecular forces very strong
+   • Rigid crystalline structure
+
+   Physical Properties:
+   • Fixed shape - maintains geometry without container
+   • Fixed volume - molecules cannot move closer or farther apart
+   • Very high density - molecules closely packed
+   • Incompressible - pressure cannot reduce volume significantly
+
+   Thermodynamic Properties (water as example):
+   • Lowest specific volume (smallest v)
+   • Lowest specific enthalpy (h is most negative)
+   • Lowest internal energy
+
+   Power Plant Applications:
+   • Ice formation in cooling systems (undesirable)
+   • Solid fuels (coal, biomass)
+
+2. LIQUID STATE:
+   Molecular Characteristics:
+   • Molecules in contact but can slide past each other
+   • Intermolecular forces still significant
+   • Random molecular arrangement
+
+   Physical Properties:
+   • No fixed shape - conforms to container
+   • FIXED VOLUME - cannot compress significantly (much denser than gas)
+   • High density - molecules close together but mobile
+   • Nearly incompressible - used for hydraulic systems
+
+   Thermodynamic Properties (water as example):
+   • Moderate specific volume (larger than solid)
+   • Moderate specific enthalpy
+   • Better energy storage than solid
+
+   Power Plant Applications:
+   • Liquid water in boilers and condensers
+   • Pump inlet (requires liquid, not vapor)
+   • Lubrication systems
+   • Cooling water
+
+3. VAPOR/GAS STATE:
+   Molecular Characteristics:
+   • Molecules separated by large distances (low density)
+   • Intermolecular forces negligible except at very high pressures
+   • Random rapid motion and collisions
+
+   Physical Properties:
+   • No fixed shape - fills entire container
+   • No fixed volume - expands to fill container
+   • Very low density - molecules far apart
+   • Highly compressible - pressure changes volume significantly
+   • Flows easily
+
+   Thermodynamic Properties (water as example):
+   • Largest specific volume (largest v)
+   • Largest specific enthalpy (h is most positive)
+   • Highest internal energy
+
+   Important Distinction:
+   • VAPOR: Gas in vicinity of saturation (can recondense easily)
+   • GAS: Substance far from saturation (difficult to condense)
+   • Example: Steam at 100 psia is "vapor" (close to saturation), Air is "gas" (far from saturation)
+
+   Power Plant Applications:
+   • Steam exiting boiler for turbine inlet
+   • Exhaust steam from turbine to condenser
+
+4. PLASMA STATE:
+   Molecular Characteristics:
+   • Gas ionized into electrons and ions
+   • High-energy state with significant electromagnetic forces
+
+   Conditions Required:
+   • Extremely high temperatures (>10,000 K)
+   • High energy inputs
+
+   Power Plant Applications:
+   • Combustion process (partially ionized)
+   • Nuclear fusion research
+   • Lightning, electric arcs
+
+PHASE TRANSITIONS (Phase Changes):
+
+Process: Substance changes from one phase to another
+
+SIX POSSIBLE PHASE CHANGES:
+
+1. MELTING: Solid → Liquid
+   • Heat absorbed (endothermic process)
+   • Temperature remains constant at melting point
+   • Intermolecular forces weaken, allowing molecular motion
+   • Occurs at constant pressure (1 atm) at fixed temperature
+   • Example: Ice at 32°F → Water at 32°F (absorbs heat of fusion)
+
+2. SOLIDIFICATION: Liquid → Solid
+   • Heat rejected (exothermic process)
+   • Temperature remains constant at freezing point
+   • Molecules slow, form crystalline structure
+   • Opposite of melting
+   • Example: Water at 32°F → Ice at 32°F (releases heat)
+
+3. VAPORIZATION: Liquid → Vapor
+   • Heat absorbed (endothermic process)
+   • Temperature remains constant at boiling/saturation point
+   • Molecules gain enough energy to escape liquid bonds
+   • Requires large energy input (latent heat)
+   • Example: Water at 212°F → Steam at 212°F (at 1 atm, absorbs heat of vaporization)
+
+4. CONDENSATION: Vapor → Liquid
+   • Heat rejected (exothermic process)
+   • Temperature remains constant at saturation point
+   • Vapor molecules lose energy, rejoin liquid phase
+   • Releases latent heat
+   • Critical process in power plant condensers
+   • Example: Steam at 212°F → Water at 212°F (at 1 atm, releases heat)
+
+5. SUBLIMATION: Solid → Vapor directly
+   • Heat absorbed (endothermic process)
+   • Skips liquid phase
+   • Temperature remains constant
+   • Rare in power plants but occurs with some refrigerants
+   • Example: Dry ice at -109°F → CO₂ vapor (sublimes at atmospheric pressure)
+
+6. DEPOSITION: Vapor → Solid directly
+   • Heat rejected (exothermic process)
+   • Skips liquid phase
+   • Reverse of sublimation
+   • Example: Frost forming (water vapor → ice directly)
+
+PHASE DIAGRAM (PRESSURE-TEMPERATURE CHART):
+
+Axes: Horizontal = Temperature, Vertical = Pressure (logarithmic scale typical)
+
+THREE PHASE BOUNDARY LINES:
+
+1. FUSION LINE (Melting/Freezing Boundary):
+   • Separates Solid and Liquid regions
+   • Relatively steep slope (strong pressure effect on melting point)
+   • Less important in power engineering (unless sub-zero operation)
+
+2. VAPORIZATION LINE (Boiling/Condensation Boundary):
+   • Separates Liquid and Vapor regions
+   • Critical curve for steam systems (most important for power plants)
+   • Pressure INCREASES with temperature
+   • Example: At 1 atm, water boils at 212°F; at 100 psia, at 327°F; at 1000 psia, at 545°F
+   • Used for saturation steam table indexing
+
+3. SUBLIMATION LINE (Deposition Boundary):
+   • Separates Solid and Vapor regions
+   • Exists only at pressures below triple point pressure
+   • Less common in power engineering
+
+CRITICAL PHASE DIAGRAM POINTS:
+
+TRIPLE POINT:
+Location: Where all three phase boundary lines meet (solid, liquid, vapor all coexist)
+For water:
+  • Temperature: 32.018°F (0.01°C)
+  • Pressure: 0.00604 psia (0.0611 kPa)
+Significance:
+  • Only point where all three phases can exist in equilibrium
+  • Used as reference point for Kelvin temperature scale
+  • Rarely encountered in power plants (too low pressure)
+
+CRITICAL POINT:
+Location: Highest temperature and pressure where liquid-vapor distinction exists
+For water:
+  • Temperature: 705.4°F (374.15°C)
+  • Pressure: 3206 psia (22.064 MPa)
+Significance:
+  • Above critical point, substance is supercritical
+  • No phase boundary, no latent heat required for vaporization
+  • Densities of liquid and vapor become equal
+  • Some supercritical power plants operate above this point
+  • Liquid and vapor properties merge; cannot distinguish between them
+
+PHASE REGIONS:
+
+Region 1: SUBCOOLED/COMPRESSED LIQUID
+• Location: Below saturation temperature at given pressure
+• Properties: Nearly incompressible, similar to saturated liquid
+• Steam table: Compressed liquid tables or saturated liquid properties
+• Importance: Pump inlet condition (must be liquid)
+
+Region 2: SATURATED REGION (WET VAPOR)
+• Location: Below critical point, between saturation lines
+• Composition: Mixture of saturated liquid and saturated vapor
+• Quality (x): Mass fraction that is vapor; 0 < x < 1
+• Properties: Calculated using quality and saturation properties
+  • h_mix = h_f + x × h_fg  (where h_fg = latent heat)
+  • s_mix = s_f + x × s_fg
+• Steam table: Saturated steam tables indexed by T or P
+• Importance: Common in turbines; quality must be >95% to prevent blade damage
+
+Region 3: SUPERHEATED VAPOR
+• Location: Above saturation temperature at given pressure
+• Properties: Single-phase gas, stable
+• Steam table: Superheated steam tables indexed by (P, T)
+• Importance: Most desirable turbine inlet condition; higher efficiency
+• Degrees of superheat: ΔT = T_actual - T_sat (should be >50°F typically)
+
+---
+
+## Note ID: 13
+### FIVE DISTINCT STATES OF WATER/STEAM IN POWER SYSTEMS:
+
+These are the five conditions encountered in typical power plant operations.
+
+1. SUBCOOLED LIQUID (COMPRESSED LIQUID):
+Definition: Liquid water at temperature BELOW saturation temperature for the given pressure.
+
+Characteristics:
+• Phase: 100% liquid
+• Molecular state: Liquid molecules tightly bound, vibrating in place
+• Resistance to boiling: Very high - requires significant heating to reach saturation
+• Compressibility: Nearly incompressible (density change < 1% for pressure changes up to several thousand psi)
+• Flow behavior: Flows easily through pipes and pumps
+
+Physical Properties:
+• Density (ρ): Relatively high and constant (~62.4 lbm/ft³ for water at room temperature)
+• Specific volume (v): Very small (~0.0161 ft³/lbm for water)
+• Specific enthalpy (h): Moderate value (depends on temperature)
+• Specific entropy (s): Moderate value (increases with temperature)
+
+Practical Examples:
+• Water in pump inlet before entering boiler
+• Cooling water returning to cooling tower after condenser
+• Liquid water in building plumbing systems
+
+Power Plant Importance:
+• Pump inlet MUST be liquid (vapor cavitation if vapor present)
+• Initial condition entering boiler
+• Desired condition for pressurization systems
+
+2. SATURATED LIQUID:
+Definition: Liquid water AT saturation temperature for the given pressure, on verge of boiling.
+
+Characteristics:
+• Phase: 100% liquid, but about to vaporize
+• Molecular state: Liquid molecules at surface have just enough energy to escape
+• Resistance to boiling: Zero - any additional heat causes vaporization
+• Heat addition next step: Small additional heat → boiling begins; temperature stays constant
+• Pressure-temperature relationship: Unique saturation pressure for each temperature (and vice versa)
+
+Physical Properties:
+• Depends on saturation temperature/pressure (indexed in saturated steam tables)
+• Density: Still relatively high (~50 lbm/ft³ for 100 psia steam)
+• Specific volume (vf): Notation "vf" indicates saturated liquid
+• Specific enthalpy (hf): Notation "hf" indicates saturated liquid enthalpy
+• Specific entropy (sf): Notation "sf" indicates saturated liquid entropy
+
+Steam Table Access:
+Two options for saturation data:
+Option 1: Look up by saturation temperature
+  If you know T_sat = 300°F, find row in saturated table
+Option 2: Look up by saturation pressure
+  If you know P_sat = 100 psia, find row in saturated table
+
+Practical Examples:
+• Water in boiler just before bubbles form
+• Steam-water mixture at the interface (liquid side) in a boiler or condenser
+
+Power Plant Importance:
+• Reference state for steam quality calculations
+• Represents maximum liquid content before vaporization begins
+
+3. WET VAPOR (TWO-PHASE MIXTURE):
+Definition: Mixture of saturated liquid AND saturated vapor coexisting at same temperature and pressure.
+
+Characteristics:
+• Phase: Mixture of both liquid and vapor (never pure single-phase in this region)
+• Composition: Varying fractions of liquid and vapor depending on heat added
+• Temperature and Pressure: BOTH remain constant during phase change (all energy goes to vaporization, not heating)
+• Quality (x): Defines composition - mass fraction that is vapor
+  • x = 0: 100% liquid
+  • x = 0.5: 50% liquid, 50% vapor (by mass)
+  • x = 1.0: 100% vapor
+  • Formula: x = m_vapor / m_total = (m_total - m_liquid) / m_total
+
+Calculating Properties in Wet Region:
+Property = (1 - x) × f_property + x × g_property
+Or equivalently:
+Property = f_property + x × fg_property
+
+Example with enthalpy:
+h = hf + x × hfg
+If P = 100 psia, x = 0.9 (90% vapor):
+  From saturated table: hf = 298.2 Btu/lbm, hfg = 888.8 Btu/lbm
+  h = 298.2 + 0.9 × 888.8 = 298.2 + 799.9 = 1098.1 Btu/lbm
+
+Physical Properties:
+• Density: Between liquid and vapor density
+• Specific volume: Between vf and vg (both phases present)
+• Enthalpy: Between hf and hg (increases as x increases)
+• Entropy: Between sf and sg (increases as x increases)
+• Viscosity: Very complex (mixture behavior)
+
+Steam Table Notations:
+• Subscript "f" = saturated liquid property
+• Subscript "g" = saturated vapor property
+• Subscript "fg" = difference: fg = g - f
+• Example: hfg = hg - hf = latent heat of vaporization
+
+Practical Examples:
+• Steam exiting boiler during initial vaporization
+• Steam-water mixture in a steam separator
+• Low-quality steam entering turbine (undesirable, but occurs)
+
+Power Plant Importance:
+• Turbine inlet quality must be HIGH (>95%) to prevent blade erosion
+• Low-quality steam causes:
+  • Impingement erosion from liquid droplets
+  • Corrosion from liquid water
+  • Reduced turbine efficiency
+  • Possible blade failure
+• Condenser produces low-quality steam (x ≈ 0.10-0.15) being condensed
+• Steam quality is carefully controlled through superheating and reheating
+
+4. SATURATED VAPOR:
+Definition: Vapor at saturation temperature for the given pressure, with last liquid just evaporated.
+
+Characteristics:
+• Phase: 100% vapor (x = 1.0)
+• Molecular state: All liquid has evaporated; no liquid droplets present
+• Saturation condition: Slightest cooling causes recondensation back to wet vapor
+• Dryness fraction: x = 1.0 (fully dry, no moisture)
+• Heat addition behavior: Further heat addition increases temperature (becomes superheated)
+
+Physical Properties:
+• Density: Much lower than liquid (~3.7 lbm/ft³ for 100 psia)
+• Specific volume (vg): Much larger than liquid (~10.5 ft³/lbm for 100 psia)
+• Specific enthalpy (hg): Highest value for saturation (hf + hfg)
+• Specific entropy (sg): Highest value for saturation (sf + sfg)
+
+Steam Table Access:
+Indexed by either saturation temperature or pressure (same table as saturated liquid):
+• Notation "vg", "hg", "sg" indicates saturated vapor properties
+
+Practical Examples:
+• Steam exiting boiler (ideal case - usually superheated instead)
+• Last molecule of steam in condenser inlet (theoretical state)
+• Output of steam separator device
+
+Power Plant Importance:
+• Represents 100% dry steam (quality x = 1.0)
+• Desirable state but seldom achieved in practice
+• Real turbines typically use superheated steam instead
+• Saturated vapor is unstable (any cooling → condensation)
+
+5. SUPERHEATED VAPOR:
+Definition: Vapor at temperature ABOVE saturation temperature for the given pressure.
+
+Characteristics:
+• Phase: 100% vapor (x = 1.0, but above saturation)
+• Molecular state: All liquid has vaporized and molecular motion has increased
+• Heat content above saturation: Degrees of superheat = T_actual - T_sat (additional sensible heat)
+• Stability: Stable condition - cooling brings it toward saturation without condensation (until saturation reached)
+• Thermal inertia: Can absorb or release considerable heat before phase change occurs
+
+Degrees of Superheat:
+ΔT_super = T_actual - T_sat
+Indicates how far above saturation the vapor is
+Example: At 100 psia:
+  T_sat = 327.8°F
+  If actual T = 400°F
+  Degrees of superheat = 400 - 327.8 = 72.2°F
+
+Physical Properties:
+• Density: Lower than saturated vapor (molecules more spread out at higher temperature)
+• Specific volume (v): Larger than saturated vapor
+• Specific enthalpy (h): Larger than saturated vapor (includes superheat energy)
+• Specific entropy (s): Larger than saturated vapor
+• Ideal gas law: Approximates ideal gas behavior for large superheat
+
+Steam Table Access:
+Indexed by pressure AND temperature (separate superheated table):
+• Look for specific pressure row
+• Find actual temperature column
+• Read properties (v, h, s, u)
+
+Practical Examples:
+• Steam from boiler with superheater (typical turbine inlet: 400-1100°F)
+• Steam reheated in reheater between turbine stages
+• Combustion gases (much higher temperature)
+
+Power Plant Importance:
+• IDEAL turbine inlet condition
+• High efficiency operation requires superheat
+• Typical power plants: 400-550°F superheat at boiler outlet
+• Additional reheating between turbine stages improves efficiency
+• Degrees of superheat directly related to efficiency gains
+
+STATE DETERMINATION FOR WATER/STEAM:
+
+STEP-BY-STEP PROCEDURE:
+
+Given: Two independent properties (e.g., P and T)
+
+1. Check if in saturation table:
+   If T = T_sat @ given P → on saturation line
+   If P = P_sat @ given T → on saturation line
+
+2. If not on saturation line:
+   If T < T_sat @ given P → Subcooled liquid (use compressed liquid table if available, or saturated liquid values)
+   If T > T_sat @ given P → Superheated vapor (use superheated table)
+
+3. Look up properties using appropriate table:
+   Saturated: Use T or P index
+   Superheated: Use P row, then T column
+   Compressed liquid: Use T row, then P column
+
+4. Read all desired properties from same row/cell:
+   v, u, h, s, and any others needed
+
+PRACTICAL EXAMPLE:
+Given: P = 100 psia, T = 350°F
+Step 1: Look up T_sat @ 100 psia = 327.8°F
+Step 2: Is 350°F > 327.8°F? YES → Superheated
+Step 3: Go to superheated steam table, 100 psia row
+Step 4: Find T = 350°F column
+Step 5: Read h = 1231.2 Btu/lbm, v = 4.432 ft³/lbm, s = 1.6117 Btu/(lbm·R)
+
+---
+
+## Note ID: 14
+### GAS LAWS AND STEAM TABLE APPLICATIONS:
+
+HISTORICAL GAS LAW DEVELOPMENT:
+
+CHARLES' LAW (1787):
+Experimental observation by Jacques Charles
+Statement: "At constant pressure, gas volume is directly proportional to absolute temperature"
+
+Mathematical Form:
+V ∝ T  (at constant P)
+V / T = constant
+V1 / T1 = V2 / T2
+
+Physical Explanation:
+• Higher temperature → molecules move faster → need more space
+• Molecule kinetic energy increases with temperature
+• Each degree Kelvin increase produces same volume increase (linear relationship)
+
+Practical Example:
+Air in sealed container at 70°F (21°C = 294 K), volume = 100 ft³
+If heated to 140°F (60°C = 316 K) at same pressure:
+V2 / V1 = T2 / T1
+V2 / 100 = 316 / 294
+V2 = 107.5 ft³ (7.5% volume increase)
+
+BOYLE'S LAW (1662):
+Experimental observation by Robert Boyle
+Statement: "At constant temperature, gas pressure is inversely proportional to volume"
+
+Mathematical Form:
+P ∝ 1/V  (at constant T)
+P × V = constant
+P1 × V1 = P2 × V2
+
+Physical Explanation:
+• Increasing pressure into same volume → molecule collision rate increases
+• Molecule collision with walls causes pressure
+• Higher collision frequency = higher pressure
+
+Practical Example:
+Air at 14.7 psia (1 atm), volume = 10 ft³
+If compressed to 1 ft³ at same temperature:
+P2 × V2 = P1 × V1
+P2 × 1 = 14.7 × 10
+P2 = 147 psia (10× pressure increase for 10× volume reduction)
+
+COMBINED/IDEAL GAS LAW:
+Combining Charles' Law and Boyle's Law:
+PV / T = constant
+
+For a fixed amount of gas (n moles):
+PV = nRT
+
+Where:
+• P = absolute pressure
+• V = volume
+• n = number of moles (or amount of substance)
+• R = universal gas constant = 1.986 Btu/(lbmol·R) = 8.314 J/(mol·K)
+• T = absolute temperature
+
+MOLAR FORM vs. SPECIFIC FORM:
+
+Molar Form (for n moles of substance):
+PV = nRT
+Units: P[kPa], V[m³], n[mol], R[J/(mol·K)], T[K]
+
+Specific Form (for 1 pound-mass of substance):
+Pv = R_specific × T
+
+Where: R_specific = R_universal / M (molecular weight)
+
+Example for Air:
+R_universal = 1.986 Btu/(lbmol·°R)
+M_air = 28.97 lbm/lbmol
+R_air = 1.986 / 28.97 = 0.0685 Btu/(lbm·°R)
+
+REQUIREMENTS FOR IDEAL GAS BEHAVIOR:
+
+Ideal gas law assumes:
+1. Molecules occupy negligible volume compared to container
+2. Intermolecular forces are negligible
+3. Collisions are perfectly elastic (no energy loss)
+4. Random motion is governed by kinetic theory
+
+These assumptions valid when:
+• Low pressure (molecules far apart)
+• High temperature (molecules moving fast, collisions less significant)
+• Far from phase change (vapor, not near condensation)
+
+CONDITIONS WHERE IDEAL GAS WORKS WELL:
+• Air at atmospheric pressure and ambient temperature
+• Natural gas at typical operating conditions
+• Steam far above saturation (>200°F of superheat)
+• Any gas at pressures < 10 atm
+
+CONDITIONS WHERE IDEAL GAS FAILS:
+• Near phase boundaries (saturation pressure-temperature)
+• High pressures (>50 psia for steam)
+• Liquids and liquid-vapor mixtures
+• ANY substance within ~50°F of saturation temperature
+• Critical point and near-critical conditions
+
+WHY IDEAL GAS LAW FAILS FOR STEAM:
+
+Steam Behavior Complexity:
+Steam (near saturation) does NOT behave as ideal gas because:
+
+1. Intermolecular Forces: Water molecules have strong hydrogen bonds
+   • In liquid water: Huge intermolecular attraction (why it stays together)
+   • In saturated vapor: Still significant attractions (molecules just barely separated)
+   • Effect: PV/T not constant; deviations can be 10-50%
+
+2. Molecular Volume: As pressure increases, molecular volume becomes significant
+   • Ideal gas assumes negligible molecular volume
+   • Real gas molecules have finite size
+   • At high pressure: Can't compress to zero volume (molecules themselves take space)
+
+3. Phase Proximity: When near saturation, vapor ready to condense
+   • Molecules oscillate between phases
+   • Behavior erratic and not predictable by simple laws
+   • PV/T coefficient changes dramatically
+
+4. Temperature Dependence: R_specific itself changes with conditions
+   • For ideal gas: R is constant
+   • For steam: Effective "R" depends on pressure and temperature
+
+EXPERIMENTAL OBSERVATION:
+Compressibility factor Z = (PV) / (nRT)
+• Ideal gas: Z = 1.0 everywhere
+• Real steam:
+  • Z ≈ 1.0 for high superheat (behaves like ideal gas)
+  • Z ≈ 0.5-0.8 near saturation (deviates significantly from ideal)
+  • Z → 0.27 at critical point (maximum deviation)
+
+STEAM TABLES SOLUTION:
+
+Definition: Experimentally-determined property tables accounting for real behavior
+
+How Created:
+1. Conduct experiments measuring properties at various P-T conditions
+2. Compile data into organized tables
+3. Use regression analysis to create interpolation formulas
+4. Validate with independent measurements
+
+Advantages Over Equations:
+• Accounts for all real-substance behavior automatically
+• No need to remember complex equations
+• Direct property lookup by indexing
+• Accurate to engineering precision
+• Valid for all states (saturated, subcooled, superheated)
+
+THREE STEAM TABLE TYPES:
+
+1. SATURATED STEAM TABLES:
+   Indexed by: Temperature (ascending) or Pressure (ascending)
+   Contains: Saturation T-P pairs and corresponding properties
+   Properties included: vf, vg, hf, hfg, hg, sf, sg, uf, ug
+   Use when: State is on saturation line OR need saturation properties
+   Example: Need hfg (latent heat) at 100 psia → look up in saturated table at 100 psia
+
+2. SUPERHEATED STEAM TABLES:
+   Indexed by: Pressure (row), then Temperature (column, ascending)
+   Contains: Properties for all combinations of P and T above saturation
+   Properties included: v, u, h, s
+   Use when: State is above saturation (T > Tsat @ given P)
+   Example: Need h at 100 psia, 350°F → find 100 psia row, then 350°F column
+
+3. COMPRESSED LIQUID TABLES (Less Common):
+   Indexed by: Pressure and Temperature (both below saturation)
+   Contains: Properties for liquid below saturation point
+   Use when: Need accurate compressed liquid properties
+   Common Approximation: For compressed liquid below saturation, use saturated liquid properties @ same temperature (usually accurate to ±1%)
+
+COMPRESSED LIQUID APPROXIMATION:
+For subcooled liquid, use saturated liquid properties at the same temperature:
+v_subcooled ≈ vf @ T_subcooled
+h_subcooled ≈ hf @ T_subcooled
+s_subcooled ≈ sf @ T_subcooled
+
+This approximation valid because:
+• Liquids nearly incompressible (density changes < 1%)
+• Temperature changes enthalpy much more than pressure
+• Entropy change with pressure minimal for liquids
+
+DEGREES OF SUBCOOLING:
+Amount by which liquid is below saturation point
+Formula: ΔT_sub = T_sat(@ P) - T_actual
+Indicates how far from boiling the liquid is
+Example: At 100 psia, T_sat = 327.8°F
+If actual T = 300°F
+Degrees of subcooling = 327.8 - 300 = 27.8°F
+
+Practical Importance:
+• Shows liquid stability (no boiling if ΔT_sub > 0)
+• Higher subcooling = safer (less prone to flashing if pressure drops)
+• Pump inlet should have several degrees of subcooling
+
+DEGREES OF SUPERHEAT:
+Amount by which vapor is above saturation point
+Formula: ΔT_super = T_actual - T_sat(@ P)
+Indicates how far above saturation the vapor is
+Example: At 100 psia, T_sat = 327.8°F
+If actual T = 400°F
+Degrees of superheat = 400 - 327.8 = 72.2°F
+
+Practical Importance:
+• Shows vapor stability (no condensation if ΔT_super > 0)
+• Higher superheat = higher energy content, better turbine efficiency
+• Typical power plants: 50-150°F superheat at boiler outlet
+• First reheater adds another 50-150°F superheat between turbine stages
+
+---
+

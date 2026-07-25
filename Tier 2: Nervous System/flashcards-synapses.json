@@ -3,31 +3,31 @@
     {
       "id": 1,
       "subject": "CP01",
-      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_flashcards.txt",
+      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_flashcards.md",
       "count": 25
     },
     {
       "id": 26,
       "subject": "TH01",
-      "contentFile": "Tier 3: Pathways/TH01_Measurement/TH01_Measurement_flashcards.txt",
+      "contentFile": "Tier 3: Pathways/TH01_Measurement/TH01_Measurement_flashcards.md",
       "count": 15
     },
     {
       "id": 41,
       "subject": "TH02",
-      "contentFile": "Tier 3: Pathways/TH02_Thermodynamics_I/TH02_Thermodynamics_I_flashcards.txt",
+      "contentFile": "Tier 3: Pathways/TH02_Thermodynamics_I/TH02_Thermodynamics_I_flashcards.md",
       "count": 15
     },
     {
       "id": 56,
       "subject": "TH03",
-      "contentFile": "Tier 3: Pathways/TH03_Thermodynamics_II/TH03_Thermodynamics_II_flashcards.txt",
+      "contentFile": "Tier 3: Pathways/TH03_Thermodynamics_II/TH03_Thermodynamics_II_flashcards.md",
       "count": 15
     },
     {
       "id": 71,
       "subject": "TH04",
-      "contentFile": "Tier 3: Pathways/TH04_Thermodynamics_III/TH04_Thermodynamics_III_flashcards.txt",
+      "contentFile": "Tier 3: Pathways/TH04_Thermodynamics_III/TH04_Thermodynamics_III_flashcards.md",
       "count": 20
     },
     {
@@ -39,25 +39,25 @@
     {
       "id": 111,
       "subject": "TH06B",
-      "contentFile": "Tier 3: Pathways/TH06B_Fluid_Flow/TH06B_Fluid_Flow_flashcards.txt",
+      "contentFile": "Tier 3: Pathways/TH06B_Fluid_Flow/TH06B_Fluid_Flow_flashcards.md",
       "count": 25
     },
     {
       "id": 136,
       "subject": "TH07B",
-      "contentFile": "Tier 3: Pathways/TH07B_Heat_Transfer/TH07B_Heat_Transfer_flashcards.txt",
+      "contentFile": "Tier 3: Pathways/TH07B_Heat_Transfer/TH07B_Heat_Transfer_flashcards.md",
       "count": 20
     },
     {
       "id": 156,
       "subject": "CP04",
-      "contentFile": "Tier 3: Pathways/CP04_Pumps/CP04_Pumps_flashcards.txt",
+      "contentFile": "Tier 3: Pathways/CP04_Pumps/CP04_Pumps_flashcards.md",
       "count": 30
     },
     {
       "id": 186,
       "subject": "CP06",
-      "contentFile": "Tier 3: Pathways/CP06_Heat_Exchangers/CP06_Heat_Exchangers_flashcards.txt",
+      "contentFile": "Tier 3: Pathways/CP06_Heat_Exchangers/CP06_Heat_Exchangers_flashcards.md",
       "count": 47
     }
   ]

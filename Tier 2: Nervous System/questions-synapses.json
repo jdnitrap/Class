@@ -2,23 +2,23 @@
   "questions": [
     {
       "subject": "CP01",
-      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_questions.txt"
+      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_questions.md"
     },
     {
       "subject": "TH01",
-      "contentFile": "Tier 3: Pathways/TH01_Measurement/TH01_Measurement_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH01_Measurement/TH01_Measurement_questions.md"
     },
     {
       "subject": "TH02",
-      "contentFile": "Tier 3: Pathways/TH02_Thermodynamics_I/TH02_Thermodynamics_I_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH02_Thermodynamics_I/TH02_Thermodynamics_I_questions.md"
     },
     {
       "subject": "TH03",
-      "contentFile": "Tier 3: Pathways/TH03_Thermodynamics_II/TH03_Thermodynamics_II_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH03_Thermodynamics_II/TH03_Thermodynamics_II_questions.md"
     },
     {
       "subject": "TH04",
-      "contentFile": "Tier 3: Pathways/TH04_Thermodynamics_III/TH04_Thermodynamics_III_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH04_Thermodynamics_III/TH04_Thermodynamics_III_questions.md"
     },
     {
       "subject": "TH05",
@@ -26,19 +26,19 @@
     },
     {
       "subject": "TH06B",
-      "contentFile": "Tier 3: Pathways/TH06B_Fluid_Flow/TH06B_Fluid_Flow_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH06B_Fluid_Flow/TH06B_Fluid_Flow_questions.md"
     },
     {
       "subject": "TH07B",
-      "contentFile": "Tier 3: Pathways/TH07B_Heat_Transfer/TH07B_Heat_Transfer_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH07B_Heat_Transfer/TH07B_Heat_Transfer_questions.md"
     },
     {
       "subject": "CP04",
-      "contentFile": "Tier 3: Pathways/CP04_Pumps/CP04_Pumps_questions.txt"
+      "contentFile": "Tier 3: Pathways/CP04_Pumps/CP04_Pumps_questions.md"
     },
     {
       "subject": "CP06",
-      "contentFile": "Tier 3: Pathways/CP06_Heat_Exchangers/CP06_Heat_Exchangers_questions.txt"
+      "contentFile": "Tier 3: Pathways/CP06_Heat_Exchangers/CP06_Heat_Exchangers_questions.md"
     }
   ]
 }
