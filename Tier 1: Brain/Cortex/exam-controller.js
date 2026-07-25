@@ -2,13 +2,9 @@
 
 import { processor } from '../Limbic/processor.js';
 import { helpers } from '../Senses/helpers.js';
+import { router } from './router.js';
 
 export const exam = {
-    router: null,
-
-    setRouter(r) {
-        this.router = r;
-    },
     startExam(state) {
         const subjectQuestions = processor.filterQuestionsBySubject(state.allQuestions, state.currentSubject);
         const numQuestions = parseInt(document.getElementById('questionCount').value);
@@ -16,7 +12,7 @@ export const exam = {
         state.currentQuestionIndex = 0;
         state.selectedAnswers = {};
         this.showQuestion(state);
-        this.router.showScreen('questionScreen');
+        router.showScreen('questionScreen');
     },
 
     startComprehensiveExam(state) {
@@ -24,15 +20,15 @@ export const exam = {
         state.currentQuestionIndex = 0;
         state.selectedAnswers = {};
         this.showQuestion(state);
-        this.router.showScreen('questionScreen');
+        router.showScreen('questionScreen');
     },
 
     startTopicExamSelection(state) {
-        this.router.renderSubjectSelection(state);
+        router.renderSubjectSelection(state);
     },
 
     backToExamConfig(state) {
-        this.router.showExamConfigScreen(state);
+        router.showExamConfigScreen(state);
     },
 
     prepareComprehensiveExam(state) {

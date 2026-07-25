@@ -3,13 +3,9 @@
 import { processor } from '../Limbic/processor.js';
 import { loader } from '../Limbic/loader.js';
 import { helpers } from '../Senses/helpers.js';
+import { router } from './router.js';
 
 export const notes = {
-    router: null,
-
-    setRouter(r) {
-        this.router = r;
-    },
     async viewNotes(state) {
         console.log(`📖 Loading notes for subject: ${state.currentNotesSubject}`);
         const subjectNotes = processor.filterNotesBySubject(state.allNotes, state.currentNotesSubject);
@@ -64,6 +60,6 @@ export const notes = {
             selectedSubjectName.textContent = displayName;
         }
 
-        this.router.showScreen('notesScreen');
+        router.showScreen('notesScreen');
     }
 };

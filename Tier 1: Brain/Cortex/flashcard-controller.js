@@ -2,13 +2,9 @@
 
 import { processor } from '../Limbic/processor.js';
 import { helpers } from '../Senses/helpers.js';
+import { router } from './router.js';
 
 export const flashcard = {
-    router: null,
-
-    setRouter(r) {
-        this.router = r;
-    },
     extractFrontBack(content) {
         const lines = content.split('\n').filter(l => l.trim());
         let front = '';
@@ -54,7 +50,7 @@ export const flashcard = {
         state.currentCardIndex = 0;
         state.cardFlipped = false;
         await this.showFlashcard(state);
-        this.router.showScreen('flashcardScreen');
+        router.showScreen('flashcardScreen');
     },
 
     async showFlashcard(state) {
@@ -98,7 +94,7 @@ export const flashcard = {
             state.currentCardIndex++;
             await this.showFlashcard(state);
         } else {
-            this.router.goHome(state);
+            router.goHome(state);
         }
     }
 };
