@@ -2,7 +2,7 @@
 
 export const helpers = {
     showScreen(screenId) {
-        document.querySelectorAll('[class*="Screen"]').forEach(el => {
+        document.querySelectorAll('[id*="Screen"]').forEach(el => {
             if (el.id === screenId) {
                 el.classList.remove('hidden');
             } else {
