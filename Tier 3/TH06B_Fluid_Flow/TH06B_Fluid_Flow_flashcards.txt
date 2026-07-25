@@ -1,99 +1,99 @@
 [Note ID: 1]
 What is mass flow rate and its formula?
-ṁ = ρ × V̇ = ρ × v × A (lbm/hr); where ρ = density, v = velocity, A = cross-sectional area.
+ṁ = ρ × V̇ = ρ × v × A (lbm/hr). ρ = density, v = velocity, A = area.
 
 [Note ID: 2]
 What is volumetric flow rate and common units?
-Q = V̇ = v × A; common units: gallons per minute (gpm) or cubic feet per minute (cfm).
+Q = v × A. Units: gpm (gallons per minute) or cfm (cubic feet per minute).
 
 [Note ID: 3]
 What is continuity equation?
-Mass flow rate into a system equals mass flow rate out: ṁ₁ = ṁ₂.
+Mass in = Mass out. ṁ₁ = ṁ₂.
 
 [Note ID: 4]
 What is viscosity and how does temperature affect it?
-Fluid's resistance to flow; for liquids: decreases with increasing temperature; for gases: increases with increasing temperature.
+Fluid's resistance to flow. Liquids: viscosity ↓ with temp. Gases: viscosity ↑ with temp.
 
 [Note ID: 5]
 What is specific gravity (SG)?
-Ratio of fluid density compared to water at 60°F; water = 1.0; SG < 1 floats, SG > 1 sinks.
+Density ratio vs water @ 60°F. Water = 1.0. SG < 1 floats, SG > 1 sinks.
 
 [Note ID: 6]
 What is fluid density and typical value for water?
-Mass per unit volume; water ≈ 62.4 lbm/ft³ at standard conditions; density changes with temperature and pressure.
+Mass per unit volume. Water ≈ 62.4 lbm/ft³ (standard). Changes with temp/pressure.
 
 [Note ID: 7]
 What is laminar flow?
-Occurs when Reynolds number < 2,000; fluid layers move smoothly with minimal mixing; parabolic velocity profile.
+Re < 2,000. Smooth layers, minimal mixing. Parabolic velocity profile.
 
 [Note ID: 8]
 What is turbulent flow?
-Occurs when Reynolds number > 3,500; characterized by cross-currents and mixing; flattened velocity profile; requires more energy.
+Re > 3,500. Cross-currents, mixing. Flattened velocity profile. Requires more energy.
 
 [Note ID: 9]
 What is transitional flow?
-Occurs when Reynolds number is between 2,000-3,500; unstable, alternates between laminar and turbulent.
+Re = 2,000-3,500. Unstable. Alternates between laminar and turbulent.
 
 [Note ID: 10]
 What is Reynolds number and its formula?
-NRe = (ρ × v × d) / μ (dimensionless); determines flow regime (laminar vs. turbulent).
+NRe = (ρ × v × d) / μ (dimensionless). Determines flow regime.
 
 [Note ID: 11]
 What is single-phase flow?
-Fluid completely in either liquid OR gaseous state, not a mixture; easier to analyze and predict.
+Fluid either liquid OR gas, not mixed. Easier to analyze and predict.
 
 [Note ID: 12]
 What is two-phase flow?
-Fluid mixture of liquid AND vapor phases; creates much greater resistance; head loss increases by factor of 100+.
+Liquid AND vapor mixture. Greater resistance. Head loss increases 100×+.
 
 [Note ID: 13]
 What is elevation head (z)?
-Potential energy component of Bernoulli's equation; height above reference point; same regardless of path.
+Potential energy in Bernoulli. Height above reference. Path-independent.
 
 [Note ID: 14]
 What is velocity head?
-Kinetic energy component of Bernoulli's equation; v²/(2gc); height fluid would rise if all kinetic energy converted to potential.
+Kinetic energy in Bernoulli. v²/(2gc). Height if KE converted to PE.
 
 [Note ID: 15]
 What is pressure head (Pv)?
-Pressure-volume energy component; height of fluid column whose weight equals the fluid pressure.
+Pressure-volume energy. Height of column weighing = fluid pressure.
 
 [Note ID: 16]
 What is total head?
-Sum of elevation head + velocity head + pressure head; constant in ideal flow (Bernoulli equation).
+Elevation + velocity + pressure heads. Constant in ideal flow.
 
 [Note ID: 17]
 What is friction head loss (Hf)?
-Conversion of fluid pressure/velocity to heat energy through friction; expressed in feet of head.
+Pressure/velocity → heat through friction. Expressed in feet of head.
 
 [Note ID: 18]
 What is friction factor (f)?
-Dimensionless constant in Darcy's equation; accounts for pipe surface roughness; depends on Reynolds number.
+Dimensionless Darcy constant. Accounts for pipe roughness. Depends on Re.
 
 [Note ID: 19]
-What is cavitation in piping?
-Vapor bubbles form when local pressure drops below saturation pressure; causes serious pump impeller damage.
+What is cavitation?
+Vapor bubbles when pressure < saturation pressure. Damages pump impellers.
 
 [Note ID: 20]
 What is choked flow?
-In compressible flow (steam), velocity reaches Mach 1; pressure wave forms that limits mass flow; Pout/Pin ≈ 0.5.
+Compressible flow (steam) reaches Mach 1. Limits mass flow. Pout/Pin ≈ 0.5.
 
 [Note ID: 21]
 What is water hammer?
-Pressure surges when flow suddenly changes; can spike to 20× normal pressure; causes pipe damage and injury risk.
+Sudden flow change → pressure surges. Can spike to 20× normal. Pipe damage, injury risk.
 
 [Note ID: 22]
 What is pump head (Hp)?
-Energy added to fluid by pump; Wp = ṁ × Hp × gc/g.
+Energy added by pump. Wp = ṁ × Hp × gc/g.
 
 [Note ID: 23]
-What is continuity equation for variable pipe diameter?
-v₁ × A₁ = v₂ × A₂; smaller diameter = higher velocity; larger diameter = lower velocity.
+What is continuity for variable pipe diameter?
+v₁ × A₁ = v₂ × A₂. Smaller diameter = higher velocity.
 
 [Note ID: 24]
 How does velocity change with pipe diameter?
-When diameter increases, velocity decreases proportionally; when diameter decreases, velocity increases proportionally.
+Diameter ↑ → velocity ↓. Diameter ↓ → velocity ↑. Proportional.
 
 [Note ID: 25]
 What is Bernoulli's equation?
-z₁ + v₁²/(2gc) + Pv₁ = z₂ + v₂²/(2gc) + Pv₂ (total head constant in ideal flow).
+z₁ + v₁²/(2gc) + Pv₁ = z₂ + v₂²/(2gc) + Pv₂. Total head constant.

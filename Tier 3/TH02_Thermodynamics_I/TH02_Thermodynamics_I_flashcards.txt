@@ -1,59 +1,59 @@
 [Note ID: 1]
 What is the First Law of Thermodynamics?
-Energy is neither created nor destroyed, only converted between forms: E_in - E_out = ΔE_system.
+Energy conserved: E_in - E_out = ΔE_system.
 
 [Note ID: 2]
-What is the six-step energy conversion process in power systems?
-(1) Heat transfer from source, (2) Energy transfer to working fluid, (3) Work extraction in turbine, (4) Mechanical to electrical conversion in generator, (5) Heat rejection in condenser, (6) Pump work increases fluid pressure.
+What is the six-step energy conversion in power systems?
+Heat input → Fluid heating → Turbine work → Generator electricity → Condenser cooling → Pump pressure increase.
 
 [Note ID: 3]
-What is the energy balance equation for power systems?
-Total energy in from heat source = Electrical power out + Heat rejected.
+What is the energy balance for power systems?
+Heat in from source = Electrical power out + Heat rejected.
 
 [Note ID: 4]
-What is stored energy in a thermodynamic system?
-Energy a mass HAS: Potential Energy, Kinetic Energy, Internal Energy, Flow Energy.
+What is stored energy in a system?
+Potential Energy, Kinetic Energy, Internal Energy, Flow Energy.
 
 [Note ID: 5]
-What is transient energy in a thermodynamic system?
-Energy IN TRANSIT: Heat (transfer due to temperature difference) and Work (transfer due to force).
+What is transient energy?
+Energy in transit: Heat (temp difference) and Work (force).
 
 [Note ID: 6]
 What are sign conventions for heat and work?
-Heat added to system: Q positive, Heat removed: Q negative. Work done BY system: W positive, Work done ON system: W negative.
+Q added: positive, Q removed: negative. W by system: positive, W on system: negative.
 
 [Note ID: 7]
 What is potential energy?
-Energy due to position above reference point; Formula: PE = m × z × g / gc.
+Energy from position. PE = m × z × g / gc.
 
 [Note ID: 8]
 What is kinetic energy?
-Energy due to motion/velocity; Formula: KE = m × v² / (2 × gc).
+Energy from velocity. KE = m × v² / (2 × gc).
 
 [Note ID: 9]
 What is internal energy (U)?
-Sum of all microscopic energy forms within substance; changes with temperature and pressure.
+Sum of all microscopic energy in substance. Changes with temperature/pressure.
 
 [Note ID: 10]
 What is flow energy (PV energy)?
-Energy a fluid has due to pressure and volume; specific flow energy = P × v; work needed to push fluid into/out of system.
+Energy from pressure × volume. Specific: P × v. Work to push fluid in/out.
 
 [Note ID: 11]
 What is enthalpy (H)?
-H = U + PV; Enthalpy = Internal Energy + Flow Work; measure of fluid's total energy content.
+H = U + PV. Total energy content of fluid.
 
 [Note ID: 12]
 What is specific enthalpy (h)?
-h = u + Pv; Enthalpy per unit mass in Btu/lbm; used for all thermodynamic cycle calculations.
+h = u + Pv. Energy per unit mass (Btu/lbm). Used in all cycle calculations.
 
 [Note ID: 13]
 How is enthalpy used in turbine calculations?
-Turbine work = h_in - h_out (enthalpy drop in turbine).
+Work = h_in - h_out. (Enthalpy drop).
 
 [Note ID: 14]
 How is enthalpy used in pump calculations?
-Pump work = h_out - h_in (enthalpy rise required by pump).
+Work = h_out - h_in. (Enthalpy rise).
 
 [Note ID: 15]
 What is heat (Q)?
-Transient energy transferred due to temperature difference, flowing from hotter to cooler; NOT a property (path-dependent).
+Transient energy due to temperature difference. Flows hot → cold. Not a property.

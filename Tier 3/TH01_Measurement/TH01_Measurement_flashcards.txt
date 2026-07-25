@@ -1,26 +1,26 @@
 [Note ID: 1]
-What are the units for force and mass in the American Engineering System?
-Force: pounds force (lbf), Mass: pounds mass (lbm).
+What are the units for force and mass in American Engineering System?
+Force: lbf (pounds force), Mass: lbm (pounds mass).
 
 [Note ID: 2]
-What temperature scale is used in the American Engineering System?
+What temperature scale is used in American Engineering System?
 Fahrenheit (°F).
 
 [Note ID: 3]
-What is the conversion factor for work in the American system?
-Work in Btu = (Force in lbf x Distance in ft) / 778.
+What is the conversion factor for work in American system?
+Btu = (lbf × ft) / 778.
 
 [Note ID: 4]
-What are the main units in the International System (SI/Metric)?
-Force: Newtons (N), Mass: kilograms (kg), Temperature: Celsius (°C) or Kelvin (K), Pressure: Pascal (Pa), kPa, or bar.
+What are the main units in SI/Metric System?
+Force: N, Mass: kg, Temperature: °C or K, Pressure: Pa/kPa/bar.
 
 [Note ID: 5]
-What is the freezing point of water in Fahrenheit and Celsius?
-Fahrenheit: 32°F, Celsius: 0°C.
+What is the freezing point of water in °F and °C?
+32°F = 0°C.
 
 [Note ID: 6]
-What is the boiling point of water in Fahrenheit and Celsius?
-Fahrenheit: 212°F, Celsius: 100°C.
+What is the boiling point of water in °F and °C?
+212°F = 100°C.
 
 [Note ID: 7]
 What is the formula to convert Fahrenheit to Celsius?
@@ -28,7 +28,7 @@ What is the formula to convert Fahrenheit to Celsius?
 
 [Note ID: 8]
 What is Absolute Zero in Rankine and Kelvin?
-Rankine: 0°R = -459.67°F, Kelvin: 0 K = -273.15°C.
+0°R = -459.67°F. 0 K = -273.15°C.
 
 [Note ID: 9]
 What is the formula to convert Fahrenheit to Rankine?
@@ -48,12 +48,12 @@ A quantity of matter or space separated from surroundings by a boundary.
 
 [Note ID: 13]
 What is an isolated system?
-A system with no mass transfer and no energy transfer (theoretical ideal).
+No mass transfer, no energy transfer. Theoretical ideal only.
 
 [Note ID: 14]
 What is a closed system?
-A system with no mass transfer, but energy transfer (heat/work) may occur (most common for thermodynamic analysis).
+No mass transfer. Energy transfer (heat/work) allowed. Most common for analysis.
 
 [Note ID: 15]
 What is an open system (control volume)?
-A system with mass transfer across boundary (inlet/outlet flows) and possible energy transfer (most realistic for practical equipment).
+Mass transfer across boundary (inlet/outlet flows). Energy transfer allowed.

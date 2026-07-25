@@ -1,59 +1,59 @@
 [Note ID: 1]
 How is the state of a substance defined?
-By two independent intensive properties; once two properties are known, all others can be determined.
+By two independent intensive properties. Know any two → determine all others.
 
 [Note ID: 2]
 What are the four phases of matter?
-Solid (fixed shape/volume), Liquid (fixed volume, takes container shape), Vapor/Gas (no fixed shape/volume), Plasma (ionized gas).
+Solid (fixed shape/volume), Liquid (fixed volume, container shape), Vapor/Gas (no fixed shape/volume), Plasma (ionized).
 
 [Note ID: 3]
 What is melting and vaporization?
-Melting: Solid to Liquid (absorbed heat). Vaporization: Liquid to Gas (absorbed heat).
+Melting: Solid → Liquid (absorbs heat). Vaporization: Liquid → Gas (absorbs heat).
 
 [Note ID: 4]
 What is condensation and solidification?
-Condensation: Gas to Liquid (rejected heat). Solidification: Liquid to Solid (rejected heat).
+Condensation: Gas → Liquid (rejects heat). Solidification: Liquid → Solid (rejects heat).
 
 [Note ID: 5]
-What are the three boundary lines on a phase diagram?
-Fusion line (Solid-Liquid), Vaporization line (Liquid-Gas), Sublimation line (Solid-Gas).
+What are the three boundary lines on phase diagram?
+Fusion (Solid-Liquid), Vaporization (Liquid-Gas), Sublimation (Solid-Gas).
 
 [Note ID: 6]
-What is the triple point on a phase diagram?
-The point where all three phases (solid, liquid, gas) coexist in equilibrium.
+What is the triple point on phase diagram?
+Point where all three phases coexist in equilibrium.
 
 [Note ID: 7]
 What are the five states of water?
-(1) Subcooled liquid, (2) Saturated liquid, (3) Wet vapor (mixture), (4) Saturated vapor, (5) Superheated vapor.
+Subcooled liquid, Saturated liquid, Wet vapor (mixture), Saturated vapor, Superheated vapor.
 
 [Note ID: 8]
 What is subcooled liquid?
-Water below saturation temperature, resistant to vaporization, nearly incompressible.
+Below saturation temp. Resistant to vaporization. Nearly incompressible.
 
 [Note ID: 9]
 What is saturated liquid and saturated vapor?
-Saturated liquid: at saturation temperature, on verge of boiling. Saturated vapor: 100% vapor, last drop just evaporated.
+Saturated liquid: at saturation temp, about to boil. Saturated vapor: 100% vapor, last drop evaporated.
 
 [Note ID: 10]
 What is wet vapor?
-Mixture of saturated liquid and vapor; both phases coexist at the same temperature.
+Mixture of liquid + vapor at same temperature.
 
 [Note ID: 11]
 What is sensible heat?
-Heat addition/removal that changes temperature without causing phase change.
+Heat that changes temperature without phase change.
 
 [Note ID: 12]
 What is latent heat?
-Heat addition/removal that causes phase change at constant temperature; all energy goes into changing molecular structure.
+Heat that causes phase change at constant temperature.
 
 [Note ID: 13]
 What is latent heat of vaporization (Hfg)?
-Energy needed to convert saturated liquid to saturated vapor; same energy released when vapor condenses.
+Energy to convert saturated liquid → saturated vapor. Released on condensation.
 
 [Note ID: 14]
 What is steam quality (X)?
-The fraction of vapor in a wet mixture; ranges from 0 (all liquid) to 1.0 (all vapor).
+Fraction of vapor in wet mixture. Range: 0 (all liquid) to 1.0 (all vapor).
 
 [Note ID: 15]
 What quality steam is required at turbine inlet and why?
-High quality (>95-99%) required because low quality causes blade erosion and corrosion.
+High quality (>95-99%) to prevent blade erosion and corrosion.

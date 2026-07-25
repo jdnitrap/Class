@@ -1,79 +1,79 @@
 [Note ID: 1]
 What is an adiabatic process?
-No heat loss or gain (Q = 0); boundary perfectly insulated; common for turbines/pumps.
+No heat transfer (Q = 0). Boundary insulated. Common in turbines/pumps.
 
 [Note ID: 2]
 What is an isobaric process?
-Constant pressure; boundary moves freely; heat addition/removal at constant pressure (boiler, condenser).
+Constant pressure. Heat added/removed at constant pressure. Boiler, condenser.
 
 [Note ID: 3]
 What is an isentropic process?
-No change in entropy (reversible adiabatic); theoretical ideal used for efficiency benchmarks.
+No entropy change. Reversible adiabatic. Theoretical ideal for efficiency benchmarks.
 
 [Note ID: 4]
 What is isenthalpic process (throttling)?
-No change in enthalpy; occurs through valve/orifice; pressure decreases, entropy increases.
+No enthalpy change. Occurs in valve/orifice. Pressure drops, entropy increases.
 
 [Note ID: 5]
 What is an isothermal process?
-Constant temperature; system remains in thermal equilibrium.
+Constant temperature. System in thermal equilibrium.
 
 [Note ID: 6]
-What are the three requirements for steady-flow conditions?
-(1) Constant mass flow rate (m_in = m_out), (2) Constant fluid properties at each point, (3) Constant rates of heat/work.
+What are the three requirements for steady-flow?
+Constant mass flow (m_in = m_out). Constant properties at each point. Constant heat/work rates.
 
 [Note ID: 7]
 What is the mechanical equivalent of heat?
-1 Btu = 778 ft-lbf or 1055 Joules.
+1 Btu = 778 ft-lbf = 1055 Joules.
 
 [Note ID: 8]
-What does the Second Law of Thermodynamics state?
-No engine can convert all heat to work; heat rejection always required; maximum efficiency depends only on temperatures.
+What does Second Law of Thermodynamics state?
+No engine converts all heat to work. Heat rejection required. Max efficiency depends only on temps.
 
 [Note ID: 9]
 What is Carnot efficiency formula?
-η_Carnot = (T_hot - T_cold) / T_hot = 1 - (T_cold / T_hot).
+η = (T_hot - T_cold) / T_hot = 1 - (T_cold / T_hot).
 
 [Note ID: 10]
 What is entropy change formula?
-ΔS = Q / T (units: Btu/lbm-R); more heat at low temperature creates larger entropy change.
+ΔS = Q / T (Btu/lbm-R). More heat at low temp = larger entropy change.
 
 [Note ID: 11]
-What is the steady-flow energy equation for turbines?
-W_turbine = h_in - h_out (enthalpy drop equals work output).
+What is the energy equation for turbines?
+W = h_in - h_out. (Enthalpy drop = work output).
 
 [Note ID: 12]
-What is the steady-flow energy equation for pumps?
-W_pump = h_out - h_in (work input equals enthalpy rise).
+What is the energy equation for pumps?
+W = h_out - h_in. (Work input = enthalpy rise).
 
 [Note ID: 13]
-What does a steam generator (boiler) do?
-Raises feedwater enthalpy to produce steam through isobaric heat addition.
+What does a boiler (steam generator) do?
+Raises feedwater enthalpy to produce steam. Isobaric heat addition.
 
 [Note ID: 14]
 What does a condenser do?
-Removes latent heat of condensation; collapses steam volume; maintains vacuum; improves turbine efficiency.
+Removes latent heat. Collapses steam. Maintains vacuum. Improves turbine efficiency.
 
 [Note ID: 15]
 Why is condensate subcooling important?
-Prevents pump cavitation; optimal: 10-20°F below saturation.
+Prevents pump cavitation. Optimal: 10-20°F below saturation.
 
 [Note ID: 16]
 What is nozzle function?
-Converts pressure/enthalpy to velocity/kinetic energy through shaped passages.
+Converts pressure/enthalpy → velocity/kinetic energy through shaped passages.
 
 [Note ID: 17]
 What are convergent and divergent nozzles?
-Convergent: area decreases, velocity increases, pressure decreases. Divergent: area increases, velocity decreases, pressure increases.
+Convergent: area ↓, velocity ↑, pressure ↓. Divergent: area ↑, velocity ↓, pressure ↑.
 
 [Note ID: 18]
-What does turbine efficiency compare?
-Ratio of actual work to ideal work; typically 80-90%.
+What is turbine efficiency?
+Ratio of actual work to ideal work. Typically 80-90%.
 
 [Note ID: 19]
-What does pump efficiency compare?
-Ratio of ideal work to actual work (opposite of turbine!); typically 75-85%.
+What is pump efficiency?
+Ratio of ideal work to actual work (opposite of turbine). Typically 75-85%.
 
 [Note ID: 20]
 What is net cycle work?
-W_net = W_turbine - W_pump; pump work is only 1-5% of turbine work.
+W_net = W_turbine - W_pump. Pump work only 1-5% of turbine work.
