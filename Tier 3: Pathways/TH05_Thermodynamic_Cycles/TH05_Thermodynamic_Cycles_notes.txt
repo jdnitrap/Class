@@ -129,10 +129,16 @@ ENABLING OBJECTIVE 4: THE CARNOT CYCLE AND POWER PLANT RELEVANCE
 HISTORICAL DEVELOPMENT:
 Nicholas Leonard Sadi Carnot (1796-1832), a French physicist, developed the concept of the idealized cycle and reversible processes. The Carnot cycle is not actually used in power plants but serves as a theoretical benchmark for evaluating real cycle performance.
 
+[IMAGE REFERENCE: carnot-basic-cycle] - Figure 1: Basic Carnot Cycle engine with cylinder, piston, heat source/sink
+
 DEFINITION OF CARNOT CYCLE:
 The Carnot cycle is an ideal heat engine cycle that converts heat into work through completely reversible processes. It employs reversible adiabatic (isentropic) work production and transfers heat only at the constant temperatures of the heat source and heat sink. The Carnot cycle has the highest possible thermal efficiency for any heat engine operating between two given constant temperature reservoirs.
 
 THE FOUR PROCESSES IN CARNOT CYCLE:
+
+[IMAGE REFERENCE: carnot-t-s-diagram] [IMAGE REFERENCE: carnot-p-v-diagram]
+- Figure 2: T-s Diagram representation of all four processes
+- Figure 3: P-v Diagram representation of all four processes
 
 1. PROCESS 1→2: ISOTHERMAL (CONSTANT TEMPERATURE) EXPANSION
 The cylinder containing gas is placed in contact with a heat source at temperature T_hot. Heat flows reversibly from the reservoir to the gas through the cylinder head. The gas expands at constant temperature, doing work against external pressure. The piston moves outward.
@@ -199,6 +205,8 @@ The Carnot cycle proves that efficiency depends only on temperatures, not on the
 
 [Note ID: 5]
 ENABLING OBJECTIVE 5: CALCULATING CARNOT EFFICIENCY
+
+[IMAGE REFERENCE: carnot-analysis-diagram] - Figure 4: Carnot Cycle T-s Diagrams showing area relationships for heat and work
 
 CARNOT EFFICIENCY FORMULA:
 η_Carnot = (T_hot - T_cold) / T_hot = 1 - (T_cold / T_hot)
@@ -298,6 +306,9 @@ Real cycles operate with higher entropy at exit than ideally expected:
 
 IMPACT ON POWER PLANT DESIGN:
 
+[IMAGE REFERENCE: steam-power-cycle] - Figure 5: Simplified Steam Power Cycle schematic
+[IMAGE REFERENCE: steam-t-s-diagram] - Figure 6: Steam Power Cycle T-s Diagram with saturated liquid/vapor lines
+
 DESIGN APPROACH 1: MAXIMIZE TEMPERATURE DIFFERENCE
 Since η_max = 1 - (T_cold / T_hot), designers focus on:
 • Increase steam generation temperature: higher pressure in boiler (up to material limits: ~3500 psia)
@@ -354,6 +365,8 @@ The Second Law sets an absolute upper limit that no engineer can overcome. All i
 
 [Note ID: 7]
 ENABLING OBJECTIVE 7: RANKINE VERSUS CARNOT CYCLE
+
+[IMAGE REFERENCE: rankine-cycle] - Figure 7: Rankine Cycle Process Diagram showing pump, boiler, turbine, condenser
 
 RANKINE CYCLE OVERVIEW:
 The Rankine cycle, developed by Scottish engineer William Rankine, is a more realistic cycle that closely approximates the processes occurring in actual steam power plants. While the Carnot cycle is purely theoretical, the Rankine cycle can be practically achieved in real equipment.
@@ -481,6 +494,8 @@ ENABLING OBJECTIVE 8: RANKINE EFFICIENCY IMPROVEMENTS - DETAILED ANALYSIS
 
 PART A: SUPERHEATING STEAM
 
+[IMAGE REFERENCE: rankine-superheat] - Figure 13: Rankine Cycle with Superheating on T-s diagram
+
 BASIC EFFECT:
 Superheating is the process of heating steam above its saturation temperature at a given pressure. Superheated steam has higher enthalpy and lower humidity than saturated steam at the same pressure.
 
@@ -521,6 +536,8 @@ LIMITATIONS:
 
 PART B: MOISTURE SEPARATOR/REHEATER (MSR)
 
+[IMAGE REFERENCE: rankine-msr] - Figure 14: Rankine Cycle with Moisture Separator/Reheater
+
 LOCATION AND FUNCTION:
 The MSR is placed in the steam supply line to the low-pressure turbine, typically after the high-pressure turbine exhaust. It serves two functions:
 
@@ -554,6 +571,8 @@ The primary function is NOT efficiency improvement but EQUIPMENT PROTECTION:
 • Economically justified by reduced maintenance
 
 PART C: FEEDWATER HEATING
+
+[IMAGE REFERENCE: rankine-feedwater-heater] - Figure 15: Rankine Cycle with Feedwater Heaters
 
 CONCEPT:
 Feedwater heating involves extracting steam from intermediate points in the turbine and using that "extraction steam" to preheat the condensate/feedwater before it returns to the steam generator. This reduces the amount of heat the steam generator must supply.
@@ -603,6 +622,8 @@ PRACTICAL IMPLEMENTATION:
 • Open vs. closed heaters: Open heaters (direct mixing) vs. closed heaters (heat exchanger design)
 
 PART D: CONDENSER VACUUM
+
+[IMAGE REFERENCE: rankine-condenser-vacuum] - Figure 16: Rankine Cycle and Condenser Vacuum effect on T-s diagram
 
 IMPORTANCE:
 Condenser vacuum (low absolute pressure) is one of the single most important factors affecting power plant efficiency. Even small improvements in vacuum directly increase both power output and efficiency.
