@@ -1,79 +1,67 @@
 [Note ID: 1]
 What are the five essential elements of a thermodynamic cycle?
-Working fluid, Engine (turbine/piston), Heat source (boiler), Heat sink (condenser), Pump/compressor.
+1) Working fluid (steam or gas), 2) Engine (turbine or piston) to convert heat to work, 3) Heat source (reactor/boiler), 4) Heat sink (condenser/cooling), 5) Device to move fluid (pump/compressor).
 
 [Note ID: 2]
-What is cycle efficiency?
-η = (Q_added - Q_rejected) / Q_added = net work / heat added.
+What is the difference between a thermodynamic process and a thermodynamic cycle?
+A process is a change of state in one direction. A cycle is a series of processes that returns the working fluid to its initial state, forming a closed loop used for continuous energy conversion.
 
 [Note ID: 3]
-What is the Carnot cycle?
-Theoretical max efficiency. Four processes: isothermal expansion, adiabatic expansion, isothermal compression, adiabatic compression.
+How is thermodynamic cycle efficiency defined?
+Cycle efficiency (η) = Net work produced / Heat supplied = (Q_added - Q_rejected) / Q_added. Expressed as a percentage, it represents the portion of heat energy converted to useful work.
 
 [Note ID: 4]
-What is Carnot efficiency dependent on?
-Only absolute temperatures (K) of source and sink. Independent of fluid type.
+Describe the Carnot cycle and why it matters to power plant design.
+The Carnot cycle is an ideal cycle with the highest possible thermal efficiency for an engine operating between two constant temperature reservoirs. It consists of two isothermal processes and two adiabatic processes. The Carnot efficiency sets the theoretical maximum that real cycles can approach but never reach.
 
 [Note ID: 5]
-How does isothermal expansion occur in Carnot?
-Constant temperature. Heat absorbed from source. Pressure ↓, Volume ↑. Produces work.
+Calculate the Carnot efficiency when a heat engine receives heat at 540°F and rejects heat at 60°F.
+Convert to absolute temperature (Rankine): T_hot = 540 + 460 = 1000°R, T_cold = 60 + 460 = 520°R. η = (T_hot - T_cold) / T_hot = (1000 - 520) / 1000 = 480 / 1000 = 48.0%.
 
 [Note ID: 6]
-How does adiabatic expansion occur in Carnot?
-No heat transfer. Temperature and pressure ↓. Fluid expands, extracting maximum work.
+How does the Second Law of Thermodynamics impact power plant design and operation?
+The Second Law requires that some heat must be rejected for any cycle to operate. Real processes are irreversible and generate entropy. Power plant designers must increase the temperature difference between heat source and sink to improve efficiency, and operators focus on minimizing losses through maintenance and proper operation.
 
 [Note ID: 7]
-What is the Rankine cycle?
-Realistic steam cycle for actual power plants. Four main processes.
+What are the key differences between the Rankine cycle and the Carnot cycle?
+Rankine is more practical: it uses constant-pressure (isobaric) heat transfer at phase boundaries instead of Carnot's constant-temperature processes. Rankine can be easily analyzed using steam tables. Rankine efficiency is lower than Carnot but achievable in actual power plants.
 
-[Note ID: 8]
-What are the four Rankine processes?
-Pump compression (adiabatic), Heat addition (isobaric boiler), Turbine expansion (adiabatic), Heat rejection (isobaric condenser).
+[Note ID: 8A]
+How does superheating steam affect Rankine cycle efficiency?
+Superheating increases the enthalpy of steam entering the turbine (more heat added). Although heat rejected also increases, the increase in turbine work output is greater than the increase in heat rejection, resulting in improved overall cycle efficiency.
+
+[Note ID: 8B]
+What is the primary function of a Moisture Separator/Reheater (MSR) in power plants?
+The MSR removes moisture from steam exiting the high-pressure turbine and reheats it before entering the low-pressure turbine. Its primary purpose is to protect the final stages of the low-pressure turbine from water droplet erosion damage. Its effect on cycle efficiency is minor.
+
+[Note ID: 8C]
+How does feedwater heating affect cycle efficiency?
+Feedwater heating uses extraction steam from the turbine to preheat condensate before it returns to the steam generator. This decreases both heat that must be added (reactor supplies less heat) and heat rejected (condenser rejects less heat). The reduction in heat added is greater than the loss of turbine work, so overall cycle efficiency increases.
+
+[Note ID: 8D]
+How does improving condenser vacuum affect Rankine cycle efficiency?
+As condenser vacuum improves (absolute pressure decreases), the temperature difference between heat source and sink increases. More work is extracted from the steam across the turbine, and less heat is rejected. Both effects increase cycle efficiency. Each inch of mercury improvement in vacuum increases efficiency approximately 0.5-1.0%.
+
+[Note ID: 8E]
+Define condensate depression (condensate subcooling) and its effect on efficiency.
+Condensate depression is the temperature difference between the saturation temperature at existing condenser pressure and the actual temperature of the condensate in the hotwell. Increasing condensate depression decreases efficiency because additional heat must be supplied by the reactor to compensate for the subcooling. Minimal condensate depression improves efficiency.
+
+[Note ID: 8F]
+How does increasing steam temperature and pressure affect Rankine cycle efficiency?
+Higher steam temperature and pressure increase the differential pressure across the turbine. With increased pressure, more turbine work is extracted, and with higher temperature, exit steam enthalpy is lower, reducing heat rejection. Both effects increase cycle efficiency.
+
+[Note ID: 8G]
+How does decreased steam quality (higher moisture content) affect Rankine cycle efficiency?
+Lower quality steam contains less energy (lower enthalpy), so less work is available from the turbine and heat rejection decreases. However, the loss of turbine work is the dominant effect, causing overall cycle efficiency to decrease. Typical minimum acceptable quality is 95-99% to prevent excessive blade damage.
 
 [Note ID: 9]
-How is pump compression in Rankine?
-Adiabatic. Increases liquid pressure. Requires work input.
+Define condensate depression with a numerical example.
+Condensate depression = Saturation temperature at condenser pressure - Hotwell temperature. Example: At 1 psia absolute (saturation temp ≈ 102°F), if hotwell temperature is 96°F, then condensate depression = 102°F - 96°F = 6°F (six degrees of depression).
 
 [Note ID: 10]
-How is heat addition in Rankine?
-Constant-pressure. Boiler raises enthalpy. Liquid → saturated or superheated steam.
+List five operational methods to maintain unit efficiency.
+1) Minimize auxiliary equipment operation to only those necessary for current power output, 2) Minimize steam generator blowdown, 3) Fix steam leaks immediately, 4) Eliminate air leaks into the condenser, 5) Operate air ejector, gland seal, and blowdown heat exchangers to maximize heat recovery.
 
 [Note ID: 11]
-How is turbine expansion in Rankine?
-Adiabatic. Pressure/enthalpy ↓. Produces useful work output.
-
-[Note ID: 12]
-How is heat rejection in Rankine?
-Constant-pressure. Condenser removes latent heat. Steam → liquid.
-
-[Note ID: 13]
-What is net work in Rankine?
-W_net = W_turbine - W_pump. Pump work only 1-5% of turbine work.
-
-[Note ID: 14]
-How does Rankine compare to Carnot?
-More realistic (isobars vs isotherms). Easier to analyze. Lower efficiency but practical.
-
-[Note ID: 15]
-Primary method to increase heat source temp?
-Superheat steam in boiler. Increases energy input. Larger temp difference. Limited by material strength.
-
-[Note ID: 16]
-Primary method to decrease heat sink temp?
-Improve condenser cooling. Deep vacuum maximizes efficiency. Limited by ambient temp.
-
-[Note ID: 17]
-How do irreversibilities affect Rankine efficiency?
-Real turbines/pumps add entropy from friction losses. Reduces efficiency vs ideal cycle.
-
-[Note ID: 18]
-Effect of pump work on Rankine?
-Pump uses 1-5% of turbine output. Net work = turbine - pump.
-
-[Note ID: 19]
-How does condenser vacuum improve efficiency?
-Lower pressure/temp increases temp difference source-sink. Improves Carnot efficiency.
-
-[Note ID: 20]
-What fluid is used in Rankine for power plants?
-Steam (water). Abundant, good properties. Absorbs/rejects large heat quantities.
+How do operators monitor and assess plant efficiency?
+Operators compare electrical generator output (proportional to turbine work) to reactor power output (proportional to heat supplied). Lower-than-expected electrical output for a given reactor power indicates secondary system inefficiency requiring investigation and maintenance.

@@ -121,35 +121,43 @@
     {
       "id": 19,
       "subject": "TH05",
-      "title": "Thermodynamic Cycles - Fundamentals",
+      "title": "Thermodynamic Cycles and Essential Elements",
       "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
     },
     {
       "id": 20,
       "subject": "TH05",
-      "title": "The Carnot Cycle",
-      "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt",
-      "image": "assets/images/carnot-cycle.svg",
-      "imageLabel": "Carnot Cycle on P-V Diagram"
+      "title": "Processes Versus Cycles - Fundamentals",
+      "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
     },
     {
       "id": 21,
       "subject": "TH05",
-      "title": "Rankine Cycle - Realistic Steam Cycle",
-      "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt",
-      "image": "assets/images/rankine-cycle.svg",
-      "imageLabel": "Rankine Cycle Schematic"
+      "title": "Cycle Efficiency and Carnot Cycle",
+      "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
     },
     {
       "id": 22,
       "subject": "TH05",
-      "title": "Improving Cycle Efficiency",
+      "title": "Carnot Efficiency and Second Law Impact",
       "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
     },
     {
       "id": 23,
       "subject": "TH05",
-      "title": "Condenser Vacuum and Heat Rate",
+      "title": "Rankine Cycle and Efficiency Improvements",
+      "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
+    },
+    {
+      "id": 23.1,
+      "subject": "TH05",
+      "title": "Condensate Depression and Subcooling",
+      "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
+    },
+    {
+      "id": 23.2,
+      "subject": "TH05",
+      "title": "Operational Methods for Efficiency",
       "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
     },
     {
