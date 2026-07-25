@@ -95,7 +95,7 @@ Tier 3/
 │   ├── CP01_notes.txt             # 5 study notes
 │   └── CP01_questions.txt         # 30 exam questions
 ├── TH01/ through TH05/            # Thermodynamics I-V
-├── CP06/                          # Heat Exchangers & Condensers
+├── CP06_Heat_Exchangers/               # Heat Exchangers & Condensers
 │   ├── CP06_Heat_Exchangers_notes.txt        # 25 comprehensive study notes
 │   ├── CP06_Heat_Exchangers_flashcards.txt  # 47 Q&A flashcards
 │   └── CP06_Heat_Exchangers_questions.txt   # 25 exam questions (JSON)
