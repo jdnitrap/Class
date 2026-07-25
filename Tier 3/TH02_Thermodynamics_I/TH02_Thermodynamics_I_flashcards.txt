@@ -1,0 +1,59 @@
+[Note ID: 1]
+What is the First Law of Thermodynamics?
+Energy is neither created nor destroyed, only converted between forms: E_in - E_out = ΔE_system.
+
+[Note ID: 2]
+What is the six-step energy conversion process in power systems?
+(1) Heat transfer from source, (2) Energy transfer to working fluid, (3) Work extraction in turbine, (4) Mechanical to electrical conversion in generator, (5) Heat rejection in condenser, (6) Pump work increases fluid pressure.
+
+[Note ID: 3]
+What is the energy balance equation for power systems?
+Total energy in from heat source = Electrical power out + Heat rejected.
+
+[Note ID: 4]
+What is stored energy in a thermodynamic system?
+Energy a mass HAS: Potential Energy, Kinetic Energy, Internal Energy, Flow Energy.
+
+[Note ID: 5]
+What is transient energy in a thermodynamic system?
+Energy IN TRANSIT: Heat (transfer due to temperature difference) and Work (transfer due to force).
+
+[Note ID: 6]
+What are sign conventions for heat and work?
+Heat added to system: Q positive, Heat removed: Q negative. Work done BY system: W positive, Work done ON system: W negative.
+
+[Note ID: 7]
+What is potential energy?
+Energy due to position above reference point; Formula: PE = m × z × g / gc.
+
+[Note ID: 8]
+What is kinetic energy?
+Energy due to motion/velocity; Formula: KE = m × v² / (2 × gc).
+
+[Note ID: 9]
+What is internal energy (U)?
+Sum of all microscopic energy forms within substance; changes with temperature and pressure.
+
+[Note ID: 10]
+What is flow energy (PV energy)?
+Energy a fluid has due to pressure and volume; specific flow energy = P × v; work needed to push fluid into/out of system.
+
+[Note ID: 11]
+What is enthalpy (H)?
+H = U + PV; Enthalpy = Internal Energy + Flow Work; measure of fluid's total energy content.
+
+[Note ID: 12]
+What is specific enthalpy (h)?
+h = u + Pv; Enthalpy per unit mass in Btu/lbm; used for all thermodynamic cycle calculations.
+
+[Note ID: 13]
+How is enthalpy used in turbine calculations?
+Turbine work = h_in - h_out (enthalpy drop in turbine).
+
+[Note ID: 14]
+How is enthalpy used in pump calculations?
+Pump work = h_out - h_in (enthalpy rise required by pump).
+
+[Note ID: 15]
+What is heat (Q)?
+Transient energy transferred due to temperature difference, flowing from hotter to cooler; NOT a property (path-dependent).

@@ -1,0 +1,99 @@
+[Note ID: 1]
+What is the primary purpose of piping systems?
+To transport fluids and fluid/solid mixtures between equipment, accounting for temperature, pressure, flow rate, and shock loads.
+
+[Note ID: 2]
+What five design factors must be considered when selecting pipe materials and components?
+Temperature, pressure, flow rate/velocity, shock loads (water hammer, steam hammer, thermal shock), and directional changes requiring support.
+
+[Note ID: 3]
+Which piping material is economical but prone to rust and corrosion?
+Low-carbon steel.
+
+[Note ID: 4]
+What material is best for high-temperature and high-pressure applications?
+Nickel alloys (though high-cost) or low-alloy steel.
+
+[Note ID: 5]
+What are the three types of pipe support systems?
+Rigid restraints (fixed, prevent movement), spring hangers (support gravity, allow thermal movement), and snubbers (limit seismic motion).
+
+[Note ID: 6]
+How do piping systems accommodate thermal expansion?
+Using thermal loops/bends or expansion joints to allow controlled linear expansion.
+
+[Note ID: 7]
+What are the five principal valve functions?
+Starting/stopping flow, throttling flow, controlling direction, regulating pressure, and relieving pressure.
+
+[Note ID: 8]
+What type of valve is used to start or stop complete fluid flow?
+Gate valves, ball valves, or plug valves.
+
+[Note ID: 9]
+What type of valve controls flow rate without completely stopping flow?
+Globe valves or needle valves (throttling-capable designs).
+
+[Note ID: 10]
+Name three basic valve construction components.
+Body (contains flow path and seats), bonnet (upper section that seals), disk (moves to open/close or throttle).
+
+[Note ID: 11]
+What is the purpose of the backseat in a valve?
+Allows packing adjustment without system depressurization.
+
+[Note ID: 12]
+What is the difference between rising-stem and non-rising stem valves?
+Rising-stem moves upward when opening (visual indicator). Non-rising stem does not move (position not visually obvious).
+
+[Note ID: 13]
+What is pressure defined as?
+Pressure = Force / Area (P = F/A), measured in psi, Pa, bar, or atm.
+
+[Note ID: 14]
+What is normal atmospheric pressure in psia and kPa?
+14.7 psia = 101.3 kPa.
+
+[Note ID: 15]
+What is hydrostatic pressure?
+Pressure from the weight of fluid column above a reference point (P = rho x g x h).
+
+[Note ID: 16]
+What is absolute pressure used for?
+Thermodynamic calculations; measured from perfect vacuum (zero reference); example: 10 psig = 24.7 psia.
+
+[Note ID: 17]
+What is gage pressure (PSIG)?
+Pressure above atmospheric (Pgage = Pabsolute - Patm); the reading on common pressure gauges.
+
+[Note ID: 18]
+What is differential pressure (PSID)?
+Difference between two locations; used for filter drop, valve throttling, and level measurement.
+
+[Note ID: 19]
+What does Pascal's Law state?
+Pressure applied to confined fluid is transmitted undiminished throughout in all directions (F1/A1 = F2/A2).
+
+[Note ID: 20]
+What is thermal binding in valves?
+Valve body cools faster than disk during cooldown, differential thermal contraction binds seat against disk, can make valve impossible to reopen.
+
+[Note ID: 21]
+How can thermal binding be prevented?
+Periodically crack valve open and re-shut during cooldown, use proper closing torque, allow gradual cooling.
+
+[Note ID: 22]
+What is pressure locking in valves?
+Liquid trapped in valve bonnet pressurizes as it heats, prevents valve opening (common in high-temperature systems).
+
+[Note ID: 23]
+How is pressure locking prevented?
+Provide relief or vent path on valve bonnet to equalize/reduce pressure buildup.
+
+[Note ID: 24]
+Should a wrench ever be used on a valve handwheel for extra leverage?
+No - can overstress actuator gearing and casing, causing catastrophic failure.
+
+[Note ID: 25]
+What does reaching hard stop on a handwheel confirm?
+Nothing - full travel must be verified by counting the designed number of turns; position limit switch is not reliable as sole indicator.

@@ -1,0 +1,119 @@
+[Note ID: 1]
+What is the fundamental function of a pump?
+To move a given volume of fluid at a specific pressure from one level to another while overcoming all flow resistance.
+
+[Note ID: 2]
+What are the two main pump categories?
+Kinetic (dynamic) pumps and Positive displacement pumps.
+
+[Note ID: 3]
+How do Kinetic (dynamic) pumps operate?
+By converting mechanical energy into kinetic energy (velocity), then converting velocity into pressure energy.
+
+[Note ID: 4]
+How do Positive displacement pumps operate?
+By trapping a fixed volume of fluid and forcing it into the discharge line repeatedly.
+
+[Note ID: 5]
+What type of pump is best for moving large volumes at moderate to low pressures?
+Centrifugal (kinetic) pumps - the most common in plant applications.
+
+[Note ID: 6]
+What types of pumps are positive displacement pumps?
+Gear pumps, screw pumps, piston pumps, and diaphragm pumps.
+
+[Note ID: 7]
+When are positive displacement pumps preferred?
+For moving small volumes at high pressures, or for moving viscous fluids.
+
+[Note ID: 8]
+What is pump capacity?
+The amount of fluid a pump moves, normally expressed in gallons per minute (gpm) or cubic feet per second (cfs).
+
+[Note ID: 9]
+What is static head?
+A difference in fluid levels (elevation head), normally stated in feet of water column.
+
+[Note ID: 10]
+What does static head represent?
+The pressure energy needed to lift fluid vertically against gravity without accounting for friction or flow velocity.
+
+[Note ID: 11]
+What is dynamic head?
+Energy required to set fluid in motion and overcome resistance, including velocity head and friction head.
+
+[Note ID: 12]
+What is total head?
+The sum of static head and dynamic head for a given operating condition.
+
+[Note ID: 13]
+What is total suction head (Hs)?
+The amount of pressure available at pump suction, expressed in feet of water column.
+
+[Note ID: 14]
+What is a positive suction head?
+When the suction source fluid level is above the pump centerline.
+
+[Note ID: 15]
+What is suction lift?
+A negative suction head that occurs when the suction source is below the pump centerline and the pump must "lift" the fluid.
+
+[Note ID: 16]
+What is total discharge head (Ht)?
+Sum of static discharge head and dynamic head of piping downstream of the pump.
+
+[Note ID: 17]
+What is total head also called?
+Total developed head or total dynamic head (TDH) - the pressure rise the pump must produce.
+
+[Note ID: 18]
+What is Net Positive Suction Head (NPSH)?
+The absolute pressure at pump suction minus the vapor pressure of the fluid at that point.
+
+[Note ID: 19]
+What happens when NPSH reaches zero?
+A partial vacuum forms and fluid begins to flash (boil) into vapor, risking cavitation.
+
+[Note ID: 20]
+What is cavitation?
+Formation of vapor bubbles when pump suction pressure approaches saturation pressure, causing damage to impeller and equipment.
+
+[Note ID: 21]
+What causes the distinctive noise during cavitation?
+The vapor bubbles collapsing or imploding under high pressure.
+
+[Note ID: 22]
+What damage does cavitation cause to the impeller?
+Pitting and erosion of the impeller surface, reducing efficiency and creating imbalance.
+
+[Note ID: 23]
+What are indicators of cavitation?
+Distinctive noise (sounds like pumping rocks), vibration, motor current fluctuations, and fluctuations in discharge pressure/flow.
+
+[Note ID: 24]
+What is the primary method to prevent cavitation during startup?
+Vent all air from suction lines and fill them completely with fluid before starting.
+
+[Note ID: 25]
+How can cavitation be prevented during operation?
+Maintain adequate NPSH by raising absolute pressure above saturation pressure, keeping system temperature low, and minimizing suction line restrictions.
+
+[Note ID: 26]
+What does a pump operational curve show?
+The relationship between flow rate and the head (pressure) a pump can develop at different operating points.
+
+[Note ID: 27]
+Where does a pump's operating point occur?
+Where the pump curve intersects the system resistance curve (system head curve).
+
+[Note ID: 28]
+How does pump efficiency vary?
+Decreases as flow rate deviates from the pump's design point; peak efficiency occurs in specific flow/head ranges.
+
+[Note ID: 29]
+What effects does operating outside the design point have?
+Wastes energy as heat, accelerates wear, and can cause cavitation.
+
+[Note ID: 30]
+What temperature effects impact pump performance?
+Higher temperature decreases viscosity and increases saturation pressure, both negatively affecting pump operation and NPSH.

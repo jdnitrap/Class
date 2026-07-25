@@ -1,0 +1,79 @@
+[Note ID: 1]
+What are the three basic modes of heat transfer?
+Conduction (molecular interactions), Convection (bulk fluid motion), Radiation (electromagnetic waves).
+
+[Note ID: 2]
+Which heat transfer modes dominate in PWR plants?
+Conduction and convection; radiation is negligible during normal operation but significant in accident conditions.
+
+[Note ID: 3]
+What is specific heat capacity (cp) and its formula?
+Heat required to raise one unit mass by one degree; Q = m × cp × ΔT; 1 Btu raises 1 lbm of water by 1°F.
+
+[Note ID: 4]
+What is conduction equation and what factors affect it?
+Q = kAΔT / x; higher k or A increases rate; higher x decreases rate; metals conduct well; gases/ceramics conduct poorly.
+
+[Note ID: 5]
+Which materials have high thermal conductivity (k)?
+Copper (133.0), Iron (39.0), 90-10 CuNi (23) Btu/hr-ft-°F; metals conduct heat well.
+
+[Note ID: 6]
+Which materials have low thermal conductivity?
+Air (0.0145), Rock Wool (0.03), Concrete (0.2-0.7) Btu/hr-ft-°F; gases and insulation conduct poorly.
+
+[Note ID: 7]
+What is convection?
+Heat transfer between fluid and surface via circulation/mixing; boundary layer is thin film next to surface.
+
+[Note ID: 8]
+What is natural convection versus forced convection?
+Natural: density-driven. Forced: pump-driven (more efficient, easier control); virtually all plant convection is forced.
+
+[Note ID: 9]
+What is boundary layer thickness and what affects it?
+Thin stagnant film next to surface; affected by: temperature (higher T thins layer), flow rate (higher flow thins layer), surface roughness.
+
+[Note ID: 10]
+What is heat transfer coefficient (hf) in convection?
+hf = kf / xf; where kf is boundary layer conductivity and xf is thickness; higher hf means better heat transfer.
+
+[Note ID: 11]
+What are the three layers in heat exchanger transfer?
+(1) Convection hot fluid to tube, (2) Conduction through tube wall, (3) Convection tube to cold fluid (all in series).
+
+[Note ID: 12]
+What does overall heat transfer coefficient (Uo) represent?
+Uo = 1 / total resistance (sum of all three resistances); Q = Uo × Ao × ΔTo.
+
+[Note ID: 13]
+How does fouling affect overall heat transfer coefficient?
+Fouling adds extra layer; 2 mil scale can drop Uo ~30%; monitored to detect degradation early.
+
+[Note ID: 14]
+What is radiation heat transfer?
+Transfers heat via electromagnetic waves (no medium needed); Stefan-Boltzmann: Q = σ × A × ε × (T⁴).
+
+[Note ID: 15]
+Why is radiation negligible in normal PWR operation?
+Requires extremely high temperature difference due to T⁴ relationship; not workable for normal operation but critical in accidents.
+
+[Note ID: 16]
+What is single-phase heat transfer?
+Both fluids remain liquid or gas; equations: Q = m × cp × ΔT.
+
+[Note ID: 17]
+What is two-phase heat transfer?
+One fluid changes phase (condenser, steam generator); equations: Q = m × Δh (uses enthalpy change).
+
+[Note ID: 18]
+What does CTP represent?
+Core Thermal Power; heat input rate from core to Reactor Coolant System.
+
+[Note ID: 19]
+What are the two methods to calculate CTP?
+RCS heat balance: Q = m × cp × ΔT. Secondary heat balance: Q = m × Δh (steam - feedwater).
+
+[Note ID: 20]
+What is condensate depression and optimal range?
+Tsat - Tcondensate; prevents pump cavitation; optimal: 10-20°F; excessive wastes heat and increases corrosion.

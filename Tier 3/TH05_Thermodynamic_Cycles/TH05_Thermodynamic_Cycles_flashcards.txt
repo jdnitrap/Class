@@ -1,0 +1,79 @@
+[Note ID: 1]
+What are the five essential elements of a thermodynamic cycle?
+(1) Working fluid (steam/gas), (2) Engine (turbine/piston), (3) Heat source (boiler), (4) Heat sink (condenser), (5) Device to move working fluid (pump/compressor).
+
+[Note ID: 2]
+What is cycle efficiency?
+Cycle efficiency = (Q_added - Q_rejected) / Q_added = net work out / heat added.
+
+[Note ID: 3]
+What is the Carnot cycle?
+Theoretical maximum efficiency cycle using four processes: isothermal expansion, adiabatic expansion, isothermal compression, adiabatic compression.
+
+[Note ID: 4]
+What is Carnot efficiency dependent on?
+Only the absolute temperatures of heat source and sink (K); independent of working fluid type.
+
+[Note ID: 5]
+How does isothermal expansion occur in Carnot cycle?
+Temperature constant; heat absorbed from heat source; pressure decreases, volume increases; system produces work.
+
+[Note ID: 6]
+How does adiabatic expansion occur in Carnot cycle?
+No heat transfer; temperature and pressure decrease; working fluid expands, extracting maximum work.
+
+[Note ID: 7]
+What is the Rankine cycle?
+More realistic steam cycle used in actual power plants; operates with four main processes.
+
+[Note ID: 8]
+What are the four processes in the Rankine cycle?
+(1) Pump compression (adiabatic), (2) Heat addition (isobaric in boiler), (3) Turbine expansion (adiabatic), (4) Heat rejection (isobaric in condenser).
+
+[Note ID: 9]
+How is pump compression in Rankine cycle?
+Adiabatic; increases liquid pressure; requires work input.
+
+[Note ID: 10]
+How is heat addition in Rankine cycle?
+Constant-pressure; boiler raises feedwater enthalpy; converts liquid to saturated or superheated steam.
+
+[Note ID: 11]
+How is turbine expansion in Rankine cycle?
+Adiabatic; decreases pressure and enthalpy; produces useful work output.
+
+[Note ID: 12]
+How is heat rejection in Rankine cycle?
+Constant-pressure; condenser removes latent heat of condensation; converts exhausted steam to liquid.
+
+[Note ID: 13]
+What is net work in Rankine cycle?
+W_net = W_turbine - W_pump; pump work typically 1-5% of turbine work.
+
+[Note ID: 14]
+How does Rankine cycle compare to Carnot?
+More realistic (uses isobars instead of isotherms); easier to analyze using steam tables; lower efficiency but achievable in practice.
+
+[Note ID: 15]
+What is the primary method to increase heat source temperature?
+Superheat steam in boiler; increases energy input; larger temperature difference with heat sink; limited by material strength.
+
+[Note ID: 16]
+What is the primary method to decrease heat sink temperature?
+Improve condenser cooling; deep vacuum in condenser maximizes efficiency gain; limited by ambient temperature.
+
+[Note ID: 17]
+How do irreversibilities affect Rankine cycle efficiency?
+Real turbines and pumps add entropy from friction losses, reducing efficiency compared to ideal cycle.
+
+[Note ID: 18]
+What is the effect of pump work on Rankine cycle?
+Pump requires 1-5% of turbine output; net work = turbine work minus pump work.
+
+[Note ID: 19]
+How does condenser vacuum improve efficiency?
+Lower condenser pressure/temperature increases temperature difference between source and sink, improving Carnot efficiency.
+
+[Note ID: 20]
+What working fluid is used in Rankine cycle for power plants?
+Steam (water); chosen for abundance, properties, and ability to absorb/reject large quantities of heat.
