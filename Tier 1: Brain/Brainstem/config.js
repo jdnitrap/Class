@@ -10,11 +10,11 @@ export const config = {
     // Data paths (Tier 2: Nervous System metadata files)
     paths: {
         metadata: {
-            questions: 'Tier 2: Nervous System/questions-synapses.json',
-            notes: 'Tier 2: Nervous System/notes-synapses.json',
-            flashcards: 'Tier 2: Nervous System/flashcards-synapses.json',
+            questions: 'Tier%202:%20Nervous%20System/questions-synapses.json',
+            notes: 'Tier%202:%20Nervous%20System/notes-synapses.json',
+            flashcards: 'Tier%202:%20Nervous%20System/flashcards-synapses.json',
         },
-        content: 'Tier 3: Pathways/',  // Base path for content files
+        content: 'Tier%203:%20Pathways/',  // Base path for content files
     },
 
     // UI settings
