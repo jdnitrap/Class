@@ -96,9 +96,9 @@ Tier 3/
 │   └── CP01_questions.txt         # 30 exam questions
 ├── TH01/ through TH05/            # Thermodynamics I-V
 ├── CP06/                          # Heat Exchangers & Condensers
-│   ├── CP06_notes.txt             # 25 comprehensive study notes
-│   ├── CP06_flashcard_notes.txt   # 42 general bite-sized flashcards
-│   └── CP06_objective_flashcards.txt  # 47 simple objective-aligned flashcards
+│   ├── CP06_Heat_Exchangers_notes.txt        # 25 comprehensive study notes
+│   ├── CP06_Heat_Exchangers_flashcards.txt  # 47 Q&A flashcards
+│   └── CP06_Heat_Exchangers_questions.txt   # 25 exam questions (JSON)
 ├── Fluid_Flow/                    # Fluid Flow (TH06B)
 │   ├── Fluid_Flow_notes.txt       # 45 study notes
 │   └── Fluid_Flow_TH06B__questions.txt  # 37 exam questions
@@ -132,9 +132,9 @@ Questions files use `[Question ID: X]` with JSON:
 ```
 
 **Total Content:**
-- **232 Note Entries** across 12 subjects (143 core study notes + 89 flashcard notes)
-- **191 Exam Questions** across 9 subjects
-- **CP06 offers triple study methods:** 25 comprehensive notes + 42 general flashcards + 47 objective-aligned flashcards (114 total)
+- **257 Note Entries** across 11 subjects (including comprehensive notes and flashcards)
+- **216 Exam Questions** across 10 subjects
+- **CP06 offers three study modes:** 25 comprehensive notes + 47 Q&A flashcards + 25 exam questions (97 total)
 
 ## How to Use the Application
 
@@ -241,15 +241,13 @@ window.app.allNotes.filter(n => n.subject === 'Pumps').length
 
 | Metric | Value |
 |--------|-------|
-| Total Subject Listings | 12 (CP01, TH01-TH05, CP06, CP06 Flashcards, CP06 Objectives, Fluid Flow, TH07B, Pumps) |
-| Core Study Notes | 143 |
-| General Flashcard Notes | 42 |
-| Objective-Aligned Flashcards | 47 |
-| Total Note Entries | 232 |
-| Exam Questions | 191 |
-| Largest Topic | CP06 triple-mode (25 comprehensive + 42 general + 47 objectives = 114 total) |
+| Total Subject Listings | 10 (CP01, TH01-TH05, CP06, Fluid Flow, TH07B, Pumps) |
+| Total Note Entries | 257 (comprehensive notes + flashcard Q&A pairs) |
+| Exam Questions | 216 |
+| Largest Topic | CP06 (25 comprehensive notes + 47 flashcards + 25 exam questions = 97 total) |
+| Three-Tier Architecture | Tier 1 (8 JS + HTML) → Tier 2 (JSON metadata) → Tier 3 (text content) |
 | Modules | 8 JS files + index.html |
-| Content Files | 21 .txt files |
+| Content Files | 24 .txt files (3 per topic × 8 topics) |
 
 ## Common Tasks
 
