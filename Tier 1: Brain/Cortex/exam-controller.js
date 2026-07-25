@@ -12,7 +12,7 @@ export const exam = {
         state.currentQuestionIndex = 0;
         state.selectedAnswers = {};
         this.showQuestion(state);
-        router.showScreen('questionScreen');
+        router.showScreen('examScreen');
     },
 
     startComprehensiveExam(state) {
@@ -20,7 +20,7 @@ export const exam = {
         state.currentQuestionIndex = 0;
         state.selectedAnswers = {};
         this.showQuestion(state);
-        router.showScreen('questionScreen');
+        router.showScreen('examScreen');
     },
 
     startTopicExamSelection(state) {
