@@ -138,8 +138,11 @@ window.addEventListener('load', async () => {
         console.log('✅ INITIALIZATION COMPLETE');
         console.log('==========================================');
         console.log('Test: Open browser DevTools Console (F12) and paste this:');
-        console.log('window.app.allNotes.filter(n=>n.subject==="Pumps").length');
-        console.log('Should show: 30');
+        console.log('window.app.allNotes.filter(n=>n.subject==="CP06 Flashcards").length');
+        console.log('Should show: 42 (CP06 now has both comprehensive notes and flashcard notes)');
+        console.log('Other subjects - try:');
+        console.log('  Pumps: window.app.allNotes.filter(n=>n.subject==="Pumps").length  // 30');
+        console.log('  CP06 comprehensive: window.app.allNotes.filter(n=>n.subject==="CP06").length  // 25');
     } catch (err) {
         console.log('==========================================');
         console.error('❌ INITIALIZATION FAILED');

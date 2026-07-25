@@ -71,7 +71,7 @@ Maps study notes to their content files with metadata.
       "image": "assets/images/diagram.png",
       "imageLabel": "Optional caption"
     },
-    // ... more notes (143 total)
+    // ... more notes (185 total entries)
   ]
 }
 ```
@@ -96,7 +96,8 @@ Tier 3/
 │   └── CP01_questions.txt         # 30 exam questions
 ├── TH01/ through TH05/            # Thermodynamics I-V
 ├── CP06/                          # Heat Exchangers & Condensers
-│   └── CP06_notes.txt             # 25 study notes (notes-only subject)
+│   ├── CP06_notes.txt             # 25 comprehensive study notes
+│   └── CP06_flashcard_notes.txt   # 42 bite-sized flashcard notes
 ├── Fluid_Flow/                    # Fluid Flow (TH06B)
 │   ├── Fluid_Flow_notes.txt       # 45 study notes
 │   └── Fluid_Flow_TH06B__questions.txt  # 37 exam questions
@@ -130,8 +131,9 @@ Questions files use `[Question ID: X]` with JSON:
 ```
 
 **Total Content:**
-- **143 Study Notes** across 10 subjects
+- **185 Note Entries** across 11 subjects (143 core study notes + 42 flashcard notes)
 - **191 Exam Questions** across 9 subjects
+- **CP06 now offers dual study methods:** 25 comprehensive notes + 42 quick-reference flashcard notes
 
 ## How to Use the Application
 
@@ -238,12 +240,14 @@ window.app.allNotes.filter(n => n.subject === 'Pumps').length
 
 | Metric | Value |
 |--------|-------|
-| Total Subjects | 10 |
-| Study Notes | 143 |
+| Total Subject Listings | 11 (CP01, TH01-TH05, CP06, CP06 Flashcards, Fluid Flow, TH07B, Pumps) |
+| Core Study Notes | 143 |
+| Flashcard Notes | 42 |
+| Total Note Entries | 185 |
 | Exam Questions | 191 |
-| Largest Topic | Fluid Flow (45 notes, 37 questions) |
+| Largest Topic | CP06 dual-mode (25 comprehensive + 42 flashcard = 67 total) |
 | Modules | 8 JS files + index.html |
-| Content Files | 19 .txt files |
+| Content Files | 20 .txt files |
 
 ## Common Tasks
 
