@@ -1,1 +1,15 @@
+Example layout for AI model to follow in making text files for each topic
 
+1. Comprehensive notes....the file nameing will be follow as "AB:12 Name of actual subject"  Example: TH06: Pump
+
+2. Flash Cards...
+  2.1 Naming of the flash card: the Flash Card nameing file will follow "AB1: Name of Actual Subject" Example TH06 Pump 
+  2.2  The flash cards will follow the objectives being ask.  
+  2.3  The flash cards must be maintain simple.  
+  2.3  The front of the flash card will have the objective being ask as a question
+  2.5  The back of the flash card will have a simple answer to remember
+
+3. Test question .txt
+  3.1  Naming sequences will be as the same as above
+  3.2  This file will hold the subjects question and answers
+  3.3  This file will always be modified with newers answers also
