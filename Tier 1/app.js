@@ -30,6 +30,12 @@ window.app = {
             console.log(`✓ Loaded ${this.allNotes.length} notes`);
             const subjects = [...new Set(this.allNotes.map(n => n.subject))].sort();
             console.log(`✓ Available subjects: ${subjects.join(', ')}`);
+
+            // Update home screen with subject count
+            const homeSubjectCountEl = document.getElementById('homeSubjectCount');
+            if (homeSubjectCountEl) {
+                homeSubjectCountEl.textContent = subjects.length;
+            }
         } catch (error) {
             console.error('✗ Initialization failed:', error);
             throw error;
