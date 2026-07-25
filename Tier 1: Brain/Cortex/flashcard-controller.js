@@ -64,7 +64,8 @@ export const flashcard = {
         document.getElementById('cardProgressFill').style.width = progress + '%';
 
         state.cardFlipped = false;
-        const { front } = this.extractFrontBack(card.content);
+        // Use front/back properties from markdown loader, fallback to content parsing for legacy format
+        const front = card.front || (card.content ? this.extractFrontBack(card.content).front : 'Flashcard');
         document.getElementById('cardContent').textContent = front;
     },
 
@@ -73,7 +74,9 @@ export const flashcard = {
         if (!card) return;
 
         state.cardFlipped = !state.cardFlipped;
-        const { front, back } = this.extractFrontBack(card.content);
+        // Use front/back properties from markdown loader, fallback to content parsing for legacy format
+        const front = card.front || (card.content ? this.extractFrontBack(card.content).front : 'Flashcard');
+        const back = card.back || (card.content ? this.extractFrontBack(card.content).back : 'No answer');
 
         if (state.cardFlipped) {
             document.getElementById('cardContent').textContent = back;
