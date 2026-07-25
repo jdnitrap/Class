@@ -1,12 +1,16 @@
-// Data filtering utilities - centralized logic for filtering questions and notes
+// Processor - filters and processes data for display
 
-export const dataFilter = {
+export const processor = {
     filterQuestionsBySubject(questions, subject) {
         return questions.filter(q => q.subject === subject);
     },
 
     filterNotesBySubject(notes, subject) {
         return notes.filter(n => n.subject === subject);
+    },
+
+    filterFlashcardsBySubject(flashcards, subject) {
+        return flashcards.filter(f => f.subject === subject);
     },
 
     getUniqueSubjects(items) {
@@ -25,33 +29,20 @@ export const dataFilter = {
         return this.getUniqueSubjects(flashcards);
     },
 
-    filterFlashcardsBySubject(flashcards, subject) {
-        return flashcards.filter(f => f.subject === subject);
-    },
-
     getDisplayName(subject, items) {
-        // Find an item with this subject to extract the display name from contentFile
         const item = items.find(i => i.subject === subject);
         if (!item || !item.contentFile) {
-            return subject; // Fallback to subject code
+            return subject;
         }
 
-        // Extract directory name from contentFile path
-        // e.g., "Tier 3/CP01_Piping/CP01_Piping_notes.txt" -> "CP01_Piping"
         const pathParts = item.contentFile.split('/');
-        const directoryName = pathParts[1]; // Get the directory name
+        const directoryName = pathParts[1];
 
         if (!directoryName) {
             return subject;
         }
 
-        // Simply replace underscores with spaces to match the directory name format
-        // CP01_Piping -> CP01 Piping
-        // TH01_Measurement -> TH01 Measurement
-        // TH06B_Fluid_Flow -> TH06B Fluid Flow
-        // CP06_Heat_Exchangers -> CP06 Heat Exchangers
         const displayName = directoryName.replace(/_/g, ' ');
-
         return displayName;
     }
 };

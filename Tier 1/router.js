@@ -1,46 +1,50 @@
-// UI module - handles screen navigation and DOM management
+// Router - handles navigation between screens and mode selection
 
-import { uiUtils } from './ui-utils.js';
-import { dataFilter } from './data-filter.js';
+import { helpers } from './ui/helpers.js';
+import { processor } from './processor.js';
+import { exam } from './modes/exam.js';
+import { flashcard } from './modes/flashcard.js';
+import { notes } from './modes/notes.js';
 
-export const ui = {
+export const router = {
     showScreen(screenId) {
-        uiUtils.showScreen(screenId);
+        helpers.showScreen(screenId);
     },
 
-    goHome(app) {
-        app.isComprehensiveExam = false;
+    goHome(state) {
+        state.isComprehensiveExam = false;
         this.showScreen('homeScreen');
     },
 
-    selectMode(app, mode) {
-        app.currentMode = mode;
-        app.currentQuestionIndex = 0;
-        app.currentCardIndex = 0;
-        app.selectedAnswers = {};
-        app.answers = [];
-        app.cardFlipped = false;
+    selectMode(state, mode) {
+        state.currentMode = mode;
+        state.currentQuestionIndex = 0;
+        state.currentCardIndex = 0;
+        state.selectedAnswers = {};
+        state.answers = [];
+        state.cardFlipped = false;
+
         if (mode === 'notes') {
-            this.renderNotesSelection(app);
+            this.renderNotesSelection(state);
         } else if (mode === 'exam') {
-            this.showExamConfigScreen(app);
+            this.showExamConfigScreen(state);
         } else if (mode === 'flashcard') {
-            this.renderNotesSelection(app);
+            this.renderNotesSelection(state);
         }
     },
 
-    showExamConfigScreen(app) {
+    showExamConfigScreen(state) {
         this.showScreen('examConfigScreen');
     },
 
-    renderSubjectSelection(app) {
+    renderSubjectSelection(state) {
         console.log('📚 Rendering exam subject selection...');
-        if (!app.allQuestions || app.allQuestions.length === 0) {
+        if (!state.allQuestions || state.allQuestions.length === 0) {
             console.error('✗ ERROR: allQuestions is empty! Data not loaded.');
             return;
         }
 
-        const subjects = dataFilter.getUniqueQuestionsSubjects(app.allQuestions);
+        const subjects = processor.getUniqueQuestionsSubjects(state.allQuestions);
         console.log(`  → Found ${subjects.length} subjects: ${subjects.join(', ')}`);
 
         const container = document.getElementById('subjectButtonsContainer');
@@ -49,40 +53,39 @@ export const ui = {
             return;
         }
 
-        uiUtils.clearContainer('subjectButtonsContainer');
+        helpers.clearContainer('subjectButtonsContainer');
 
         subjects.forEach(subject => {
             const btn = document.createElement('button');
             btn.className = 'subject-btn';
-            const displayName = dataFilter.getDisplayName(subject, app.allQuestions);
+            const displayName = processor.getDisplayName(subject, state.allQuestions);
             btn.textContent = displayName;
-            btn.onclick = () => this.selectSubject(app, subject);
+            btn.onclick = () => this.selectSubject(state, subject);
             container.appendChild(btn);
         });
 
-        if (subjects.length > 0) this.selectSubject(app, subjects[0]);
+        if (subjects.length > 0) this.selectSubject(state, subjects[0]);
         this.showScreen('subjectScreen');
     },
 
-    renderNotesSelection(app) {
+    renderNotesSelection(state) {
         console.log('📝 Rendering notes selection...');
 
         let subjects;
-        if (app.currentMode === 'flashcard') {
-            if (!app.allFlashcards || app.allFlashcards.length === 0) {
+        if (state.currentMode === 'flashcard') {
+            if (!state.allFlashcards || state.allFlashcards.length === 0) {
                 console.error('✗ ERROR: allFlashcards is empty! Data not loaded.');
                 return;
             }
-            subjects = dataFilter.getUniqueFlashcardsSubjects(app.allFlashcards);
+            subjects = processor.getUniqueFlashcardsSubjects(state.allFlashcards);
             console.log(`  → Found ${subjects.length} flashcard subjects: ${subjects.join(', ')}`);
         } else {
-            if (!app.allNotes || app.allNotes.length === 0) {
+            if (!state.allNotes || state.allNotes.length === 0) {
                 console.error('✗ ERROR: allNotes is empty! Data not loaded.');
                 return;
             }
-            subjects = dataFilter.getUniqueNotesSubjects(app.allNotes);
+            subjects = processor.getUniqueNotesSubjects(state.allNotes);
             console.log(`  → Found ${subjects.length} note subjects: ${subjects.join(', ')}`);
-
         }
 
         const container = document.getElementById('notesSubjectButtonsContainer');
@@ -91,33 +94,33 @@ export const ui = {
             return;
         }
 
-        uiUtils.clearContainer('notesSubjectButtonsContainer');
+        helpers.clearContainer('notesSubjectButtonsContainer');
 
-        const dataSource = app.currentMode === 'flashcard' ? app.allFlashcards : app.allNotes;
+        const dataSource = state.currentMode === 'flashcard' ? state.allFlashcards : state.allNotes;
         subjects.forEach(subject => {
             const btn = document.createElement('button');
             btn.className = 'subject-btn';
-            const displayName = dataFilter.getDisplayName(subject, dataSource);
+            const displayName = processor.getDisplayName(subject, dataSource);
             btn.textContent = displayName;
-            btn.onclick = () => this.selectNotesSubject(app, subject);
+            btn.onclick = () => this.selectNotesSubject(state, subject);
             container.appendChild(btn);
         });
 
-        if (subjects.length > 0) this.selectNotesSubject(app, subjects[0]);
+        if (subjects.length > 0) this.selectNotesSubject(state, subjects[0]);
         this.showScreen('notesSelectScreen');
     },
 
-    selectSubject(app, subject) {
-        app.currentSubject = subject;
-        const displayName = dataFilter.getDisplayName(subject, app.allQuestions);
+    selectSubject(state, subject) {
+        state.currentSubject = subject;
+        const displayName = processor.getDisplayName(subject, state.allQuestions);
         document.getElementById('selectedSubjectName').textContent = displayName;
-        document.getElementById('modeButtonText').textContent = app.currentMode === 'exam' ? 'Exam' : 'Flashcards';
+        document.getElementById('modeButtonText').textContent = state.currentMode === 'exam' ? 'Exam' : 'Flashcards';
         document.querySelectorAll('#subjectButtonsContainer .subject-btn').forEach(btn => {
             btn.classList.toggle('active', btn.textContent === displayName);
         });
 
-        if (app.currentMode === 'exam') {
-            const subjectQuestions = dataFilter.filterQuestionsBySubject(app.allQuestions, subject);
+        if (state.currentMode === 'exam') {
+            const subjectQuestions = processor.filterQuestionsBySubject(state.allQuestions, subject);
             const maxQuestions = subjectQuestions.length;
             document.getElementById('maxQuestions').textContent = maxQuestions;
             document.getElementById('questionCount').max = maxQuestions;
@@ -128,49 +131,50 @@ export const ui = {
         }
     },
 
-    selectNotesSubject(app, subject) {
-        console.log(`🔄 Selecting notes subject: ${subject}, mode: ${app.currentMode}`);
-        app.currentNotesSubject = subject;
+    selectNotesSubject(state, subject) {
+        console.log(`🔄 Selecting notes subject: ${subject}, mode: ${state.currentMode}`);
+        state.currentNotesSubject = subject;
         const subjectNameEl = document.getElementById('selectedNotesSubjectName');
         if (!subjectNameEl) {
             console.error('✗ ERROR: selectedNotesSubjectName element not found');
             return;
         }
-        const displayName = dataFilter.getDisplayName(subject, app.allNotes);
+        const dataSource = state.currentMode === 'flashcard' ? state.allFlashcards : state.allNotes;
+        const displayName = processor.getDisplayName(subject, dataSource);
         subjectNameEl.textContent = displayName;
         document.querySelectorAll('#notesSubjectButtonsContainer .subject-btn').forEach(btn => {
             btn.classList.toggle('active', btn.textContent === displayName);
         });
-        const buttonText = app.currentMode === 'flashcard' ? 'Start Flashcards' : 'View Notes';
+        const buttonText = state.currentMode === 'flashcard' ? 'Start Flashcards' : 'View Notes';
         document.getElementById('studyModeButtonText').textContent = buttonText;
         console.log(`✓ Subject selected: ${subject}`);
     },
 
-    startStudyMode(app) {
-        if (app.currentMode === 'flashcard') {
+    startStudyMode(state) {
+        if (state.currentMode === 'flashcard') {
             return 'flashcard';
         } else {
             return 'notes';
         }
     },
 
-    startMode(app, exam, flashcard, notes) {
-        if (!app.currentMode) {
-            console.error('Mode not set. Current mode:', app.currentMode);
+    startMode(state) {
+        if (!state.currentMode) {
+            console.error('Mode not set. Current mode:', state.currentMode);
             return;
         }
-        if (app.isComprehensiveExam) {
-            exam.startComprehensiveExam(app);
-        } else if (app.currentMode === 'exam') {
-            exam.startExam(app);
-        } else if (app.currentMode === 'flashcard') {
-            flashcard.startFlashcards(app);
+        if (state.isComprehensiveExam) {
+            exam.startComprehensiveExam(state);
+        } else if (state.currentMode === 'exam') {
+            exam.startExam(state);
+        } else if (state.currentMode === 'flashcard') {
+            flashcard.startFlashcards(state);
         } else {
-            console.error('Unknown mode:', app.currentMode);
+            console.error('Unknown mode:', state.currentMode);
         }
     },
 
-    goBackToNotesSelection(app) {
-        this.renderNotesSelection(app);
+    goBackToNotesSelection(state) {
+        this.renderNotesSelection(state);
     }
 };
