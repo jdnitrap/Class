@@ -10,13 +10,13 @@ export const notes = {
         console.log(`📖 Loading notes for subject: ${state.currentNotesSubject}`);
         const subjectNotes = processor.filterNotesBySubject(state.allNotes, state.currentNotesSubject);
 
-        const container = document.getElementById('notesContent');
+        const container = document.getElementById('notesListContainer');
         if (!container) {
-            console.error('✗ notesContent container not found');
+            console.error('✗ notesListContainer container not found');
             return;
         }
 
-        helpers.clearContainer('notesContent');
+        helpers.clearContainer('notesListContainer');
 
         for (const note of subjectNotes) {
             const noteDiv = document.createElement('div');
