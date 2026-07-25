@@ -1,0 +1,187 @@
+[Note ID: 186]
+What is the main difference between direct contact and indirect contact heat exchangers?
+Direct contact: fluids touch each other. Indirect contact: fluids separated by solid surface (tube/plate).
+
+[Note ID: 187]
+What are common examples of direct contact heat exchangers?
+Cooling towers, lakes, rivers - fluids in direct contact.
+
+[Note ID: 188]
+What are common examples of indirect contact heat exchangers?
+Steam generators, main condensers - fluids separated by surfaces.
+
+[Note ID: 189]
+How does a forced draft cooling tower work?
+Fans blow air into the tower to exchange heat between cooling water and air.
+
+[Note ID: 190]
+How does a natural draft cooling tower work?
+Uses convective chimney effects (hot air rises) to pull air through tower - no fans needed.
+
+[Note ID: 191]
+What two flow configurations are used in cooling towers?
+Cross-flow (air enters side, exits opposite) and Counter-flow (air enters bottom, exits top).
+
+[Note ID: 192]
+What is the purpose of cooling tower fill material?
+Increases air-water contact surface area for better heat transfer. Usually PVC or plastic.
+
+[Note ID: 193]
+What are the four basic flow paths in shell-and-tube heat exchangers?
+Cross flow, Parallel flow, Counter flow, U-tube.
+
+[Note ID: 194]
+What is crossflow heat transfer?
+Two fluids flow perpendicular to each other. Example: main condensers.
+
+[Note ID: 195]
+What is parallel flow heat transfer?
+Two fluids flow in same direction. Requires large surface area - not commonly used.
+
+[Note ID: 196]
+What is counter flow heat transfer?
+Two fluids flow in opposite directions. Most efficient - maintains large temperature difference.
+
+[Note ID: 197]
+Why is counter-flow more efficient than parallel-flow?
+Counter-flow maintains larger temperature difference throughout exchanger, allowing more heat transfer in smaller space.
+
+[Note ID: 198]
+What formula calculates heat transfer rate?
+Q = Uo × A × ΔT (heat transfer = coefficient × surface area × temperature difference)
+
+[Note ID: 199]
+What three factors increase heat transfer rate?
+Larger overall heat transfer coefficient (Uo), larger surface area (A), larger temperature difference (ΔT).
+
+[Note ID: 200]
+What is a regenerative heat exchanger?
+Transfers heat from hot fluid into cold sections of SAME system. Example: Feedwater Heaters. Minimizes energy loss.
+
+[Note ID: 201]
+What is a non-regenerative heat exchanger?
+Transfers heat between TWO SEPARATE systems. Heat is rejected and discarded. Example: Turbine Lube Oil Coolers.
+
+[Note ID: 202]
+What are the major components of a shell and tube heat exchanger?
+Shell, tube bundle, tubesheets, waterboxes, baffles, nozzles, vents, drains.
+
+[Note ID: 203]
+What is the shell in a heat exchanger?
+The casing that surrounds the heat transfer region. Houses shell-side fluid.
+
+[Note ID: 204]
+What are tubesheets in a heat exchanger?
+Perforated metal plates at shell ends that separate the two fluids and support tubes.
+
+[Note ID: 205]
+What are baffles in a heat exchanger?
+Internal dividers that direct shell-side flow to cross tubes multiple times for better heat transfer.
+
+[Note ID: 206]
+What are the two common tube types?
+Straight tubes (easy to clean/replace) and U-tubes (simplified expansion, fewer joints).
+
+[Note ID: 207]
+What is thermal shock in a heat exchanger?
+Sudden temperature change causing excessive thermal stress - risk of metal cracking or brittle fracture.
+
+[Note ID: 208]
+When is thermal shock most likely to occur?
+During startup when hot and cold fluids suddenly introduced, or sudden temperature changes during operation.
+
+[Note ID: 209]
+How do you prevent thermal shock during heat exchanger startup?
+Gradually introduce fluids by throttling inlet valves - minimize sudden temperature changes.
+
+[Note ID: 210]
+What is the startup procedure for a heat exchanger?
+(1) Circulate cold fluid first with vents open. (2) Valve in hot fluid slowly. (3) Throttle inlet to prevent pressure spikes.
+
+[Note ID: 211]
+What is water hammer in heat exchangers?
+Pressure spike when fluid velocity suddenly changes - causes pipe movement and damage.
+
+[Note ID: 212]
+How do you minimize water hammer?
+Operate valves slowly - avoid sudden changes in fluid velocity.
+
+[Note ID: 213]
+How do flow rates affect heat exchanger performance?
+Too high = excessive pressure drops and energy loss. Too low = inadequate heat transfer. Must optimize.
+
+[Note ID: 214]
+What is scaling in a heat exchanger?
+Deposit buildup (mineral scale, corrosion products) that reduces heat transfer surface area and efficiency.
+
+[Note ID: 215]
+What causes tube fouling in heat exchangers?
+Deposits from minerals, corrosion, biological growth that reduce heat transfer coefficient and surface area.
+
+[Note ID: 216]
+What happens if a heat exchanger tube fails?
+Cross-contamination of fluids, loss of heat transfer capability, and potential operational hazards.
+
+[Note ID: 217]
+How do you maintain heat exchanger performance?
+Keep surfaces clean, maintain proper flow rates, monitor for fouling, detect tube failures early.
+
+[Note ID: 218]
+What is the relationship between condenser vacuum and turbine backpressure?
+Higher vacuum (lower pressure) = lower backpressure = greater pressure difference across turbine = more work and efficiency.
+
+[Note ID: 219]
+Why is condenser vacuum important?
+Better vacuum improves turbine efficiency by increasing pressure difference, allowing more steam work conversion.
+
+[Note ID: 220]
+What happens when condenser vacuum degrades?
+Backpressure increases, turbine output decreases, plant efficiency reduces.
+
+[Note ID: 221]
+How is vacuum measured in condensers?
+As absolute pressure - lower absolute pressure = better vacuum.
+
+[Note ID: 222]
+How does a main condenser operate?
+Exhaust steam from turbine contacts cold condenser tubes - steam condenses to condensate - circulating water absorbs latent heat.
+
+[Note ID: 223]
+What is the flow pattern in a main condenser?
+Crossflow: exhaust steam flows downward perpendicular to tubes containing circulating cooling water.
+
+[Note ID: 224]
+What is the hotwell in a condenser?
+Collects condensed steam at bottom of condenser before being pumped to feedwater system.
+
+[Note ID: 225]
+How much cooling water is needed per pound of steam?
+Approximately 65 to 100 pounds (8 to 12 gallons) of cooling water per pound of steam condensed.
+
+[Note ID: 226]
+What are non-condensable gases in a condenser?
+Air and other gases that cannot condense - accumulate and increase pressure, reducing vacuum.
+
+[Note ID: 227]
+How do air removal systems maintain condenser vacuum?
+Jet air ejectors or vacuum pumps continuously remove non-condensable gases.
+
+[Note ID: 228]
+How do you monitor condenser efficiency?
+Measure vacuum, outlet water temperature, flow rates. Degradation = reduced vacuum, increased outlet temperature.
+
+[Note ID: 229]
+What is biofouling in cooling systems?
+Aquatic organism growth that degrades cooling tower and condenser performance - control through chemical treatment.
+
+[Note ID: 230]
+What are the three key principles of heat exchanger operation?
+(1) Heat transfers from hot to cold, (2) Temperature difference drives transfer, (3) Minimize losses through proper design/maintenance.
+
+[Note ID: 231]
+What makes an effective heat exchanger?
+Proper flow patterns, adequate surface area, clean surfaces, correct fluid properties, effective thermal design.
+
+[Note ID: 232]
+What is the operator's role in heat exchanger performance?
+Monitor conditions, maintain flow rates, prevent fouling, detect failures, perform proper startup/shutdown procedures.

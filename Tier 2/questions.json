@@ -35,6 +35,10 @@
     {
       "subject": "Pumps",
       "contentFile": "Tier 3/Pumps/Pumps_questions.txt"
+    },
+    {
+      "subject": "CP06",
+      "contentFile": "Tier 3/CP06/CP06_Heat_Exchangers_questions.txt"
     }
   ]
 }
