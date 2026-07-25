@@ -250,6 +250,81 @@ Tier 2 (notes.json) references these files by subject:
 
 ---
 
+## Image and Diagram Support
+
+Each topic can include diagrams and visual aids to enhance learning.
+
+### Image Directory Structure
+
+Images for each topic should be organized in a dedicated images subfolder:
+
+```
+Tier 3/
+├── CP01_Piping/
+│   ├── CP01_Piping_notes.txt
+│   ├── CP01_Piping_flashcards.txt
+│   ├── CP01_Piping_questions.txt
+│   └── images/
+│       ├── valve-types.png
+│       ├── pressure-types.svg
+│       ├── pipe-support-systems.svg
+│       └── thermal-expansion.svg
+│
+├── TH01_Measurement/
+│   ├── TH01_Measurement_notes.txt
+│   ├── TH01_Measurement_flashcards.txt
+│   ├── TH01_Measurement_questions.txt
+│   └── images/
+│       ├── temperature-scales.svg
+│       ├── unit-conversion-chart.svg
+│       └── system-types.svg
+│
+└── [Other topics follow same pattern]
+```
+
+### Linking Images in Notes
+
+Images should be referenced in the metadata file (Tier 2) with associations to specific note IDs. The application will display images inline when viewing comprehensive notes.
+
+### Recommended Image Types
+
+- **Diagrams:** System schematics, flow charts, component layouts
+- **Charts:** Unit conversion tables, temperature comparison scales, phase diagrams
+- **Illustrations:** Equipment designs, cross-sections, operational sequences
+- **Graphs:** Performance curves, efficiency charts, relationships between variables
+
+### Image File Naming
+
+Images should be named descriptively related to their content:
+- `valve-types.svg` - types of valves used in piping
+- `temperature-scales.svg` - comparison of temperature measurement scales
+- `pt-phase-diagram.svg` - pressure-temperature phase diagram for water
+- `thermal-expansion.svg` - thermal expansion in piping systems
+
+---
+
+## Comprehensive Notes Format with Images
+
+Enhanced notes files can now reference images through the metadata system:
+
+### Example with Image References
+
+In Tier 2 (notes-synapses.json):
+```json
+{
+  "id": 14,
+  "subject": "TH03",
+  "title": "Five States of Water",
+  "contentFile": "Tier 3: Pathways/TH03_Thermodynamics_II/TH03_Thermodynamics_II_notes.txt",
+  "image": "Tier 3: Pathways/TH03_Thermodynamics_II/images/five-states-water.svg",
+  "imageLabel": "Five States of Water Diagram"
+}
+```
+
+The application will display the image above or below the note content with the provided label.
+
+---
+
 ## Summary
 
 Each topic in Tier 3 **MUST** have **THREE** txt files:
@@ -258,10 +333,16 @@ Each topic in Tier 3 **MUST** have **THREE** txt files:
 2. **`{Topic}_flashcards.txt`** - Simple Q&A flashcards (focused, easy to remember)
 3. **`{Topic}_questions.txt`** - Exam questions (multiple choice with explanations)
 
+### Optional Image Support
+
+4. **`images/`** - Directory containing diagrams, charts, and visual aids
+   - Each image referenced in Tier 2 metadata
+   - Displayed inline with notes during study
+
 ### Three-Tier Architecture
 - **Tier 1:** Application logic (reads/displays content)
-- **Tier 2:** Metadata (JSON references to files)
-- **Tier 3:** Content files (actual learning materials)
+- **Tier 2:** Metadata (JSON references to files AND images)
+- **Tier 3:** Content files (actual learning materials + images subfolder)
 
 ### Result
-One button per topic per mode, with clean separation of content types.
+One button per topic per mode, with clean separation of content types and integrated visual aids for enhanced learning.
