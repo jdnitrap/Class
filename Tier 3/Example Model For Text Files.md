@@ -1,43 +1,40 @@
-================================================================================
-EXAMPLE MODEL FOR TEXT FILES - TIER 3 FORMAT SPECIFICATION
-================================================================================
+# Example Model For Text Files - Tier 3 Format Specification
 
 This file demonstrates the three required text file formats for each topic in Tier 3.
 All topics must follow this structure.
 
-================================================================================
-QUICK REFERENCE: TIER 3 FILE STRUCTURE
-================================================================================
+## Quick Reference: Tier 3 File Structure
 
-1. COMPREHENSIVE NOTES
-   - File naming: {Code}_{Subject}_notes.txt
-   - Example: TH06_Pump_notes.txt
-   - Content: Full, detailed study material
+### 1. Comprehensive Notes
+- **File naming:** `{Code}_{Subject}_notes.txt`
+- **Example:** `TH06_Pump_notes.txt`
+- **Content:** Full, detailed study material
 
-2. FLASHCARDS
-   2.1 File naming: {Code}_{Subject}_flashcards.txt
-       Example: TH06_Pump_flashcards.txt
-   2.2 Content follows the learning objectives being asked
-   2.3 Flashcards must be maintained simple
-   2.4 Front of flashcard: The objective being asked as a question
-   2.5 Back of flashcard: A simple answer to remember
+### 2. Flashcards
+- **2.1 File naming:** `{Code}_{Subject}_flashcards.txt`
+  - **Example:** `TH06_Pump_flashcards.txt`
+- **2.2** Content follows the learning objectives being asked
+- **2.3** Flashcards must be maintained simple
+- **2.4** Front of flashcard: The objective being asked as a question
+- **2.5** Back of flashcard: A simple answer to remember
 
-3. TEST QUESTIONS
-   3.1 File naming: {Code}_{Subject}_questions.txt
-       Example: TH06_Pump_questions.txt
-   3.2 This file will hold the subject's questions and answers
-   3.3 This file will always be modified with newer answers also (updatable)
+### 3. Test Questions
+- **3.1 File naming:** `{Code}_{Subject}_questions.txt`
+  - **Example:** `TH06_Pump_questions.txt`
+- **3.2** This file will hold the subject's questions and answers
+- **3.3** This file will always be modified with newer answers also (updatable)
 
-================================================================================
-1. COMPREHENSIVE NOTES FILE FORMAT
-================================================================================
+---
 
-FILENAME: {Code}_{Subject}_notes.txt
-EXAMPLE: TH06_Pump_notes.txt
+## 1. Comprehensive Notes File Format
 
-PURPOSE: Full, detailed study material for comprehensive learning
+**Filename:** `{Code}_{Subject}_notes.txt`  
+**Example:** `TH06_Pump_notes.txt`
 
-FORMAT:
+**Purpose:** Full, detailed study material for comprehensive learning
+
+### Format:
+```
 [Note ID: 1]
 First comprehensive note content here.
 Can include multiple paragraphs.
@@ -54,26 +51,27 @@ Full definitions and thorough explanations.
 
 [Note ID: 3]
 Additional comprehensive notes continue in this format...
+```
 
-KEY CHARACTERISTICS:
-- Each note starts with [Note ID: X]
+### Key Characteristics:
+- Each note starts with `[Note ID: X]`
 - Sequential numbering (1, 2, 3, etc.)
 - Full, detailed content for each ID
 - Multiple paragraphs per note supported
 - Bullet points and formatting preserved
 - Used for "Study Notes" mode in the application
 
+---
 
-================================================================================
-2. FLASHCARDS FILE FORMAT
-================================================================================
+## 2. Flashcards File Format
 
-FILENAME: {Code}_{Subject}_flashcards.txt
-EXAMPLE: TH06_Pump_flashcards.txt
+**Filename:** `{Code}_{Subject}_flashcards.txt`  
+**Example:** `TH06_Pump_flashcards.txt`
 
-PURPOSE: Simple, focused flashcards aligned with learning objectives for memory and recall
+**Purpose:** Simple, focused flashcards aligned with learning objectives for memory and recall
 
-FORMAT:
+### Format:
+```
 [Note ID: 1]
 What is the main function of a pump?
 A pump moves fluids from one location to another by converting mechanical energy into flow energy.
@@ -93,28 +91,29 @@ Available absolute pressure at pump inlet minus vapor pressure of the fluid.
 [Note ID: 5]
 What is the purpose of cooling tower fill material?
 Increases surface area for heat exchange between water and air.
+```
 
-KEY CHARACTERISTICS:
-- Each flashcard starts with [Note ID: X]
+### Key Characteristics:
+- Each flashcard starts with `[Note ID: X]`
 - First line after ID: Question based on learning objective
 - Following lines: Simple, concise answer (easy to remember)
 - Maintained simple and focused
 - One concept/objective per card
-- Front: Question
-- Back: Answer (when flipped in app)
+- **Front:** Question
+- **Back:** Answer (when flipped in app)
 - Used for "Flashcards" mode in the application
 
+---
 
-================================================================================
-3. TEST QUESTIONS FILE FORMAT
-================================================================================
+## 3. Test Questions File Format
 
-FILENAME: {Code}_{Subject}_questions.txt
-EXAMPLE: TH06_Pump_questions.txt
+**Filename:** `{Code}_{Subject}_questions.txt`  
+**Example:** `TH06_Pump_questions.txt`
 
-PURPOSE: Multiple choice exam questions with answers and explanations
+**Purpose:** Multiple choice exam questions with answers and explanations
 
-FORMAT:
+### Format:
+```
 [Question ID: 1]
 {"id":1,"subject":"TH06","text":"What is the primary purpose of a pump?","options":[{"letter":"a","text":"To measure pressure","correct":false},{"letter":"b","text":"To move fluids from one location to another","correct":true},{"letter":"c","text":"To store fluids","correct":false},{"letter":"d","text":"To regulate temperature","correct":false}],"explanation":"The fundamental purpose of all pumps is to move fluids (and sometimes fluid-solid mixtures) by converting mechanical energy into fluid flow energy."}
 
@@ -129,47 +128,47 @@ FORMAT:
 
 [Question ID: 5]
 {"id":5,"subject":"TH06","text":"How do you prevent cavitation in pump operation?","options":[{"letter":"a","text":"Increase discharge pressure","correct":false},{"letter":"b","text":"Maintain adequate NPSH by keeping suction pressure high and temperature low","correct":true},{"letter":"c","text":"Use a larger diameter discharge pipe","correct":false},{"letter":"d","text":"Reduce fluid velocity","correct":false}],"explanation":"Cavitation is prevented by maintaining adequate Net Positive Suction Head (NPSH) - ensuring sufficient pressure at the pump inlet above vapor pressure."}
+```
 
-KEY CHARACTERISTICS:
-- Each question starts with [Question ID: X]
+### Key Characteristics:
+- Each question starts with `[Question ID: X]`
 - Followed by one complete JSON object per question
-- JSON fields required:
-  * id: Question number (integer)
-  * subject: Topic code (string, e.g., "TH06")
-  * text: The question text (string)
-  * options: Array of 4 answer options
-    - letter: "a", "b", "c", or "d"
-    - text: Answer option text
-    - correct: true/false boolean
-  * explanation: Detailed explanation (string)
+- **JSON fields required:**
+  - `id`: Question number (integer)
+  - `subject`: Topic code (string, e.g., "TH06")
+  - `text`: The question text (string)
+  - `options`: Array of 4 answer options
+    - `letter`: "a", "b", "c", or "d"
+    - `text`: Answer option text
+    - `correct`: true/false boolean
+  - `explanation`: Detailed explanation (string)
 - Each question on its own line with JSON on one line
 - Used for "Exams" mode in the application
 
+---
 
-================================================================================
-NAMING CONVENTION SUMMARY
-================================================================================
+## Naming Convention Summary
 
 All three files for a topic follow similar naming:
 
-Format: {Code}_{Subject}_{type}.txt
+**Format:** `{Code}_{Subject}_{type}.txt`
 
-Examples:
-- TH06_Pump_notes.txt          (Comprehensive notes)
-- TH06_Pump_flashcards.txt     (Flashcards with objectives)
-- TH06_Pump_questions.txt      (Test questions)
+**Examples:**
+- `TH06_Pump_notes.txt` (Comprehensive notes)
+- `TH06_Pump_flashcards.txt` (Flashcards with objectives)
+- `TH06_Pump_questions.txt` (Test questions)
 
-OR
+**OR**
 
-- CP06_Heat_Exchangers_notes.txt
-- CP06_Heat_Exchangers_flashcards.txt
-- CP06_Heat_Exchangers_questions.txt
+- `CP06_Heat_Exchangers_notes.txt`
+- `CP06_Heat_Exchangers_flashcards.txt`
+- `CP06_Heat_Exchangers_questions.txt`
 
+---
 
-================================================================================
-DIRECTORY STRUCTURE
-================================================================================
+## Directory Structure
 
+```
 Tier 3/
 ├── CP01/
 │   ├── CP01_Piping_notes.txt
@@ -182,47 +181,46 @@ Tier 3/
 │   └── TH06_Pump_questions.txt
 │
 └── [Other topics follow same pattern]
+```
 
+---
 
-================================================================================
-HOW THESE FILES ARE USED IN THE APPLICATION
-================================================================================
+## How These Files Are Used in the Application
 
 Tier 2 (notes.json) references these files by subject:
 
-FLASHCARDS MODE:
+### Flashcards Mode
 - Loads all entries with subject matching a topic
-- Reads from {Topic}_flashcards.txt
+- Reads from `{Topic}_flashcards.txt`
 - Displays one "TH06 Pump" button per topic
 - User sees flashcard front (question) → flips to back (answer)
 
-STUDY NOTES MODE:
+### Study Notes Mode
 - Loads all entries with subject matching a topic
-- Reads from {Topic}_notes.txt
+- Reads from `{Topic}_notes.txt`
 - Displays one "TH06 Pump" button per topic
 - User sees comprehensive notes with full content
 
-EXAMS MODE:
+### Exams Mode
 - Loads all entries with subject matching a topic
-- Reads from {Topic}_questions.txt
+- Reads from `{Topic}_questions.txt`
 - Displays one "TH06 Pump" button per topic
 - User sees multiple choice questions with options and explanations
 
+---
 
-================================================================================
-SUMMARY
-================================================================================
+## Summary
 
-Each topic in Tier 3 MUST have THREE txt files:
-1. {Topic}_notes.txt - Comprehensive study materials (detailed)
-2. {Topic}_flashcards.txt - Simple Q&A flashcards (focused, easy to remember)
-3. {Topic}_questions.txt - Exam questions (multiple choice with explanations)
+Each topic in Tier 3 **MUST** have **THREE** txt files:
 
-The three-tier architecture is maintained:
-- Tier 1: Application logic (reads/displays content)
-- Tier 2: Metadata (JSON references to files)
-- Tier 3: Content files (actual learning materials)
+1. **`{Topic}_notes.txt`** - Comprehensive study materials (detailed)
+2. **`{Topic}_flashcards.txt`** - Simple Q&A flashcards (focused, easy to remember)
+3. **`{Topic}_questions.txt`** - Exam questions (multiple choice with explanations)
 
-Result: One button per topic per mode, with clean separation of content types.
+### Three-Tier Architecture
+- **Tier 1:** Application logic (reads/displays content)
+- **Tier 2:** Metadata (JSON references to files)
+- **Tier 3:** Content files (actual learning materials)
 
-================================================================================
+### Result
+One button per topic per mode, with clean separation of content types.
