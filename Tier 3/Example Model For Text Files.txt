@@ -6,6 +6,29 @@ This file demonstrates the three required text file formats for each topic in Ti
 All topics must follow this structure.
 
 ================================================================================
+QUICK REFERENCE: TIER 3 FILE STRUCTURE
+================================================================================
+
+1. COMPREHENSIVE NOTES
+   - File naming: {Code}_{Subject}_notes.txt
+   - Example: TH06_Pump_notes.txt
+   - Content: Full, detailed study material
+
+2. FLASHCARDS
+   2.1 File naming: {Code}_{Subject}_flashcards.txt
+       Example: TH06_Pump_flashcards.txt
+   2.2 Content follows the learning objectives being asked
+   2.3 Flashcards must be maintained simple
+   2.4 Front of flashcard: The objective being asked as a question
+   2.5 Back of flashcard: A simple answer to remember
+
+3. TEST QUESTIONS
+   3.1 File naming: {Code}_{Subject}_questions.txt
+       Example: TH06_Pump_questions.txt
+   3.2 This file will hold the subject's questions and answers
+   3.3 This file will always be modified with newer answers also (updatable)
+
+================================================================================
 1. COMPREHENSIVE NOTES FILE FORMAT
 ================================================================================
 
