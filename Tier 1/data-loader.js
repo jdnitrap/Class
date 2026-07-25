@@ -38,6 +38,8 @@ export const dataLoader = {
                     if (i + 1 < lines.length) {
                         try {
                             const questionJson = JSON.parse(lines[i + 1].trim());
+                            // Add contentFile reference so getDisplayName can find it
+                            questionJson.contentFile = contentFile;
                             questions.push(questionJson);
                         } catch (e) {
                             console.warn(`⚠ Failed to parse question in ${contentFile} at line ${i + 1}:`, e.message);
