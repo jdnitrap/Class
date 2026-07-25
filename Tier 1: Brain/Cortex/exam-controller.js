@@ -123,6 +123,6 @@ export const exam = {
         }
         document.getElementById('scoreMessage').textContent = message;
 
-        this.router.showScreen('resultsScreen');
+        router.showScreen('resultsScreen');
     }
 };
