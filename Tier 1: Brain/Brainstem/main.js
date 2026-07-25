@@ -88,12 +88,12 @@ window.app = {
     },
 
     // Study modes
-    startStudyMode() {
+    async startStudyMode() {
         const mode = router.startStudyMode(state);
         if (mode === 'flashcard') {
-            this.startFlashcards();
+            await this.startFlashcards();
         } else if (mode === 'notes') {
-            notes.viewNotes(state);
+            await notes.viewNotes(state);
         }
     },
 
