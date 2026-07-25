@@ -66,13 +66,24 @@ export const ui = {
 
     renderNotesSelection(app) {
         console.log('📝 Rendering notes selection...');
-        if (!app.allNotes || app.allNotes.length === 0) {
-            console.error('✗ ERROR: allNotes is empty! Data not loaded.');
-            return;
-        }
 
-        const subjects = dataFilter.getUniqueNotesSubjects(app.allNotes);
-        console.log(`  → Found ${subjects.length} subjects: ${subjects.join(', ')}`);
+        let subjects;
+        if (app.currentMode === 'flashcard') {
+            if (!app.allFlashcards || app.allFlashcards.length === 0) {
+                console.error('✗ ERROR: allFlashcards is empty! Data not loaded.');
+                return;
+            }
+            subjects = dataFilter.getUniqueFlashcardsSubjects(app.allFlashcards);
+            console.log(`  → Found ${subjects.length} flashcard subjects: ${subjects.join(', ')}`);
+        } else {
+            if (!app.allNotes || app.allNotes.length === 0) {
+                console.error('✗ ERROR: allNotes is empty! Data not loaded.');
+                return;
+            }
+            subjects = dataFilter.getUniqueNotesSubjects(app.allNotes);
+            console.log(`  → Found ${subjects.length} note subjects: ${subjects.join(', ')}`);
+
+        }
 
         const container = document.getElementById('notesSubjectButtonsContainer');
         if (!container) {
@@ -82,10 +93,11 @@ export const ui = {
 
         uiUtils.clearContainer('notesSubjectButtonsContainer');
 
+        const dataSource = app.currentMode === 'flashcard' ? app.allFlashcards : app.allNotes;
         subjects.forEach(subject => {
             const btn = document.createElement('button');
             btn.className = 'subject-btn';
-            const displayName = dataFilter.getDisplayName(subject, app.allNotes);
+            const displayName = dataFilter.getDisplayName(subject, dataSource);
             btn.textContent = displayName;
             btn.onclick = () => this.selectNotesSubject(app, subject);
             container.appendChild(btn);

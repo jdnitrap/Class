@@ -10,6 +10,7 @@ import { notes } from './notes.js';
 window.app = {
     allQuestions: [],
     allNotes: [],
+    allFlashcards: [],
     currentSubject: null,
     currentNotesSubject: null,
     currentMode: null,
@@ -28,6 +29,8 @@ window.app = {
             console.log(`✓ Loaded ${this.allQuestions.length} questions`);
             await dataLoader.loadNotes(this);
             console.log(`✓ Loaded ${this.allNotes.length} notes`);
+            await dataLoader.loadFlashcards(this);
+            console.log(`✓ Loaded ${this.allFlashcards.length} flashcards`);
             const subjects = [...new Set(this.allNotes.map(n => n.subject))].sort();
             console.log(`✓ Available subjects: ${subjects.join(', ')}`);
 

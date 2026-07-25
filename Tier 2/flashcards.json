@@ -1,0 +1,64 @@
+{
+  "flashcards": [
+    {
+      "id": 1,
+      "subject": "CP01",
+      "contentFile": "Tier 3/CP01_Piping/CP01_Piping_flashcards.txt",
+      "count": 25
+    },
+    {
+      "id": 26,
+      "subject": "TH01",
+      "contentFile": "Tier 3/TH01_Measurement/TH01_Measurement_flashcards.txt",
+      "count": 15
+    },
+    {
+      "id": 41,
+      "subject": "TH02",
+      "contentFile": "Tier 3/TH02_Thermodynamics_I/TH02_Thermodynamics_I_flashcards.txt",
+      "count": 15
+    },
+    {
+      "id": 56,
+      "subject": "TH03",
+      "contentFile": "Tier 3/TH03_Thermodynamics_II/TH03_Thermodynamics_II_flashcards.txt",
+      "count": 15
+    },
+    {
+      "id": 71,
+      "subject": "TH04",
+      "contentFile": "Tier 3/TH04_Thermodynamics_III/TH04_Thermodynamics_III_flashcards.txt",
+      "count": 20
+    },
+    {
+      "id": 91,
+      "subject": "TH05",
+      "contentFile": "Tier 3/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_flashcards.txt",
+      "count": 20
+    },
+    {
+      "id": 111,
+      "subject": "TH06B",
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_flashcards.txt",
+      "count": 25
+    },
+    {
+      "id": 136,
+      "subject": "TH07B",
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_flashcards.txt",
+      "count": 20
+    },
+    {
+      "id": 156,
+      "subject": "CP04",
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_flashcards.txt",
+      "count": 30
+    },
+    {
+      "id": 186,
+      "subject": "CP06",
+      "contentFile": "Tier 3/CP06_Heat_Exchangers/CP06_Heat_Exchangers_flashcards.txt",
+      "count": 47
+    }
+  ]
+}

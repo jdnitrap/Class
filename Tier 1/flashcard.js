@@ -3,12 +3,11 @@
 import { ui } from './ui.js';
 import { uiUtils } from './ui-utils.js';
 import { dataFilter } from './data-filter.js';
-import { notes } from './notes.js';
 
 export const flashcard = {
     async startFlashcards(app) {
-        const notesForSubject = dataFilter.filterNotesBySubject(app.allNotes, app.currentNotesSubject);
-        app.answers = notesForSubject;
+        const flashcardsForSubject = dataFilter.filterFlashcardsBySubject(app.allFlashcards, app.currentNotesSubject);
+        app.answers = flashcardsForSubject;
         app.currentCardIndex = 0;
         app.cardFlipped = false;
         await this.showFlashcard(app);
@@ -26,13 +25,12 @@ export const flashcard = {
         document.getElementById('cardProgressFill').style.width = progress + '%';
 
         app.cardFlipped = false;
-        document.getElementById('cardContent').textContent = card.title;
-
-        // Preload content for this card
-        if (!card._contentLoaded) {
-            card._content = await notes.getNoteContent(card);
-            card._contentLoaded = true;
-        }
+        // Show first line or first part as front of card
+        const contentLines = card.content.split('\n');
+        const frontText = contentLines[0].length > 100
+            ? contentLines[0].substring(0, 100) + '...'
+            : contentLines[0];
+        document.getElementById('cardContent').textContent = frontText || 'Flashcard ' + card.id;
     },
 
     flipCard(app) {
@@ -41,9 +39,13 @@ export const flashcard = {
 
         app.cardFlipped = !app.cardFlipped;
         if (app.cardFlipped) {
-            document.getElementById('cardContent').textContent = card._content || card.content || "Loading...";
+            document.getElementById('cardContent').textContent = card.content;
         } else {
-            document.getElementById('cardContent').textContent = card.title;
+            const contentLines = card.content.split('\n');
+            const frontText = contentLines[0].length > 100
+                ? contentLines[0].substring(0, 100) + '...'
+                : contentLines[0];
+            document.getElementById('cardContent').textContent = frontText || 'Flashcard ' + card.id;
         }
     },
 

@@ -21,6 +21,14 @@ export const dataFilter = {
         return this.getUniqueSubjects(notes);
     },
 
+    getUniqueFlashcardsSubjects(flashcards) {
+        return this.getUniqueSubjects(flashcards);
+    },
+
+    filterFlashcardsBySubject(flashcards, subject) {
+        return flashcards.filter(f => f.subject === subject);
+    },
+
     getDisplayName(subject, items) {
         // Find an item with this subject to extract the display name from contentFile
         const item = items.find(i => i.subject === subject);
