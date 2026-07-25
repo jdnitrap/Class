@@ -47,6 +47,13 @@ export const flashcard = {
         }
     },
 
+    async previousCard(app) {
+        if (app.currentCardIndex > 0) {
+            app.currentCardIndex--;
+            await this.showFlashcard(app);
+        }
+    },
+
     async nextCard(app) {
         if (app.currentCardIndex < app.answers.length - 1) {
             app.currentCardIndex++;

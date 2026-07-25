@@ -429,11 +429,11 @@
                 <h3 style="margin-bottom: 20px;"><span id="notesViewTitle">Notes</span></h3>
                 <p style="color: #666; margin-bottom: 20px;"><span id="notesCountDisplay">0</span> notes available for review</p>
                 <div class="notes-list" id="notesListContainer"></div>
-                <div style="display: flex; gap: 10px; margin-top: 20px;">
-                    <button class="back-home-btn" onclick="app.goBackToNotesSelection()" style="flex: 1;">
-                        ← Back to Subject Selection
+                <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
+                    <button class="back-home-btn" onclick="app.goBackToNotesSelection()" style="flex: 1; min-width: 150px;">
+                        ← Back to Topic Selection
                     </button>
-                    <button class="back-home-btn" onclick="app.goHome()" style="flex: 1;">
+                    <button class="back-home-btn" onclick="app.goHome()" style="flex: 1; min-width: 150px;">
                         ← Return to Home
                     </button>
                 </div>
@@ -450,10 +450,10 @@
                 <div class="question-text" id="questionText">Loading question...</div>
                 <div class="options" id="optionsContainer"></div>
                 <div class="button-group">
-                    <button class="back-home-btn" onclick="app.previousQuestion()">← Previous</button>
-                    <button class="back-home-btn" onclick="app.renderSubjectSelection()">← Back to Test Topics</button>
+                    <button class="back-home-btn" onclick="app.previousQuestion()">← Previous Question</button>
+                    <button class="back-home-btn" onclick="app.renderSubjectSelection()">← Back to Topics</button>
                     <button class="back-home-btn" onclick="app.goHome()">← Home</button>
-                    <button class="btn-primary" onclick="app.nextQuestion()">Next →</button>
+                    <button class="btn-primary" onclick="app.nextQuestion()">Next Question →</button>
                 </div>
             </div>
 
@@ -485,7 +485,9 @@
                     <p style="margin-top: 10px; color: #999; font-size: 0.9em;">Click card to flip</p>
                 </div>
                 <div class="button-group">
-                    <button class="back-home-btn" onclick="app.goHome()">← Return to Home</button>
+                    <button class="back-home-btn" onclick="app.previousCard()">← Previous Card</button>
+                    <button class="back-home-btn" onclick="app.goBackToFlashcardSelection()">← Back to Topic</button>
+                    <button class="back-home-btn" onclick="app.goHome()">← Home</button>
                     <button class="btn-primary" onclick="app.nextCard()">Next Card →</button>
                 </div>
             </div>
@@ -495,9 +497,12 @@
                 <h2 style="margin-bottom: 30px;">Exam Complete!</h2>
                 <div style="font-size: 3em; color: #667eea; margin-bottom: 20px;" id="scoreDisplay">0%</div>
                 <p style="font-size: 1.2em; color: #333; margin-bottom: 30px;" id="scoreMessage">Good job!</p>
-                <div class="button-group" style="justify-content: center; gap: 15px;">
+                <div class="button-group" style="justify-content: center; gap: 15px; flex-direction: column;">
+                    <button class="btn-primary" onclick="app.goBackToExamSelection()" style="padding: 12px 30px;">
+                        📚 Take Another Exam
+                    </button>
                     <button class="back-home-btn" onclick="app.goHome()" style="padding: 12px 30px;">
-                        Return to Home
+                        ← Return to Home
                     </button>
                 </div>
             </div>

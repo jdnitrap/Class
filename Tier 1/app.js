@@ -109,6 +109,10 @@ window.app = {
         flashcard.flipCard(this);
     },
 
+    async previousCard() {
+        await flashcard.previousCard(this);
+    },
+
     async nextCard() {
         await flashcard.nextCard(this);
     },
@@ -124,6 +128,15 @@ window.app = {
 
     goBackToNotesSelection() {
         ui.goBackToNotesSelection(this);
+    },
+
+    goBackToExamSelection() {
+        exam.startTopicExamSelection(this);
+    },
+
+    goBackToFlashcardSelection() {
+        this.currentMode = 'flashcard';
+        ui.renderNotesSelection(this);
     }
 };
 
