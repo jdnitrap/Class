@@ -1,10 +1,14 @@
 // Exam mode - handles exam functionality
 
-import { router } from './router.js';
 import { processor } from '../Limbic/processor.js';
 import { helpers } from '../Senses/helpers.js';
 
 export const exam = {
+    router: null,
+
+    setRouter(r) {
+        this.router = r;
+    },
     startExam(state) {
         const subjectQuestions = processor.filterQuestionsBySubject(state.allQuestions, state.currentSubject);
         const numQuestions = parseInt(document.getElementById('questionCount').value);
@@ -12,7 +16,7 @@ export const exam = {
         state.currentQuestionIndex = 0;
         state.selectedAnswers = {};
         this.showQuestion(state);
-        router.showScreen('questionScreen');
+        this.router.showScreen('questionScreen');
     },
 
     startComprehensiveExam(state) {
@@ -20,15 +24,15 @@ export const exam = {
         state.currentQuestionIndex = 0;
         state.selectedAnswers = {};
         this.showQuestion(state);
-        router.showScreen('questionScreen');
+        this.router.showScreen('questionScreen');
     },
 
     startTopicExamSelection(state) {
-        router.renderSubjectSelection(state);
+        this.router.renderSubjectSelection(state);
     },
 
     backToExamConfig(state) {
-        router.showExamConfigScreen(state);
+        this.router.showExamConfigScreen(state);
     },
 
     prepareComprehensiveExam(state) {
@@ -123,6 +127,6 @@ export const exam = {
         }
         document.getElementById('scoreMessage').textContent = message;
 
-        router.showScreen('resultsScreen');
+        this.router.showScreen('resultsScreen');
     }
 };

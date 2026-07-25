@@ -1,10 +1,14 @@
 // Flashcard mode - handles flashcard study functionality
 
-import { router } from './router.js';
 import { processor } from '../Limbic/processor.js';
 import { helpers } from '../Senses/helpers.js';
 
 export const flashcard = {
+    router: null,
+
+    setRouter(r) {
+        this.router = r;
+    },
     extractFrontBack(content) {
         const lines = content.split('\n').filter(l => l.trim());
         let front = '';
@@ -50,7 +54,7 @@ export const flashcard = {
         state.currentCardIndex = 0;
         state.cardFlipped = false;
         await this.showFlashcard(state);
-        router.showScreen('flashcardScreen');
+        this.router.showScreen('flashcardScreen');
     },
 
     async showFlashcard(state) {
@@ -94,7 +98,7 @@ export const flashcard = {
             state.currentCardIndex++;
             await this.showFlashcard(state);
         } else {
-            router.goHome(state);
+            this.router.goHome(state);
         }
     }
 };

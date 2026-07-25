@@ -149,6 +149,11 @@ window.addEventListener('load', async () => {
     console.log('🚀 STARTING APP INITIALIZATION');
     console.log('==========================================');
     try {
+        // Break circular dependencies by setting router after modules load
+        exam.setRouter(router);
+        flashcard.setRouter(router);
+        notes.setRouter(router);
+
         await window.app.init();
         console.log('==========================================');
         console.log('✅ INITIALIZATION COMPLETE');
