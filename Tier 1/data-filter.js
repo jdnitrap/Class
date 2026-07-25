@@ -37,28 +37,12 @@ export const dataFilter = {
             return subject;
         }
 
-        // Extract code from directory name (before the first underscore)
-        // e.g., "CP01_Piping" -> code = "CP01"
-        const underscore = directoryName.indexOf('_');
-        const code = underscore !== -1 ? directoryName.substring(0, underscore) : directoryName;
-
-        // Parse directory name: "CP01_Piping" -> "CP01 Piping"
-        // Replace underscores with spaces
-        let displayName = directoryName.replace(/_/g, ' ');
-
-        // Clean up common patterns that may have spaces added
-        displayName = displayName.replace(/Thermodynamics I(?!\w)/, 'Thermodynamics I');
-        displayName = displayName.replace(/Thermodynamics II(?!\w)/, 'Thermodynamics II');
-        displayName = displayName.replace(/Thermodynamics III(?!\w)/, 'Thermodynamics III');
-        displayName = displayName.replace(/Thermodynamic Cycles/, 'Thermodynamic Cycles');
-        displayName = displayName.replace(/Fluid Flow/, 'Fluid Flow');
-        displayName = displayName.replace(/Heat Transfer/, 'Heat Transfer');
-        displayName = displayName.replace(/Heat Exchangers/, 'Heat Exchangers');
-
-        // Ensure format is "CODE Subject" by reconstructing
-        // Extract just the subject part after the code and underscore
-        const subjectPart = displayName.substring(code.length).trim();
-        displayName = `${code} ${subjectPart}`;
+        // Simply replace underscores with spaces to match the directory name format
+        // CP01_Piping -> CP01 Piping
+        // TH01_Measurement -> TH01 Measurement
+        // TH06B_Fluid_Flow -> TH06B Fluid Flow
+        // CP06_Heat_Exchangers -> CP06 Heat Exchangers
+        const displayName = directoryName.replace(/_/g, ' ');
 
         return displayName;
     }
