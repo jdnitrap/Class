@@ -138,12 +138,10 @@ window.addEventListener('load', async () => {
         console.log('✅ INITIALIZATION COMPLETE');
         console.log('==========================================');
         console.log('Test: Open browser DevTools Console (F12) and paste this:');
-        console.log('window.app.allNotes.filter(n=>n.subject==="CP06 Objectives").length');
-        console.log('Should show: 47 (CP06 now has triple-mode study materials)');
-        console.log('CP06 Study Options:');
-        console.log('  CP06 comprehensive: window.app.allNotes.filter(n=>n.subject==="CP06").length  // 25');
-        console.log('  CP06 general flashcards: window.app.allNotes.filter(n=>n.subject==="CP06 Flashcards").length  // 42');
-        console.log('  CP06 objective flashcards: window.app.allNotes.filter(n=>n.subject==="CP06 Objectives").length  // 47');
+        console.log('window.app.allNotes.filter(n=>n.subject==="CP06").length');
+        console.log('Should show: 47 (CP06 Q&A flashcards for focused study)');
+        console.log('CP06 Study Option:');
+        console.log('  CP06 flashcards: window.app.allNotes.filter(n=>n.subject==="CP06").length  // 47 Q&A flashcards');
     } catch (err) {
         console.log('==========================================');
         console.error('❌ INITIALIZATION FAILED');
