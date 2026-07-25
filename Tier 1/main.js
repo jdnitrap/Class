@@ -1,8 +1,8 @@
 // Main - application initializer and coordinator
 // This is the entry point that starts the app and coordinates all tiers
 
-import { state } from './state.js';
-import { loader } from './loader.js';
+import { state } from './data/state.js';
+import { loader } from './data/loader.js';
 import { router } from './router.js';
 import { exam } from './modes/exam-controller.js';
 import { flashcard } from './modes/flashcard-controller.js';

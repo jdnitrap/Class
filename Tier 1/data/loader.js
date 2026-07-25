@@ -1,10 +1,12 @@
 // Loader - fetches data from Tier 2 metadata and Tier 3 content files
 
+import { config } from '../config.js';
+
 export const loader = {
     async loadQuestions(state) {
         state.allQuestions = [];
         try {
-            const response = await fetch('Tier 2/questions-index.json?v=' + Date.now());
+            const response = await fetch(config.getMetadataPath('questions'));
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const data = await response.json();
             if (data.questions && Array.isArray(data.questions)) {
@@ -53,7 +55,7 @@ export const loader = {
     async loadNotes(state) {
         state.allNotes = [];
         try {
-            const response = await fetch('Tier 2/notes-index.json?v=' + Date.now());
+            const response = await fetch(config.getMetadataPath('notes'));
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const data = await response.json();
             if (data.notes && Array.isArray(data.notes)) {
@@ -72,7 +74,7 @@ export const loader = {
     async loadFlashcards(state) {
         state.allFlashcards = [];
         try {
-            const response = await fetch('Tier 2/flashcards-index.json?v=' + Date.now());
+            const response = await fetch(config.getMetadataPath('flashcards'));
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const data = await response.json();
             if (data.flashcards && Array.isArray(data.flashcards)) {

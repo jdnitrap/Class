@@ -1,7 +1,7 @@
 // Router - handles navigation between screens and mode selection
 
 import { helpers } from './ui/helpers.js';
-import { processor } from './processor.js';
+import { processor } from './data/processor.js';
 import { exam } from './modes/exam-controller.js';
 import { flashcard } from './modes/flashcard-controller.js';
 import { notes } from './modes/notes-controller.js';

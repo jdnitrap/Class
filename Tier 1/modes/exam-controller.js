@@ -1,7 +1,7 @@
 // Exam mode - handles exam functionality
 
 import { router } from '../router.js';
-import { processor } from '../processor.js';
+import { processor } from '../data/processor.js';
 import { helpers } from '../ui/helpers.js';
 
 export const exam = {

@@ -1,8 +1,8 @@
 // Notes mode - handles comprehensive notes viewing
 
 import { router } from '../router.js';
-import { processor } from '../processor.js';
-import { loader } from '../loader.js';
+import { processor } from '../data/processor.js';
+import { loader } from '../data/loader.js';
 import { helpers } from '../ui/helpers.js';
 
 export const notes = {
