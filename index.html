@@ -2,8 +2,8 @@
 <!--
   GoBook Application - Three-Tier Architecture
 
-  TIER 1 (Application Logic):
-    Tier 1/js/ - JavaScript modules that implement functionality
+  TIER 1: BRAIN (Application Logic):
+    Tier 1: Brain/ - JavaScript modules that implement functionality
       - app.js: Core state management, loads all data sources
       - data-loader.js: Fetches and parses JSON metadata + text content
       - data-filter.js: Filters and processes data for display
@@ -13,24 +13,24 @@
       - notes.js: Comprehensive notes viewing mode (uses allNotes)
       - ui-utils.js: DOM manipulation helpers
 
-  TIER 2 (Metadata):
-    Tier 2/ - JSON reference files that map to content
+  TIER 2: MAP (Metadata):
+    Tier 2: Map/ - JSON reference files that map to content
       - questions.json: Maps exam questions by subject → Tier 3/*_questions.txt
       - notes.json: Maps comprehensive notes by subject → Tier 3/*_notes.txt
       - flashcards.json: Maps simplified Q&A flashcards by subject → Tier 3/*_flashcards.txt
 
-  TIER 3 (Content):
-    Tier 3/{Subject}/ - Actual learning materials as text files
+  TIER 3: LIBRARY (Content):
+    Tier 3: Library/{Subject}/ - Actual learning materials as text files
       - {Code}_{Subject}_questions.txt: Exam questions with metadata
       - {Code}_{Subject}_notes.txt: Comprehensive study notes
       - {Code}_{Subject}_flashcards.txt: Simplified Q&A flashcards for memorization
 
   Data Flow:
-    1. app.js loads Tier 2 metadata (questions.json, notes.json, flashcards.json)
-    2. data-loader.js fetches referenced Tier 3 text files
-    3. Content is processed and filtered via data-filter.js
-    4. ui.js routes to appropriate mode (exam/notes/flashcards)
-    5. Mode-specific module displays content in its format
+    1. main.js loads Tier 2: Map metadata (questions-index.json, notes-index.json, flashcards-index.json)
+    2. loader.js fetches referenced Tier 3: Library text files
+    3. Content is processed and filtered via processor.js
+    4. router.js routes to appropriate mode (exam/notes/flashcards)
+    5. Mode-specific controller displays content in its format
 -->
 <html lang="en">
 <head>
@@ -565,6 +565,6 @@
         </div>
     </div>
 
-    <script type="module" src="Tier 1/main.js"></script>
+    <script type="module" src="Tier 1: Brain/main.js"></script>
 </body>
 </html>

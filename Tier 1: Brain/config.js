@@ -7,14 +7,14 @@ export const config = {
         busting: true,  // Add timestamp to fetch URLs to bypass cache
     },
 
-    // Data paths (Tier 2 metadata files)
+    // Data paths (Tier 2: Map metadata files)
     paths: {
         metadata: {
-            questions: 'Tier 2/questions-index.json',
-            notes: 'Tier 2/notes-index.json',
-            flashcards: 'Tier 2/flashcards-index.json',
+            questions: 'Tier 2: Map/questions-index.json',
+            notes: 'Tier 2: Map/notes-index.json',
+            flashcards: 'Tier 2: Map/flashcards-index.json',
         },
-        content: 'Tier 3/',  // Base path for content files
+        content: 'Tier 3: Library/',  // Base path for content files
     },
 
     // UI settings
