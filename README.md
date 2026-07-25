@@ -6,58 +6,64 @@ A modern, modular three-tier study application for power plant operator training
 
 GoBook is an interactive learning platform that provides exam practice, flashcard study, and comprehensive study notes across multiple technical topics. The application uses a clean three-tier architecture that separates concerns and makes it easy to add new content.
 
-## Three-Tier Architecture
+## Three-Tier Architecture (Brain Metaphor)
 
-### 🎯 Tier 1: Application Logic (Controller Layer)
+### 🧠 Tier 1: Brain (Application Logic)
 
-**Location:** `Tier 1/` and `index.html`
+**Location:** `Tier 1: Brain/` and `index.html`
 
-The application logic layer handles user interface, screen navigation, and data management.
+The brain tier handles all application logic, organized by neurological function:
 
-**Files:**
-- `index.html` - Entry point with HTML structure and styling
-- `app.js` - Core application state and initialization
-- `ui.js` - Screen navigation and routing logic
-- `ui-utils.js` - Reusable DOM manipulation utilities
-- `exam.js` - Exam mode functionality
-- `flashcard.js` - Flashcard study mode
-- `notes.js` - Study notes display logic
-- `data-loader.js` - Async data fetching from Tier 2 and Tier 3
-- `data-filter.js` - Pure utility functions for filtering data
+#### **Brainstem/** - Vital Initialization & Setup
+- `config.js` - Core configuration and settings
+- `main.js` - Application startup and coordination
+
+#### **Cortex/** - Thinking & Logic
+- `router.js` - Navigation pathways between screens
+- `exam-controller.js` - Exam mode functionality
+- `flashcard-controller.js` - Flashcard study mode
+- `notes-controller.js` - Study notes display logic
+
+#### **Limbic/** - Memory & Data Storage
+- `state.js` - Application state management
+- `loader.js` - Async data fetching from Tier 2 and Tier 3
+- `processor.js` - Data processing and transformation
+
+#### **Senses/** - Perception & Output
+- `helpers.js` - Reusable DOM manipulation utilities
 
 **How it works:**
 1. User loads `index.html` in browser
-2. `app.js` imports all modules and initializes on page load
-3. `data-loader.js` fetches JSON metadata from Tier 2
-4. Content file paths from JSON are used to load actual content from Tier 3
-5. UI modules render screens and handle user interactions
+2. Browser loads `Tier 1: Brain/Brainstem/main.js` as entry point
+3. Brainstem initializes and coordinates all systems
+4. Limbic modules fetch metadata synapses from Tier 2: Nervous System
+5. Cortex router directs user through application flows
+6. Senses render the user interface
 
-### 📊 Tier 2: Metadata (Data Manager Layer)
+### 🔗 Tier 2: Nervous System (Metadata & Connections)
 
-**Location:** `Tier 2/`
+**Location:** `Tier 2: Nervous System/`
 
-Metadata files that index and reference all learning content.
+Metadata "synapses" that connect the brain to knowledge pathways.
 
 **Files:**
 
-#### `questions.json`
-Maps exam questions to their content files in Tier 3.
+#### `questions-synapses.json`
+Maps exam questions to their content files in Tier 3: Pathways.
 
 ```json
 {
   "questions": [
     {
       "subject": "CP01",
-      "contentFile": "Tier 3/CP01/CP01_questions.txt"
+      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_questions.txt"
     },
     // ... more subjects
   ]
 }
 ```
 
-Current subjects: CP01, TH01, TH02, TH03, TH04, TH05, Fluid Flow (TH06B), TH07B, Pumps
-
-#### `notes.json`
+#### `notes-synapses.json`
 Maps study notes to their content files with metadata.
 
 ```json
@@ -67,14 +73,17 @@ Maps study notes to their content files with metadata.
       "id": 1,
       "subject": "CP01",
       "title": "Note Title",
-      "contentFile": "Tier 3/CP01/CP01_notes.txt",
+      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_notes.txt",
       "image": "assets/images/diagram.png",
       "imageLabel": "Optional caption"
     },
-    // ... more notes (185 total entries)
+    // ... more notes (232 total entries)
   ]
 }
 ```
+
+#### `flashcards-synapses.json`
+Maps flashcard entries to their content files.
 
 **Key Features:**
 - Minimal metadata - only references and IDs
@@ -82,46 +91,34 @@ Maps study notes to their content files with metadata.
 - Easy to update or add new subjects
 - Supports images and captions
 
-### 📚 Tier 3: Content (Learning Materials)
+### 📚 Tier 3: Pathways (Learning Materials & Knowledge Routes)
 
-**Location:** `Tier 3/{SUBJECT}/`
+**Location:** `Tier 3: Pathways/{SUBJECT}/`
 
-Actual learning content organized by topic in plain text files.
+Actual learning content organized by topic in plain text files. Pathways represent different routes students can take through knowledge.
 
 **Structure:**
 ```
-Tier 3/
+Tier 3: Pathways/
 ├── CP01_Piping/
 │   ├── CP01_Piping_notes.txt
+│   ├── CP01_Piping_flashcards.txt
 │   └── CP01_Piping_questions.txt
 ├── CP04_Pumps/
 │   ├── CP04_Pumps_notes.txt
+│   ├── CP04_Pumps_flashcards.txt
 │   └── CP04_Pumps_questions.txt
 ├── CP06_Heat_Exchangers/
 │   ├── CP06_Heat_Exchangers_notes.txt
 │   ├── CP06_Heat_Exchangers_flashcards.txt
 │   └── CP06_Heat_Exchangers_questions.txt
 ├── TH01_Measurement/
-│   ├── TH01_Measurement_notes.txt
-│   └── TH01_Measurement_questions.txt
 ├── TH02_Thermodynamics_I/
-│   ├── TH02_Thermodynamics_I_notes.txt
-│   └── TH02_Thermodynamics_I_questions.txt
 ├── TH03_Thermodynamics_II/
-│   ├── TH03_Thermodynamics_II_notes.txt
-│   └── TH03_Thermodynamics_II_questions.txt
 ├── TH04_Thermodynamics_III/
-│   ├── TH04_Thermodynamics_III_notes.txt
-│   └── TH04_Thermodynamics_III_questions.txt
 ├── TH05_Thermodynamic_Cycles/
-│   ├── TH05_Thermodynamic_Cycles_notes.txt
-│   └── TH05_Thermodynamic_Cycles_questions.txt
 ├── TH06B_Fluid_Flow/
-│   ├── TH06B_Fluid_Flow_notes.txt
-│   └── TH06B_Fluid_Flow_questions.txt
 └── TH07B_Heat_Transfer/
-    ├── TH07B_Heat_Transfer_notes.txt
-    └── TH07B_Heat_Transfer_questions.txt
 ```
 
 **Content Formats:**
@@ -176,59 +173,80 @@ Questions files use `[Question ID: X]` with JSON:
 
 When adding new study materials:
 
-1. **Create Topic Directory** in Tier 3:
+1. **Create Topic Directory** in Tier 3: Pathways:
    ```bash
-   mkdir -p Tier 3/NEW_TOPIC
+   mkdir -p "Tier 3: Pathways/NEW_TOPIC"
    ```
 
 2. **Create Content Files**:
-   - `Tier 3/NEW_TOPIC/NEW_TOPIC_notes.txt` with [Note ID: X] markers
-   - `Tier 3/NEW_TOPIC/NEW_TOPIC_questions.txt` with [Question ID: X] markers (optional)
+   - `Tier 3: Pathways/NEW_TOPIC/NEW_TOPIC_notes.txt` with [Note ID: X] markers
+   - `Tier 3: Pathways/NEW_TOPIC/NEW_TOPIC_questions.txt` with [Question ID: X] markers (optional)
+   - `Tier 3: Pathways/NEW_TOPIC/NEW_TOPIC_flashcards.txt` with [Note ID: X] and FRONT/BACK format
 
-3. **Update Tier 2 Metadata**:
-   - Add entries to `questions.json` (if questions exist)
-   - Add entries to `notes.json` for each note
+3. **Update Tier 2: Nervous System Synapses**:
+   - Add entries to `Tier 2: Nervous System/questions-synapses.json` (if questions exist)
+   - Add entries to `Tier 2: Nervous System/notes-synapses.json` for each note
+   - Add entries to `Tier 2: Nervous System/flashcards-synapses.json` for flashcards
 
 4. **Verify**:
    - Content file ID markers must match JSON entry IDs
    - All `contentFile` paths must be relative from repository root
    - Questions must have "subject" field matching JSON entries
+   - Flashcard format: `FRONT: Question` on line 2, `BACK: Answer` on line 3
 
 #### File Paths
 
 All file paths in Tier 2 JSON are relative from the repository root:
-- ✓ Correct: `"Tier 3/CP01/CP01_notes.txt"`
-- ✗ Wrong: `"./Tier 3/CP01/CP01_notes.txt"` or `"/Tier 3/CP01/CP01_notes.txt"`
+- ✓ Correct: `"Tier 3: Pathways/CP01_Piping/CP01_Piping_notes.txt"`
+- ✗ Wrong: `"./Tier 3: Pathways/CP01_Piping/CP01_Piping_notes.txt"` or `"/Tier 3: Pathways/..."`
 
-#### Data Loading Flow
+#### Data Loading Flow (Neural Cascade)
 
 ```
-index.html
+Browser loads index.html
     ↓
-Tier 1/app.js (init)
+Brainstem/main.js (initialization & coordination)
     ↓
-Tier 1/data-loader.js (fetch JSON)
+Limbic/loader.js (fetch synapses from Nervous System)
     ↓
-Tier 2/questions.json & notes.json (read contentFile paths)
+Tier 2: Nervous System/*.json (synapses provide contentFile paths)
     ↓
-Tier 3/*.txt files (fetch actual content)
+Limbic/loader.js (fetch actual content from pathways)
     ↓
-Tier 1/ui.js & exam.js & notes.js (render to user)
+Tier 3: Pathways/*.txt (knowledge routes and learning materials)
+    ↓
+Cortex/router.js (decide which mode to show)
+    ↓
+Senses/helpers.js & Controllers (render to user)
 ```
 
-## Module System
+This mirrors how a brain processes information:
+- Brainstem wakes the system up
+- Limbic system retrieves memories (synapses)
+- Cortex routes the information
+- Senses display it to the user
 
-The application uses ES6 modules with `import`/`export`:
+## Module System (Brain Organization)
+
+The application uses ES6 modules with `import`/`export`, organized by brain function:
 
 ```javascript
-// Tier 1/app.js
-import { dataLoader } from './data-loader.js';
-import { ui } from './ui.js';
-// ... more imports
+// Tier 1: Brain/Brainstem/main.js (entry point)
+import { state } from '../Limbic/state.js';
+import { loader } from '../Limbic/loader.js';
+import { router } from '../Cortex/router.js';
+import { exam } from '../Cortex/exam-controller.js';
+import { flashcard } from '../Cortex/flashcard-controller.js';
+import { notes } from '../Cortex/notes-controller.js';
 
 // Each module exports its functionality
 export const exam = { /* ... */ };
 ```
+
+**Import Patterns:**
+- From Brainstem → other tiers: `import { config } from '../Brainstem/config.js'`
+- From Cortex → Limbic: `import { loader } from '../Limbic/loader.js'`
+- From Cortex → Senses: `import { helpers } from '../Senses/helpers.js'`
 
 ## Browser Console Debugging
 
@@ -256,38 +274,45 @@ window.app.allNotes.filter(n => n.subject === 'Pumps').length
 | Metric | Value |
 |--------|-------|
 | Total Subject Listings | 10 (CP01, TH01-TH05, CP06, Fluid Flow, TH07B, Pumps) |
-| Total Note Entries | 257 (comprehensive notes + flashcard Q&A pairs) |
-| Exam Questions | 216 |
-| Largest Topic | CP06 (25 comprehensive notes + 47 flashcards + 25 exam questions = 97 total) |
-| Three-Tier Architecture | Tier 1 (8 JS + HTML) → Tier 2 (JSON metadata) → Tier 3 (text content) |
-| Modules | 8 JS files + index.html |
-| Content Files | 24 .txt files (3 per topic × 8 topics) |
+| Total Note Entries | 232 (comprehensive notes + flashcard entries) |
+| Exam Questions | 216+ across all subjects |
+| Largest Topic | CP06 (25 comprehensive notes + 47 Q&A flashcards + exam questions) |
+| Three-Tier Brain Metaphor | Brain (10 modules) → Nervous System (3 synapses JSON) → Pathways (11+ topic directories) |
+| Brain Modules | 10 JS files (Brainstem: 2, Cortex: 4, Limbic: 3, Senses: 1) |
+| Metadata Synapses | 3 JSON files (questions, notes, flashcards) |
+| Content Pathways | 11 subject directories in Tier 3: Pathways/ |
+| Content Files | 30+ .txt files (.notes, .questions, .flashcards per topic) |
 
 ## Common Tasks
 
 ### Testing a New Subject
-1. Add content to Tier 3/{SUBJECT}/
-2. Update Tier 2/questions.json and notes.json
-3. Verify ID markers match: `grep "Note ID: 114" Tier\ 3/*/Pumps_notes.txt`
+1. Add content to `Tier 3: Pathways/{SUBJECT}/`
+2. Update `Tier 2: Nervous System/questions-synapses.json` and `notes-synapses.json`
+3. Verify ID markers match: `grep "Note ID: 114" "Tier 3: Pathways"/*/Pumps_notes.txt`
 4. Open browser, press F12 to check console for errors
 5. Test in each mode: Exams, Flashcards, Study Notes
 
 ### Checking Data Integrity
 ```bash
 # Verify all content file references exist
-node -e "const q=require('./Tier\ 2/questions.json'); q.questions.forEach(x => console.log(require('fs').existsSync(x.contentFile) ? '✓' : '✗ ' + x.contentFile))"
+cat "Tier 2: Nervous System/notes-synapses.json" | grep contentFile | \
+  sed 's/.*"contentFile": "//' | sed 's/".*//' | \
+  while read f; do test -f "$f" && echo "✓ $f" || echo "✗ MISSING: $f"; done
 
 # Count notes by subject
-grep "\"subject\"" Tier\ 2/notes.json | sort | uniq -c
+grep "\"subject\"" "Tier 2: Nervous System/notes-synapses.json" | sort | uniq -c
 ```
 
 ### Finding Content by ID
 ```bash
 # Find note ID 69 (first CP06 note)
-grep -n "Note ID: 69" Tier\ 3/*/CP06_notes.txt
+grep -n "Note ID: 69" "Tier 3: Pathways"/*/CP06_notes.txt
 
 # Find question ID 1
-grep -n "Question ID: 1" Tier\ 3/*/questions.txt
+grep -n "Question ID: 1" "Tier 3: Pathways"/*/questions.txt
+
+# Find all flashcards with FRONT/BACK format
+grep -l "FRONT:" "Tier 3: Pathways"/*/*.txt
 ```
 
 ## Technology Stack
