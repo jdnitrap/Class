@@ -2,43 +2,43 @@
   "questions": [
     {
       "subject": "CP01",
-      "contentFile": "Tier 3/CP01_Piping/CP01_Piping_questions.txt"
+      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_questions.txt"
     },
     {
       "subject": "TH01",
-      "contentFile": "Tier 3/TH01_Measurement/TH01_Measurement_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH01_Measurement/TH01_Measurement_questions.txt"
     },
     {
       "subject": "TH02",
-      "contentFile": "Tier 3/TH02_Thermodynamics_I/TH02_Thermodynamics_I_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH02_Thermodynamics_I/TH02_Thermodynamics_I_questions.txt"
     },
     {
       "subject": "TH03",
-      "contentFile": "Tier 3/TH03_Thermodynamics_II/TH03_Thermodynamics_II_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH03_Thermodynamics_II/TH03_Thermodynamics_II_questions.txt"
     },
     {
       "subject": "TH04",
-      "contentFile": "Tier 3/TH04_Thermodynamics_III/TH04_Thermodynamics_III_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH04_Thermodynamics_III/TH04_Thermodynamics_III_questions.txt"
     },
     {
       "subject": "TH05",
-      "contentFile": "Tier 3/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_questions.txt"
     },
     {
       "subject": "TH06B",
-      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH06B_Fluid_Flow/TH06B_Fluid_Flow_questions.txt"
     },
     {
       "subject": "TH07B",
-      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_questions.txt"
+      "contentFile": "Tier 3: Pathways/TH07B_Heat_Transfer/TH07B_Heat_Transfer_questions.txt"
     },
     {
       "subject": "CP04",
-      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_questions.txt"
+      "contentFile": "Tier 3: Pathways/CP04_Pumps/CP04_Pumps_questions.txt"
     },
     {
       "subject": "CP06",
-      "contentFile": "Tier 3/CP06_Heat_Exchangers/CP06_Heat_Exchangers_questions.txt"
+      "contentFile": "Tier 3: Pathways/CP06_Heat_Exchangers/CP06_Heat_Exchangers_questions.txt"
     }
   ]
 }
