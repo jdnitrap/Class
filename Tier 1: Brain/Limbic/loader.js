@@ -118,6 +118,7 @@ export const loader = {
                             flashcards.push({
                                 id: id,
                                 subject: subject,
+                                contentFile: contentFile,
                                 content: content.trim()
                             });
                         }
