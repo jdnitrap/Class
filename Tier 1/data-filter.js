@@ -37,24 +37,28 @@ export const dataFilter = {
             return subject;
         }
 
+        // Extract code from directory name (before the first underscore)
+        // e.g., "CP01_Piping" -> code = "CP01"
+        const underscore = directoryName.indexOf('_');
+        const code = underscore !== -1 ? directoryName.substring(0, underscore) : directoryName;
+
         // Parse directory name: "CP01_Piping" -> "CP01 Piping"
-        // Replace underscores with spaces and handle special cases
+        // Replace underscores with spaces
         let displayName = directoryName.replace(/_/g, ' ');
 
-        // Clean up common patterns
-        displayName = displayName.replace(/Thermodynamics I/, 'Thermodynamics I');
-        displayName = displayName.replace(/Thermodynamics II/, 'Thermodynamics II');
-        displayName = displayName.replace(/Thermodynamics III/, 'Thermodynamics III');
+        // Clean up common patterns that may have spaces added
+        displayName = displayName.replace(/Thermodynamics I(?!\w)/, 'Thermodynamics I');
+        displayName = displayName.replace(/Thermodynamics II(?!\w)/, 'Thermodynamics II');
+        displayName = displayName.replace(/Thermodynamics III(?!\w)/, 'Thermodynamics III');
         displayName = displayName.replace(/Thermodynamic Cycles/, 'Thermodynamic Cycles');
         displayName = displayName.replace(/Fluid Flow/, 'Fluid Flow');
         displayName = displayName.replace(/Heat Transfer/, 'Heat Transfer');
         displayName = displayName.replace(/Heat Exchangers/, 'Heat Exchangers');
 
-        // Remove duplicate code if present (e.g., "TH06B Fluid Flow TH06B" -> "TH06B Fluid Flow")
-        const code = subject.split(' ')[0]; // Get code part like "CP01" or "TH06B"
-        const regex = new RegExp(`\\b${code}\\s+`, 'g');
-        displayName = displayName.replace(regex, '');
-        displayName = code + ' ' + displayName;
+        // Ensure format is "CODE Subject" by reconstructing
+        // Extract just the subject part after the code and underscore
+        const subjectPart = displayName.substring(code.length).trim();
+        displayName = `${code} ${subjectPart}`;
 
         return displayName;
     }
