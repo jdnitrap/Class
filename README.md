@@ -91,23 +91,37 @@ Actual learning content organized by topic in plain text files.
 **Structure:**
 ```
 Tier 3/
-├── CP01/                           # Piping
-│   ├── CP01_notes.txt             # 5 study notes
-│   └── CP01_questions.txt         # 30 exam questions
-├── TH01/ through TH05/            # Thermodynamics I-V
-├── CP06_Heat_Exchangers/               # Heat Exchangers & Condensers
-│   ├── CP06_Heat_Exchangers_notes.txt        # 25 comprehensive study notes
-│   ├── CP06_Heat_Exchangers_flashcards.txt  # 47 Q&A flashcards
-│   └── CP06_Heat_Exchangers_questions.txt   # 25 exam questions (JSON)
-├── Fluid_Flow/                    # Fluid Flow (TH06B)
-│   ├── Fluid_Flow_notes.txt       # 45 study notes
-│   └── Fluid_Flow_TH06B__questions.txt  # 37 exam questions
-├── Pumps/                         # Pumps (CP04)
-│   ├── Pumps_notes.txt            # 30 study notes
-│   └── Pumps_questions.txt        # 20 exam questions
-└── TH07B/                         # TH07B
-    ├── TH07B_notes.txt            # 20 study notes
-    └── TH07B_questions.txt        # 25 exam questions
+├── CP01_Piping/
+│   ├── CP01_Piping_notes.txt
+│   └── CP01_Piping_questions.txt
+├── CP04_Pumps/
+│   ├── CP04_Pumps_notes.txt
+│   └── CP04_Pumps_questions.txt
+├── CP06_Heat_Exchangers/
+│   ├── CP06_Heat_Exchangers_notes.txt
+│   ├── CP06_Heat_Exchangers_flashcards.txt
+│   └── CP06_Heat_Exchangers_questions.txt
+├── TH01_Measurement/
+│   ├── TH01_Measurement_notes.txt
+│   └── TH01_Measurement_questions.txt
+├── TH02_Thermodynamics_I/
+│   ├── TH02_Thermodynamics_I_notes.txt
+│   └── TH02_Thermodynamics_I_questions.txt
+├── TH03_Thermodynamics_II/
+│   ├── TH03_Thermodynamics_II_notes.txt
+│   └── TH03_Thermodynamics_II_questions.txt
+├── TH04_Thermodynamics_III/
+│   ├── TH04_Thermodynamics_III_notes.txt
+│   └── TH04_Thermodynamics_III_questions.txt
+├── TH05_Thermodynamic_Cycles/
+│   ├── TH05_Thermodynamic_Cycles_notes.txt
+│   └── TH05_Thermodynamic_Cycles_questions.txt
+├── TH06B_Fluid_Flow/
+│   ├── TH06B_Fluid_Flow_notes.txt
+│   └── TH06B_Fluid_Flow_questions.txt
+└── TH07B_Heat_Transfer/
+    ├── TH07B_Heat_Transfer_notes.txt
+    └── TH07B_Heat_Transfer_questions.txt
 ```
 
 **Content Formats:**

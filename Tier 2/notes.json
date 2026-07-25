@@ -4,13 +4,13 @@
       "id": 1,
       "subject": "CP01",
       "title": "Piping Fundamentals and Design",
-      "contentFile": "Tier 3/CP01/CP01_notes.txt"
+      "contentFile": "Tier 3/CP01_Piping/CP01_Piping_notes.txt"
     },
     {
       "id": 2,
       "subject": "CP01",
       "title": "Valve Functions and Basic Construction",
-      "contentFile": "Tier 3/CP01/CP01_notes.txt",
+      "contentFile": "Tier 3/CP01_Piping/CP01_Piping_notes.txt",
       "image": "assets/images/valve-types.svg",
       "imageLabel": "Common Valve Types and Applications"
     },
@@ -18,7 +18,7 @@
       "id": 3,
       "subject": "CP01",
       "title": "Pressure Types and Relationships",
-      "contentFile": "Tier 3/CP01/CP01_notes.txt",
+      "contentFile": "Tier 3/CP01_Piping/CP01_Piping_notes.txt",
       "image": "assets/images/pressure-types.svg",
       "imageLabel": "Types of Pressure and Relationships"
     },
@@ -26,25 +26,25 @@
       "id": 4,
       "subject": "CP01",
       "title": "Valve Operational Issues and Prevention",
-      "contentFile": "Tier 3/CP01/CP01_notes.txt"
+      "contentFile": "Tier 3/CP01_Piping/CP01_Piping_notes.txt"
     },
     {
       "id": 5,
       "subject": "CP01",
       "title": "Valve Actuators and Position Verification",
-      "contentFile": "Tier 3/CP01/CP01_notes.txt"
+      "contentFile": "Tier 3/CP01_Piping/CP01_Piping_notes.txt"
     },
     {
       "id": 6,
       "subject": "TH01",
       "title": "Systems of Measurement and Unit Conversion",
-      "contentFile": "Tier 3/TH01/TH01_notes.txt"
+      "contentFile": "Tier 3/TH01_Measurement/TH01_Measurement_notes.txt"
     },
     {
       "id": 7,
       "subject": "TH01",
       "title": "Temperature Scales Comparison",
-      "contentFile": "Tier 3/TH01/TH01_notes.txt",
+      "contentFile": "Tier 3/TH01_Measurement/TH01_Measurement_notes.txt",
       "image": "assets/images/temperature-scales.svg",
       "imageLabel": "Temperature Scales Comparison"
     },
@@ -52,31 +52,31 @@
       "id": 8,
       "subject": "TH01",
       "title": "System Types and Properties",
-      "contentFile": "Tier 3/TH01/TH01_notes.txt"
+      "contentFile": "Tier 3/TH01_Measurement/TH01_Measurement_notes.txt"
     },
     {
       "id": 9,
       "subject": "TH02",
       "title": "First Law of Thermodynamics",
-      "contentFile": "Tier 3/TH02/TH02_notes.txt"
+      "contentFile": "Tier 3/TH02_Thermodynamics_I/TH02_Thermodynamics_I_notes.txt"
     },
     {
       "id": 10,
       "subject": "TH02",
       "title": "Energy Components and Enthalpy",
-      "contentFile": "Tier 3/TH02/TH02_notes.txt"
+      "contentFile": "Tier 3/TH02_Thermodynamics_I/TH02_Thermodynamics_I_notes.txt"
     },
     {
       "id": 11,
       "subject": "TH02",
       "title": "Heat, Work, and Power",
-      "contentFile": "Tier 3/TH02/TH02_notes.txt"
+      "contentFile": "Tier 3/TH02_Thermodynamics_I/TH02_Thermodynamics_I_notes.txt"
     },
     {
       "id": 12,
       "subject": "TH03",
       "title": "States, Phases, and Phase Diagrams",
-      "contentFile": "Tier 3/TH03/TH03_notes.txt",
+      "contentFile": "Tier 3/TH03_Thermodynamics_II/TH03_Thermodynamics_II_notes.txt",
       "image": "assets/images/pt-phase-diagram.svg",
       "imageLabel": "P-T Phase Diagram"
     },
@@ -84,7 +84,7 @@
       "id": 13,
       "subject": "TH03",
       "title": "Five States of Water",
-      "contentFile": "Tier 3/TH03/TH03_notes.txt",
+      "contentFile": "Tier 3/TH03_Thermodynamics_II/TH03_Thermodynamics_II_notes.txt",
       "image": "assets/images/five-states-water.svg",
       "imageLabel": "Five States of Water"
     },
@@ -92,43 +92,43 @@
       "id": 14,
       "subject": "TH03",
       "title": "Ideal Gas Laws and Steam Tables",
-      "contentFile": "Tier 3/TH03/TH03_notes.txt"
+      "contentFile": "Tier 3/TH03_Thermodynamics_II/TH03_Thermodynamics_II_notes.txt"
     },
     {
       "id": 15,
       "subject": "TH04",
       "title": "Thermodynamic Processes",
-      "contentFile": "Tier 3/TH04/TH04_notes.txt"
+      "contentFile": "Tier 3/TH04_Thermodynamics_III/TH04_Thermodynamics_III_notes.txt"
     },
     {
       "id": 16,
       "subject": "TH04",
       "title": "Steady Flow and Second Law",
-      "contentFile": "Tier 3/TH04/TH04_notes.txt"
+      "contentFile": "Tier 3/TH04_Thermodynamics_III/TH04_Thermodynamics_III_notes.txt"
     },
     {
       "id": 17,
       "subject": "TH04",
       "title": "Heat Exchangers and Nozzles",
-      "contentFile": "Tier 3/TH04/TH04_notes.txt"
+      "contentFile": "Tier 3/TH04_Thermodynamics_III/TH04_Thermodynamics_III_notes.txt"
     },
     {
       "id": 18,
       "subject": "TH04",
       "title": "Turbines, Pumps, and Throttles",
-      "contentFile": "Tier 3/TH04/TH04_notes.txt"
+      "contentFile": "Tier 3/TH04_Thermodynamics_III/TH04_Thermodynamics_III_notes.txt"
     },
     {
       "id": 19,
       "subject": "TH05",
       "title": "Thermodynamic Cycles - Fundamentals",
-      "contentFile": "Tier 3/TH05/TH05_notes.txt"
+      "contentFile": "Tier 3/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
     },
     {
       "id": 20,
       "subject": "TH05",
       "title": "The Carnot Cycle",
-      "contentFile": "Tier 3/TH05/TH05_notes.txt",
+      "contentFile": "Tier 3/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt",
       "image": "assets/images/carnot-cycle.svg",
       "imageLabel": "Carnot Cycle on P-V Diagram"
     },
@@ -136,7 +136,7 @@
       "id": 21,
       "subject": "TH05",
       "title": "Rankine Cycle - Realistic Steam Cycle",
-      "contentFile": "Tier 3/TH05/TH05_notes.txt",
+      "contentFile": "Tier 3/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt",
       "image": "assets/images/rankine-cycle.svg",
       "imageLabel": "Rankine Cycle Schematic"
     },
@@ -144,583 +144,583 @@
       "id": 22,
       "subject": "TH05",
       "title": "Improving Cycle Efficiency",
-      "contentFile": "Tier 3/TH05/TH05_notes.txt"
+      "contentFile": "Tier 3/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
     },
     {
       "id": 23,
       "subject": "TH05",
       "title": "Condenser Vacuum and Heat Rate",
-      "contentFile": "Tier 3/TH05/TH05_notes.txt"
+      "contentFile": "Tier 3/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
     },
     {
       "id": 24,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Mass Flow Rate",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 25,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Volumetric Flow Rate",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 26,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Steady Flow (Continuity of Flow)",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 27,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Viscosity",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 28,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Specific Gravity",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 29,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Density",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 30,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Laminar Flow",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 31,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Turbulent Flow",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 32,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Transitional Flow",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 33,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Reynolds Number",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 34,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Single-Phase Flow",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 35,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Two-Phase Flow",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 36,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Elevation Head",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 37,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Velocity Head",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 38,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Pressure Head",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 39,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Total Head",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 40,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Head Loss",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 41,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Friction Factor",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 42,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Cavitation",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 43,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Sonic Choking",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 44,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Water Hammer",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 45,
       "subject": "Fluid Flow (TH06B)",
       "title": "Definition: Pump Head",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 46,
       "subject": "Fluid Flow (TH06B)",
       "title": "Equation: Mass Flow Rate",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 47,
       "subject": "Fluid Flow (TH06B)",
       "title": "Equation: Volumetric Flow Rate",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 48,
       "subject": "Fluid Flow (TH06B)",
       "title": "Equation: Continuity (Incompressible Fluid)",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 49,
       "subject": "Fluid Flow (TH06B)",
       "title": "Equation: Reynolds Number",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 50,
       "subject": "Fluid Flow (TH06B)",
       "title": "Equation: Bernoulli's (Ideal Flow)",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 51,
       "subject": "Fluid Flow (TH06B)",
       "title": "Equation: Bernoulli's (Real Flow - Modified)",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 52,
       "subject": "Fluid Flow (TH06B)",
       "title": "Equation: Flow-Pressure Relationship (Leak)",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 53,
       "subject": "Fluid Flow (TH06B)",
       "title": "Equation: Darcy's Equation (Head Loss)",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 54,
       "subject": "Fluid Flow (TH06B)",
       "title": "Equation: Head Loss (Level Pipe, Constant Area)",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 55,
       "subject": "Fluid Flow (TH06B)",
       "title": "Equation: Joukowsky Equation (Water Hammer)",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 56,
       "subject": "Fluid Flow (TH06B)",
       "title": "Equation: Water Hammer Pressure Pulse Duration",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 57,
       "subject": "Fluid Flow (TH06B)",
       "title": "Concept: Impact of Viscosity on System Operation",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 58,
       "subject": "Fluid Flow (TH06B)",
       "title": "Concept: Impact of Temperature on System Properties",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 59,
       "subject": "Fluid Flow (TH06B)",
       "title": "Concept: Laminar vs Turbulent Flow - Head Loss",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 60,
       "subject": "Fluid Flow (TH06B)",
       "title": "Concept: How Operators Control Head Loss",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 61,
       "subject": "Fluid Flow (TH06B)",
       "title": "Concept: Velocity Effect on Head Loss",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 62,
       "subject": "Fluid Flow (TH06B)",
       "title": "Concept: Two-Phase Flow in Steam Generator",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 63,
       "subject": "Fluid Flow (TH06B)",
       "title": "Safety: Water Hammer Prevention - System Preparation",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 64,
       "subject": "Fluid Flow (TH06B)",
       "title": "Safety: Water Hammer Prevention - Operational Procedures",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 65,
       "subject": "Fluid Flow (TH06B)",
       "title": "Safety: Water Hammer Prevention - System Design",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 66,
       "subject": "Fluid Flow (TH06B)",
       "title": "Safety: NPSH and Cavitation in Closed Systems",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 67,
       "subject": "Fluid Flow (TH06B)",
       "title": "Safety: System Draining and Startup",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 68,
       "subject": "Fluid Flow (TH06B)",
       "title": "Key Operator Focus: Monitoring and Understanding Flow",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_notes.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_notes.txt"
     },
     {
       "id": 94,
       "subject": "TH07B",
       "title": "Heat Transfer Definition and Modes",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 95,
       "subject": "TH07B",
       "title": "Specific Heat Capacity (cp)",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 96,
       "subject": "TH07B",
       "title": "Conduction Heat Transfer",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 97,
       "subject": "TH07B",
       "title": "Thermal Conductivity Values",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 98,
       "subject": "TH07B",
       "title": "Convection Heat Transfer",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 99,
       "subject": "TH07B",
       "title": "Film Convection Coefficient (hf)",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 100,
       "subject": "TH07B",
       "title": "Combined Heat Transfer in Heat Exchangers",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 101,
       "subject": "TH07B",
       "title": "Overall Heat Transfer Coefficient (Uo)",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 102,
       "subject": "TH07B",
       "title": "Radiation Heat Transfer",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 103,
       "subject": "TH07B",
       "title": "Heat Exchanger Types and Operation",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 104,
       "subject": "TH07B",
       "title": "Core Thermal Power (CTP) Calculation",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 105,
       "subject": "TH07B",
       "title": "Secondary Heat Balance and Condensate Depression",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 106,
       "subject": "TH07B",
       "title": "Nuclear Fuel Heat Transfer Path",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 107,
       "subject": "TH07B",
       "title": "Zirc-Water Reaction",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 108,
       "subject": "TH07B",
       "title": "Heat Flux and DNB",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 109,
       "subject": "TH07B",
       "title": "Natural vs Forced Convection in Plants",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 110,
       "subject": "TH07B",
       "title": "Nucleate Boiling Effect on Heat Transfer",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 111,
       "subject": "TH07B",
       "title": "Heat Exchanger Degradation Mechanisms",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 112,
       "subject": "TH07B",
       "title": "Percent Reactor Power and NI Indication",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 113,
       "subject": "TH07B",
       "title": "Example: Effect of Tube Plugging on Tavg",
-      "contentFile": "Tier 3/TH07B/TH07B_notes.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.txt"
     },
     {
       "id": 114,
       "subject": "Pumps",
       "title": "Definition: Pumps and Flow Resistance",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 115,
       "subject": "Pumps",
       "title": "Pump Purpose: Moving Fluids Through Systems",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 116,
       "subject": "Pumps",
       "title": "Diverse Pump Applications and Functions",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 117,
       "subject": "Pumps",
       "title": "Pump Classification: Kinetic vs Positive Displacement",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 118,
       "subject": "Pumps",
       "title": "Kinetic (Dynamic) Pumps - Centrifugal Type",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 119,
       "subject": "Pumps",
       "title": "Positive Displacement Pumps - Fixed Volume",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 120,
       "subject": "Pumps",
       "title": "Pump Capacity - Volumetric Flow Rate",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 121,
       "subject": "Pumps",
       "title": "Static Head - Elevation Difference",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 122,
       "subject": "Pumps",
       "title": "Dynamic Head - Velocity and Friction Effects",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 123,
       "subject": "Pumps",
       "title": "Total Suction Head (Hs) - Equation and Components",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 124,
       "subject": "Pumps",
       "title": "Suction Head Formula and Pressure Considerations",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 125,
       "subject": "Pumps",
       "title": "Total Discharge Head (Ht) - Equation and Components",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 126,
       "subject": "Pumps",
       "title": "Discharge Head Formula and Tank Pressure",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 127,
       "subject": "Pumps",
       "title": "Total Head (H) - Pressure Difference Calculation",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 128,
       "subject": "Pumps",
       "title": "Head Calculation Example - Suction and Discharge",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 129,
       "subject": "Pumps",
       "title": "Net Positive Suction Head (NPSH) Definition",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 130,
       "subject": "Pumps",
       "title": "NPSH Equation and Saturation Pressure",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 131,
       "subject": "Pumps",
       "title": "Cavitation - Formation and Vapor Bubbles",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 132,
       "subject": "Pumps",
       "title": "Cavitation Effects - Damage and Performance Loss",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 133,
       "subject": "Pumps",
       "title": "Cavitation Indicators - Noise and Vibration",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 134,
       "subject": "Pumps",
       "title": "Cavitation Prevention Methods",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 135,
       "subject": "Pumps",
       "title": "System Preparation to Prevent Cavitation",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 136,
       "subject": "Pumps",
       "title": "System Design Features for Cavitation Prevention",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 137,
       "subject": "Pumps",
       "title": "Pump Performance Curves and Operating Points",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 138,
       "subject": "Pumps",
       "title": "Pump Efficiency and Design Operating Range",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 139,
       "subject": "Pumps",
       "title": "Fluid Properties and Temperature Effects on Pumps",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 140,
       "subject": "Pumps",
       "title": "Centrifugal Pump Impeller Designs",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 141,
       "subject": "Pumps",
       "title": "Positive Displacement Pumps - Types and Applications",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 142,
       "subject": "Pumps",
       "title": "Pump Reliability and Preventive Maintenance",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 143,
       "subject": "Pumps",
       "title": "Pump Theory Application - Key Concepts Summary",
-      "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_notes.txt"
     },
     {
       "id": 186,

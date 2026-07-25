@@ -2,39 +2,39 @@
   "questions": [
     {
       "subject": "CP01",
-      "contentFile": "Tier 3/CP01/CP01_questions.txt"
+      "contentFile": "Tier 3/CP01_Piping/CP01_Piping_questions.txt"
     },
     {
       "subject": "TH01",
-      "contentFile": "Tier 3/TH01/TH01_questions.txt"
+      "contentFile": "Tier 3/TH01_Measurement/TH01_Measurement_questions.txt"
     },
     {
       "subject": "TH02",
-      "contentFile": "Tier 3/TH02/TH02_questions.txt"
+      "contentFile": "Tier 3/TH02_Thermodynamics_I/TH02_Thermodynamics_I_questions.txt"
     },
     {
       "subject": "TH03",
-      "contentFile": "Tier 3/TH03/TH03_questions.txt"
+      "contentFile": "Tier 3/TH03_Thermodynamics_II/TH03_Thermodynamics_II_questions.txt"
     },
     {
       "subject": "TH04",
-      "contentFile": "Tier 3/TH04/TH04_questions.txt"
+      "contentFile": "Tier 3/TH04_Thermodynamics_III/TH04_Thermodynamics_III_questions.txt"
     },
     {
       "subject": "TH05",
-      "contentFile": "Tier 3/TH05/TH05_questions.txt"
+      "contentFile": "Tier 3/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_questions.txt"
     },
     {
       "subject": "Fluid Flow (TH06B)",
-      "contentFile": "Tier 3/Fluid_Flow/Fluid_Flow_TH06B__questions.txt"
+      "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_questions.txt"
     },
     {
       "subject": "TH07B",
-      "contentFile": "Tier 3/TH07B/TH07B_questions.txt"
+      "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_questions.txt"
     },
     {
       "subject": "Pumps",
-      "contentFile": "Tier 3/Pumps/Pumps_questions.txt"
+      "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_questions.txt"
     },
     {
       "subject": "CP06",
