@@ -3,6 +3,19 @@
 This file demonstrates the three required text file formats for each topic in Tier 3.
 All topics must follow this structure.
 
+## ⚠️ IMPORTANT: Naming Convention Requirements
+
+**ALL Tier 3 directories and files MUST follow the naming format below.**
+
+Directories must be named: **`{Code}_{Subject}/`**
+Files must be named: **`{Code}_{Subject}_{type}.txt`**
+
+Examples:
+- Directory: `CP06_Heat_Exchangers/`
+- Files: `CP06_Heat_Exchangers_notes.txt`, `CP06_Heat_Exchangers_flashcards.txt`, `CP06_Heat_Exchangers_questions.txt`
+
+Failure to follow this naming convention will result in broken file references and the content will not load in the application.
+
 ## Quick Reference: Tier 3 File Structure
 
 ### 1. Comprehensive Notes
@@ -149,6 +162,17 @@ Increases surface area for heat exchange between water and air.
 
 ## Naming Convention Summary
 
+### Directory Naming Format
+All topic directories in Tier 3 must follow this naming format:
+
+**Format:** `{Code}_{Subject}/`
+
+**Examples:**
+- `CP01_Piping/`
+- `TH06_Pump/` or `CP06_Heat_Exchangers/`
+- `Fluid_Flow/` (alternative with underscores for multi-word names)
+
+### File Naming Format
 All three files for a topic follow similar naming:
 
 **Format:** `{Code}_{Subject}_{type}.txt`
@@ -163,6 +187,23 @@ All three files for a topic follow similar naming:
 - `CP06_Heat_Exchangers_notes.txt`
 - `CP06_Heat_Exchangers_flashcards.txt`
 - `CP06_Heat_Exchangers_questions.txt`
+
+**Complete Directory Structure Example:**
+```
+Tier 3/
+├── CP06_Heat_Exchangers/
+│   ├── CP06_Heat_Exchangers_notes.txt
+│   ├── CP06_Heat_Exchangers_flashcards.txt
+│   └── CP06_Heat_Exchangers_questions.txt
+├── TH06_Pump/
+│   ├── TH06_Pump_notes.txt
+│   ├── TH06_Pump_flashcards.txt
+│   └── TH06_Pump_questions.txt
+└── CP01_Piping/
+    ├── CP01_Piping_notes.txt
+    ├── CP01_Piping_flashcards.txt
+    └── CP01_Piping_questions.txt
+```
 
 ---
 
