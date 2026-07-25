@@ -74,7 +74,7 @@ export const exam = {
         document.getElementById('questionNumber').textContent = state.currentQuestionIndex + 1;
         document.getElementById('questionTotal').textContent = state.answers.length;
         const progress = helpers.getProgressPercentage(state.currentQuestionIndex, state.answers.length);
-        document.getElementById('questionProgressFill').style.width = progress + '%';
+        document.getElementById('progressFill').style.width = progress + '%';
     },
 
     selectAnswer(state, optionIndex) {
