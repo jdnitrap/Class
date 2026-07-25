@@ -4,9 +4,9 @@
 import { state } from './state.js';
 import { loader } from './loader.js';
 import { router } from './router.js';
-import { exam } from './modes/exam.js';
-import { flashcard } from './modes/flashcard.js';
-import { notes } from './modes/notes.js';
+import { exam } from './modes/exam-controller.js';
+import { flashcard } from './modes/flashcard-controller.js';
+import { notes } from './modes/notes-controller.js';
 
 // Expose app API to window for HTML onclick handlers
 window.app = {

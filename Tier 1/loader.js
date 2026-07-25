@@ -4,7 +4,7 @@ export const loader = {
     async loadQuestions(state) {
         state.allQuestions = [];
         try {
-            const response = await fetch('Tier 2/questions.json?v=' + Date.now());
+            const response = await fetch('Tier 2/questions-index.json?v=' + Date.now());
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const data = await response.json();
             if (data.questions && Array.isArray(data.questions)) {
@@ -53,7 +53,7 @@ export const loader = {
     async loadNotes(state) {
         state.allNotes = [];
         try {
-            const response = await fetch('Tier 2/notes.json?v=' + Date.now());
+            const response = await fetch('Tier 2/notes-index.json?v=' + Date.now());
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const data = await response.json();
             if (data.notes && Array.isArray(data.notes)) {
@@ -72,7 +72,7 @@ export const loader = {
     async loadFlashcards(state) {
         state.allFlashcards = [];
         try {
-            const response = await fetch('Tier 2/flashcards.json?v=' + Date.now());
+            const response = await fetch('Tier 2/flashcards-index.json?v=' + Date.now());
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const data = await response.json();
             if (data.flashcards && Array.isArray(data.flashcards)) {

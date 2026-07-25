@@ -2,9 +2,9 @@
 
 import { helpers } from './ui/helpers.js';
 import { processor } from './processor.js';
-import { exam } from './modes/exam.js';
-import { flashcard } from './modes/flashcard.js';
-import { notes } from './modes/notes.js';
+import { exam } from './modes/exam-controller.js';
+import { flashcard } from './modes/flashcard-controller.js';
+import { notes } from './modes/notes-controller.js';
 
 export const router = {
     showScreen(screenId) {
