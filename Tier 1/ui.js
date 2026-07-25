@@ -54,7 +54,8 @@ export const ui = {
         subjects.forEach(subject => {
             const btn = document.createElement('button');
             btn.className = 'subject-btn';
-            btn.textContent = subject;
+            const displayName = dataFilter.getDisplayName(subject, app.allQuestions);
+            btn.textContent = displayName;
             btn.onclick = () => this.selectSubject(app, subject);
             container.appendChild(btn);
         });
@@ -84,7 +85,8 @@ export const ui = {
         subjects.forEach(subject => {
             const btn = document.createElement('button');
             btn.className = 'subject-btn';
-            btn.textContent = subject;
+            const displayName = dataFilter.getDisplayName(subject, app.allNotes);
+            btn.textContent = displayName;
             btn.onclick = () => this.selectNotesSubject(app, subject);
             container.appendChild(btn);
         });
@@ -95,10 +97,11 @@ export const ui = {
 
     selectSubject(app, subject) {
         app.currentSubject = subject;
-        document.getElementById('selectedSubjectName').textContent = subject;
+        const displayName = dataFilter.getDisplayName(subject, app.allQuestions);
+        document.getElementById('selectedSubjectName').textContent = displayName;
         document.getElementById('modeButtonText').textContent = app.currentMode === 'exam' ? 'Exam' : 'Flashcards';
         document.querySelectorAll('#subjectButtonsContainer .subject-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.textContent === subject);
+            btn.classList.toggle('active', btn.textContent === displayName);
         });
 
         if (app.currentMode === 'exam') {
@@ -121,9 +124,10 @@ export const ui = {
             console.error('✗ ERROR: selectedNotesSubjectName element not found');
             return;
         }
-        subjectNameEl.textContent = subject;
+        const displayName = dataFilter.getDisplayName(subject, app.allNotes);
+        subjectNameEl.textContent = displayName;
         document.querySelectorAll('#notesSubjectButtonsContainer .subject-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.textContent === subject);
+            btn.classList.toggle('active', btn.textContent === displayName);
         });
         const buttonText = app.currentMode === 'flashcard' ? 'Start Flashcards' : 'View Notes';
         document.getElementById('studyModeButtonText').textContent = buttonText;
