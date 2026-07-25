@@ -1,12 +1,12 @@
 // Main - application initializer and coordinator
 // This is the entry point that starts the app and coordinates all tiers
 
-import { state } from './data/state.js';
-import { loader } from './data/loader.js';
-import { router } from './router.js';
-import { exam } from './modes/exam-controller.js';
-import { flashcard } from './modes/flashcard-controller.js';
-import { notes } from './modes/notes-controller.js';
+import { state } from '../Limbic/state.js';
+import { loader } from '../Limbic/loader.js';
+import { router } from '../Cortex/router.js';
+import { exam } from '../Cortex/exam-controller.js';
+import { flashcard } from '../Cortex/flashcard-controller.js';
+import { notes } from '../Cortex/notes-controller.js';
 
 // Expose app API to window for HTML onclick handlers
 window.app = {

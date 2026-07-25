@@ -1,10 +1,10 @@
 // Router - handles navigation between screens and mode selection
 
-import { helpers } from './ui/helpers.js';
-import { processor } from './data/processor.js';
-import { exam } from './modes/exam-controller.js';
-import { flashcard } from './modes/flashcard-controller.js';
-import { notes } from './modes/notes-controller.js';
+import { helpers } from '../Senses/helpers.js';
+import { processor } from '../Limbic/processor.js';
+import { exam } from './exam-controller.js';
+import { flashcard } from './flashcard-controller.js';
+import { notes } from './notes-controller.js';
 
 export const router = {
     showScreen(screenId) {

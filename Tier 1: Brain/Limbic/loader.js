@@ -1,6 +1,6 @@
 // Loader - fetches data from Tier 2 metadata and Tier 3 content files
 
-import { config } from '../config.js';
+import { config } from '../Brainstem/config.js';
 
 export const loader = {
     async loadQuestions(state) {

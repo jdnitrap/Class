@@ -3,21 +3,17 @@
   GoBook Application - Three-Tier Architecture
 
   TIER 1: BRAIN (Application Logic):
-    Tier 1: Brain/ - JavaScript modules that implement functionality
-      - app.js: Core state management, loads all data sources
-      - data-loader.js: Fetches and parses JSON metadata + text content
-      - data-filter.js: Filters and processes data for display
-      - ui.js: Screen navigation and routing
-      - exam.js: Exam mode logic
-      - flashcard.js: Flashcard study mode (uses allFlashcards)
-      - notes.js: Comprehensive notes viewing mode (uses allNotes)
-      - ui-utils.js: DOM manipulation helpers
+    Tier 1: Brain/ - JavaScript modules organized by function
+      Brainstem/ (Vital Setup): config.js, main.js
+      Cortex/ (Thinking/Logic): router.js, mode controllers
+      Limbic/ (Memory/Data): data loading and state management
+      Senses/ (Output): UI rendering and interaction
 
-  TIER 2: MAP (Metadata):
-    Tier 2: Map/ - JSON reference files that map to content
-      - questions.json: Maps exam questions by subject → Tier 3/*_questions.txt
-      - notes.json: Maps comprehensive notes by subject → Tier 3/*_notes.txt
-      - flashcards.json: Maps simplified Q&A flashcards by subject → Tier 3/*_flashcards.txt
+  TIER 2: NERVOUS SYSTEM (Metadata):
+    Tier 2: Nervous System/ - JSON synapses that connect to content
+      - questions-synapses.json: Maps exam questions → Tier 3 content
+      - notes-synapses.json: Maps study notes → Tier 3 content
+      - flashcards-synapses.json: Maps Q&A flashcards → Tier 3 content
 
   TIER 3: LIBRARY (Content):
     Tier 3: Library/{Subject}/ - Actual learning materials as text files
@@ -26,11 +22,10 @@
       - {Code}_{Subject}_flashcards.txt: Simplified Q&A flashcards for memorization
 
   Data Flow:
-    1. main.js loads Tier 2: Map metadata (questions-index.json, notes-index.json, flashcards-index.json)
-    2. loader.js fetches referenced Tier 3: Library text files
-    3. Content is processed and filtered via processor.js
-    4. router.js routes to appropriate mode (exam/notes/flashcards)
-    5. Mode-specific controller displays content in its format
+    1. Brainstem/main.js initializes and loads synapses from Tier 2: Nervous System
+    2. Limbic/ modules fetch referenced Tier 3: Library text files
+    3. Cortex/router.js routes to appropriate mode (exam/notes/flashcards)
+    4. Senses/ modules render content through UI
 -->
 <html lang="en">
 <head>
@@ -565,6 +560,6 @@
         </div>
     </div>
 
-    <script type="module" src="Tier 1: Brain/main.js"></script>
+    <script type="module" src="Tier 1: Brain/Brainstem/main.js"></script>
 </body>
 </html>

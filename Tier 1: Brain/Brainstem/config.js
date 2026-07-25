@@ -7,12 +7,12 @@ export const config = {
         busting: true,  // Add timestamp to fetch URLs to bypass cache
     },
 
-    // Data paths (Tier 2: Map metadata files)
+    // Data paths (Tier 2: Nervous System metadata files)
     paths: {
         metadata: {
-            questions: 'Tier 2: Map/questions-index.json',
-            notes: 'Tier 2: Map/notes-index.json',
-            flashcards: 'Tier 2: Map/flashcards-index.json',
+            questions: 'Tier 2: Nervous System/questions-synapses.json',
+            notes: 'Tier 2: Nervous System/notes-synapses.json',
+            flashcards: 'Tier 2: Nervous System/flashcards-synapses.json',
         },
         content: 'Tier 3: Library/',  // Base path for content files
     },

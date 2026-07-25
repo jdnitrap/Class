@@ -1,8 +1,8 @@
 // Exam mode - handles exam functionality
 
-import { router } from '../router.js';
-import { processor } from '../data/processor.js';
-import { helpers } from '../ui/helpers.js';
+import { router } from './router.js';
+import { processor } from '../Limbic/processor.js';
+import { helpers } from '../Senses/helpers.js';
 
 export const exam = {
     startExam(state) {

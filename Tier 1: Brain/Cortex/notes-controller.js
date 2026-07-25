@@ -1,9 +1,9 @@
 // Notes mode - handles comprehensive notes viewing
 
-import { router } from '../router.js';
-import { processor } from '../data/processor.js';
-import { loader } from '../data/loader.js';
-import { helpers } from '../ui/helpers.js';
+import { router } from './router.js';
+import { processor } from '../Limbic/processor.js';
+import { loader } from '../Limbic/loader.js';
+import { helpers } from '../Senses/helpers.js';
 
 export const notes = {
     async viewNotes(state) {
