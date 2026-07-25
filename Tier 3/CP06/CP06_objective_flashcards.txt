@@ -1,5 +1,5 @@
 [Note ID: 186]
-OBJECTIVE 1: What is the main difference between direct contact and indirect contact heat exchangers?
+What is the main difference between direct contact and indirect contact heat exchangers?
 Direct contact: fluids touch each other. Indirect contact: fluids separated by solid surface (tube/plate).
 
 [Note ID: 187]
@@ -11,7 +11,7 @@ What are common examples of indirect contact heat exchangers?
 Steam generators, main condensers - fluids separated by surfaces.
 
 [Note ID: 189]
-OBJECTIVE 2: How does a forced draft cooling tower work?
+How does a forced draft cooling tower work?
 Fans blow air into the tower to exchange heat between cooling water and air.
 
 [Note ID: 190]
@@ -27,7 +27,7 @@ What is the purpose of cooling tower fill material?
 Increases air-water contact surface area for better heat transfer. Usually PVC or plastic.
 
 [Note ID: 193]
-OBJECTIVE 3: What are the four basic flow paths in shell-and-tube heat exchangers?
+What are the four basic flow paths in shell-and-tube heat exchangers?
 Cross flow, Parallel flow, Counter flow, U-tube.
 
 [Note ID: 194]
@@ -43,7 +43,7 @@ What is counter flow heat transfer?
 Two fluids flow in opposite directions. Most efficient - maintains large temperature difference.
 
 [Note ID: 197]
-OBJECTIVE 4: Why is counter-flow more efficient than parallel-flow?
+Why is counter-flow more efficient than parallel-flow?
 Counter-flow maintains larger temperature difference throughout exchanger, allowing more heat transfer in smaller space.
 
 [Note ID: 198]
@@ -55,7 +55,7 @@ What three factors increase heat transfer rate?
 Larger overall heat transfer coefficient (Uo), larger surface area (A), larger temperature difference (ΔT).
 
 [Note ID: 200]
-OBJECTIVE 5: What is a regenerative heat exchanger?
+What is a regenerative heat exchanger?
 Transfers heat from hot fluid into cold sections of SAME system. Example: Feedwater Heaters. Minimizes energy loss.
 
 [Note ID: 201]
@@ -63,7 +63,7 @@ What is a non-regenerative heat exchanger?
 Transfers heat between TWO SEPARATE systems. Heat is rejected and discarded. Example: Turbine Lube Oil Coolers.
 
 [Note ID: 202]
-OBJECTIVE 6: What are the major components of a shell and tube heat exchanger?
+What are the major components of a shell and tube heat exchanger?
 Shell, tube bundle, tubesheets, waterboxes, baffles, nozzles, vents, drains.
 
 [Note ID: 203]
@@ -83,7 +83,7 @@ What are the two common tube types?
 Straight tubes (easy to clean/replace) and U-tubes (simplified expansion, fewer joints).
 
 [Note ID: 207]
-OBJECTIVE 7: What is thermal shock in a heat exchanger?
+What is thermal shock in a heat exchanger?
 Sudden temperature change causing excessive thermal stress - risk of metal cracking or brittle fracture.
 
 [Note ID: 208]
@@ -107,7 +107,7 @@ How do you minimize water hammer?
 Operate valves slowly - avoid sudden changes in fluid velocity.
 
 [Note ID: 213]
-OBJECTIVE 8: How do flow rates affect heat exchanger performance?
+How do flow rates affect heat exchanger performance?
 Too high = excessive pressure drops and energy loss. Too low = inadequate heat transfer. Must optimize.
 
 [Note ID: 214]
@@ -127,7 +127,7 @@ How do you maintain heat exchanger performance?
 Keep surfaces clean, maintain proper flow rates, monitor for fouling, detect tube failures early.
 
 [Note ID: 218]
-OBJECTIVE 9: What is the relationship between condenser vacuum and turbine backpressure?
+What is the relationship between condenser vacuum and turbine backpressure?
 Higher vacuum (lower pressure) = lower backpressure = greater pressure difference across turbine = more work and efficiency.
 
 [Note ID: 219]
@@ -143,7 +143,7 @@ How is vacuum measured in condensers?
 As absolute pressure - lower absolute pressure = better vacuum.
 
 [Note ID: 222]
-OBJECTIVE 10: How does a main condenser operate?
+How does a main condenser operate?
 Exhaust steam from turbine contacts cold condenser tubes - steam condenses to condensate - circulating water absorbs latent heat.
 
 [Note ID: 223]
@@ -175,13 +175,13 @@ What is biofouling in cooling systems?
 Aquatic organism growth that degrades cooling tower and condenser performance - control through chemical treatment.
 
 [Note ID: 230]
-SUMMARY: What are the three key principles of heat exchanger operation?
+What are the three key principles of heat exchanger operation?
 (1) Heat transfers from hot to cold, (2) Temperature difference drives transfer, (3) Minimize losses through proper design/maintenance.
 
 [Note ID: 231]
-SUMMARY: What makes an effective heat exchanger?
+What makes an effective heat exchanger?
 Proper flow patterns, adequate surface area, clean surfaces, correct fluid properties, effective thermal design.
 
 [Note ID: 232]
-SUMMARY: What is the operator's role in heat exchanger performance?
+What is the operator's role in heat exchanger performance?
 Monitor conditions, maintain flow rates, prevent fouling, detect failures, perform proper startup/shutdown procedures.
