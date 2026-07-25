@@ -689,6 +689,8 @@ OPERATIONAL FOCUS:
 
 PART E: CONDENSATE SUBCOOLING (CONDENSATE DEPRESSION)
 
+[IMAGE REFERENCE: condenser-operation] - Condenser showing hotwell, saturation temperature reference, subcooling measurement
+
 DEFINITION:
 Condensate subcooling (condensate depression) occurs when the condensate in the condenser hotwell is cooled below the saturation temperature at the existing condenser pressure. It is the temperature difference between saturation temperature and actual condensate temperature.
 
@@ -736,6 +738,9 @@ Each degree of unnecessary subcooling:
 
 PART F: STEAM TEMPERATURE AND PRESSURE
 
+[IMAGE REFERENCE: steam-temp-effect] - Figure 18: Effect of Increased Steam Temperature on Rankine T-s diagram
+[IMAGE REFERENCE: steam-pressure-effect] - Figure 19: Effect of Increased Steam Pressure on Rankine T-s diagram
+
 EFFECT OF HIGHER STEAM TEMPERATURE:
 When steam leaves the steam generator at higher temperature (while maintaining same pressure):
 • Enthalpy increases (more energy in steam)
@@ -780,6 +785,8 @@ TYPICAL OPERATING CONDITIONS:
 • Fossil plants: Up to 1100°F, 3500 psia (supercritical designs)
 
 PART G: STEAM QUALITY (MOISTURE CONTENT)
+
+[IMAGE REFERENCE: steam-quality-diagram] - T-s diagram showing quality region with wet steam region
 
 DEFINITION:
 Steam quality (X or dryness fraction) is the mass fraction of vapor in a two-phase mixture:
@@ -848,6 +855,8 @@ Steam quality | Increases available energy for expansion | 1-2% per 5% improveme
 
 [Note ID: 9]
 ENABLING OBJECTIVE 9: CONDENSATE DEPRESSION (CONDENSATE SUBCOOLING)
+
+[IMAGE REFERENCE: condenser-temperature-measurement] - Condenser hotwell showing saturation temperature reference and subcooling measurement point
 
 DETAILED DEFINITION:
 Condensate depression (also called condensate subcooling) is the magnitude of the temperature difference between the saturation temperature of water at the existing condenser pressure and the actual measured temperature of the liquid in the condenser hotwell.
@@ -991,6 +1000,9 @@ RECOGNITION OF INSUFFICIENT SUBCOOLING:
 
 [Note ID: 10]
 ENABLING OBJECTIVE 10: OPERATIONAL METHODS TO MAINTAIN UNIT EFFICIENCY
+
+[IMAGE REFERENCE: plant-efficiency-monitoring] - Plant heat rate monitoring systems and efficiency indicators
+[IMAGE REFERENCE: auxiliary-systems-diagram] - Secondary system auxiliary equipment layout and flow paths
 
 IMPORTANCE OF OPERATIONAL EFFICIENCY:
 Once a power plant is designed and built, the efficiency is essentially fixed by equipment characteristics. The way the plant is operated becomes THE determining factor in whether that design efficiency is actually achieved. Poor operations can reduce actual efficiency by 5-15% below design values.

@@ -134,13 +134,17 @@
       "id": 21,
       "subject": "TH05",
       "title": "Cycle Efficiency and Carnot Cycle",
-      "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
+      "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt",
+      "image": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/images/carnot-cycle-diagram.jpg",
+      "imageLabel": "Carnot Cycle Diagram - Basic Engine and Process Representation"
     },
     {
       "id": 22,
       "subject": "TH05",
       "title": "Carnot Efficiency and Second Law Impact",
-      "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt"
+      "contentFile": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_notes.txt",
+      "image": "Tier 3: Pathways/TH05_Thermodynamic_Cycles/images/carnot-cycle-diagram.jpg",
+      "imageLabel": "Carnot Cycle - Temperature-Entropy and Pressure-Volume Diagrams"
     },
     {
       "id": 23,
