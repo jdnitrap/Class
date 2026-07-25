@@ -79,7 +79,7 @@ export const loader = {
             const data = await response.json();
             if (data.flashcards && Array.isArray(data.flashcards)) {
                 for (const fcRef of data.flashcards) {
-                    const flashcards = await this.getFlashcardsFromFile(fcRef.contentFile);
+                    const flashcards = await this.getFlashcardsFromFile(fcRef.contentFile, fcRef.subject);
                     state.allFlashcards = state.allFlashcards.concat(flashcards);
                 }
             }
@@ -92,7 +92,7 @@ export const loader = {
         console.log(`✓ Loaded ${flashcardCount} flashcards across ${subjectCount} subjects`);
     },
 
-    async getFlashcardsFromFile(contentFile) {
+    async getFlashcardsFromFile(contentFile, subject) {
         try {
             const response = await fetch(contentFile);
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -117,6 +117,7 @@ export const loader = {
                         if (content.trim()) {
                             flashcards.push({
                                 id: id,
+                                subject: subject,
                                 content: content.trim()
                             });
                         }
