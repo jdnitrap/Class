@@ -1,6 +1,6 @@
-# CP04_Pumps - Exam Questions
+### Question: What is the primary function of a pump?
 
-## Question ID: N/A
+## Question ID: 1
 ### Question: What is the primary function of a pump?
 
 **Options:**
@@ -16,7 +16,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 2
 ### Question: Which type of pump is best for moving large volumes at relatively low pressure?
 
 **Options:**
@@ -32,7 +32,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 3
 ### Question: How does a positive displacement pump differ from a kinetic pump?
 
 **Options:**
@@ -48,7 +48,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 4
 ### Question: What is pump capacity typically measured in?
 
 **Options:**
@@ -64,7 +64,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 5
 ### Question: Static head is best described as:
 
 **Options:**
@@ -80,7 +80,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 6
 ### Question: Dynamic head includes which of the following components?
 
 **Options:**
@@ -96,7 +96,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 7
 ### Question: Total suction head becomes negative when:
 
 **Options:**
@@ -112,7 +112,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 8
 ### Question: Using the formula Hs = hs – hfs + ps, what does 'hfs' represent?
 
 **Options:**
@@ -128,7 +128,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 9
 ### Question: Total discharge head (Ht) does NOT include:
 
 **Options:**
@@ -144,7 +144,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 10
 ### Question: If a pump has Ht = 40 ft and Hs = -5 ft, what is the total head (H)?
 
 **Options:**
@@ -160,7 +160,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 11
 ### Question: Net Positive Suction Head (NPSH) is the difference between:
 
 **Options:**
@@ -176,7 +176,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 12
 ### Question: Cavitation occurs when:
 
 **Options:**
@@ -192,7 +192,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 13
 ### Question: Which of the following is NOT a consequence of cavitation?
 
 **Options:**
@@ -208,7 +208,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 14
 ### Question: A pump that sounds like it is pumping rocks most likely indicates:
 
 **Options:**
@@ -224,7 +224,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 15
 ### Question: Which method does NOT prevent cavitation?
 
 **Options:**
@@ -240,7 +240,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 16
 ### Question: What must be done to suction lines before pump startup to prevent cavitation?
 
 **Options:**
@@ -256,7 +256,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 17
 ### Question: The operating point of a pump occurs where:
 
 **Options:**
@@ -272,7 +272,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 18
 ### Question: Pump efficiency typically decreases when:
 
 **Options:**
@@ -288,7 +288,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 19
 ### Question: How does fluid temperature affect pump operation?
 
 **Options:**
@@ -304,7 +304,7 @@
 
 ---
 
-## Question ID: N/A
+## Question ID: 20
 ### Question: For safe and reliable pump operation, operators must:
 
 **Options:**
