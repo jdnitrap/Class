@@ -1,0 +1,125 @@
+[Note ID: 144]
+Heat Exchanger Definition: Device designed to transfer heat from one fluid to another. Requires temperature difference for heat transfer - heat always flows from hot to cold.
+
+[Note ID: 145]
+Heat Transfer Methods: Conduction (heat transfer through material between adjacent molecules) and Convection (heat transfer by bulk motion and mixing of fluids).
+
+[Note ID: 146]
+Direct Contact Heat Exchangers: Two fluids in direct contact with each other. Examples: cooling towers, lakes, rivers. Less common in power plants.
+
+[Note ID: 147]
+Indirect Contact Heat Exchangers: Two fluids separated by solid surface (tube or metal plate). Examples: steam generators, main condensers. Most common in power plants.
+
+[Note ID: 148]
+Cooling Towers: Use evaporative cooling to exchange energy from cooling water into air. Provide heat sink for main condensers.
+
+[Note ID: 149]
+Cooling Tower Flow Types: Cross-flow (air enters side, flows across, exits opposite side) and Counter flow (air enters bottom, flows up; water enters top, flows down).
+
+[Note ID: 150]
+Cooling Tower Draft Types: Forced-draft (fans blow air in), Induced-draft (fans draw air through), Natural-draft (uses convective chimney effects).
+
+[Note ID: 151]
+Cooling Tower Fill Material: Traditionally redwood, now mostly PVC or plastic. Affects efficiency and service life.
+
+[Note ID: 152]
+Shell and Tube Heat Exchangers: Most common type. Tubes carry one fluid, shell contains another. Shell side is typically lower pressure.
+
+[Note ID: 153]
+Crossflow Heat Exchangers: Two fluids flow perpendicular to each other. Main condensers are typical examples.
+
+[Note ID: 154]
+Parallel Flow Heat Exchangers: Fluids flow in same direction. Large temperature difference at entrance, small at exit. Larger surface area needed. Not commonly used.
+
+[Note ID: 155]
+Counter Flow Heat Exchangers: Fluids flow in opposite directions. Maintains larger temperature difference throughout. More efficient than parallel flow.
+
+[Note ID: 156]
+Heat Transfer Rate Formula: Q = Uo × A × ΔT. Where Q = heat transfer rate (Btu/hr), Uo = overall heat transfer coefficient, A = surface area, ΔT = temperature difference.
+
+[Note ID: 157]
+U-Tube Heat Exchangers: Tubes bent in U-shape. Advantages: simplified expansion, fewer tube-to-sheet joints. Disadvantage: difficult to mechanically clean.
+
+[Note ID: 158]
+Heat Exchanger Components: Shell, tube bundle, tubesheets, waterboxes, baffles, nozzles, vents, drains.
+
+[Note ID: 159]
+Tube Types: Straight tubes (easy to clean/replace), U-tubes (simplified expansion), Coil tubes (spring-like expansion), Bowed tubes (bolted expansion).
+
+[Note ID: 160]
+Regenerative Heat Exchangers: Transfer heat from hot fluid to cold sections of same system. Examples: Feedwater Heaters. Minimizes energy loss.
+
+[Note ID: 161]
+Non-Regenerative Heat Exchangers: Transfer heat between two separate systems. Heat is rejected. Examples: Turbine Lube Oil Coolers.
+
+[Note ID: 162]
+Thermal Shock: Temperature change causing excessive thermal stress. Occurs when temperature suddenly increases/decreases. Risk of brittle fracture with high internal pressure.
+
+[Note ID: 163]
+Preventing Thermal Shock: Gradually introduce fluids by throttling inlet valves. Minimize sudden temperature changes during startup.
+
+[Note ID: 164]
+Heat Exchanger Startup Procedure: (1) Circulate cold fluid first with vents open for air evacuation. (2) Valve in hot fluid after cold flow established. (3) Throttle inlet to minimize pressure spikes.
+
+[Note ID: 165]
+Water Hammer: Pressure spike occurring when fluid velocity suddenly changes. Causes pipe movement and damage. Minimized by slowly operating valves.
+
+[Note ID: 166]
+Heat Exchanger Shutdown: Controlled cooling and draining. Open drains to prevent water hammer and pressure spikes. Allow metal contraction safely.
+
+[Note ID: 167]
+Flow Rate Effects on Performance: Too high = excessive pressure drops and energy loss. Too low = inadequate heat transfer. Requires optimization.
+
+[Note ID: 168]
+Scaling and Tube Fouling: Deposits (mineral scale, corrosion products, biological growth) reduce heat transfer surface area and coefficient. Decreases efficiency.
+
+[Note ID: 169]
+Heat Exchanger Tube Failure: Results in cross-contamination of fluids, loss of heat transfer capability, and operational hazards. Monitor for early signs.
+
+[Note ID: 170]
+Maintaining Heat Exchanger Performance: Keep surfaces clean, maintain proper flow rates, monitor for fouling indicators, detect tube failures early.
+
+[Note ID: 171]
+Condenser Definition: Heat exchanger that condenses exhaust steam to condensate using cooling water. Critical for turbine operation and plant efficiency.
+
+[Note ID: 172]
+Condenser Vacuum and Backpressure: Higher vacuum (lower pressure) = greater pressure difference across turbine = more work from steam. Better vacuum improves turbine efficiency.
+
+[Note ID: 173]
+Main Condenser Design: Largest shell and tube heat exchanger. Rectangular shape with thousands of tubes. Steam on shell side, cooling water on tube side.
+
+[Note ID: 174]
+Condenser Flow Pattern: Crossflow design - exhaust steam flows downward, perpendicular to tube bundles containing circulating cooling water.
+
+[Note ID: 175]
+Hotwell: Collects condensed steam from main condenser. Steam condenses at constant temperature during phase change. Water temperature rises through tubes.
+
+[Note ID: 176]
+Non-Condensable Gases in Condenser: Air and other gases cannot condense. Accumulate and increase pressure, reducing vacuum. Reduces heat transfer efficiency.
+
+[Note ID: 177]
+Condenser Air Removal Systems: Jet air ejectors or vacuum pumps continuously remove non-condensable gases. Maintains vacuum for optimal condenser performance.
+
+[Note ID: 178]
+Condenser Efficiency Indicators: Vacuum measurement, outlet water temperature, flow rates. Degradation shown by reduced vacuum despite stable load, increased outlet temperature.
+
+[Note ID: 179]
+Condenser Maintenance: Regular tube cleaning and air system maintenance. Biofouling control through chemical treatment. Prevents performance degradation.
+
+[Note ID: 180]
+Operating Experience: Aquatic organism growth in cooling water systems (biofouling) can degrade condenser and cooling tower performance. Increases backpressure. Reduce through chemical treatment and monitoring.
+
+[Note ID: 181]
+Shell and Tube Passes: HX can have multiple passes for tube side and shell side. Multiple passes allow shorter unit with same tube length.
+
+[Note ID: 182]
+Baffles Function: Direct flow over tubes, serve as lateral support. Force flow to cross tubes multiple times while maintaining overall counter flow direction.
+
+[Note ID: 183]
+Temperature Difference Impact: Larger temperature difference = higher heat transfer rate. Counter flow maintains larger ΔT throughout exchanger than parallel flow.
+
+[Note ID: 184]
+Extended Surface Tubes: Have fins, rings, studs, or grooves. Increase surface area for heat transfer. Often used in gas-to-liquid exchangers.
+
+[Note ID: 185]
+Tube Thermal Expansion: 30-foot feedwater heater tube expands ~1.4 inches when heated from 70°F to 470°F. Floating head design accommodates this expansion.

@@ -871,6 +871,258 @@
       "subject": "Pumps",
       "title": "Pump Theory Application - Key Concepts Summary",
       "contentFile": "Tier 3/Pumps/Pumps_notes.txt"
+    },
+    {
+      "id": 144,
+      "subject": "CP06 Flashcards",
+      "title": "Heat Exchanger Definition and Heat Transfer Methods",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 145,
+      "subject": "CP06 Flashcards",
+      "title": "Conduction and Convection in Heat Transfer",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 146,
+      "subject": "CP06 Flashcards",
+      "title": "Direct Contact Heat Exchangers",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 147,
+      "subject": "CP06 Flashcards",
+      "title": "Indirect Contact (Surface) Heat Exchangers",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 148,
+      "subject": "CP06 Flashcards",
+      "title": "Cooling Towers and Heat Sink Function",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 149,
+      "subject": "CP06 Flashcards",
+      "title": "Cross-Flow and Counter-Flow in Cooling Towers",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 150,
+      "subject": "CP06 Flashcards",
+      "title": "Cooling Tower Draft Types",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 151,
+      "subject": "CP06 Flashcards",
+      "title": "Cooling Tower Fill Materials",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 152,
+      "subject": "CP06 Flashcards",
+      "title": "Shell and Tube Heat Exchangers Basics",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 153,
+      "subject": "CP06 Flashcards",
+      "title": "Crossflow Heat Exchanger Operation",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 154,
+      "subject": "CP06 Flashcards",
+      "title": "Parallel Flow Heat Exchangers",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 155,
+      "subject": "CP06 Flashcards",
+      "title": "Counter Flow Heat Exchangers",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 156,
+      "subject": "CP06 Flashcards",
+      "title": "Heat Transfer Rate Equation and Factors",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 157,
+      "subject": "CP06 Flashcards",
+      "title": "U-Tube Heat Exchangers Design and Benefits",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 158,
+      "subject": "CP06 Flashcards",
+      "title": "Heat Exchanger Main Components",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 159,
+      "subject": "CP06 Flashcards",
+      "title": "Tube Types and Selection",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 160,
+      "subject": "CP06 Flashcards",
+      "title": "Regenerative Heat Exchangers",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 161,
+      "subject": "CP06 Flashcards",
+      "title": "Non-Regenerative Heat Exchangers",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 162,
+      "subject": "CP06 Flashcards",
+      "title": "Thermal Shock Definition and Hazards",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 163,
+      "subject": "CP06 Flashcards",
+      "title": "Preventing Thermal Shock",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 164,
+      "subject": "CP06 Flashcards",
+      "title": "Heat Exchanger Startup Procedure",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 165,
+      "subject": "CP06 Flashcards",
+      "title": "Water Hammer Prevention",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 166,
+      "subject": "CP06 Flashcards",
+      "title": "Heat Exchanger Shutdown Procedures",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 167,
+      "subject": "CP06 Flashcards",
+      "title": "Flow Rate Effects on Performance",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 168,
+      "subject": "CP06 Flashcards",
+      "title": "Scaling and Tube Fouling",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 169,
+      "subject": "CP06 Flashcards",
+      "title": "Heat Exchanger Tube Failure Consequences",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 170,
+      "subject": "CP06 Flashcards",
+      "title": "Maintaining Heat Exchanger Performance",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 171,
+      "subject": "CP06 Flashcards",
+      "title": "Condenser Definition and Purpose",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 172,
+      "subject": "CP06 Flashcards",
+      "title": "Condenser Vacuum and Turbine Backpressure",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 173,
+      "subject": "CP06 Flashcards",
+      "title": "Main Condenser Construction and Design",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 174,
+      "subject": "CP06 Flashcards",
+      "title": "Condenser Flow Pattern (Crossflow)",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 175,
+      "subject": "CP06 Flashcards",
+      "title": "Hotwell Function in Condensers",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 176,
+      "subject": "CP06 Flashcards",
+      "title": "Non-Condensable Gases in Condenser",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 177,
+      "subject": "CP06 Flashcards",
+      "title": "Condenser Air Removal Systems",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 178,
+      "subject": "CP06 Flashcards",
+      "title": "Monitoring Condenser Efficiency",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 179,
+      "subject": "CP06 Flashcards",
+      "title": "Condenser Maintenance Requirements",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 180,
+      "subject": "CP06 Flashcards",
+      "title": "Biofouling Impact on Cooling Systems",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 181,
+      "subject": "CP06 Flashcards",
+      "title": "Shell and Tube Multiple Passes",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 182,
+      "subject": "CP06 Flashcards",
+      "title": "Baffles Function and Design",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 183,
+      "subject": "CP06 Flashcards",
+      "title": "Temperature Difference Optimization",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 184,
+      "subject": "CP06 Flashcards",
+      "title": "Extended Surface Tubes",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
+    },
+    {
+      "id": 185,
+      "subject": "CP06 Flashcards",
+      "title": "Tube Thermal Expansion and Accommodation",
+      "contentFile": "Tier 3/CP06/CP06_flashcard_notes.txt"
     }
   ]
 }
