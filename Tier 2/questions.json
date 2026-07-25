@@ -25,7 +25,7 @@
       "contentFile": "Tier 3/TH05_Thermodynamic_Cycles/TH05_Thermodynamic_Cycles_questions.txt"
     },
     {
-      "subject": "Fluid Flow (TH06B)",
+      "subject": "TH06B",
       "contentFile": "Tier 3/TH06B_Fluid_Flow/TH06B_Fluid_Flow_questions.txt"
     },
     {
@@ -33,7 +33,7 @@
       "contentFile": "Tier 3/TH07B_Heat_Transfer/TH07B_Heat_Transfer_questions.txt"
     },
     {
-      "subject": "Pumps",
+      "subject": "CP04",
       "contentFile": "Tier 3/CP04_Pumps/CP04_Pumps_questions.txt"
     },
     {
