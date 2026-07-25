@@ -47,34 +47,6 @@ The Second Law requires that some heat must be rejected for any cycle to operate
 
 Rankine is more practical: it uses constant-pressure (isobaric) heat transfer at phase boundaries instead of Carnot's constant-temperature processes. Rankine can be easily analyzed using steam tables. Rankine efficiency is lower than Carnot but achievable in actual power plants.
 
-[Note ID: 8A]
-How does superheating steam affect Rankine cycle efficiency?
-Superheating increases the enthalpy of steam entering the turbine (more heat added). Although heat rejected also increases, the increase in turbine work output is greater than the increase in heat rejection, resulting in improved overall cycle efficiency.
-
-[Note ID: 8B]
-What is the primary function of a Moisture Separator/Reheater (MSR) in power plants?
-The MSR removes moisture from steam exiting the high-pressure turbine and reheats it before entering the low-pressure turbine. Its primary purpose is to protect the final stages of the low-pressure turbine from water droplet erosion damage. Its effect on cycle efficiency is minor.
-
-[Note ID: 8C]
-How does feedwater heating affect cycle efficiency?
-Feedwater heating uses extraction steam from the turbine to preheat condensate before it returns to the steam generator. This decreases both heat that must be added (reactor supplies less heat) and heat rejected (condenser rejects less heat). The reduction in heat added is greater than the loss of turbine work, so overall cycle efficiency increases.
-
-[Note ID: 8D]
-How does improving condenser vacuum affect Rankine cycle efficiency?
-As condenser vacuum improves (absolute pressure decreases), the temperature difference between heat source and sink increases. More work is extracted from the steam across the turbine, and less heat is rejected. Both effects increase cycle efficiency. Each inch of mercury improvement in vacuum increases efficiency approximately 0.5-1.0%.
-
-[Note ID: 8E]
-Define condensate depression (condensate subcooling) and its effect on efficiency.
-Condensate depression is the temperature difference between the saturation temperature at existing condenser pressure and the actual temperature of the condensate in the hotwell. Increasing condensate depression decreases efficiency because additional heat must be supplied by the reactor to compensate for the subcooling. Minimal condensate depression improves efficiency.
-
-[Note ID: 8F]
-How does increasing steam temperature and pressure affect Rankine cycle efficiency?
-Higher steam temperature and pressure increase the differential pressure across the turbine. With increased pressure, more turbine work is extracted, and with higher temperature, exit steam enthalpy is lower, reducing heat rejection. Both effects increase cycle efficiency.
-
-[Note ID: 8G]
-How does decreased steam quality (higher moisture content) affect Rankine cycle efficiency?
-Lower quality steam contains less energy (lower enthalpy), so less work is available from the turbine and heat rejection decreases. However, the loss of turbine work is the dominant effect, causing overall cycle efficiency to decrease. Typical minimum acceptable quality is 95-99% to prevent excessive blade damage.
-
 ---
 
 ## Flashcard ID: 9
