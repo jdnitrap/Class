@@ -14,7 +14,7 @@ export const config = {
             notes: 'Tier 2: Nervous System/notes-synapses.json',
             flashcards: 'Tier 2: Nervous System/flashcards-synapses.json',
         },
-        content: 'Tier 3: Library/',  // Base path for content files
+        content: 'Tier 3: Pathways/',  // Base path for content files
     },
 
     // UI settings

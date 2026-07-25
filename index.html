@@ -15,15 +15,15 @@
       - notes-synapses.json: Maps study notes → Tier 3 content
       - flashcards-synapses.json: Maps Q&A flashcards → Tier 3 content
 
-  TIER 3: LIBRARY (Content):
-    Tier 3: Library/{Subject}/ - Actual learning materials as text files
+  TIER 3: PATHWAYS (Learning Materials):
+    Tier 3: Pathways/{Subject}/ - Knowledge pathways and learning materials as text files
       - {Code}_{Subject}_questions.txt: Exam questions with metadata
       - {Code}_{Subject}_notes.txt: Comprehensive study notes
       - {Code}_{Subject}_flashcards.txt: Simplified Q&A flashcards for memorization
 
   Data Flow:
     1. Brainstem/main.js initializes and loads synapses from Tier 2: Nervous System
-    2. Limbic/ modules fetch referenced Tier 3: Library text files
+    2. Limbic/ modules fetch referenced Tier 3: Pathways text files
     3. Cortex/router.js routes to appropriate mode (exam/notes/flashcards)
     4. Senses/ modules render content through UI
 -->
