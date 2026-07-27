@@ -104,7 +104,8 @@ export const exam = {
             const userAnswer = state.selectedAnswers[idx];
             if (userAnswer !== undefined) {
                 const options = question.options || [];
-                if (options[userAnswer] && options[userAnswer].correct) {
+                const selectedOption = options[userAnswer];
+                if (selectedOption && (selectedOption.correct === true || selectedOption.letter === question.correct)) {
                     correct++;
                 }
             }
