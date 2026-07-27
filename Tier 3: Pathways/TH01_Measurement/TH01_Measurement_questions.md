@@ -9,9 +9,8 @@
 - c) Only downward due to gravity
 - d) Only along the path of least resistance
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Pascal's Law: pressure applied to an enclosed fluid transmits undiminished throughout in all directions.
 
 ---
@@ -25,9 +24,8 @@
 - c) Absolute pressure
 - d) Static pressure
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Pabs = Pgage + Patm. Absolute pressure is always the sum of gauge and atmospheric pressures.
 
 ---
@@ -41,9 +39,8 @@
 - c) The rate of volume change
 - d) The volume at standard temperature and pressure
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Specific volume (v) = V/m, measured in ft³/lbm or m³/kg. It is the reciprocal of density.
 
 ---
@@ -57,7 +54,6 @@
 - c) An open system is always at constant pressure
 - d) A closed system is only used in laboratories
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Closed systems have fixed mass boundaries but allow energy exchange. Open systems (control volumes) allow both mass and energy crossing boundaries.
@@ -73,9 +69,8 @@
 - c) Derived property
 - d) Critical property
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Extensive properties (volume, mass, weight) depend on the amount of substance. Intensive properties (pressure, temperature) do not.
 
 ---
@@ -89,9 +84,8 @@
 - c) Rankine
 - d) Kelvin
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** The Rankine scale (absolute scale for Fahrenheit) and Kelvin (absolute scale for Celsius) both have zero at absolute zero.
 
 ---
@@ -105,9 +99,8 @@
 - c) Vacuum pressure
 - d) Differential pressure
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Vacuum pressure is any pressure below atmospheric. Pvac = Patm - Pabs.
 
 ---
@@ -121,9 +114,8 @@
 - c) Differential pressure
 - d) Transient pressure
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Differential pressure (psid) is the pressure difference between two points in a system, commonly used across filters and restrictors.
 
 ---
@@ -137,9 +129,8 @@
 - c) The output force is greater than the input force
 - d) Output force depends only on fluid type
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** In a hydraulic press, F = P × A. A larger output piston area produces greater output force (Pascal's Law application).
 
 ---
@@ -153,9 +144,8 @@
 - c) Because pressure always increases density
 - d) Because temperature is more important than pressure
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Liquids are nearly incompressible, so pressure changes have minimal volume effect. Temperature changes cause greater density variations.
 
 ---
@@ -169,9 +159,8 @@
 - c) A closed tank with no inlets or outlets
 - d) A battery converting chemical energy
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** An open system (control volume) has mass crossing its boundary. Turbines, compressors, pumps, boilers, and condensers are examples.
 
 ---
@@ -185,9 +174,8 @@
 - c) A system insulated from heat transfer
 - d) A system at constant volume
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** An isolated system is completely separated from its surroundings; no mass or energy transfer occurs across the boundary.
 
 ---
@@ -201,9 +189,8 @@
 - c) Only the fluid's specific volume
 - d) The container shape
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Hydrostatic pressure P = ρgh, where ρ is density, g is gravitational acceleration, and h is height above reference.
 
 ---
@@ -217,9 +204,8 @@
 - c) Kilogram-force
 - d) Dyne
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** The American Engineering System uses pound-force (lbf) for force and pound-mass (lbm) for mass; the mechanical equivalent of heat is 1 Btu = 778 ft-lbf.
 
 ---
@@ -233,9 +219,8 @@
 - c) The weight of a fluid column
 - d) The density of a substance
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Pressure (P) = F/A, with units of psia (pounds per square inch absolute), psi, Pa, bar, etc.
 
 ---
@@ -249,9 +234,8 @@
 - c) 32°
 - d) 100°
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** At -40°, both scales read the same: -40°C = -40°F. This is where the conversion lines intersect.
 
 ---

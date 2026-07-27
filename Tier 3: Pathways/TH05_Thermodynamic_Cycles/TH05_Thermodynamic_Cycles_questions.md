@@ -10,7 +10,6 @@
 - d) Input, output, efficiency, work, and heat
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** The five essential elements of a thermodynamic cycle are: a working fluid, an engine to convert heat to work, a heat source, a heat sink, and a device to move the working fluid.
 
@@ -25,7 +24,6 @@
 - c) Compression, heating, expansion, and cooling
 - d) Four isenthalpic processes
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** The Carnot cycle consists of two isothermal processes and two adiabatic (isentropic) processes, operating between two heat reservoirs.
@@ -42,7 +40,6 @@
 - d) The amount of work produced
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** The Carnot efficiency depends only on the absolute temperatures of the heat source and heat sink: η = 1 - (Tcold/Thot).
 
@@ -57,7 +54,6 @@
 - c) Use a more efficient turbine and condenser
 - d) Add more heat exchangers to the system
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Carnot efficiency increases by raising the heat source temperature or lowering the heat sink temperature, both of which increase the temperature ratio.
@@ -74,7 +70,6 @@
 - d) To increase the condenser vacuum and lower rejection temperature
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** The MSR protects turbine blades from erosion and damage caused by moisture, not to improve efficiency directly.
 
@@ -89,7 +84,6 @@
 - c) It has no effect on efficiency
 - d) It only improves reliability, not efficiency
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Feedwater heating improves efficiency by reducing the amount of heat that must be added in the boiler to achieve the desired cycle conditions.
@@ -106,7 +100,6 @@
 - d) It increases efficiency only if feedwater heating is also used
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Lower condenser pressure increases the expansion ratio in the turbine, extracting more work per unit of steam and improving efficiency.
 
@@ -122,7 +115,6 @@
 - d) Heat rate is the same as efficiency expressed in different units
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Heat rate (BTU/kW-hr) is inversely proportional to efficiency. A lower heat rate indicates higher efficiency.
 
@@ -137,9 +129,8 @@
 - c) η = (T_hot - T_cold)/T_cold
 - d) η = T_hot/(T_hot + T_cold)
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Carnot efficiency η = 1 - (T_cold/T_hot) where temperatures are absolute (R or K). Higher source temperature or lower sink temperature increases efficiency.
 
 ---
@@ -153,9 +144,8 @@
 - c) Isentropic turbine expansion
 - d) Constant-pressure heat rejection in condenser
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** The Rankine cycle boiler process is isobaric (constant pressure). Heat addition occurs at constant system pressure to generate steam.
 
 ---
@@ -169,9 +159,8 @@
 - c) Increasing steam flow rate to the turbine
 - d) Using feedwater heating
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Increasing steam flow rate increases power output but does not improve efficiency. Efficiency (%) is determined by cycle temperatures/pressures and losses.
 
 ---
@@ -185,9 +174,8 @@
 - c) To reduce the condenser cooling water requirement
 - d) To decrease turbine work output
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Wet steam (low quality) damages turbine blades through moisture impingement. High quality steam (>99%) ensures protection and optimal expansion characteristics.
 
 ---

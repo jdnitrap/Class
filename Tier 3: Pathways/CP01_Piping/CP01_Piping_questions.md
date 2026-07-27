@@ -10,7 +10,6 @@
 - d) To measure fluid temperature
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Piping serves as the housing to transport fluids (and sometimes fluid/solid mixtures) between equipment in power plant systems.
 
@@ -25,9 +24,8 @@
 - c) Stainless Steel
 - d) Copper Alloy
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Low alloy steel is preferred for high-temperature applications due to its superior resistance to wear, fatigue, and corrosion.
 
 ---
@@ -41,9 +39,8 @@
 - c) Stainless Steel
 - d) Nickel Alloy
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Stainless steel is used in reactor systems where corrosion product buildup must be minimized to protect system integrity.
 
 ---
@@ -57,9 +54,8 @@
 - c) Increasing system pressure
 - d) Relieving pressure
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** The five principal valve functions are: starting/stopping, throttling, controlling flow direction, regulating pressure, and relieving pressure. Increasing system pressure is not a valve function.
 
 ---
@@ -73,9 +69,8 @@
 - c) To increase valve strength
 - d) To regulate flow rate
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** The backseat is a critical safety feature that removes system pressure from the packing, allowing maintenance without depressurizing the system.
 
 ---
@@ -89,9 +84,8 @@
 - c) They cannot withstand high pressures
 - d) They are harder to operate
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Gate valves are unsuitable for throttling because disk positioning in the flow causes turbulence and accelerated wear, damaging the valve.
 
 ---
@@ -105,9 +99,8 @@
 - c) They operate faster than other valves
 - d) They require less maintenance
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Globe valves are ideal for throttling because the beveled disk seating at right angles to flow allows smooth, controlled flow regulation.
 
 ---
@@ -121,7 +114,6 @@
 - c) They cannot be used for throttling
 - d) They have a packing gland design
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Kerotest valves are pack-less globe valves designed to go from full closed to full open in approximately 1¼ turns.
@@ -137,9 +129,8 @@
 - c) It causes the valve to leak
 - d) It damages the stem threads
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Over-torquing a Kerotest valve can crush or deform the disk, potentially making the valve impossible to open later.
 
 ---
@@ -153,9 +144,8 @@
 - c) Its high flow capacity
 - d) Its multiple disk design
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** A needle valve's long, narrow, cone-shaped stem tip allows fine, precise adjustment of flow rate.
 
 ---
@@ -169,9 +159,8 @@
 - c) Cryogenic systems
 - d) Nuclear coolant piping
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Butterfly valves are ideal for large diameter, high flow, low pressure service such as circulating water systems.
 
 ---
@@ -185,9 +174,8 @@
 - c) It operates faster than other valves
 - d) It requires no maintenance
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Diaphragm valves completely separate the fluid from moving parts, preventing stem leakage and protecting against contamination.
 
 ---
@@ -201,9 +189,8 @@
 - c) To reduce system pressure
 - d) To isolate equipment
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Check valves are one-way devices that permit flow in the intended direction while preventing backflow.
 
 ---
@@ -217,9 +204,8 @@
 - c) Relief valves pop fully open, safety valves open gradually
 - d) There is no practical difference
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Safety valves pop fully open at setpoint with minimal accumulation, while relief valves open gradually as pressure rises above setpoint.
 
 ---
@@ -233,9 +219,8 @@
 - c) To measure vacuum in the system
 - d) To regulate flow rate
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** A vacuum breaker is a safety device that protects vessels from structural collapse under low internal pressure conditions.
 
 ---
@@ -249,9 +234,8 @@
 - c) The valve remains in its current position when the actuating medium is lost
 - d) The valve springs to a safe position
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Fail As Is (most common in Motor Operated Valves) means the valve maintains its current position when actuating power is lost.
 
 ---
@@ -265,7 +249,6 @@
 - c) Operate it as quickly as possible
 - d) Do not verify the position afterward
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Tagging out the motor power prevents inadvertent power application during manual valve operation, ensuring operator safety.
@@ -281,9 +264,8 @@
 - c) It doesn't matter
 - d) Clockwise only
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Testing closure direction is safe because if the valve is already closed, the handwheel won't move, causing no system impact.
 
 ---
@@ -297,9 +279,8 @@
 - c) Color-code all valve handwheels
 - d) Limit operator access to valves
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Verification of all indications before and after valve operation is essential to prevent dangerous mispositioning events.
 
 ---
@@ -313,9 +294,8 @@
 - c) Disk warping from heat
 - d) Stem rupture
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Thermal binding (differential cooling contraction) and pressure locking (trapped liquid expansion) are critical gate valve failure mechanisms.
 
 ---
@@ -329,9 +309,8 @@
 - c) Number of flanges used
 - d) Proximity to the building exit
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Piping design must account for operating conditions: temperature, pressure, flow rate, fluid properties, contamination, and dynamic loads like water hammer and seismic motion.
 
 ---
@@ -345,9 +324,8 @@
 - c) Radioactive fluid transport
 - d) High-pressure systems
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Copper alloys provide excellent corrosion resistance and thermal conductivity, ideal for seawater, condensate, and cooling water systems.
 
 ---
@@ -361,9 +339,8 @@
 - c) Snubber
 - d) Clamp
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Snubbers limit large seismic displacements while allowing normal thermal expansion/contraction of piping systems.
 
 ---
@@ -377,9 +354,8 @@
 - c) To reduce fluid pressure
 - d) To change fluid temperature
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Thermal insulation provides worker protection and energy efficiency by minimizing heat transfer between the pipe and environment.
 
 ---
@@ -393,9 +369,8 @@
 - c) Heat causing the disk to warp
 - d) Stem corrosion during shutdown
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Thermal binding occurs when the valve body cools faster than the disk, causing the disk to bind against the seat. Prevention: crack open periodically during cooldown.
 
 ---
@@ -409,9 +384,8 @@
 - c) The disk corroding to the seat
 - d) Excessive handwheel torque
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Pressure locking occurs when trapped liquid in the bonnet heats and pressurizes, making the valve impossible to open. Prevention: provide bonnet relief or vent paths.
 
 ---
@@ -425,7 +399,6 @@
 - c) Lift check is used only for liquids
 - d) Swing check cannot prevent backflow
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Swing check: hinged disk, low pressure drop when open. Lift check: globe-like, higher D/P but better upstream isolation.
@@ -441,9 +414,8 @@
 - c) Relieve pressure when exceeded
 - d) Control flow rate
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Stop check valves combine a check valve's backflow prevention with a globe valve's isolation capability via external actuation.
 
 ---
@@ -457,9 +429,8 @@
 - c) Fail As Is with gear reduction and declutch lever
 - d) Spring-loaded
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** MOVs are electric motors with gear reduction and a declutch lever allowing manual/motor engagement; they typically fail as-is (maintain position).
 
 ---
@@ -473,9 +444,8 @@
 - c) It speeds up valve operation
 - d) It prevents the motor from engaging
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Applying excessive torque via wrenches to MOV handwheels can catastrophically damage the actuator gear train. Operating procedures prohibit this.
 
 ---

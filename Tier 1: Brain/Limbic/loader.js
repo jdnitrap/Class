@@ -11,7 +11,7 @@ export const loader = {
             const data = await response.json();
             if (data.questions && Array.isArray(data.questions)) {
                 for (const qRef of data.questions) {
-                    const questions = await this.getQuestionsFromFile(qRef.contentFile);
+                    const questions = await this.getQuestionsFromFile(qRef.contentFile, qRef.subject);
                     state.allQuestions = state.allQuestions.concat(questions);
                 }
             }
@@ -23,7 +23,7 @@ export const loader = {
         document.getElementById('subjectsCount').textContent = new Set(state.allQuestions.map(q => q.subject)).size;
     },
 
-    async getQuestionsFromFile(contentFile) {
+    async getQuestionsFromFile(contentFile, subject) {
         try {
             const response = await fetch(contentFile + '?v=' + Date.now());
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -35,7 +35,7 @@ export const loader = {
 
             if (isMarkdown) {
                 // Parse markdown format (## Question ID: X)
-                questions.push(...this.parseMarkdownQuestions(text, contentFile));
+                questions.push(...this.parseMarkdownQuestions(text, contentFile, subject));
             } else {
                 // Parse text format ([Question ID: X] followed by JSON)
                 const lines = text.split('\n');
@@ -62,7 +62,7 @@ export const loader = {
         }
     },
 
-    parseMarkdownQuestions(markdown, contentFile) {
+    parseMarkdownQuestions(markdown, contentFile, subject) {
         const questions = [];
         const qPattern = /^##\s+(?:Question\s+)?ID:\s*(\d+)/mi;
         const blocks = markdown.split(qPattern);
@@ -93,6 +93,7 @@ export const loader = {
 
             questions.push({
                 id: parseInt(id),
+                subject: subject,
                 text: questionText,
                 options: options,
                 correct: correctAnswer,

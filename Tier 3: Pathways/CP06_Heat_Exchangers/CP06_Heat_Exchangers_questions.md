@@ -9,9 +9,8 @@
 - c) To mix two different fluids together
 - d) To increase the pressure of fluids
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** A heat exchanger is a device designed to transfer heat from one fluid to another. Heat transfer requires a temperature difference between substances.
 
 ---
@@ -25,9 +24,8 @@
 - c) Indirect contact is less efficient than direct contact
 - d) Direct contact is used only for cooling towers
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Direct contact heat exchangers allow two fluids to contact each other directly. Indirect (surface) heat exchangers separate fluids with a solid surface such as tubes or metal plates.
 
 ---
@@ -41,9 +39,8 @@
 - c) Forced draft tower
 - d) Cross-flow tower
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Forced draft cooling towers use fans to blow air into the tower, facilitating heat exchange between cooling water and air.
 
 ---
@@ -57,9 +54,8 @@
 - c) To filter contaminated water
 - d) To reduce the noise from falling water
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Cooling tower fill material (traditionally redwood, now mostly PVC or plastic) increases surface area for air-water contact and helps atomize water for effective heat exchange.
 
 ---
@@ -73,9 +69,8 @@
 - c) Counter-flow with steam and water flowing in opposite directions
 - d) U-tube flow with steam circulating around the tubes
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Main condensers operate as classic cross-flow heat exchangers where exhaust steam flows downward perpendicular to tubes containing circulating cooling water.
 
 ---
@@ -89,9 +84,8 @@
 - c) They are more expensive than counter-flow exchangers
 - d) They cannot handle liquid-to-liquid heat transfer
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Parallel-flow exchangers are inefficient because as heat transfers, temperatures converge and the temperature difference (ΔT) becomes smaller, reducing heat transfer rate.
 
 ---
@@ -105,9 +99,8 @@
 - c) Q = P × V × T (pressure times volume times temperature)
 - d) Q = F × D × H (flow rate times diameter times head)
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** The overall heat transfer rate is calculated as Q = Uo × A × ΔT, where Uo is the overall heat transfer coefficient, A is surface area, and ΔT is temperature difference.
 
 ---
@@ -121,9 +114,8 @@
 - c) They require less cooling water
 - d) They are less expensive to construct
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Counter-flow heat exchangers maintain a higher temperature difference throughout because fluids flow in opposite directions, resulting in greater heat transfer for their size.
 
 ---
@@ -137,9 +129,8 @@
 - c) They operate at higher pressures than straight tubes
 - d) They are cheaper to manufacture than other types
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** U-tube heat exchangers simplify thermal expansion handling and reduce the number of tube-to-sheet joints needed compared to straight tube designs.
 
 ---
@@ -153,9 +144,8 @@
 - c) A heat exchanger that requires periodic regeneration or cleaning
 - d) A heat exchanger used only in secondary systems
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Regenerative heat exchangers transfer heat within the same system (e.g., feedwater heaters), minimizing energy loss since heat is not rejected to a separate system.
 
 ---
@@ -169,9 +159,8 @@
 - c) Compressor pump
 - d) Shell casing and tube bundle
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Major components include shell, tube bundle, tubesheets, waterboxes, baffles, nozzles, vents and drains. A compressor pump is not part of the heat exchanger structure.
 
 ---
@@ -185,9 +174,8 @@
 - c) 3.0 inches
 - d) 5.5 inches
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** A typical 30-foot tube expands approximately 1.4 inches when heated from 70°F to 470°F. Floating head designs allow one tubesheet to slide to accommodate this expansion.
 
 ---
@@ -201,9 +189,8 @@
 - c) To measure the temperature of the shell side fluid
 - d) To separate scale and fouling deposits from tubes
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Baffles direct shell-side fluid to cross tubes multiple times while maintaining counter-flow direction, improving heat transfer efficiency and supporting tubes.
 
 ---
@@ -217,9 +204,8 @@
 - c) Thermal shock is the vibration that occurs during startup
 - d) Thermal shock is when tubes become corroded from thermal cycling
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Thermal shock occurs when temperature suddenly increases or decreases, causing differential expansion/contraction between tubes and shell. This can challenge structural integrity and cause brittle fracture under high pressure.
 
 ---
@@ -233,9 +219,8 @@
 - c) Fill the exchanger rapidly with both fluids simultaneously
 - d) Operate at full flow rate from the beginning of startup
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Cold fluid is circulated first to minimize differential thermal expansion. Hot fluid is then introduced gradually through throttled inlet valves to prevent thermal shock.
 
 ---
@@ -249,9 +234,8 @@
 - c) Water hammer is vibration from tube friction; minimized by reducing flow rate
 - d) Water hammer is sediment buildup; minimized by frequent flushing
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Water hammer occurs when fluid velocity suddenly changes. It is minimized by slowly operating inlet valves and opening drain connections to prevent trapped liquids from pressurizing.
 
 ---
@@ -265,9 +249,8 @@
 - c) Operating at partial load
 - d) Reduced heat transfer coefficient
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Flow rates that are too high create excessive pressure drops and energy loss. Flow rates that are too low result in inadequate heat transfer.
 
 ---
@@ -281,9 +264,8 @@
 - c) The pressure inside the tubes
 - d) The tube material strength
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Scaling and fouling deposits (mineral scale, corrosion products, biological growth) reduce effective heat transfer surface area and lower the overall heat transfer coefficient.
 
 ---
@@ -297,9 +279,8 @@
 - c) Lower vacuum increases backpressure, improving plant efficiency
 - d) Vacuum has no effect on turbine output
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Higher condenser vacuum (lower absolute pressure) creates a greater pressure difference between turbine inlet and outlet, driving more work from steam and improving efficiency.
 
 ---
@@ -313,9 +294,8 @@
 - c) 65 to 100 pounds (8 to 12 gallons)
 - d) 150 to 200 pounds (18 to 24 gallons)
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Approximately 65 to 100 pounds or 8 to 12 gallons of cooling water is needed per pound of steam condensed. This large quantity is necessary to absorb the latent heat of condensation.
 
 ---
@@ -329,9 +309,8 @@
 - c) To measure the condenser pressure continuously
 - d) To cool the circulating water temperature
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Non-condensable gases (primarily air) cannot condense and accumulate in the condenser, increasing pressure and reducing vacuum. Air removal systems (jet air ejectors or vacuum pumps) continuously remove these gases.
 
 ---
@@ -345,9 +324,8 @@
 - c) Decreased outlet water temperature
 - d) Lower pressure readings on the secondary system
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Condenser degradation is indicated by: (1) Reduced vacuum despite stable load, (2) Increased outlet water temperature, (3) Fouling of tubes, (4) Air in-leakage.
 
 ---
@@ -361,9 +339,8 @@
 - c) Accumulation of mineral deposits on tube surfaces
 - d) Thermal stress from rapid temperature changes
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Biofouling (SOER 84-1) occurs when aquatic organism growth degrades cooling tower and condenser performance. Control measures include chemical treatment and system monitoring.
 
 ---
@@ -377,9 +354,8 @@
 - c) It proves that heat exchangers cannot be made more efficient
 - d) It is used only for condenser calculations, not other heat exchangers
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** The equation Q = Uo × A × ΔT shows that heat transfer rate increases with larger heat transfer coefficient (U), increased surface area (A), or greater temperature difference (ΔT).
 
 ---
@@ -393,9 +369,8 @@
 - c) It measures the maximum temperature the exchanger can tolerate
 - d) It has no practical application in modern heat exchangers
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** In counter-flow heat exchangers, the logarithmic mean temperature difference (ΔTlm) is used because the temperature profile changes throughout the exchanger, requiring this mathematical correction for accurate heat transfer calculations.
 
 ---

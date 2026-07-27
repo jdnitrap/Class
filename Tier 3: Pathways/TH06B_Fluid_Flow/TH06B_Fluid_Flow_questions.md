@@ -9,9 +9,8 @@
 - c) The velocity of fluid at a reference point
 - d) The pressure of fluid at a reference point per unit time
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Mass flow rate (ṁ) is the mass of fluid that passes a reference point per unit time, typically expressed in lbm/hr.
 
 ---
@@ -25,9 +24,8 @@
 - c) A
 - d) V̇
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** In the mass flow rate equation, A represents the cross-sectional area of flow in square feet (ft²).
 
 ---
@@ -41,9 +39,8 @@
 - c) ft/sec
 - d) psi/hr
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Volumetric flow rate is the volume of fluid passing a reference point per unit time, commonly expressed as gallons per minute (gpm) or cubic feet per minute (cfm).
 
 ---
@@ -57,9 +54,8 @@
 - c) The pressure is constant throughout the system
 - d) The fluid temperature remains constant
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Steady flow (continuity of flow) occurs when the mass flow rate into and out of a system or component are equal.
 
 ---
@@ -73,9 +69,8 @@
 - c) A fluid's ability to resist flow
 - d) A fluid's compressibility under pressure
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Viscosity is a measurement of a fluid's ability to resist flow. Free flowing fluids have low viscosity while fluids that resist flow have high viscosity.
 
 ---
@@ -89,9 +84,8 @@
 - c) Viscosity decreases
 - d) Viscosity changes unpredictably
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** For liquids, viscosity decreases with increasing temperature, primarily due to increased molecular spacing.
 
 ---
@@ -105,9 +99,8 @@
 - c) 10.0 centipoise
 - d) 100.0 centipoise
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Water at 68°F is the standard reference point for viscosity measurement, with a value of 1.0 centipoise.
 
 ---
@@ -121,9 +114,8 @@
 - c) The ability of a fluid to resist flow
 - d) The pressure exerted by a fluid per unit area
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Specific gravity (SG) is the ratio of a fluid's density compared to water at 60°F (which has an SG of 1.0).
 
 ---
@@ -137,9 +129,8 @@
 - c) Viscosity increases, specific gravity decreases
 - d) Viscosity decreases, specific gravity increases
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** For liquids, as temperature increases, both viscosity and specific gravity decrease, resulting in less energy required for flow.
 
 ---
@@ -153,9 +144,8 @@
 - c) Maximum velocity at the pipe walls and zero at center
 - d) Uniform velocity profile across the pipe diameter
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** In laminar flow, layers of fluid move smoothly over adjacent layers with minimal mixing. Flow conditions exist where Reynolds number is less than about 2,000.
 
 ---
@@ -169,9 +159,8 @@
 - c) Parabolic velocity profile similar to laminar flow
 - d) Velocity that is zero everywhere in the pipe
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** In turbulent flow, cross-currents are set up that disturb the fluid layers. This flow exists when Reynolds number is greater than 3,500.
 
 ---
@@ -185,9 +174,8 @@
 - c) The temperature of the fluid
 - d) The total head of the fluid system
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Reynolds number (NRe) determines the mode of flow: laminar (NRe < 2,000), transitional (2,000-3,500), or turbulent (NRe > 3,500).
 
 ---
@@ -201,9 +189,8 @@
 - c) The flow passes through multiple pipe sections
 - d) The pressure remains constant throughout the system
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Systems and components are normally designed for single-phase fluid flow where the fluid is either in its liquid state or in its gaseous state, not a mixture of both.
 
 ---
@@ -217,9 +204,8 @@
 - c) The fluid is a mixture of liquid and vapor with different flow velocities
 - d) The pipe diameter becomes smaller
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Two-phase flow is when liquid and vapor coexist, greatly increasing resistance to flow and can increase head loss by a factor of 100 or more.
 
 ---
@@ -233,9 +219,8 @@
 - c) The energy due to fluid pressure
 - d) The energy lost to friction
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Elevation head (z) represents the potential energy the fluid possesses due to its elevation above a reference level, expressed in feet.
 
 ---
@@ -249,7 +234,6 @@
 - c) The vertical distance above a reference level
 - d) The energy lost due to friction in the pipe
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Velocity head represents the kinetic energy the fluid possesses due to its velocity - the height to which the fluid would rise if all kinetic energy converted to potential energy.
@@ -265,9 +249,8 @@
 - c) The pressure multiplied by the flow rate
 - d) The gauge pressure plus atmospheric pressure
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Pressure head (Pv) represents the PV energy the fluid possesses due to its pressure - expressed as the height of a fluid column equivalent to that pressure.
 
 ---
@@ -281,9 +264,8 @@
 - c) Total head
 - d) Pump head
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** The sum of elevation head, velocity head, and pressure head is called total head. Bernoulli's equation states that total head is constant when ideal conditions apply.
 
 ---
@@ -297,9 +279,8 @@
 - c) The total height of fluid above a reference point
 - d) The pressure drop across a closed valve
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Head loss is the conversion of fluid pressure and velocity to heat energy through friction. Although it represents a loss of flow energy, it increases the fluid's internal energy.
 
 ---
@@ -313,9 +294,8 @@
 - c) The surface roughness of the pipe and type of flow
 - d) The elevation change in the system
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** The friction factor (f) in Darcy's equation takes into account the surface roughness of the pipe and depends on Reynolds number (type of flow).
 
 ---
@@ -329,9 +309,8 @@
 - c) Decreasing fluid velocity
 - d) Increasing pipe roughness
 
-**Correct:** a
-**Correct:** d
 
+**Correct:** d
 **Explanation:** Head loss increases with: increased friction factor (f), increased pipe length (L), and increased velocity squared (v²). Head loss decreases with increased pipe diameter (d).
 
 ---
@@ -345,9 +324,8 @@
 - c) Increase by 50%
 - d) Remain unchanged
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Since head loss is proportional to v², if velocity doubles (2×), head loss increases by (2)² = 4 times.
 
 ---
@@ -361,9 +339,8 @@
 - c) Temperature versus time
 - d) Velocity versus elevation
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** A system characteristic curve shows head loss versus volumetric flow rate for a given system configuration. The exponential shape results from the velocity squared term.
 
 ---
@@ -377,9 +354,8 @@
 - c) The erosion of pipe material caused by high velocity water
 - d) The vibration of pipe hangers due to system operation
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Water hammer is the name given to pressure fluctuations (surges) that develop in a piping system when flow is suddenly changed, such as by valve closure.
 
 ---
@@ -393,9 +369,8 @@
 - c) Steam condenses inside the pipe
 - d) Pump cavitation occurs
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** In single-phase water hammer, moving water is suddenly decelerated by a restriction (valve closure). The momentum (kinetic energy) converts to pressure-volume energy.
 
 ---
@@ -409,9 +384,8 @@
 - c) Higher velocities are involved when water slugs collide
 - d) The fluid temperature is lower
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Two-phase water hammers are more severe due to the higher velocities involved when water slugs (entrained water accelerated by steam) collide with obstructions.
 
 ---
@@ -425,9 +399,8 @@
 - c) The fluid's compressibility
 - d) The change in flow rate
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** In the Joukowsky equation (ΔP = ρ × c × Δv), 'c' represents the pressure wave speed (speed of sound in the fluid), typically expressed in ft/sec.
 
 ---
@@ -441,9 +414,8 @@
 - c) The velocity change and fluid density
 - d) The pipe diameter only
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Peak water hammer pressure (ΔP) is primarily dependent on velocity change (Δv) and fluid density (ρ), NOT on pipe length.
 
 ---
@@ -457,9 +429,8 @@
 - c) Rapidly close valves to stop flow immediately
 - d) Ensure steam traps are functioning to remove condensate
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Rapidly closing valves causes water hammer. Prevention methods include filling systems completely, initiating flow slowly, and closing valves slowly when required.
 
 ---
@@ -473,9 +444,8 @@
 - c) Increase the flow rate
 - d) Remove air from the system
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Keep fill systems are low-volume pump systems designed to keep another system's piping full for correct system response time and to prevent water hammer.
 
 ---
@@ -489,9 +459,8 @@
 - c) The system becomes more compressible
 - d) The pump speed increases
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** As heat is added to a closed system, the density of water decreases, resulting in a pressure increase. Isolation of heat exchangers before cooling can cause rupture.
 
 ---
@@ -505,9 +474,8 @@
 - c) The pipe friction increases
 - d) The fluid viscosity increases
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** As heat is added, the system temperature gets closer to saturation. The lowest pressure is at pump suction, so when saturation is reached, cavitation occurs.
 
 ---
@@ -521,9 +489,8 @@
 - c) Increase flow rate
 - d) Check for leaks
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** High point casing vents allow pump priming and removal of non-condensable gases that could be trapped in the case, preventing pump damage and water hammer.
 
 ---
@@ -537,9 +504,8 @@
 - c) The pump starts running
 - d) The water temperature reaches 100°F
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** High point vents should remain open until a solid stream of fluid comes out, ensuring all air is removed and the system is properly filled.
 
 ---
@@ -553,9 +519,8 @@
 - c) It will cause excessive vibration
 - d) It reduces system efficiency
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Starting a pump in a drained system risks pump damage from cavitation and lack of cooling/lubrication. Pumps should be stopped and tagged before draining systems.
 
 ---
@@ -569,9 +534,8 @@
 - c) Cavitation in the bearing cooling system
 - d) Inadequate bearing clearance design
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** At the starting temperature of 52°F, oil viscosity was approximately 700 SUS, causing excessive friction and bearing pad contact with shaft, resulting in bearing wipe.
 
 ---
@@ -585,9 +549,8 @@
 - c) Reheater systems never experience water hammer
 - d) Valve materials determine water hammer severity
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** The September 1996 Oconee event resulted in an 18-inch pipe rupture and seven personnel injuries, demonstrating water hammer's potential for catastrophic failure.
 
 ---

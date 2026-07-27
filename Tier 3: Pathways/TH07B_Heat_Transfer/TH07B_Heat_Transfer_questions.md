@@ -10,7 +10,6 @@
 - d) The storage of thermal energy in a substance
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Heat transfer is the transfer of energy due to a temperature difference, from higher to lower temperature.
 
@@ -25,9 +24,8 @@
 - c) Radiation
 - d) Evaporation
 
-**Correct:** a
-**Correct:** d
 
+**Correct:** d
 **Explanation:** The three basic modes are conduction, convection, and radiation. Evaporation is a phase change process, not a mode of heat transfer.
 
 ---
@@ -41,7 +39,6 @@
 - c) The heat required to change phase without temperature change
 - d) The ratio of heat to work in a cycle
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Specific heat capacity cp is the heat required to raise the temperature of one unit mass by one degree Fahrenheit or Celsius.
@@ -57,9 +54,8 @@
 - c) The rate remains the same
 - d) The rate quadruples
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** From Equation 5: Q = kAΔT / x. Doubling thickness x halves the heat transfer rate.
 
 ---
@@ -73,7 +69,6 @@
 - c) Stainless Steel
 - d) Air
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Copper has the highest thermal conductivity at 133.0 Btu/hr-ft-°F, making it an excellent conductor.
@@ -90,7 +85,6 @@
 - d) The sum of all individual heat transfer coefficients
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Uo is the overall coefficient accounting for conduction through the tube wall and convection in both boundary layers, as the reciprocal of total resistance.
 
@@ -105,9 +99,8 @@
 - c) It has no effect on Uo
 - d) It only affects the fluid velocities
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Fouling adds an extra layer with its own U, increasing total resistance and thus decreasing the overall Uo, sometimes dramatically.
 
 ---
@@ -121,7 +114,6 @@
 - c) It is too efficient and would overheat the core
 - d) It violates the First Law of Thermodynamics
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Radiation requires very large ΔT for meaningful heat transfer due to the T^4 dependence, making it impractical for normal operation.
@@ -138,7 +130,6 @@
 - d) The power consumed by the reactor coolant pumps
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** CTP is the rate of heat transfer from the core into the RCS, calculated via heat balance.
 
@@ -153,7 +144,6 @@
 - c) Q = Uo × Ao × ΔTo
 - d) Q = m × v × A
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** For RCS heat balance with no phase change: Q = m × cp × ΔT, where ΔT is TH - TC.
@@ -170,7 +160,6 @@
 - d) Because feedwater flow is not measured
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Secondary side involves phase change (sensible + latent), so total enthalpy change Δh = hSteam - hFeedwater is used.
 
@@ -185,7 +174,6 @@
 - c) Condenser heat rejection and pump heat input
 - d) Steam flow and feedwater temperature only
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Two methods: RCS heat balance (Q = m cp ΔT) and secondary heat balance (Q = m Δh).
@@ -202,7 +190,6 @@
 - d) Neutron flux indication only
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Percent reactor power = CTP actual / CTP rated × 100%. It is what nuclear instrumentation indicates.
 
@@ -217,7 +204,6 @@
 - c) About 1000°F
 - d) About 150°F
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Gap temperature drop ~200°F due to helium's relatively low thermal conductivity compared to solids.
@@ -234,7 +220,6 @@
 - d) Evaporation
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Through the solid ceramic pellet, heat transfers by conduction, with a large ~1000°F drop due to low k of UO2.
 
@@ -249,7 +234,6 @@
 - c) A corrosion reaction that starts at 5000°F
 - d) A phase change in the cladding material
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Zirc-water reaction begins ~1800°F and becomes self-sustaining ~2200°F, producing heat and hydrogen that can damage cladding.
@@ -266,7 +250,6 @@
 - d) To determine condenser vacuum
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Monitoring Uo allows early detection of fouling or corrosion that reduces heat transfer capability.
 
@@ -281,7 +264,6 @@
 - c) Radiation through the tube wall
 - d) Convection from cold to hot fluid only
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Sequence: hot fluid convection → tube wall conduction → cold fluid convection.
@@ -298,7 +280,6 @@
 - d) It only affects radiation heat transfer
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Nucleate boiling creates bubble motion that thins the boundary layer and increases hf, improving heat transfer.
 
@@ -313,7 +294,6 @@
 - c) Forced convection requires no pumps
 - d) Natural convection produces higher temperatures
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Forced convection via pumps is more efficient and allows precise flow control for heat transfer management.
@@ -330,7 +310,6 @@
 - d) About 50°F
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Large ~1000°F drop across the pellet due to low thermal conductivity of ceramic UO2.
 
@@ -345,7 +324,6 @@
 - c) Cladding temperature drops
 - d) No effect on cladding
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** DNB causes sharp rise in cladding surface temperature, risking zirc-water reaction and cladding damage.
@@ -362,7 +340,6 @@
 - d) To measure fluid flow rate
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Heat exchangers transfer heat between two fluids without mixing them, used for heating, cooling, or steam generation.
 
@@ -378,7 +355,6 @@
 - d) The fluid is changing phase
 
 **Correct:** a
-**Correct:** a
 
 **Explanation:** Negative Q means heat loss from the fluid; positive means heat gain. The other fluid has the opposite sign.
 
@@ -393,7 +369,6 @@
 - c) Both are the same process
 - d) Conduction only in condenser, convection only in core
 
-**Correct:** a
 **Correct:** a
 
 **Explanation:** Conduction through solid tube walls; convection from rod surface into flowing coolant.

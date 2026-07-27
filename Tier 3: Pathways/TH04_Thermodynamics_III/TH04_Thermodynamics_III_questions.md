@@ -9,9 +9,8 @@
 - c) Adiabatic
 - d) Isochoric
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Adiabatic process: Q = 0 (no heat transfer). Temperature and pressure can change in adiabatic processes.
 
 ---
@@ -25,9 +24,8 @@
 - c) Pin - Pout
 - d) Tin - Tout
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Turbine work: W = h_in - h_out. The enthalpy drop across the turbine equals the mechanical work output.
 
 ---
@@ -41,9 +39,8 @@
 - c) Constant pressure
 - d) Constant temperature
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Isenthalpic process: enthalpy remains constant. Throttling (through a valve) is an isenthalpic process.
 
 ---
@@ -57,9 +54,8 @@
 - c) Pin - Pout
 - d) Tin - Tout
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Pump work: W = h_out - h_in (positive value). Work is input to increase fluid pressure and enthalpy.
 
 ---
@@ -73,9 +69,8 @@
 - c) Inlet temperature - Outlet temperature
 - d) Condenser temperature - Cooling water temperature
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Condensate depression = saturation temperature minus actual condensate temperature. A few degrees prevents pump cavitation.
 
 ---
@@ -89,9 +84,8 @@
 - c) Isobaric
 - d) Adiabatic
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Isobaric process: P = constant. Boiler heat addition and condenser heat rejection are isobaric processes.
 
 ---
@@ -105,9 +99,8 @@
 - c) Isothermal
 - d) Isentropic
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Isothermal process: T = constant. Often occurs during condensation or with isothermal compression/expansion.
 
 ---
@@ -121,9 +114,8 @@
 - c) Heat only flows from cold to hot
 - d) The amount of entropy always decreases
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Second Law: No cyclic heat engine can achieve 100% efficiency. All engines must reject heat to the surroundings.
 
 ---
@@ -137,9 +129,8 @@
 - c) The change in internal energy of the system
 - d) The rate of heat transfer
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Entropy change: ΔS = Q/T_abs. Total entropy increases in any real irreversible process (Second Law).
 
 ---
@@ -153,9 +144,8 @@
 - c) Velocity decreases and pressure increases
 - d) Both velocity and pressure decrease
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** In convergent nozzles: flow area decreases → velocity increases, pressure decreases (kinetic energy increases).
 
 ---
@@ -169,9 +159,8 @@
 - c) To reduce overall system pressure
 - d) To improve condenser heat transfer
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Condensate depression prevents pump cavitation (vapor bubbles) but excessive depression wastes heat and increases corrosion.
 
 ---
@@ -185,9 +174,8 @@
 - c) Pressure remains constant
 - d) No work is performed
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Isentropic process: ΔS = 0 (reversible). Real turbines/pumps add entropy through friction, reducing their efficiency.
 
 ---
@@ -201,9 +189,8 @@
 - c) Output power / Input power
 - d) Pressure drop / Enthalpy drop
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Turbine efficiency = Real work output / Ideal isentropic work. Real turbines are always less efficient than ideal.
 
 ---
@@ -217,9 +204,8 @@
 - c) It determines the pressure drop
 - d) It measures vibration levels
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** In heat exchangers: Q gained = Q lost (First Law). The energy equation q = h_out - h_in applies directly.
 
 ---
@@ -233,9 +219,8 @@
 - c) To maintain constant velocity
 - d) To isolate fluid flows
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** In a divergent nozzle: flow area increases → velocity decreases, pressure increases (kinetic energy converts to pressure energy).
 
 ---
@@ -249,9 +234,8 @@
 - c) Isothermal expansion
 - d) Adiabatic expansion
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Throttling: constant enthalpy (h_in = h_out), pressure drops, entropy increases. No work done, no heat added. Used for flow control.
 
 ---
@@ -265,9 +249,8 @@
 - c) Inlet pressure / Outlet pressure
 - d) Flow rate / Pressure rise
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Pump efficiency = ideal (isentropic) work / real (shaft) work. Real pumps require more shaft power than ideal due to friction.
 
 ---
@@ -281,9 +264,8 @@
 - c) It has no effect on turbine work
 - d) It only affects condenser pressure
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Superheating increases the enthalpy of steam entering the turbine (h_in increases), resulting in greater work output (W = h_in - h_out).
 
 ---
@@ -297,9 +279,8 @@
 - c) Friction has no effect
 - d) Real turbine has lower outlet pressure
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Friction in real turbines increases entropy (ΔS > 0), reducing the enthalpy drop available for work. Turbine efficiency accounts for this.
 
 ---

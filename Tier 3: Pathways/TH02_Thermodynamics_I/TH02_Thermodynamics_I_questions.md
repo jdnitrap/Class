@@ -9,9 +9,8 @@
 - c) Can only flow from hot to cold
 - d) Is lost as heat in all processes
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** The First Law (Energy Conservation): Energy entering a system equals energy stored in or leaving it. E in = E stored + E out.
 
 ---
@@ -25,9 +24,8 @@
 - c) Potential energy
 - d) Kinetic energy
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Heat and work are transient energy forms—energy in transit. They exist only during energy transfer between systems and surroundings.
 
 ---
@@ -41,9 +39,8 @@
 - c) H = U/PV
 - d) H = PV - U
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Enthalpy H = U + PV, where U is internal energy and PV is flow energy. This is a fundamental thermodynamic property.
 
 ---
@@ -57,9 +54,8 @@
 - c) Potential Energy
 - d) Flow Energy
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Potential Energy (PE) depends on position. PE = mzg/gc, where z is height above a reference point.
 
 ---
@@ -73,9 +69,8 @@
 - c) Internal Energy
 - d) Thermal Energy
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Kinetic Energy (KE) = mv²/2gc. It depends on the velocity of the substance.
 
 ---
@@ -89,9 +84,8 @@
 - c) Energy stored in compressed springs
 - d) Energy from electrical sources
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Internal energy (U) is the sum of all microscopic forms: molecular rotation, vibration, and translational kinetic energy.
 
 ---
@@ -105,9 +99,8 @@
 - c) h = u/Pv
 - d) h = Pv - u
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Specific enthalpy h = u + Pv. It represents energy per unit mass of fluid.
 
 ---
@@ -121,9 +114,8 @@
 - c) Change in enthalpy = heat transferred to the system minus work done by the system (Δh = q - w)
 - d) Q = U + PV
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** For closed systems with no PE/KE change: Δh = q - w. This is the simplified First Law energy equation.
 
 ---
@@ -137,9 +129,8 @@
 - c) Power
 - d) Momentum
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Power is work per unit time: P = W/t, measured in watts (J/s) or horsepower (hp).
 
 ---
@@ -153,9 +144,8 @@
 - c) 1 Btu = 1000 cal
 - d) 1 Btu = 4.184 J
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Joule's constant: 1 Btu = 778 ft-lbf. This converts between heat (Btu) and mechanical work (ft-lbf).
 
 ---
@@ -169,9 +159,8 @@
 - c) Its pressure and volume (the work required to push the fluid into a system)
 - d) Its velocity
 
-**Correct:** a
-**Correct:** c
 
+**Correct:** c
 **Explanation:** Flow energy (PV) is the work required to push a fluid of volume V at pressure P into a system. It equals P×v per unit mass.
 
 ---
@@ -185,9 +174,8 @@
 - c) Zero
 - d) Undefined
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Sign convention: Q added (into system) = positive; Q removed (out of system) = negative. Similarly, W done by system = positive, W done on system = negative.
 
 ---
@@ -201,9 +189,8 @@
 - c) Zero
 - d) Depends on the gas type
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Sign convention: Work done BY the system (expansion, turbine) = positive. Work done ON the system (compression, pump) = negative.
 
 ---
@@ -217,9 +204,8 @@
 - c) The rate of heat transfer
 - d) The mechanical work output
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Entropy (S) measures disorder and unavailable energy. Specific entropy (s) has units of Btu/lbm-R. Total entropy increases in real processes.
 
 ---
@@ -233,9 +219,8 @@
 - c) h = u × Pv
 - d) h = u / (Pv)
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Specific enthalpy h = u + Pv combines internal energy u and flow energy Pv. This property simplifies energy analysis of control volumes.
 
 ---
@@ -249,9 +234,8 @@
 - c) All pressures in the system
 - d) All velocities in the system
 
-**Correct:** a
-**Correct:** b
 
+**Correct:** b
 **Explanation:** Steady flow: constant mass flow rate in/out, constant properties at each location over time, constant heat/work transfer rates. Most power equipment operates in steady flow.
 
 ---
