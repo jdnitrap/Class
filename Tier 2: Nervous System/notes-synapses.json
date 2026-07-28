@@ -369,28 +369,6 @@
       "contentFile": "Tier 3: Pathways/TH02_Thermodynamics_I/TH02_Thermodynamics_I_notes.md"
     },
     {
-      "id": 12,
-      "subject": "TH03",
-      "title": "States, Phases, and Phase Diagrams",
-      "contentFile": "Tier 3: Pathways/TH03_Thermodynamics_II/TH03_Thermodynamics_II_notes.md",
-      "image": "assets/images/pt-phase-diagram.svg",
-      "imageLabel": "P-T Phase Diagram"
-    },
-    {
-      "id": 13,
-      "subject": "TH03",
-      "title": "Five States of Water",
-      "contentFile": "Tier 3: Pathways/TH03_Thermodynamics_II/TH03_Thermodynamics_II_notes.md",
-      "image": "assets/images/five-states-water.svg",
-      "imageLabel": "Five States of Water"
-    },
-    {
-      "id": 14,
-      "subject": "TH03",
-      "title": "Ideal Gas Laws and Steam Tables",
-      "contentFile": "Tier 3: Pathways/TH03_Thermodynamics_II/TH03_Thermodynamics_II_notes.md"
-    },
-    {
       "id": 15,
       "subject": "TH04",
       "title": "Thermodynamic Processes",
