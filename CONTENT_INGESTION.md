@@ -94,6 +94,22 @@ user has explicitly confirmed how they want to proceed.
 fingerprint to `ingested-sources.json`** -- this is what makes the check
 possible for every future upload, not just the one you're doing now.
 
+## Step 0.5 — Check whether this lecture supersedes older unsourced content
+
+Some existing subjects were built before official lecture documents were
+available (hand-authored from general knowledge, not `ingested-sources.json`).
+If a newly uploaded lecture covers substantially the same ground as one of
+these -- compare topics/section headers, not just subject codes -- **the
+lecture is the authoritative source.** Flag the overlap to the user and
+offer to replace the older, unsourced version rather than creating a
+second subject that looks like a confusing near-duplicate (this is what
+happened with TH03 "Thermodynamics II" vs. TH03B "Steam Properties" --
+same actual material, but the former predated any lecture doc and was
+thinner). A quick way to tell if an existing subject is lecture-sourced:
+check whether its `subject_code` appears in `ingested-sources.json`. If it
+doesn't, treat it as replaceable when a real lecture covering that ground
+shows up.
+
 ## Step 1 — Identify the subject
 
 - Match the lecture's topic/course number against existing subject codes in
