@@ -1,8 +1,10 @@
 # CP01_Piping - Comprehensive Study Notes
 
-## Note ID: 1
-### PIPING FUNDAMENTALS:
-
+---
+id: 1
+section: 'PIPING FUNDAMENTALS:'
+objective: null
+---
 PURPOSE AND FUNCTION: Transports fluids and fluid/solid mixtures between equipment. Design must account for temperature, pressure, flow rate, chemical/physical properties, contamination, and shock loads.
 
 DESIGN FACTORS:
@@ -31,10 +33,10 @@ THERMAL EFFECTS:
 • Insulation: controls heat loss/gain and protects personnel
 
 ---
-
-## Note ID: 2
-### FIVE PRINCIPAL VALVE FUNCTIONS:
-
+id: 2
+section: 'FIVE PRINCIPAL VALVE FUNCTIONS:'
+objective: null
+---
 1. STARTING/STOPPING FLOW: Isolation to completely stop or start fluid flow (gate valves, ball valves, plug valves)
 
 2. THROTTLING FLOW: Control flow rate without stopping completely, requires throttling-capable design (globe valves, needle valves)
@@ -59,10 +61,10 @@ STEM DESIGNS:
 • Non-rising stem: stem does not move (position not visually obvious)
 
 ---
-
-## Note ID: 3
-### PRESSURE FUNDAMENTALS:
-
+id: 3
+section: 'PRESSURE FUNDAMENTALS:'
+objective: null
+---
 DEFINITION: Pressure = Force / Area (P = F/A). Units: psi, Pa, bar, atm. Normal atmospheric pressure = 14.7 psia = 101.3 kPa.
 
 HYDROSTATIC PRESSURE: Pressure from weight of fluid column above reference point. Formula: P = rho x g x h. Increases with depth. Acts in all directions equally.
@@ -80,10 +82,10 @@ PASCAL'S LAW: Pressure applied to confined fluid is transmitted undiminished thr
 HYDRAULIC PRESS APPLICATION: Input force on small piston creates pressure throughout system. Pressure acts on larger piston producing larger output force. Work In = Work Out: F1 x d1 = F2 x d2.
 
 ---
-
-## Note ID: 4
-### THERMAL BINDING:
-
+id: 4
+section: 'THERMAL BINDING:'
+objective: null
+---
 CAUSE: Valve body cools faster than disk during system cooldown. Differential thermal contraction binds seat against disk. Can make valve impossible to reopen until reheated.
 
 PREVENTION:
@@ -116,10 +118,10 @@ KEY MAINTENANCE PRACTICES:
 • Track valve operation history
 
 ---
-
-## Note ID: 5
-### ACTUATOR FAILURE POSITIONS:
-
+id: 5
+section: 'ACTUATOR FAILURE POSITIONS:'
+objective: null
+---
 • Fail Open: opens on loss of power/control (safety for emergency drainage)
 • Fail Closed: closes on loss of power (safety for isolation)
 • Fail As Is: remains in current position (most Motor Operated Valves)
@@ -152,6 +154,3 @@ HUMAN ERROR PREVENTION:
 • Verify all local/remote indications before and after manipulation
 • Follow procedures and require independent verification
 • Confirm valves and instrumentation are labeled correctly
-
----
-

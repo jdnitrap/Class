@@ -1,8 +1,10 @@
 # TH07B_Heat_Transfer - Comprehensive Study Notes
 
-## Note ID: 1
-### HEAT TRANSFER FUNDAMENTALS AND THREE MODES:
-
+---
+id: 1
+section: 'HEAT TRANSFER FUNDAMENTALS AND THREE MODES:'
+objective: null
+---
 HEAT TRANSFER DEFINITION:
 Heat transfer is the transport of thermal energy (heat) from a region of higher temperature to a region of lower temperature. This occurs spontaneously due to the second law of thermodynamics - entropy increases as energy flows from hot to cold.
 
@@ -193,10 +195,10 @@ The Challenge:
 • Radiation is backup, not primary
 
 ---
-
-## Note ID: 2
-### SPECIFIC HEAT CAPACITY:
-
+id: 2
+section: 'SPECIFIC HEAT CAPACITY:'
+objective: null
+---
 DEFINITION:
 Specific heat capacity (cp) is the amount of heat required to raise the temperature of ONE UNIT MASS of a substance by ONE DEGREE TEMPERATURE.
 
@@ -272,10 +274,10 @@ IMPORTANCE FOR HEAT BALANCE CALCULATIONS:
 4. Changes in cp (due to composition changes) detected through heat balance monitoring
 
 ---
-
-## Note ID: 3
-### CONDUCTION HEAT TRANSFER THROUGH MATERIALS:
-
+id: 3
+section: 'CONDUCTION HEAT TRANSFER THROUGH MATERIALS:'
+objective: null
+---
 CONDUCTION DEFINITION REVIEW:
 Heat transfer through solid material by molecular contact without bulk fluid motion.
 Mechanism: Thermal vibrations propagate through atomic/molecular bonds.
@@ -389,10 +391,10 @@ RESULT: Deposits reduced heat transfer by factor of 6.6× (or 85% reduction)
 This demonstrates the huge impact of fouling in heat exchangers!
 
 ---
-
-## Note ID: 4
-### THERMAL CONDUCTIVITY DATA AND MATERIAL SELECTION:
-
+id: 4
+section: 'THERMAL CONDUCTIVITY DATA AND MATERIAL SELECTION:'
+objective: null
+---
 COMPREHENSIVE THERMAL CONDUCTIVITY TABLE:
 
 Metals and Alloys Used in Nuclear Plants:
@@ -481,10 +483,10 @@ Must compensate with enhanced convection (higher flow rates, better geometry)
 Heat transfer equation: Q = U × A × ΔT encompasses all effects
 
 ---
-
-## Note ID: 5
-### CONVECTION HEAT TRANSFER DETAILED:
-
+id: 5
+section: 'CONVECTION HEAT TRANSFER DETAILED:'
+objective: null
+---
 CONVECTION DEFINITION AND MECHANISM REVIEW:
 Heat transfer from a hot surface to an adjacent fluid (or vice versa) through the combination of conduction within a thin boundary layer and bulk fluid motion.
 
@@ -675,10 +677,10 @@ Interpretation:
 Most plant systems operate turbulent (high Re) for efficient cooling.
 
 ---
-
-## Note ID: 6
-### BOUNDARY LAYER THICKNESS AND EFFECTS:
-
+id: 6
+section: 'BOUNDARY LAYER THICKNESS AND EFFECTS:'
+objective: null
+---
 BOUNDARY LAYER PHYSICS DETAILED:
 
 Boundary Layer Definition:
@@ -805,10 +807,10 @@ Higher gradient → faster heat transfer
 Linear relationships assumed, but actual dependence is power law
 
 ---
-
-## Note ID: 7
-### HEAT EXCHANGER HEAT TRANSFER MECHANISMS:
-
+id: 7
+section: 'HEAT EXCHANGER HEAT TRANSFER MECHANISMS:'
+objective: null
+---
 HEAT EXCHANGER ARCHITECTURE:
 
 Three Heat Transfer Resistances in Series:
@@ -941,10 +943,10 @@ After 2 mil scale: U_o = 700 Btu/(hr·ft²·°F) (30% reduction)
 This is why condenser cleaning critical to maintain efficiency!
 
 ---
-
-## Note ID: 8
-### OVERALL HEAT TRANSFER COEFFICIENT AND MONITORING:
-
+id: 8
+section: 'OVERALL HEAT TRANSFER COEFFICIENT AND MONITORING:'
+objective: null
+---
 DEFINITION REVIEW:
 U_o is single combined coefficient including effects of:
 • Hot-side convection (h_hot)
@@ -1090,10 +1092,10 @@ If U_o drops:
 • Expect 15-30% improvement in U_o after cleaning
 
 ---
-
-## Note ID: 9
-### RADIATION HEAT TRANSFER:
-
+id: 9
+section: 'RADIATION HEAT TRANSFER:'
+objective: null
+---
 RADIATION DEFINITION REVIEW:
 Heat transfer via electromagnetic waves (primarily infrared radiation) from one surface to another without requiring contact or an intermediate medium.
 
@@ -1243,10 +1245,10 @@ But it's inadequate until temperatures very high (dangerous to cladding)
 Goal: Maintain liquid cooling (convection) to prevent radiation cooling scenario
 
 ---
-
-## Note ID: 10
-### SINGLE-PHASE VS. TWO-PHASE HEAT TRANSFER:
-
+id: 10
+section: 'SINGLE-PHASE VS. TWO-PHASE HEAT TRANSFER:'
+objective: null
+---
 SINGLE-PHASE HEAT TRANSFER:
 
 Definition: Heat transfer where neither fluid changes phase.
@@ -1399,10 +1401,10 @@ h_cooling_water ≈ 1000-2000 (usually limiting)
 Design strategy: Increase cooling water flow to improve h_cold
 
 ---
-
-## Note ID: 20
-### CORE THERMAL POWER CALCULATION AND HEAT BALANCE:
-
+id: 20
+section: 'CORE THERMAL POWER CALCULATION AND HEAT BALANCE:'
+objective: null
+---
 DEFINITION:
 Core Thermal Power (CTP) is the rate of thermal energy released by fission reactions in the reactor core. Also called "reactor thermal power" or "core power."
 
@@ -1509,10 +1511,10 @@ During power changes: Instruments respond faster, heat balance lags
 Verify actual core power: Use heat balance to calibrate instruments
 
 ---
-
-## Note ID: 21
-### STEAM GENERATOR TUBE PLUGGING AND TEMPERATURE EFFECTS:
-
+id: 21
+section: 'STEAM GENERATOR TUBE PLUGGING AND TEMPERATURE EFFECTS:'
+objective: null
+---
 SCENARIO:
 Some steam generator tubes have been plugged (isolated from service) due to corrosion/cracking.
 Effect on system performance when power held constant.
@@ -1622,6 +1624,3 @@ THIS EXAMPLE SHOWS:
 • Why steam generator condition critical to plant performance
 • Interdependence of primary/secondary systems through heat transfer
 • Real-time operating impacts of equipment degradation
-
----
-

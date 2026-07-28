@@ -1,8 +1,10 @@
 # TH02_Thermodynamics_I - Comprehensive Study Notes
 
-## Note ID: 9
-### FIRST LAW OF THERMODYNAMICS - ENERGY CONSERVATION:
-
+---
+id: 9
+section: 'FIRST LAW OF THERMODYNAMICS - ENERGY CONSERVATION:'
+objective: null
+---
 FUNDAMENTAL PRINCIPLE:
 "Energy cannot be created or destroyed, only converted from one form to another."
 
@@ -139,10 +141,10 @@ Advantages of Using Enthalpy:
 • Applies to all open systems (turbines, pumps, heat exchangers)
 
 ---
-
-## Note ID: 10
-### ENERGY FORMS AND THEIR SIGNIFICANCE:
-
+id: 10
+section: 'ENERGY FORMS AND THEIR SIGNIFICANCE:'
+objective: null
+---
 REVIEW OF STORED ENERGY TYPES:
 
 1. POTENTIAL ENERGY:
@@ -269,10 +271,10 @@ Typical generator efficiency: 95-99%
 Combined: 80-90% of shaft power becomes electrical power
 
 ---
-
-## Note ID: 11
-### ENERGY TRANSFER MECHANISMS IN POWER CYCLES:
-
+id: 11
+section: 'ENERGY TRANSFER MECHANISMS IN POWER CYCLES:'
+objective: null
+---
 HEAT TRANSFER (Q):
 Fundamental Mechanism: Random molecular motion transfer across temperature gradient
 
@@ -354,6 +356,3 @@ Typical: 33-40% coal, 45-55% gas, 33% nuclear
 ENERGY CONSERVATION CHECK:
 For any process: Q_in - Q_out - W_out + W_in = ΔE_system
 Sum of all energy transfers must equal change in system energy.
-
----
-

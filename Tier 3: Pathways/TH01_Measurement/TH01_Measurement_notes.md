@@ -1,8 +1,10 @@
 # TH01_Measurement - Comprehensive Study Notes
 
-## Note ID: 6
-### SYSTEMS OF MEASUREMENT AND UNIT CONVERSION:
-
+---
+id: 6
+section: 'SYSTEMS OF MEASUREMENT AND UNIT CONVERSION:'
+objective: null
+---
 TWO PRIMARY SYSTEMS:
 
 AMERICAN ENGINEERING SYSTEM (ENGLISH ENGINEERS SYSTEM):
@@ -65,10 +67,10 @@ Method to verify equations are dimensionally consistent:
 • Use to catch errors in calculations
 
 ---
-
-## Note ID: 7
-### TEMPERATURE MEASUREMENT SCALES:
-
+id: 7
+section: 'TEMPERATURE MEASUREMENT SCALES:'
+objective: null
+---
 ABSOLUTE ZERO AND MOLECULAR MOTION:
 Absolute zero = point where all molecular motion theoretically stops
 • 0 K = -273.15°C = -459.67°R = -459.67°F
@@ -140,10 +142,10 @@ TEMPERATURE CONVERSION QUICK REFERENCE:
 Room temp (68°F) = 20°C = 293.15 K = 527.67°R
 
 ---
-
-## Note ID: 8
-### SYSTEMS AND SYSTEM PROPERTIES:
-
+id: 8
+section: 'SYSTEMS AND SYSTEM PROPERTIES:'
+objective: null
+---
 DEFINITION OF A THERMODYNAMIC SYSTEM:
 A quantity of matter or space separated from surroundings by a boundary.
 • Everything within the boundary = THE SYSTEM
@@ -250,6 +252,3 @@ When analyzing a steam system:
 
 IMPORTANT NOTE:
 All thermodynamic equations use SPECIFIC (intensive) properties, requiring division by mass for correct results.
-
----
-

@@ -1,8 +1,10 @@
 # TH03_Thermodynamics_II - Comprehensive Study Notes
 
-## Note ID: 12
-### THERMODYNAMIC STATE AND PHASE CHARACTERISTICS:
-
+---
+id: 12
+section: 'THERMODYNAMIC STATE AND PHASE CHARACTERISTICS:'
+objective: null
+---
 DEFINITION OF STATE:
 A substance is in a specific thermodynamic state when its condition is uniquely defined by two independent intensive properties.
 Once ANY TWO independent properties are known, ALL other properties can be determined.
@@ -234,10 +236,10 @@ Region 3: SUPERHEATED VAPOR
 • Degrees of superheat: ΔT = T_actual - T_sat (should be >50°F typically)
 
 ---
-
-## Note ID: 13
-### FIVE DISTINCT STATES OF WATER/STEAM IN POWER SYSTEMS:
-
+id: 13
+section: 'FIVE DISTINCT STATES OF WATER/STEAM IN POWER SYSTEMS:'
+objective: null
+---
 These are the five conditions encountered in typical power plant operations.
 
 1. SUBCOOLED LIQUID (COMPRESSED LIQUID):
@@ -455,10 +457,10 @@ Step 4: Find T = 350°F column
 Step 5: Read h = 1231.2 Btu/lbm, v = 4.432 ft³/lbm, s = 1.6117 Btu/(lbm·R)
 
 ---
-
-## Note ID: 14
-### GAS LAWS AND STEAM TABLE APPLICATIONS:
-
+id: 14
+section: 'GAS LAWS AND STEAM TABLE APPLICATIONS:'
+objective: null
+---
 HISTORICAL GAS LAW DEVELOPMENT:
 
 CHARLES' LAW (1787):
@@ -667,6 +669,3 @@ Practical Importance:
 • Higher superheat = higher energy content, better turbine efficiency
 • Typical power plants: 50-150°F superheat at boiler outlet
 • First reheater adds another 50-150°F superheat between turbine stages
-
----
-

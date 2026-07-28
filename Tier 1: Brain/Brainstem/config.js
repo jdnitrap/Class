@@ -1,13 +1,19 @@
 // Configuration - centralized settings and constants
 
 export const config = {
-    // Cache settings
+    // Cache settings. Content is now served as a single precompiled bundle
+    // (dist/content-bundle.json) versioned by git short-sha (see version.js),
+    // so the fetch URL only changes when content actually changes -- not on
+    // every single page load like the old Date.now() cache-buster did. This
+    // lets the browser (and future service worker) cache it properly.
     cache: {
         enabled: true,
-        busting: true,  // Add timestamp to fetch URLs to bypass cache
+        busting: false,
     },
 
-    // Data paths (Tier 2: Nervous System metadata files)
+    // Data paths. Tier 2 metadata files are no longer fetched at runtime --
+    // they're consumed by scripts/build-content.js at build time and folded
+    // into dist/content-bundle.json. Kept here only for reference/tooling.
     paths: {
         metadata: {
             questions: 'Tier%202:%20Nervous%20System/questions-synapses.json',
@@ -15,6 +21,7 @@ export const config = {
             flashcards: 'Tier%202:%20Nervous%20System/flashcards-synapses.json',
         },
         content: 'Tier%203:%20Pathways/',  // Base path for content files
+        bundle: 'dist/content-bundle.json',
     },
 
     // UI settings
@@ -41,16 +48,5 @@ export const config = {
     logging: {
         enabled: true,
         verbose: false,  // Set to true for detailed logs
-    },
-
-    // Get cache-busting timestamp
-    getCacheBuster() {
-        return this.cache.busting ? '?v=' + Date.now() : '';
-    },
-
-    // Get full metadata path with cache buster
-    getMetadataPath(type) {
-        const path = this.paths.metadata[type];
-        return path + this.getCacheBuster();
     }
 };

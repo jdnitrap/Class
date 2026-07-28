@@ -1,8 +1,10 @@
 # TH04_Thermodynamics_III - Comprehensive Study Notes
 
-## Note ID: 15
-### THERMODYNAMIC PROCESSES - FUNDAMENTAL TYPES:
-
+---
+id: 15
+section: 'THERMODYNAMIC PROCESSES - FUNDAMENTAL TYPES:'
+objective: null
+---
 Definition: A thermodynamic process is a change in the state of a system as it goes from an initial condition to a final condition.
 
 Processes are characterized by what remains constant or what constraints are applied.
@@ -325,10 +327,10 @@ Typical: 75-85% (means 15-25% wasted as heat in pump)
 Note: Opposite convention for pumps vs turbines!
 
 ---
-
-## Note ID: 16
-### STEADY-FLOW PROCESS AND ENERGY BALANCE:
-
+id: 16
+section: 'STEADY-FLOW PROCESS AND ENERGY BALANCE:'
+objective: null
+---
 STEADY-FLOW SYSTEM DEFINITION:
 A system where mass and energy flow through at constant rates, with properties constant with time (but may vary spatially).
 
@@ -519,10 +521,10 @@ Power Plant Efficiency Checks:
 • Generator efficiency: η_gen = MWe / MW ≈ 97%
 
 ---
-
-## Note ID: 17
-### HEAT EXCHANGER EQUIPMENT ANALYSIS:
-
+id: 17
+section: 'HEAT EXCHANGER EQUIPMENT ANALYSIS:'
+objective: null
+---
 HEAT EXCHANGER DEFINITION:
 Device that transfers heat between two flowing streams without mass mixing.
 
@@ -628,10 +630,10 @@ NPSH (Net Positive Suction Head) requirement depends on pump design
 Minimum subcooling typically 2-5°F depending on pump and conditions
 
 ---
-
-## Note ID: 18
-### NOZZLES AND DIFFUSERS:
-
+id: 18
+section: 'NOZZLES AND DIFFUSERS:'
+objective: null
+---
 NOZZLE DEFINITION:
 Shaped passage (convergent or divergent) that converts pressure/enthalpy to velocity/kinetic energy.
 
@@ -795,10 +797,10 @@ Lower outlet pressure → Larger enthalpy drop → Higher exit velocity
 Better vacuum → Lower outlet pressure → Maximum performance
 
 ---
-
-## Note ID: 19
-### TURBINES AND PUMPS - WORK DEVICES:
-
+id: 19
+section: 'TURBINES AND PUMPS - WORK DEVICES:'
+objective: null
+---
 TURBINE OVERVIEW:
 
 Function: Extract mechanical work from expanding fluid
@@ -1104,6 +1106,3 @@ Result: Throttling from (200 psia, saturated liquid) → (1 psia, 29.1% vapor, 7
 Large quality change due to large pressure drop
 
 Implication: Throttling from high pressure liquid to low pressure produces significant moisture/quality change!
-
----
-

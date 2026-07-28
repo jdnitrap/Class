@@ -1,8 +1,10 @@
 # TH05_Thermodynamic_Cycles - Comprehensive Study Notes
 
-## Note ID: 1
-### ENABLING OBJECTIVE 1: THERMODYNAMIC CYCLES AND ESSENTIAL ELEMENTS
-
+---
+id: 1
+section: 'ENABLING OBJECTIVE 1: THERMODYNAMIC CYCLES AND ESSENTIAL ELEMENTS'
+objective: null
+---
 DEFINITION OF A THERMODYNAMIC CYCLE:
 A thermodynamic cycle is a recurring series of thermodynamic processes used for the transformation of energy to produce a useful effect. When the working fluid goes through different changes of state (processes) and returns to its initial state, the system has undergone a cycle. The properties of the working fluid are the same at the beginning and end of the cycle.
 
@@ -31,10 +33,10 @@ APPLICATION IN POWER PLANTS:
 • Circulating device: Feed pump pressurizes condensate back to steam generator
 
 ---
-
-## Note ID: 2
-### ENABLING OBJECTIVE 2: PROCESSES VERSUS CYCLES
-
+id: 2
+section: 'ENABLING OBJECTIVE 2: PROCESSES VERSUS CYCLES'
+objective: null
+---
 UNDERSTANDING THERMODYNAMIC PROCESSES:
 A process is a change in the state of a system (a single step or series of steps in one direction). During a process, at least one property of the working fluid changes (pressure, temperature, volume, enthalpy, entropy). A process has a defined starting point and ending point but does not return to the starting state.
 
@@ -73,10 +75,10 @@ Cycles are typically plotted on diagrams using:
 • The enclosed area of the cycle loop represents net work produced
 
 ---
-
-## Note ID: 3
-### ENABLING OBJECTIVE 3: THERMODYNAMIC CYCLE EFFICIENCY
-
+id: 3
+section: 'ENABLING OBJECTIVE 3: THERMODYNAMIC CYCLE EFFICIENCY'
+objective: null
+---
 EFFICIENCY DEFINITION:
 Thermodynamic cycle efficiency (η) is the ratio of net work produced by the cycle to the total heat energy supplied to the cycle, expressed as a percentage. It represents the fraction of energy input that is converted to useful work output.
 
@@ -130,10 +132,10 @@ The only ways to improve efficiency are to:
 3. Reduce losses in turbine and pump (reduce irreversibilities)
 
 ---
-
-## Note ID: 4
-### ENABLING OBJECTIVE 4: THE CARNOT CYCLE AND POWER PLANT RELEVANCE
-
+id: 4
+section: 'ENABLING OBJECTIVE 4: THE CARNOT CYCLE AND POWER PLANT RELEVANCE'
+objective: null
+---
 HISTORICAL DEVELOPMENT:
 Nicholas Leonard Sadi Carnot (1796-1832), a French physicist, developed the concept of the idealized cycle and reversible processes. The Carnot cycle is not actually used in power plants but serves as a theoretical benchmark for evaluating real cycle performance.
 
@@ -212,10 +214,10 @@ The Carnot cycle concept motivates many power plant improvements:
 The Carnot cycle proves that efficiency depends only on temperatures, not on the choice of working fluid (steam, air, helium, etc.). This shows that water is a practical choice for nuclear plants because its efficiency is determined solely by steam temperature and cooling water temperature, regardless of the fluid itself.
 
 ---
-
-## Note ID: 5
-### ENABLING OBJECTIVE 5: CALCULATING CARNOT EFFICIENCY
-
+id: 5
+section: 'ENABLING OBJECTIVE 5: CALCULATING CARNOT EFFICIENCY'
+objective: null
+---
 [IMAGE REFERENCE: carnot-analysis-diagram] - Figure 4: Carnot Cycle T-s Diagrams showing area relationships for heat and work
 
 CARNOT EFFICIENCY FORMULA:
@@ -284,10 +286,11 @@ Method 3: As percentage
 All three give identical results.
 
 ---
-
-## Note ID: 6
-### ENABLING OBJECTIVE 6: SECOND LAW OF THERMODYNAMICS IMPACT ON PLANT DESIGN AND OPERATION
-
+id: 6
+section: 'ENABLING OBJECTIVE 6: SECOND LAW OF THERMODYNAMICS IMPACT ON PLANT DESIGN
+  AND OPERATION'
+objective: null
+---
 THE SECOND LAW OF THERMODYNAMICS STATEMENT:
 "No heat engine, actual or ideal, when operating in a cycle can convert all the heat supplied to it into mechanical work."
 
@@ -376,10 +379,10 @@ The Second Law sets an absolute upper limit that no engineer can overcome. All i
 • Continuous improvement focuses on reducing this gap
 
 ---
-
-## Note ID: 7
-### ENABLING OBJECTIVE 7: RANKINE VERSUS CARNOT CYCLE
-
+id: 7
+section: 'ENABLING OBJECTIVE 7: RANKINE VERSUS CARNOT CYCLE'
+objective: null
+---
 [IMAGE REFERENCE: rankine-cycle] - Figure 7: Rankine Cycle Process Diagram showing pump, boiler, turbine, condenser
 
 RANKINE CYCLE OVERVIEW:
@@ -504,10 +507,10 @@ Actual nuclear and fossil plants use modified Rankine cycles with:
 These improvements move the practical Rankine efficiency closer to the theoretical Carnot maximum.
 
 ---
-
-## Note ID: 8
-### ENABLING OBJECTIVE 8: RANKINE EFFICIENCY IMPROVEMENTS - DETAILED ANALYSIS
-
+id: 8
+section: 'ENABLING OBJECTIVE 8: RANKINE EFFICIENCY IMPROVEMENTS - DETAILED ANALYSIS'
+objective: null
+---
 PART A: SUPERHEATING STEAM
 
 [IMAGE REFERENCE: rankine-superheat] - Figure 13: Rankine Cycle with Superheating on T-s diagram
@@ -870,10 +873,10 @@ Steam pressure | Increases expansion ratio, increases density | 2-3% per 500 psi
 Steam quality | Increases available energy for expansion | 1-2% per 5% improvement | Boiler design
 
 ---
-
-## Note ID: 9
-### ENABLING OBJECTIVE 9: CONDENSATE DEPRESSION (CONDENSATE SUBCOOLING)
-
+id: 9
+section: 'ENABLING OBJECTIVE 9: CONDENSATE DEPRESSION (CONDENSATE SUBCOOLING)'
+objective: null
+---
 [IMAGE REFERENCE: condenser-temperature-measurement] - Condenser hotwell showing saturation temperature reference and subcooling measurement point
 
 DETAILED DEFINITION:
@@ -1017,10 +1020,10 @@ RECOGNITION OF INSUFFICIENT SUBCOOLING:
 • Investigate for cooling water shortage (seasonal)
 
 ---
-
-## Note ID: 10
-### ENABLING OBJECTIVE 10: OPERATIONAL METHODS TO MAINTAIN UNIT EFFICIENCY
-
+id: 10
+section: 'ENABLING OBJECTIVE 10: OPERATIONAL METHODS TO MAINTAIN UNIT EFFICIENCY'
+objective: null
+---
 [IMAGE REFERENCE: plant-efficiency-monitoring] - Plant heat rate monitoring systems and efficiency indicators
 [IMAGE REFERENCE: auxiliary-systems-diagram] - Secondary system auxiliary equipment layout and flow paths
 
@@ -1412,6 +1415,3 @@ This is the essence of operational excellence:
 5. Take corrective action promptly
 6. Verify correction was effective
 7. Prevent recurrence through procedure or maintenance changes
-
----
-
