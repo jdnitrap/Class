@@ -7,6 +7,7 @@ import { router } from '../Cortex/router.js';
 import { exam } from '../Cortex/exam-controller.js';
 import { flashcard } from '../Cortex/flashcard-controller.js';
 import { notes } from '../Cortex/notes-controller.js';
+import { ingest } from './ingest.js';
 
 // Expose app API to window for HTML onclick handlers
 window.app = {
@@ -144,6 +145,10 @@ window.app = {
 
     async rateCard(rating) {
         await flashcard.rateCard(state, rating);
+    },
+
+    async uploadLecture() {
+        await ingest.uploadLecture();
     }
 };
 

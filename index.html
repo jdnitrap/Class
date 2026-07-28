@@ -377,6 +377,19 @@
                         📖 Notes<br><span style="font-size: 0.8em; opacity: 0.9;">Comprehensive materials</span>
                     </button>
                 </div>
+
+                <div style="margin-top: 30px; padding: 20px; background: rgba(102, 126, 234, 0.05); border: 2px dashed #667eea; border-radius: 8px;">
+                    <h3 style="margin-top: 0; color: #667eea; font-size: 1em;">➕ Add a New Lecture</h3>
+                    <p style="color: #666; font-size: 0.85em; margin-bottom: 12px;">
+                        Upload a lecture document (.docx) and it will be automatically extracted into
+                        notes, flashcards, and exam questions -- no formatting needed.
+                    </p>
+                    <input type="file" id="lectureUploadInput" accept=".docx" style="margin-bottom: 10px;">
+                    <button class="btn-primary" onclick="app.uploadLecture()" style="width: 100%; padding: 12px;">
+                        Upload &amp; Process
+                    </button>
+                    <p id="lectureUploadStatus" style="font-size: 0.85em; margin-top: 10px; color: #666;"></p>
+                </div>
             </div>
 
             <!-- Exam Configuration Screen -->
