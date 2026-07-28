@@ -13,6 +13,53 @@ happens — don't rely on chat memory across sessions.
 > the build loudly instead of silently degrading in the browser. This
 > replaces the previous version of this file, which described the old format.
 
+## READ THIS BEFORE TOUCHING ANYTHING
+
+This document is written to be followed by **any AI model** — Claude, GPT,
+Gemini, Grok, or anything else — not just one specific assistant. It is
+deliberately explicit and mechanical rather than relying on "figure out the
+right thing to do." If you are an AI reading this: follow it literally,
+step by step, in order. Do not improvise around it, do not skip steps you
+think are unnecessary, and do not decide a step doesn't apply to your
+specific case without saying so explicitly to the user first.
+
+**Hard rules — no exceptions, regardless of model or how confident you are:**
+
+1. **`git pull` before doing anything else.** Never compute an ID, a next
+   subject code, or a duplicate check against a stale local copy of the repo.
+2. **Never touch the parser or build script to make bad content pass.**
+   If `scripts/build-content.js` or `tests/validate_content.py` reject your
+   generated content, the content is wrong — fix the content. Do not loosen
+   a validation rule, do not add a special case, do not comment out a check.
+   These scripts exist specifically to catch mistakes; weakening them to get
+   past an error defeats the entire point of this pipeline.
+3. **Never invent facts, numbers, or events not present in the source
+   document.** Every note, flashcard, and question must trace back to
+   something actually in the uploaded file. If the source doesn't cover
+   something, don't fill the gap with plausible-sounding content.
+4. **Never edit, delete, or reformat existing subjects/files** unless the
+   user explicitly asked you to (e.g. "wipe CP01," "update the TH05 notes").
+   Adding new content should never touch unrelated existing content.
+5. **Never skip Step 0 (duplicate check) or Step 6 (build + validate).**
+   Both are mandatory, every single time, no matter how simple the upload
+   looks.
+6. **Always show the literal terminal output of the validator and build
+   script to the user** (or, in an autonomous/headless context, log it) --
+   don't just say "validation passed." If either one fails, stop and fix
+   the content before proceeding; don't report success anyway.
+7. **Never force-push, rewrite git history, or amend someone else's
+   commits.** Only ever add new commits on top.
+8. **Never claim a task is finished if it hasn't been pushed.** If you have
+   no push credentials in the current context, say clearly: "committed
+   locally as `<sha>`, not yet pushed — need a token/credential to push."
+   Committed-but-unpushed is not done.
+9. **If anything in this document seems to conflict with what the user just
+   asked for, stop and ask** rather than guessing which one wins.
+
+If you cannot complete a step (missing info, ambiguous source content,
+a check fails and you can't tell why), stop and tell the user exactly
+what's blocking you. Do not guess and continue.
+
 ## Step 0 — Check for a duplicate upload FIRST (before anything else)
 
 Before extracting or generating anything, check the uploaded file against
@@ -159,27 +206,64 @@ options:
 
 ## Step 6 — Build and validate
 
+Run both, in this order, every time, with no exceptions:
+
 ```
 node scripts/build-content.js
+python3 tests/validate_content.py
 ```
-This reads Tier 2 + Tier 3, validates every entry (correct answer keys
-exist, questions/notes/flashcards have their required sections, IDs
-resolve), and writes `dist/content-bundle.json` plus
-`Tier 1: Brain/Brainstem/version.js` (git-sha content version, used for
-cache-busting). **It exits non-zero on any content problem — fix the
-content, don't work around the script.**
 
-`python3 tests/validate_content.py` runs the same checks without Node, for
-a quick local sanity pass.
+`build-content.js` reads Tier 2 + Tier 3, validates every entry (correct
+answer keys exist, questions/notes/flashcards have their required
+sections, IDs resolve, no duplicate source hashes), and writes
+`dist/content-bundle.json` plus `Tier 1: Brain/Brainstem/version.js`
+(git-sha content version, used for cache-busting). **It exits non-zero on
+any content problem — fix the content, don't work around the script.**
 
-## Step 7 — Commit and push
+`validate_content.py` runs the same category of checks independently, in
+Python, as a second opinion. **Both must exit 0 / show "PASSED" before you
+proceed to Step 7.** If either fails, stop, read the exact error message,
+fix the specific content it's pointing at, and re-run both again from
+scratch — don't just fix the one thing and assume the rest is still fine.
+
+## Step 7 — Commit and push (full command sequence, copy this exactly)
 
 Also append this upload's fingerprint to
 `Tier 2: Nervous System/ingested-sources.json` in the same commit (see
 Step 0) -- this is the only thing that lets the duplicate check work for
 future uploads.
 
-Commit message convention: `Add content: {CODE} {Topic Name}`.
+This is the complete, literal sequence from start to finish. Substitute
+your own subject code / folder name / commit message where marked.
+
+```bash
+# 1. Always sync first (Hard Rule 1)
+git pull origin main
+
+# 2. (after generating/editing Tier 3 files and Tier 2 JSON registrations,
+#     including ingested-sources.json)
+
+# 3. Build and validate -- BOTH must succeed
+node scripts/build-content.js
+python3 tests/validate_content.py
+
+# 4. Review exactly what changed before committing anything
+git status --short
+git diff --stat
+
+# 5. Stage and commit
+git add -A
+git commit -m "Add content: {CODE} {Topic Name}"
+
+# 6. Push (requires a GitHub token/credential in this session)
+git push origin main
+```
+
+If step 6 fails because there's no credential available, stop there and
+tell the user explicitly: the commit exists locally (give the short sha
+from `git log -1 --oneline`) but has NOT been pushed, and a token is
+needed to finish.
+
 Pushing to `main` also triggers `.github/workflows/build-content.yml`,
 which rebuilds and re-validates the bundle server-side as a backstop.
 
@@ -216,9 +300,32 @@ almost always one of:
 
 It is **not** a missing button-creation step -- don't add one.
 
+## Definition of Done — confirm every item before saying the task is complete
+
+Do not tell the user the upload is finished until you can honestly check
+off every one of these:
+
+- [ ] Step 0 duplicate check was actually run, and either found no match or
+      the user explicitly confirmed how to proceed
+- [ ] Every note/flashcard/question traces back to actual content in the
+      source document -- nothing invented
+- [ ] `node scripts/build-content.js` was run and printed success (not
+      just assumed)
+- [ ] `python3 tests/validate_content.py` was run and printed "PASSED"
+- [ ] `ingested-sources.json` was updated with this upload's fingerprint
+- [ ] `git status --short` was checked and only the expected files changed
+      -- nothing unrelated was modified
+- [ ] The commit was actually pushed (`git push` succeeded), OR you told
+      the user explicitly that it's committed-but-unpushed and why
+
+If any box can't be checked, the task is not done -- say so plainly,
+explain what's blocking it, and stop there rather than reporting success.
+
 ---
 
 **The point of this file:** none of the above should require the user to
 specify a folder name, file name, ID number, or format. Uploading the source
 document is the only input needed; this spec is what the assistant follows
-to do the rest correctly and consistently, upload after upload.
+to do the rest correctly and consistently, upload after upload -- and it's
+written strictly enough that this holds regardless of which AI model is
+following it.
