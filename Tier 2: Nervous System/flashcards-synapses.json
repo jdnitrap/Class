@@ -53,6 +53,12 @@
       "subject": "CP06",
       "contentFile": "Tier 3: Pathways/CP06_Heat_Exchangers/CP06_Heat_Exchangers_flashcards.md",
       "count": 47
+    },
+    {
+      "id": 233,
+      "subject": "CP01",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_flashcards.md",
+      "count": 59
     }
   ]
 }

@@ -821,6 +821,216 @@
       "subject": "TH07B",
       "title": "STEAM GENERATOR TUBE PLUGGING AND TEMPERATURE EFFECTS:",
       "contentFile": "Tier 3: Pathways/TH07B_Heat_Transfer/TH07B_Heat_Transfer_notes.md"
+    },
+    {
+      "id": 144,
+      "subject": "CP01",
+      "title": "1.0 INTRODUCTION",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 145,
+      "subject": "CP01",
+      "title": "2.1 PURPOSE OF PIPING",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 146,
+      "subject": "CP01",
+      "title": "2.2 PIPING DESIGN FACTORS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 147,
+      "subject": "CP01",
+      "title": "2.3 PIPING MATERIALS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 148,
+      "subject": "CP01",
+      "title": "2.4.1 PIPING SUPPORTS, RESTRAINTS, AND SNUBBERS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 149,
+      "subject": "CP01",
+      "title": "2.4.1 PRECAUTIONS FOR PIPING SUPPORTS AND RESTRAINTS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 150,
+      "subject": "CP01",
+      "title": "2.4.2 THERMAL EFFECTS ON PIPING",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 151,
+      "subject": "CP01",
+      "title": "3.1 PURPOSE OF VALVES",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 152,
+      "subject": "CP01",
+      "title": "3.2 BASIC VALVE CONSTRUCTION - MAIN COMPONENTS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 153,
+      "subject": "CP01",
+      "title": "3.2 VALVE STEM DETAILS, PACKING, AND RISING/NON-RISING DESIGN",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 154,
+      "subject": "CP01",
+      "title": "4.1.1 GATE VALVE CONSTRUCTION AND USES",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 155,
+      "subject": "CP01",
+      "title": "4.1.2 GATE VALVE SYSTEM FLOW VERSUS POSITION",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 156,
+      "subject": "CP01",
+      "title": "4.2 GLOBE VALVES",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 157,
+      "subject": "CP01",
+      "title": "4.3 KEROTEST VALVES",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 158,
+      "subject": "CP01",
+      "title": "4.3 KEROTEST VALVE OPERATING EXPERIENCE - NCR 01656020",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 159,
+      "subject": "CP01",
+      "title": "4.4 NEEDLE VALVES",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 160,
+      "subject": "CP01",
+      "title": "4.5 BUTTERFLY VALVES",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 161,
+      "subject": "CP01",
+      "title": "4.6 PLUG AND BALL VALVES",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 162,
+      "subject": "CP01",
+      "title": "4.7 DIAPHRAGM VALVES",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 163,
+      "subject": "CP01",
+      "title": "4.8 CHECK VALVES",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 164,
+      "subject": "CP01",
+      "title": "4.9.1 SAFETY AND RELIEF VALVE APPLICATION AND CONSTRUCTION",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 165,
+      "subject": "CP01",
+      "title": "4.9.2 SAFETY VS. RELIEF VALVE PERFORMANCE",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 166,
+      "subject": "CP01",
+      "title": "4.9.3 CALCULATING RELIEF PRESSURE, ACCUMULATION, AND BLOWDOWN",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 167,
+      "subject": "CP01",
+      "title": "4.10 VACUUM BREAKERS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 168,
+      "subject": "CP01",
+      "title": "4.11 STEAM TRAPS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 169,
+      "subject": "CP01",
+      "title": "5.0/5.1 VALVE ACTUATORS AND FAILURE POSITIONS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 170,
+      "subject": "CP01",
+      "title": "5.2 MANUAL ACTUATORS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 171,
+      "subject": "CP01",
+      "title": "5.3 ELECTRIC ACTUATORS - MOVs AND SOLENOIDS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 172,
+      "subject": "CP01",
+      "title": "5.4 PNEUMATIC ACTUATORS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 173,
+      "subject": "CP01",
+      "title": "5.5 HYDRAULIC ACTUATORS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 174,
+      "subject": "CP01",
+      "title": "5.6 VALVE CONTROLLER OPERATION",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 175,
+      "subject": "CP01",
+      "title": "6.1/6.2 VALVE POSITION VERIFICATION - LIGHT INDICATION AND TRAVEL INDICATION",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 176,
+      "subject": "CP01",
+      "title": "6.3 SYSTEM INDICATION METHODS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 177,
+      "subject": "CP01",
+      "title": "6.4 SOER 85-2 - PREVENTING HUMAN ERROR IN VALVE MISPOSITIONING",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 178,
+      "subject": "CP01",
+      "title": "6.5 VALVE FAILURE MECHANISMS",
+      "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
     }
   ]
 }
