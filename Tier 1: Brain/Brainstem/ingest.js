@@ -26,12 +26,21 @@ export const ingest = {
             return;
         }
 
+        const passcodeInput = document.getElementById('lectureUploadPasscode');
+        const passcode = passcodeInput ? passcodeInput.value : '';
+        if (!passcode) {
+            status.textContent = 'Enter the passcode first.';
+            status.style.color = '#b45309';
+            return;
+        }
+
         status.textContent = '⏳ Uploading and processing -- this can take up to a minute...';
         status.style.color = '#666';
 
         try {
             const formData = new FormData();
             formData.append('file', file);
+            formData.append('passcode', passcode);
             const response = await fetch(WORKER_URL, { method: 'POST', body: formData });
             const result = await response.json();
 
@@ -44,6 +53,7 @@ export const ingest = {
             status.textContent = `✓ Added ${result.subject} (${result.folder}): ${result.notes} notes, ${result.flashcards} flashcards, ${result.questions} questions. The site will update in a minute or two once GitHub rebuilds.`;
             status.style.color = '#15803d';
             input.value = '';
+            if (passcodeInput) passcodeInput.value = '';
         } catch (err) {
             status.textContent = `✗ Upload failed: ${err.message}`;
             status.style.color = '#b91c1c';

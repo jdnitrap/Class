@@ -384,7 +384,8 @@
                         Upload a lecture document (.docx) and it will be automatically extracted into
                         notes, flashcards, and exam questions -- no formatting needed.
                     </p>
-                    <input type="file" id="lectureUploadInput" accept=".docx" style="margin-bottom: 10px;">
+                    <input type="file" id="lectureUploadInput" accept=".docx" style="margin-bottom: 10px; display: block;">
+                    <input type="password" id="lectureUploadPasscode" placeholder="Passcode" style="margin-bottom: 10px; width: 100%; padding: 8px; box-sizing: border-box;">
                     <button class="btn-primary" onclick="app.uploadLecture()" style="width: 100%; padding: 12px;">
                         Upload &amp; Process
                     </button>
