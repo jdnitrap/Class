@@ -363,8 +363,7 @@
             <div id="homeScreen" class="content home-screen">
                 <h2>📚 Welcome to Your Learning Hub</h2>
                 <p style="color: #666; font-size: 0.9em; margin-bottom: 25px; text-align: center;">
-                    Three-Tier Architecture: Tier 1 (Application Logic) → Tier 2 (Metadata) → Tier 3 (Content)<br>
-                    Choose your study method for <span id="homeSubjectCount">10</span> topics
+                    Choose how you want to study <span id="homeSubjectCount">10</span> subjects
                 </p>
                 <div class="mode-buttons">
                     <button class="mode-btn exam-btn" onclick="app.selectMode('exam')">
@@ -381,15 +380,15 @@
 
             <!-- Exam Configuration Screen -->
             <div id="examConfigScreen" class="content subject-screen hidden">
-                <h2>📝 Exam Mode (Tier 3 Question Banks)</h2>
+                <h2>📝 Exam Mode</h2>
                 <p style="color: #999; font-size: 0.85em; margin-bottom: 20px;">
-                    Choose your exam style and difficulty
+                    Choose how you want to be tested
                 </p>
 
                 <div style="margin-bottom: 30px; padding: 20px; background: rgba(102, 126, 234, 0.05); border: 2px solid #667eea; border-radius: 8px;">
                     <h3 style="margin-top: 0; color: #667eea;">📚 Topic-Specific Exams</h3>
                     <p style="color: #666; font-size: 0.9em; margin-bottom: 15px;">
-                        Select a specific subject (e.g., CP04 Pumps, TH01 Measurement) and choose how many questions
+                        Pick a subject and how many questions you want
                     </p>
                     <button class="btn-primary" onclick="app.startTopicExamSelection()" style="width: 100%; padding: 15px; font-size: 1em; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important; display: block !important; visibility: visible !important;">
                         Select Topic & Start Exam →
@@ -399,7 +398,7 @@
                 <div style="margin-bottom: 30px; padding: 20px; background: rgba(118, 75, 162, 0.05); border: 2px solid #764ba2; border-radius: 8px;">
                     <h3 style="margin-top: 0; color: #764ba2;">🎯 Comprehensive Exam</h3>
                     <p style="color: #666; font-size: 0.9em; margin-bottom: 15px;">
-                        Random questions from all topics and Tier 3 subject areas. Great for comprehensive review!
+                        Random questions from every subject -- good for a full review.
                     </p>
                     <label for="comprehensiveQuestionCount" style="color: #000; font-weight: bold; display: block; margin-bottom: 10px;">
                         How many questions? (1-999)
@@ -415,20 +414,16 @@
 
                 <div class="button-group" style="margin-top: 30px;">
                     <button class="back-home-btn" onclick="app.goHome()" style="flex: 1;">
-                        ← Return to Home
+                        ← Home
                     </button>
                 </div>
             </div>
 
             <!-- Subject Selection Screen -->
             <div id="subjectScreen" class="content subject-screen hidden">
-                <h2>📚 Exam Topics (Tier 3 Content)</h2>
-                <p style="color: #999; font-size: 0.85em; margin-bottom: 15px;">
-                    Topics organized by subject area | Loaded: <span id="questionsCount">0</span> questions | <span id="subjectsCount">0</span> topics available
-                </p>
-                <p style="color: #666; font-size: 0.8em; margin-bottom: 20px; padding: 10px; background: rgba(102, 126, 234, 0.1); border-left: 3px solid #667eea; border-radius: 4px;">
-                    💡 Button format: <strong>CODE Subject</strong> (e.g., CP04 Pumps, TH01 Measurement)<br>
-                    Each topic has comprehensive notes, flashcards, and exam questions in Tier 3 directories.
+                <h2>📚 Exam Topics</h2>
+                <p style="color: #999; font-size: 0.85em; margin-bottom: 20px;">
+                    <span id="questionsCount">0</span> questions across <span id="subjectsCount">0</span> subjects
                 </p>
                 <div class="subject-buttons" id="subjectButtonsContainer"></div>
 
@@ -456,13 +451,9 @@
 
             <!-- Notes Subject Selection Screen -->
             <div id="notesSelectScreen" class="content subject-screen hidden">
-                <h2>📖 Study Topics (Tier 3 Content)</h2>
-                <p style="color: #999; font-size: 0.85em; margin-bottom: 15px;">
-                    Topics organized by subject area | <span id="notesSubjectsCount">0</span> topics available for study
-                </p>
-                <p style="color: #666; font-size: 0.8em; margin-bottom: 20px; padding: 10px; background: rgba(102, 126, 234, 0.1); border-left: 3px solid #667eea; border-radius: 4px;">
-                    💡 Button format: <strong>CODE Subject</strong> (e.g., CP04 Pumps, TH01 Measurement)<br>
-                    Choose between Flashcards (Q&A for quick recall) or Study Notes (comprehensive learning materials).
+                <h2>📖 Study Topics</h2>
+                <p style="color: #999; font-size: 0.85em; margin-bottom: 20px;">
+                    <span id="notesSubjectsCount">0</span> subjects available
                 </p>
                 <div class="subject-buttons" id="notesSubjectButtonsContainer"></div>
                 <div class="button-group" style="margin-top: 30px;">
@@ -470,7 +461,7 @@
                         <span id="studyModeButtonText">View Notes</span> - <span id="selectedNotesSubjectName">Select Subject</span>
                     </button>
                     <button class="back-home-btn" onclick="app.goHome()" style="flex: 1;">
-                        ← Return to Home
+                        ← Home
                     </button>
                 </div>
             </div>
@@ -482,10 +473,10 @@
                 <div class="notes-list" id="notesListContainer"></div>
                 <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
                     <button class="back-home-btn" onclick="app.goBackToNotesSelection()" style="flex: 1; min-width: 150px;">
-                        ← Back to Topic Selection
+                        ← Back to Topics
                     </button>
                     <button class="back-home-btn" onclick="app.goHome()" style="flex: 1; min-width: 150px;">
-                        ← Return to Home
+                        ← Home
                     </button>
                 </div>
             </div>
@@ -547,7 +538,7 @@
                 </div>
                 <div class="button-group">
                     <button class="back-home-btn" onclick="app.previousCard()">← Previous Card</button>
-                    <button class="back-home-btn" onclick="app.goBackToFlashcardSelection()">← Back to Topic</button>
+                    <button class="back-home-btn" onclick="app.goBackToFlashcardSelection()">← Back to Topics</button>
                     <button class="back-home-btn" onclick="app.goHome()">← Home</button>
                     <button class="btn-primary" onclick="app.nextCard()">Next Card →</button>
                 </div>
@@ -563,7 +554,7 @@
                         📚 Take Another Exam
                     </button>
                     <button class="back-home-btn" onclick="app.goHome()" style="padding: 12px 30px;">
-                        ← Return to Home
+                        ← Home
                     </button>
                 </div>
             </div>
