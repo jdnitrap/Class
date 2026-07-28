@@ -144,6 +144,39 @@ Commit message convention: `Add content: {CODE} {Topic Name}`.
 Pushing to `main` also triggers `.github/workflows/build-content.yml`,
 which rebuilds and re-validates the bundle server-side as a backstop.
 
+## Step 8 — UI buttons are automatic, do not add them manually
+
+**Subject buttons are never hardcoded anywhere in the app.** `router.js`'s
+`renderSubjectSelection()` (exam mode) and `renderNotesSelection()`
+(notes/flashcard mode) both build their button lists dynamically, at
+runtime, from whatever subjects are present in the loaded bundle:
+
+```js
+const subjects = processor.getUniqueQuestionsSubjects(state.allQuestions); // or Notes/Flashcards
+subjects.forEach(subject => { /* create a button */ });
+```
+
+The button's label comes from `processor.getDisplayName()`, which derives
+it from the note/flashcard/question's `contentFile` path -- specifically
+the Tier 3 folder name with underscores turned into spaces. So a folder
+named `CP01_Piping_Valves_and_Actuators` automatically produces a button
+labeled "CP01 Piping Valves and Actuators" with **no additional code, no
+button registry, and no manual step**, as soon as:
+
+1. The subject appears in Tier 2 metadata (`notes-synapses.json` /
+   `flashcards-synapses.json` / `questions-synapses.json`), and
+2. The build (`node scripts/build-content.js`) has run and been committed.
+
+If a new subject doesn't appear as a button after ingestion, the cause is
+almost always one of:
+- The build didn't actually run/commit (check `dist/content-bundle.json`'s
+  `version` field matches the latest commit sha), or
+- GitHub Pages/CDN hasn't finished propagating yet -- wait a minute and
+  hard-refresh (Ctrl+Shift+R), or
+- The subject is genuinely missing from one of the three Tier 2 files.
+
+It is **not** a missing button-creation step -- don't add one.
+
 ---
 
 **The point of this file:** none of the above should require the user to
