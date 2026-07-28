@@ -215,10 +215,24 @@ options:
 
 - `notes-synapses.json`: append one entry per note —
   `{id, subject, title, contentFile}` (add `image`/`imageLabel` only if a
-  diagram is actually supplied).
+  diagram is actually supplied — see "Images" below).
 - `flashcards-synapses.json`: append one entry for the whole new file —
   `{id: <first ID in file>, subject, contentFile, count: <number of cards>}`.
 - `questions-synapses.json`: append one entry — `{subject, contentFile}`.
+
+### Images (optional)
+
+Diagrams/charts for a subject go in an `images/` subfolder next to its
+three content files:
+
+```
+Tier 3: Pathways/{CODE}_{Topic_Name}/images/descriptive-name.svg
+```
+
+Link one to a specific note by adding `image` (the path above) and
+`imageLabel` (a caption) to that note's entry in `notes-synapses.json` —
+the app displays it inline with the note. Only add these fields when a
+real image file is actually supplied; don't invent placeholder images.
 
 ## Step 6 — Build and validate
 
