@@ -30,7 +30,7 @@
   - Absolute scales: Rankine (corresponds to Fahrenheit) and Kelvin (corresponds to Celsius); 0R = 0K = absolute zero, the point of no molecular motion
   - Thermodynamic equations and definitions use absolute temperature scales, not relative ones
 
-## TH02
+## TH02B
 - First Law
   - Conservation of energy: energy is neither created nor destroyed, only converted between forms; energy entering a system equals energy stored in or leaving it
   - Governs the energy conversions in a power plant: heat transfer from core to coolant, coolant to steam, turbine work from steam, heat removal in the condenser, pump work to sustain flow
@@ -56,7 +56,7 @@
   - Entropy (S): a measure of the unavailable energy in a fluid at a given state; specific entropy (s) has units of BTU/lbm-R
 - Improvement Area: equations and symbols
 
-## TH03
+## TH03B
 - States and Phases
   - State: defined by two independent, intensive properties (e.g. pressure and temperature); any property change is a change of state
   - Phase: describes molecular structure -- solid, liquid, vapor/gas, plasma

@@ -128,15 +128,15 @@ Correct Answer: The volume occupied by a unit mass of a substance (the reciproca
 
 Question 31: The First Law of Thermodynamics states that energy:
 Correct Answer: Cannot be created or destroyed, only converted from one form to another
-// TH02
+// TH02B
 
 Question 32: Heat and work are best classified as which type of energy?
 Correct Answer: Transient (energy in transit) forms of energy
-// TH02
+// TH02B
 
 Question 33: Which equation correctly defines enthalpy (H)?
 Correct Answer: H = U + PV
-// TH02
+// TH02B
 
 Question 34: Which piping material is commonly used for water, low-temperature steam, air, and fuel oil due to its low cost, despite being prone to rusting?
 Correct Answer: Low-Carbon Steel
@@ -212,63 +212,63 @@ Correct Answer: Because liquids are relatively incompressible, so pressure has l
 
 Question 52: What is the term for energy a substance possesses due to its position or height relative to a reference point?
 Correct Answer: Potential Energy
-// TH02
+// TH02B
 
 Question 53: What is the term for energy a substance possesses due to its motion?
 Correct Answer: Kinetic Energy
-// TH02
+// TH02B
 
 Question 54: Internal energy is best described as which of the following?
 Correct Answer: The sum of the microscopic energy forms (molecular rotation, vibration, and translation) within a substance
-// TH02
+// TH02B
 
 Question 55: Which equation correctly defines specific enthalpy (h)?
 Correct Answer: h = u + Pv
-// TH02
+// TH02B
 
 Question 56: For a closed system with no change in potential or kinetic energy, the General Energy Equation reduces to which relationship?
 Correct Answer: Change in enthalpy = heat transferred to the system minus work done by the system (delta h = q - w)
-// TH02
+// TH02B
 
 Question 57: Which term describes the rate at which work is done?
 Correct Answer: Power
-// TH02
+// TH02B
 
 Question 58: What is the term for a liquid existing at a temperature below its saturation temperature for a given pressure?
 Correct Answer: Subcooled (or compressed) liquid
-// TH03
+// TH03B
 
 Question 59: What is the term for steam that is 100% vapor at its boiling temperature, with no liquid remaining?
 Correct Answer: Saturated vapor
-// TH03
+// TH03B
 
 Question 60: What is the term for vapor that exists above its boiling (saturation) temperature?
 Correct Answer: Superheated vapor
-// TH03
+// TH03B
 
 Question 61: Heat that changes a substance's phase without changing its temperature is called:
 Correct Answer: Latent heat
-// TH03
+// TH03B
 
 Question 62: What term describes the fraction of vapor present in a wet steam mixture?
 Correct Answer: Steam quality
-// TH03
+// TH03B
 
 Question 63: On a P-T diagram, the point at which the solid, liquid, and gas phases can all exist in equilibrium simultaneously is called:
 Correct Answer: The Triple Point
-// TH03
+// TH03B
 
 Question 64: According to Charles' Law, at constant pressure, the volume of a gas is:
 Correct Answer: Directly proportional to its absolute temperature
-// TH03
+// TH03B
 
 Question 65: According to Boyle's Law, at constant temperature, the volume of a gas is:
 Correct Answer: Inversely proportional to its absolute pressure
-// TH03
+// TH03B
 
 Question 66: Why should the Ideal Gas Law not be used to determine the properties of steam?
 Correct Answer: Steam's behavior is considerably more complex than an ideal gas, so steam tables (experimentally derived data) must be used instead
-// TH03
+// TH03B
 
 Question 67: What does the Second Law of Thermodynamics state about a heat engine operating in a cycle?
 Correct Answer: No engine, actual or ideal, can convert all the heat supplied into work; some heat must always be rejected
