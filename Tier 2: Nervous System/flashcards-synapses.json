@@ -59,6 +59,12 @@
       "subject": "CP01",
       "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_flashcards.md",
       "count": 59
+    },
+    {
+      "id": 292,
+      "subject": "TH03B",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_flashcards.md",
+      "count": 36
     }
   ]
 }

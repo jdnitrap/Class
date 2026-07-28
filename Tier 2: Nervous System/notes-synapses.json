@@ -1031,6 +1031,144 @@
       "subject": "CP01",
       "title": "6.5 VALVE FAILURE MECHANISMS",
       "contentFile": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators/CP01_Piping_Valves_and_Actuators_notes.md"
+    },
+    {
+      "id": 179,
+      "subject": "TH03B",
+      "title": "1.0 INTRODUCTION",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 180,
+      "subject": "TH03B",
+      "title": "2.1/2.2 STATES AND PHASES",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 181,
+      "subject": "TH03B",
+      "title": "3.1/3.2 MOLES AND IDEAL GASES",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 182,
+      "subject": "TH03B",
+      "title": "3.3 CHARLES' LAW",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 183,
+      "subject": "TH03B",
+      "title": "3.4 BOYLE'S LAW",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 184,
+      "subject": "TH03B",
+      "title": "3.5/3.6 COMBINED GAS LAW AND IDEAL GAS LAW",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 185,
+      "subject": "TH03B",
+      "title": "IDEAL GAS LAW APPLICATION",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 186,
+      "subject": "TH03B",
+      "title": "WHY STEAM TABLES INSTEAD OF THE IDEAL GAS LAW",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 187,
+      "subject": "TH03B",
+      "title": "4.1 P-T DIAGRAM",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 188,
+      "subject": "TH03B",
+      "title": "4.2 P-v DIAGRAM AND THE VAPOR DOME",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 189,
+      "subject": "TH03B",
+      "title": "QUALITY, MOISTURE CONTENT, AND VOID FRACTION",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 190,
+      "subject": "TH03B",
+      "title": "'4.3 T-h DIAGRAM: FIVE STATES OF WATER (SUBCOOLED TO SATURATED LIQUID)'",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 191,
+      "subject": "TH03B",
+      "title": "'T-h DIAGRAM: LATENT HEAT AND SATURATED VAPOR TO SUPERHEATED VAPOR'",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 192,
+      "subject": "TH03B",
+      "title": "4.4 T-s DIAGRAM",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 193,
+      "subject": "TH03B",
+      "title": "5.0 WATER PROPERTY TABLES OVERVIEW",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 194,
+      "subject": "TH03B",
+      "title": "'5.1 SATURATED STEAM: TEMPERATURE TABLE'",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 195,
+      "subject": "TH03B",
+      "title": "'5.2 SATURATED STEAM: PRESSURE TABLE'",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 196,
+      "subject": "TH03B",
+      "title": "5.3 SUPERHEATED STEAM TABLES",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 197,
+      "subject": "TH03B",
+      "title": "5.4 CALCULATING HEAT CAPACITY FROM STEAM TABLES",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 198,
+      "subject": "TH03B",
+      "title": "5.5 COMPRESSED/SUBCOOLED LIQUID TABLES",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 199,
+      "subject": "TH03B",
+      "title": "6.0 THE MOLLIER DIAGRAM",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 200,
+      "subject": "TH03B",
+      "title": "'7.0 OPERATING EXPERIENCE: FORT CALHOUN RCP CAVITATION (#172086)'",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
+    },
+    {
+      "id": 201,
+      "subject": "TH03B",
+      "title": "8.0 SUMMARY",
+      "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_notes.md"
     }
   ]
 }
