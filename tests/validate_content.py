@@ -96,11 +96,60 @@ def extract_section(body, heading):
 
 
 # ---------------------------------------------------------------------------
+# Check 0: Duplicate detection -- catches accidental re-ingestion even if
+# the CONTENT_INGESTION.md Step 0 pre-check was somehow skipped.
+# ---------------------------------------------------------------------------
+
+def check_no_duplicates():
+    print("\n[1/5] Checking for accidentally duplicated content...")
+    registry_path = TIER2 / "ingested-sources.json"
+    seen_file_hashes = {}
+    if registry_path.exists():
+        registry = json.loads(registry_path.read_text(encoding="utf-8"))
+        sources = registry.get("sources", [])
+
+        for src in sources:
+            h = src.get("file_sha256")
+            if h and h in seen_file_hashes:
+                fail(f"Duplicate source: '{src['filename']}' has the same file_sha256 as "
+                     f"'{seen_file_hashes[h]}' -- the same document appears to have been "
+                     f"ingested twice")
+            elif h:
+                seen_file_hashes[h] = src["filename"]
+
+        seen_content_hashes = {}
+        for src in sources:
+            h = src.get("content_sha256")
+            if h and h in seen_content_hashes:
+                fail(f"Duplicate source: '{src['filename']}' has the same content_sha256 as "
+                     f"'{seen_content_hashes[h]}' -- identical content ingested under two names")
+            elif h:
+                seen_content_hashes[h] = src["filename"]
+
+    # A subject code must map to exactly one Tier 3 folder. If it maps to
+    # two different folders, that's what an accidental duplicate re-upload
+    # under a slightly different folder name would look like.
+    with open(TIER2 / "notes-synapses.json", encoding="utf-8") as f:
+        notes_refs = json.load(f)["notes"]
+    subject_to_folders = {}
+    for ref in notes_refs:
+        folder = str(Path(ref["contentFile"]).parent)
+        subject_to_folders.setdefault(ref["subject"], set()).add(folder)
+    for subject, folders in subject_to_folders.items():
+        if len(folders) > 1:
+            fail(f"Subject '{subject}' maps to multiple Tier 3 folders: {sorted(folders)} "
+                 f"-- likely an accidental duplicate ingestion under a different folder name")
+
+    print(f"  Checked {len(seen_file_hashes)} registered sources and "
+          f"{len(subject_to_folders)} subjects for duplicates.")
+
+
+# ---------------------------------------------------------------------------
 # Check 1: Notes
 # ---------------------------------------------------------------------------
 
 def check_notes():
-    print("\n[1/4] Checking notes (Tier 2 <-> Tier 3 consistency)...")
+    print("\n[2/5] Checking notes (Tier 2 <-> Tier 3 consistency)...")
     with open(TIER2 / "notes-synapses.json", encoding="utf-8") as f:
         notes_refs = json.load(f)["notes"]
 
@@ -134,7 +183,7 @@ def check_notes():
 # ---------------------------------------------------------------------------
 
 def check_flashcards():
-    print("\n[2/4] Checking flashcards...")
+    print("\n[3/5] Checking flashcards...")
     with open(TIER2 / "flashcards-synapses.json", encoding="utf-8") as f:
         fc_refs = json.load(f)["flashcards"]
 
@@ -172,7 +221,7 @@ def check_flashcards():
 # ---------------------------------------------------------------------------
 
 def check_questions():
-    print("\n[3/4] Checking questions...")
+    print("\n[4/5] Checking questions...")
     with open(TIER2 / "questions-synapses.json", encoding="utf-8") as f:
         q_refs = json.load(f)["questions"]
 
@@ -218,7 +267,7 @@ def check_questions():
 # ---------------------------------------------------------------------------
 
 def check_exam_grading(all_questions):
-    print("\n[4/4] Simulating full exam grading end-to-end...")
+    print("\n[5/5] Simulating full exam grading end-to-end...")
     subjects = sorted(set(q["subject"] for q in all_questions if q["subject"]))
     if not subjects:
         fail("Exam simulation: no subjects found at all -- cannot simulate")
@@ -256,6 +305,7 @@ def main():
     print("GoBook content validation suite (YAML frontmatter format)")
     print("=" * 70)
 
+    check_no_duplicates()
     check_notes()
     check_flashcards()
     all_questions = check_questions()

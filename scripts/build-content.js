@@ -72,6 +72,46 @@ function extractSection(body, heading) {
     return m ? m[1].trim() : null;
 }
 
+// ---- Duplicate detection (mirrors tests/validate_content.py) ----
+
+function checkNoDuplicates(notesRefs) {
+    const registryPath = path.join(TIER2, 'ingested-sources.json');
+    if (fs.existsSync(registryPath)) {
+        const registry = JSON.parse(fs.readFileSync(registryPath, 'utf-8'));
+        const sources = registry.sources || [];
+        const seenFile = new Map();
+        const seenContent = new Map();
+        for (const src of sources) {
+            if (src.file_sha256) {
+                if (seenFile.has(src.file_sha256)) {
+                    fail(`Duplicate source: '${src.filename}' has the same file_sha256 as '${seenFile.get(src.file_sha256)}' -- ingested twice`);
+                } else {
+                    seenFile.set(src.file_sha256, src.filename);
+                }
+            }
+            if (src.content_sha256) {
+                if (seenContent.has(src.content_sha256)) {
+                    fail(`Duplicate source: '${src.filename}' has the same content_sha256 as '${seenContent.get(src.content_sha256)}' -- identical content ingested twice`);
+                } else {
+                    seenContent.set(src.content_sha256, src.filename);
+                }
+            }
+        }
+    }
+
+    const subjectToFolders = new Map();
+    for (const ref of notesRefs) {
+        const folder = path.dirname(ref.contentFile);
+        if (!subjectToFolders.has(ref.subject)) subjectToFolders.set(ref.subject, new Set());
+        subjectToFolders.get(ref.subject).add(folder);
+    }
+    for (const [subject, folders] of subjectToFolders) {
+        if (folders.size > 1) {
+            fail(`Subject '${subject}' maps to multiple Tier 3 folders: ${[...folders].join(', ')} -- likely an accidental duplicate ingestion`);
+        }
+    }
+}
+
 // ---- Notes -----------------------------------------------------------
 
 function buildNotes() {
@@ -218,6 +258,7 @@ function getVersion() {
 function main() {
     console.log('Building content bundle...');
     const notes = buildNotes();
+    checkNoDuplicates(readJSON(path.join(TIER2, 'notes-synapses.json')).notes);
     const flashcards = buildFlashcards();
     const questions = buildQuestions();
 

@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "filename": "BNT-CP01Br09c_Piping_Valves_and_Actuators-1.docx",
+      "file_sha256": "19c74b54bf10414d3519a6a6f9fe80b80e9210033a87a18d9f6f2763d8ad6c9c",
+      "content_sha256": "a70e61de9ef7c1de1fa6a58392af2eea45b1483e1002aad05ca0bf5904102f42",
+      "lecture_number": "CP01B",
+      "revision": "09c",
+      "subject_code": "CP01",
+      "folder": "Tier 3: Pathways/CP01_Piping_Valves_and_Actuators",
+      "ingested_date": "2026-07-28"
+    }
+  ]
+}

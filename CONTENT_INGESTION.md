@@ -13,6 +13,40 @@ happens — don't rely on chat memory across sessions.
 > the build loudly instead of silently degrading in the browser. This
 > replaces the previous version of this file, which described the old format.
 
+## Step 0 — Check for a duplicate upload FIRST (before anything else)
+
+Before extracting or generating anything, check the uploaded file against
+`Tier 2: Nervous System/ingested-sources.json`. This is a deliberately
+"dumb," mechanical check -- no judgment calls, just hash/number comparison
+-- specifically to catch accidental re-uploads of the same lecture:
+
+1. Compute the SHA-256 of the raw uploaded file's bytes.
+2. Compare it against every `file_sha256` in `ingested-sources.json`.
+   - **Exact match** -> this exact file was already ingested. Stop and
+     tell the user which subject it already became and when, and ask
+     whether they meant to re-upload it (e.g. to force a rebuild) before
+     doing anything else. Do not silently proceed.
+3. If no exact file match, extract the text and compute its SHA-256 too,
+   compared against `content_sha256` in the registry.
+   - **Match** -> the file was re-saved/re-exported but the content is
+     identical. Same as above -- stop and confirm with the user.
+4. Also check the lecture's own declared "Number" and "Revision" fields
+   (Duke lecture docs state these in their header table, e.g. "Number:
+   CP01B, Revision: 09c") against `lecture_number`/`revision` in the
+   registry.
+   - **Same lecture_number, different revision** -> this is a genuine
+     update to an existing lecture, not really a duplicate. Tell the user
+     it looks like a newer revision of an existing subject and ask
+     whether to update that subject's content in place rather than create
+     a second, duplicate subject folder.
+
+Only proceed to Step 1 once none of these checks flag a match, or the
+user has explicitly confirmed how they want to proceed.
+
+**After successfully ingesting a new lecture (Step 7), always append its
+fingerprint to `ingested-sources.json`** -- this is what makes the check
+possible for every future upload, not just the one you're doing now.
+
 ## Step 1 — Identify the subject
 
 - Match the lecture's topic/course number against existing subject codes in
@@ -139,6 +173,11 @@ content, don't work around the script.**
 a quick local sanity pass.
 
 ## Step 7 — Commit and push
+
+Also append this upload's fingerprint to
+`Tier 2: Nervous System/ingested-sources.json` in the same commit (see
+Step 0) -- this is the only thing that lets the duplicate check work for
+future uploads.
 
 Commit message convention: `Add content: {CODE} {Topic Name}`.
 Pushing to `main` also triggers `.github/workflows/build-content.yml`,
