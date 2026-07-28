@@ -19,6 +19,16 @@
       "subject_code": "TH03B",
       "folder": "Tier 3: Pathways/TH03B_Steam_Properties",
       "ingested_date": "2026-07-28"
+    },
+    {
+      "filename": "BNT-TH02Br05b-Basic_Energy_Concepts.docx",
+      "file_sha256": "ab007e41403448532fe852e5d6712ec08a8286175454a77a7f453ad06728cd0d",
+      "content_sha256": "2140512b932e25506745a9e231bcdc9736908b1bbb9e0265d1228b6685952637",
+      "lecture_number": "TH02B",
+      "revision": "05",
+      "subject_code": "TH02B",
+      "folder": "Tier 3: Pathways/TH02B_Basic_Energy_Concepts",
+      "ingested_date": "2026-07-28"
     }
   ]
 }

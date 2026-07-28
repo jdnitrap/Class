@@ -100,21 +100,12 @@ Actual learning content organized by topic in plain text files. Pathways represe
 **Structure:**
 ```
 Tier 3: Pathways/
-├── CP01_Piping/
-│   ├── CP01_Piping_notes.txt
-│   ├── CP01_Piping_flashcards.txt
-│   └── CP01_Piping_questions.txt
+├── CP01_Piping_Valves_and_Actuators/
 ├── CP04_Pumps/
-│   ├── CP04_Pumps_notes.txt
-│   ├── CP04_Pumps_flashcards.txt
-│   └── CP04_Pumps_questions.txt
 ├── CP06_Heat_Exchangers/
-│   ├── CP06_Heat_Exchangers_notes.txt
-│   ├── CP06_Heat_Exchangers_flashcards.txt
-│   └── CP06_Heat_Exchangers_questions.txt
 ├── TH01_Measurement/
-├── TH02_Thermodynamics_I/
-├── TH03_Thermodynamics_II/
+├── TH02B_Basic_Energy_Concepts/
+├── TH03B_Steam_Properties/
 ├── TH04_Thermodynamics_III/
 ├── TH05_Thermodynamic_Cycles/
 ├── TH06B_Fluid_Flow/

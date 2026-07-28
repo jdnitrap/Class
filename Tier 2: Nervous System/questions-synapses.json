@@ -5,10 +5,6 @@
       "contentFile": "Tier 3: Pathways/TH01_Measurement/TH01_Measurement_questions.md"
     },
     {
-      "subject": "TH02",
-      "contentFile": "Tier 3: Pathways/TH02_Thermodynamics_I/TH02_Thermodynamics_I_questions.md"
-    },
-    {
       "subject": "TH04",
       "contentFile": "Tier 3: Pathways/TH04_Thermodynamics_III/TH04_Thermodynamics_III_questions.md"
     },
@@ -39,6 +35,10 @@
     {
       "subject": "TH03B",
       "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_questions.md"
+    },
+    {
+      "subject": "TH02B",
+      "contentFile": "Tier 3: Pathways/TH02B_Basic_Energy_Concepts/TH02B_Basic_Energy_Concepts_questions.md"
     }
   ]
 }

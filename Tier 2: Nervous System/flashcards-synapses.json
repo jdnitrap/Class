@@ -7,12 +7,6 @@
       "count": 15
     },
     {
-      "id": 41,
-      "subject": "TH02",
-      "contentFile": "Tier 3: Pathways/TH02_Thermodynamics_I/TH02_Thermodynamics_I_flashcards.md",
-      "count": 15
-    },
-    {
       "id": 71,
       "subject": "TH04",
       "contentFile": "Tier 3: Pathways/TH04_Thermodynamics_III/TH04_Thermodynamics_III_flashcards.md",
@@ -59,6 +53,12 @@
       "subject": "TH03B",
       "contentFile": "Tier 3: Pathways/TH03B_Steam_Properties/TH03B_Steam_Properties_flashcards.md",
       "count": 36
+    },
+    {
+      "id": 328,
+      "subject": "TH02B",
+      "contentFile": "Tier 3: Pathways/TH02B_Basic_Energy_Concepts/TH02B_Basic_Energy_Concepts_flashcards.md",
+      "count": 26
     }
   ]
 }
