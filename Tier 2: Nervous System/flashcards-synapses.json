@@ -1,12 +1,6 @@
 {
   "flashcards": [
     {
-      "id": 1,
-      "subject": "CP01",
-      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_flashcards.md",
-      "count": 25
-    },
-    {
       "id": 26,
       "subject": "TH01",
       "contentFile": "Tier 3: Pathways/TH01_Measurement/TH01_Measurement_flashcards.md",

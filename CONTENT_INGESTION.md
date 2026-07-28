@@ -16,7 +16,7 @@ happens — don't rely on chat memory across sessions.
 ## Step 1 — Identify the subject
 
 - Match the lecture's topic/course number against existing subject codes in
-  `Tier 2: Nervous System/notes-synapses.json` (currently: CP01, CP04, CP06,
+  `Tier 2: Nervous System/notes-synapses.json` (currently: CP04, CP06,
   TH01, TH02, TH03, TH04, TH05, TH06B, TH07B).
 - If it clearly extends an existing subject, use that code.
 - If it's a new topic, pick the next unused number under the matching prefix

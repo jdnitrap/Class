@@ -1,40 +1,6 @@
 {
   "notes": [
     {
-      "id": 1,
-      "subject": "CP01",
-      "title": "Piping Fundamentals and Design",
-      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_notes.md"
-    },
-    {
-      "id": 2,
-      "subject": "CP01",
-      "title": "Valve Functions and Basic Construction",
-      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_notes.md",
-      "image": "assets/images/valve-types.svg",
-      "imageLabel": "Common Valve Types and Applications"
-    },
-    {
-      "id": 3,
-      "subject": "CP01",
-      "title": "Pressure Types and Relationships",
-      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_notes.md",
-      "image": "assets/images/pressure-types.svg",
-      "imageLabel": "Types of Pressure and Relationships"
-    },
-    {
-      "id": 4,
-      "subject": "CP01",
-      "title": "Valve Operational Issues and Prevention",
-      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_notes.md"
-    },
-    {
-      "id": 5,
-      "subject": "CP01",
-      "title": "Valve Actuators and Position Verification",
-      "contentFile": "Tier 3: Pathways/CP01_Piping/CP01_Piping_notes.md"
-    },
-    {
       "id": 114,
       "subject": "CP04",
       "title": "Definition: Pumps and Flow Resistance",
