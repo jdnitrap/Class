@@ -140,6 +140,10 @@ window.app = {
 
     async nextCard() {
         await flashcard.nextCard(state);
+    },
+
+    async rateCard(rating) {
+        await flashcard.rateCard(state, rating);
     }
 };
 

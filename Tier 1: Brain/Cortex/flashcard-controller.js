@@ -5,6 +5,28 @@ import { helpers } from '../Senses/helpers.js';
 import { router } from './router.js';
 
 export const flashcard = {
+    // Lower-rated (harder) cards get a higher weight so they tend to sort
+    // earlier in the shuffled deck. Unrated cards get a neutral weight so
+    // new content still gets seen without dominating the session.
+    ratingToWeight(rating) {
+        if (!rating) return 3;
+        return 6 - rating; // rating 1 (hardest) -> weight 5, rating 5 (easiest) -> weight 1
+    },
+
+    // Efraimidis-Spirakis weighted shuffle: gives a full random permutation
+    // where higher-weight (harder/unrated) cards are statistically more
+    // likely to appear earlier, without ever fully excluding easy cards.
+    weightedShuffle(cards, ratings) {
+        return cards
+            .map(card => {
+                const weight = this.ratingToWeight(ratings[card.id]);
+                const key = Math.pow(Math.random(), 1 / weight);
+                return { card, key };
+            })
+            .sort((a, b) => b.key - a.key)
+            .map(entry => entry.card);
+    },
+
     extractFrontBack(content) {
         const lines = content.split('\n').filter(l => l.trim());
         let front = '';
@@ -46,11 +68,20 @@ export const flashcard = {
 
     async startFlashcards(state) {
         const flashcardsForSubject = processor.filterFlashcardsBySubject(state.allFlashcards, state.currentNotesSubject);
-        state.answers = flashcardsForSubject;
+        state.answers = this.weightedShuffle(flashcardsForSubject, state.flashcardRatings);
         state.currentCardIndex = 0;
         state.cardFlipped = false;
         await this.showFlashcard(state);
         router.showScreen('flashcardScreen');
+    },
+
+    // Called when the user taps a 1-5 difficulty rating after flipping a
+    // card. Records the rating (feeds future shuffles) and advances.
+    async rateCard(state, rating) {
+        const card = state.answers[state.currentCardIndex];
+        if (!card) return;
+        state.saveFlashcardRating(card.id, rating);
+        await this.nextCard(state);
     },
 
     async showFlashcard(state) {
@@ -67,6 +98,8 @@ export const flashcard = {
         // Use front/back properties from markdown loader, fallback to content parsing for legacy format
         const front = card.front || (card.content ? this.extractFrontBack(card.content).front : 'Flashcard');
         document.getElementById('cardContent').textContent = front;
+        const ratingRow = document.getElementById('cardRatingRow');
+        if (ratingRow) ratingRow.classList.add('hidden');
     },
 
     flipCard(state) {
@@ -83,6 +116,8 @@ export const flashcard = {
         } else {
             document.getElementById('cardContent').textContent = front;
         }
+        const ratingRow = document.getElementById('cardRatingRow');
+        if (ratingRow) ratingRow.classList.toggle('hidden', !state.cardFlipped);
     },
 
     async previousCard(state) {
