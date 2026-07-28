@@ -196,7 +196,7 @@
         }
 
         .question-info {
-            color: #999;
+            color: #4d4d4d;
             margin-bottom: 20px;
             font-size: 0.9em;
         }
@@ -317,7 +317,7 @@
         .note-image-label {
             text-align: center;
             font-size: 0.9em;
-            color: #999;
+            color: #4d4d4d;
             margin-top: 10px;
         }
 
@@ -354,7 +354,7 @@
             <!-- Home Screen -->
             <div id="homeScreen" class="content home-screen">
                 <h2>📚 Welcome to Your Learning Hub</h2>
-                <p style="color: #666; font-size: 0.9em; margin-bottom: 25px; text-align: center;">
+                <p style="color: #333; font-size: 0.9em; margin-bottom: 25px; text-align: center;">
                     Choose how you want to study <span id="homeSubjectCount">10</span> subjects
                 </p>
                 <div class="mode-buttons">
@@ -373,13 +373,13 @@
             <!-- Exam Configuration Screen -->
             <div id="examConfigScreen" class="content subject-screen hidden">
                 <h2>📝 Exam Mode</h2>
-                <p style="color: #999; font-size: 0.85em; margin-bottom: 20px;">
+                <p style="color: #4d4d4d; font-size: 0.85em; margin-bottom: 20px;">
                     Choose how you want to be tested
                 </p>
 
                 <div style="margin-bottom: 30px; padding: 20px; background: rgba(102, 126, 234, 0.05); border: 2px solid #667eea; border-radius: 8px;">
                     <h3 style="margin-top: 0; color: #667eea;">📚 Topic-Specific Exams</h3>
-                    <p style="color: #666; font-size: 0.9em; margin-bottom: 15px;">
+                    <p style="color: #333; font-size: 0.9em; margin-bottom: 15px;">
                         Pick a subject and how many questions you want
                     </p>
                     <button class="btn-primary" onclick="app.startTopicExamSelection()" style="width: 100%; padding: 15px; font-size: 1em; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important; display: block !important; visibility: visible !important;">
@@ -389,7 +389,7 @@
 
                 <div style="margin-bottom: 30px; padding: 20px; background: rgba(118, 75, 162, 0.05); border: 2px solid #764ba2; border-radius: 8px;">
                     <h3 style="margin-top: 0; color: #764ba2;">🎯 Comprehensive Exam</h3>
-                    <p style="color: #666; font-size: 0.9em; margin-bottom: 15px;">
+                    <p style="color: #333; font-size: 0.9em; margin-bottom: 15px;">
                         Random questions from every subject -- good for a full review.
                     </p>
                     <label for="comprehensiveQuestionCount" style="color: #000; font-weight: bold; display: block; margin-bottom: 10px;">
@@ -414,7 +414,7 @@
             <!-- Subject Selection Screen -->
             <div id="subjectScreen" class="content subject-screen hidden">
                 <h2>📚 Exam Topics</h2>
-                <p style="color: #999; font-size: 0.85em; margin-bottom: 20px;">
+                <p style="color: #4d4d4d; font-size: 0.85em; margin-bottom: 20px;">
                     <span id="questionsCount">0</span> questions across <span id="subjectsCount">0</span> subjects
                 </p>
                 <div class="subject-buttons" id="subjectButtonsContainer"></div>
@@ -444,7 +444,7 @@
             <!-- Notes Subject Selection Screen -->
             <div id="notesSelectScreen" class="content subject-screen hidden">
                 <h2>📖 Study Topics</h2>
-                <p style="color: #999; font-size: 0.85em; margin-bottom: 20px;">
+                <p style="color: #4d4d4d; font-size: 0.85em; margin-bottom: 20px;">
                     <span id="notesSubjectsCount">0</span> subjects available
                 </p>
                 <div class="subject-buttons" id="notesSubjectButtonsContainer"></div>
@@ -461,7 +461,7 @@
             <!-- Notes View Screen -->
             <div id="notesScreen" class="content hidden">
                 <h3 style="margin-bottom: 20px;"><span id="notesViewTitle">Notes</span></h3>
-                <p style="color: #666; margin-bottom: 20px;"><span id="notesCountDisplay">0</span> notes available for review</p>
+                <p style="color: #333; margin-bottom: 20px;"><span id="notesCountDisplay">0</span> notes available for review</p>
                 <div class="notes-list" id="notesListContainer"></div>
                 <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
                     <button class="back-home-btn" onclick="app.goBackToNotesSelection()" style="flex: 1; min-width: 150px;">
@@ -516,10 +516,10 @@
                     " onclick="app.flipCard()">
                         <span id="cardContent">Click to flip</span>
                     </div>
-                    <p style="margin-top: 10px; color: #999; font-size: 0.9em;">Click card to flip</p>
+                    <p style="margin-top: 10px; color: #4d4d4d; font-size: 0.9em;">Click card to flip</p>
                 </div>
                 <div id="cardRatingRow" class="hidden" style="text-align: center; margin-bottom: 20px;">
-                    <p style="color: #666; font-size: 0.9em; margin-bottom: 8px;">How well did you know this?</p>
+                    <p style="color: #333; font-size: 0.9em; margin-bottom: 8px;">How well did you know this?</p>
                     <div style="display: flex; justify-content: center; gap: 8px;">
                         <button class="back-home-btn" onclick="app.rateCard(1)" title="Didn't know it">1 – Again</button>
                         <button class="back-home-btn" onclick="app.rateCard(2)" title="Struggled">2 – Hard</button>
