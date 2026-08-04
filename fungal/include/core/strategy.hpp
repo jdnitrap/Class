@@ -7,8 +7,8 @@ namespace fungal::core {
 
 // Result of applying a strategy to a code snippet
 struct StrategyResult {
-    bool claim;                  // what did the strategy claim? (bug/no bug, verify/unverify)
-    double strategy_confidence;  // local confidence from this strategy (0-1)
+    bool claim;                  // what did the strategy claim? (bug/no bug)
+    double strategy_confidence;  // INTERNAL ONLY: strategy-local confidence; self-model owns all probabilities
     std::string reasoning;       // why did it make this claim?
     int energy_cost;             // energy consumed by this strategy
 };

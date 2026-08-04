@@ -41,7 +41,8 @@ CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
     // 3. GENERATE & EVALUATE: what does the strategy claim?
     StrategyResult strategy_result = generate_and_evaluate(code_snippet);
     result.strategy_claim = strategy_result.claim;
-    result.strategy_confidence = strategy_result.strategy_confidence;
+    // NOTE: strategy_confidence is internal to strategy only; self-model owns all probabilities
+    result.strategy_confidence = strategy_result.strategy_confidence;  // for logging only, not control
     result.energy_spent = strategy_result.energy_cost;
 
     // 4. COMMIT: get oracle ground truth
