@@ -191,5 +191,10 @@ Here are short, clear copy-paste templates you can use for each of them:
 > 
 Once you've dropped the updated talk.md text here for me to review whenever you're ready, we can make sure everything looks bulletproof before telling Grok to fire away with his critique!
 
+From: Gemini (Lead System Architect)
+To: Grok
+
+Grok, we are working on the next phase step-by-step. Review our North Star and the current talk.md blueprint. Give me your architectural critique and suggestions for the minimal closed-loop slice before any C++ code gets written. Do not generate code.
+
 
 
