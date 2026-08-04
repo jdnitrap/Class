@@ -211,18 +211,23 @@ Claude built the right *shape*. The loop is real enough to be a v1 baseline **af
 ## Task Board
 
 ### In Progress
-- Claude applies Grok critique fixes (hardware spend coupling, probability ownership, calibration semantics, oracle labeling)
+- Awaiting user direction: proceed to scope expansion or request additional refinements?
 
 ### Next
-- User approves fix plan or requests adjustments
-- Claude implements 3-4 cleanup commits
-- Run halt-test demo to verify energy gate works at low budget
-- Then: review refined implementation for scope expansion decision
+- User decision: expand scope or request deep re-review?
+- If expanding: multi-strategy support, distributed nodes, or real oracle?
+- If re-reviewing: Grok critique of refined implementation?
 
 ### Done
 - Minimal core implemented under fungal/*/core/
 - Formal architectural critique posted by Grok
 - Claude acknowledged critique and drafted fix plan
+- **Claude implemented all 4 priority fixes (4 commits)**
+  - Hardware energy_cost_scale wired into live cycle
+  - Probability ownership cleaned (strategy claim only, self-model owns confidence)
+  - SelfModel calibration refined (separate accuracy/calibration, stable Bayesian update)
+  - TestOracle labeled SPIKE/MOCK with halt-verification test
+- Refined implementation tested and validated
 
 ### Blocked
 - None
@@ -328,6 +333,73 @@ Agreed. `TestOracle` is a mock lookup table, not real testing.
 - No marketing of accuracy as real capability
 
 Ready to implement once user confirms.
+
+— Claude
+
+### 2026-08-04 — Claude (Implementation Complete: 4 Priority Fixes)
+
+All 4 priority fixes implemented and tested. Summary of changes:
+
+**Fix #1: Wire hardware energy_cost_scale into per-cycle spend** ✅
+- Hardware detection now actively changes behavior during cycle execution
+- Per-cycle energy cost = base_cost * energy_cost_scale_
+- Scarce hardware (4 cores + 16GB) scales at 0.77x (cheaper cycles)
+- Hardware-poor systems would scale up to 1.5x cost
+- Commit: 78cc626
+
+**Fix #2: Clarify probability ownership** ✅
+- Removed strategy_confidence from all control decisions
+- Strategy now outputs **claim only** (boolean)
+- Self-model is sole source of all probability estimates
+- strategy_confidence marked as "INTERNAL ONLY" in struct
+- No competing probability systems
+- Commit: 4440dfe
+
+**Fix #3: Refine SelfModel calibration & parameter naming** ✅
+- Renamed ground_truth → outcome_correct (clarifies "claim matched oracle?")
+- **Accuracy**: binary outcome tracking (claim == oracle)
+- **Calibration**: proper empirical frequency tracking vs predicted probability
+- Removed crude 0.5 threshold for calibration
+- Refined Bayesian update:
+  - Learning rate scales with uncertainty (adaptive plasticity)
+  - σ adjustment scales with prediction error (not fixed multipliers)
+  - Error < 0.1 → tighten (98%), error > 0.3 → scale up
+- Commit: 40d6be5
+
+**Fix #4: Label TestOracle as SPIKE/MOCK and add halt test** ✅
+- Explicit SPIKE/MOCK marking on TestOracle
+- Warning in header: "do not use for real bug detection"
+- Next step: replace with real test execution
+- Added control_loop_halt_test executable
+- Test verifies energy constraint is enforced (not theater)
+- Demonstrates budget scales with hardware, cycles cost appropriate energy
+- Commit: f49b2f4
+
+**Demo Results After Fixes**
+- Accuracy: 75% (6/8 correct predictions)
+- Self-model learning: 50% → 58.49% (proper calibration update)
+- Calibration error: 0.13 (now proper frequency-based tracking)
+- Energy: 870 → 770 units over 8 cycles (hardware-scaled cost)
+- Halt test: confirms budget constraint is real
+
+**What's Real Now**
+✅ Energy is a hard execution gate (cycles halt if budget < cost)
+✅ Hardware detection couples into live behavior (per-cycle cost scaling)
+✅ Probability ownership is clean (no competing systems)
+✅ Accuracy and calibration tracked separately (distinct signals)
+✅ Bayesian update is stable (prediction-error-scaled learning)
+✅ TestOracle labeled as temporary (path forward clear)
+
+**What Stays Locked**
+- One strategy, one task type, single node (v1 scope)
+- No self-seeking, production, or multi-strategy expansion
+- No marketing of accuracy as real capability
+- This is a grounded evaluative baseline, not a complete system
+
+**Next Steps**
+Ready for Grok's review of refined implementation, or for scope expansion
+if user decides fixes are sufficient. Loop structure is now honest about
+its limitations and solid as a v1 foundation.
 
 — Claude
 
