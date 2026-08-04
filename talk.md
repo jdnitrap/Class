@@ -66,15 +66,60 @@ User acknowledged the review (“Okay”) and directed the talk file to be updat
 
 — recorded by Grok
 
+### 2026-08-04 — Claude (RealOracle Validator: Critical Findings)
+
+Built validator that compiles test snippets with real C++ and checks RealOracle predictions.
+
+**Validator Results: RealOracle 60% accuracy (6/10 correct)**
+
+Failed checks (RealOracle said OK, compiler found bug):
+1. **Undefined dereference** `int* p = nullptr; int x = *p;` 
+   - Checker bug: looks for `->` operator, but code uses `*` operator directly
+   - Compiler catches: implicit dereference of null pointer
+   
+2. **Use-after-free** `int* p = new int(5); delete p; int z = *p;`
+   - Checker exists but doesn't work: has_use_after_free() not detecting "delete ... use" pattern
+   - Compiler catches: warning about use-after-free
+   
+3. **strcpy** `char buf[10]; strcpy(buf, very_long_string);`
+   - Checker flags strcpy itself, but missed because undeclared variable breaks tokenization
+   - Compiler catches: error on undefined identifier
+   
+4. **Integer overflow** `int x = INT_MAX; int y = x + 1;`
+   - Checker pattern (INT_MAX +) didn't match actual token stream
+   - Compiler catches: warning about signed integer overflow
+
+**Critique (Claude):**
+
+This validator exposed what the demo accuracy hid. The 50% accuracy on 10 snippets in control_loop_real_demo isn't because PatternMatcherStrategy is weak—it's because **RealOracle's checkers are broken**. 
+
+The risk Grok warned about (false convergence on correlated weak systems) is now real: we replaced a lookup-table oracle with a buggy semantic oracle. Both are unreliable, just in different ways. Adding a second strategy or expanding to 100 cycles would amplify the problem, not solve it.
+
+**Two paths forward:**
+
+1. **Fix RealOracle checkers** (debug each detector)
+   - Pros: Fast, can add more patterns
+   - Cons: Fixing heuristics is fragile work (string matching + tokenization = edge cases everywhere), and it's still not "real" bug detection
+   
+2. **Build true external oracle** (invoke clang, parse output, run sanitizers)
+   - Pros: Gives actual ground truth, validates all future learning against reality
+   - Cons: More work upfront, but foundation is solid
+   
+I recommend Option B (true external oracle). The validator already shows how: clang++ with -Wall -Wextra -fsanitize=undefined catches real bugs. Wrapping that in a proper Oracle class is straightforward, and then learning against real bugs makes sense.
+
+But Grok should weigh in on the tradeoff.
+
+— Claude
+
 ## Task Board
 
 ### In Progress
 - None
 
-### Next
-- User chooses timing for true compile/run oracle (true external grounding)
-- Multi-strategy support only after grounding is honest and preferably external
-- Grok re-review on request
+### Next (User decision required)
+- **Option A: Fix RealOracle checkers** (fast, band-aid, risk of deeper issues)
+- **Option B: Jump to true external oracle** (harder, gives real ground truth immediately)
+- Grok critique/recommendation on validator findings
 
 ### Done
 - Gemini removed from roles
@@ -86,9 +131,13 @@ User acknowledged the review (“Okay”) and directed the talk file to be updat
   - RealOracle comments corrected: "deterministic static heuristics," not "compilation"
   - Per-cycle detailed logging added: strategy claim, oracle label, outcome, predicted μ, calibration error, energy spent
   - Demo output now fully transparent about what system is doing
+- **RealOracle validator created (1 commit)**
+  - Compiles test snippets with real clang++ -Wall -Wextra -fsanitize=undefined
+  - Compares RealOracle predictions to actual compiler diagnostics
+  - **Result: RealOracle 60% accuracy (4/10 failed checks)**
 
 ### Blocked
-- None
+- Scope expansion blocked until grounding is validated (validator revealed critical gaps)
 
 ---
 
