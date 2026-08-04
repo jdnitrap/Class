@@ -9,7 +9,8 @@ using namespace fungal::core;
 int main() {
     std::cout << "=== Fungal v1 Control Loop with REAL Oracle ===" << std::endl << std::endl;
 
-    // Create REAL oracle (actual semantic checking, not lookup table)
+    // Create REAL oracle (deterministic static heuristics, not actual compilation)
+    // Better grounded than TestOracle but still pattern-based, not true external test
     auto oracle = std::make_shared<RealOracle>();
 
     // Create strategy
@@ -44,40 +45,48 @@ int main() {
 
     std::cout << "Running " << test_snippets.size() << " test cycles with REAL oracle..." << std::endl << std::endl;
 
-    std::cout << std::left << std::setw(50) << "Code Snippet"
-              << std::setw(15) << "Real Verdict"
-              << std::setw(15) << "Strategy Says"
-              << std::setw(12) << "Correct"
-              << std::setw(10) << "Budget" << std::endl;
-    std::cout << std::string(102, '-') << std::endl;
-
     auto results = loop.run_cycles(test_snippets);
+    SelfModel& self_model = loop.self_model();
 
     int real_bugs = 0;
     int strategy_bugs = 0;
     int correct = 0;
+
+    // Per-cycle detailed logging
+    std::cout << "=== PER-CYCLE LOGS ===" << std::endl << std::endl;
 
     for (size_t i = 0; i < results.size(); ++i) {
         const auto& result = results[i];
 
         std::string oracle_says = result.oracle_ground_truth ? "BUG" : "OK";
         std::string strategy_says = result.strategy_claim ? "BUG" : "OK";
-        std::string match = (result.prediction_correct && result.system_had_energy) ? "✓" : "✗";
+        std::string match = (result.prediction_correct && result.system_had_energy) ? "CORRECT" : "WRONG";
+
+        std::cout << "Cycle " << (i + 1) << ":" << std::endl;
+        std::cout << "  Code: " << test_snippets[i].substr(0, 70);
+        if (test_snippets[i].size() > 70) std::cout << "...";
+        std::cout << std::endl;
+        std::cout << "  Strategy claim: " << strategy_says << std::endl;
+        std::cout << "  Oracle label: " << oracle_says << std::endl;
+        std::cout << "  Outcome correct: " << (result.prediction_correct ? "true" : "false") << std::endl;
+        std::cout << "  Predicted μ (at cycle): " << std::fixed << std::setprecision(3)
+                  << result.predicted_success * 100 << "%" << std::endl;
+        std::cout << "  Empirical success rate: " << std::fixed << std::setprecision(3)
+                  << self_model.get_empirical_success_rate(0) * 100 << "%" << std::endl;
+        std::cout << "  Calibration error: " << std::fixed << std::setprecision(3)
+                  << self_model.get_calibration_error(0) << std::endl;
+        std::cout << "  Energy spent this cycle: " << result.energy_spent << " units" << std::endl;
+        std::cout << "  Had energy to run: " << (result.system_had_energy ? "yes" : "no") << std::endl;
+        std::cout << "  Result: " << match << std::endl << std::endl;
 
         if (result.oracle_ground_truth) real_bugs++;
         if (result.strategy_claim) strategy_bugs++;
         if (result.prediction_correct && result.system_had_energy) correct++;
-
-        std::cout << std::left << std::setw(50) << test_snippets[i].substr(0, 49)
-                  << std::setw(15) << oracle_says
-                  << std::setw(15) << strategy_says
-                  << std::setw(12) << match
-                  << std::setw(10) << loop.energy_budget().current_budget() << std::endl;
     }
 
-    std::cout << std::string(102, '-') << std::endl << std::endl;
+    std::cout << "=== SUMMARY ===" << std::endl << std::endl;
 
-    std::cout << "Results with REAL Oracle:" << std::endl;
+    std::cout << "Results with RealOracle:" << std::endl;
     std::cout << "  Total cycles: " << loop.total_cycles_run() << std::endl;
     std::cout << "  Cycles ran: " << loop.cycles_that_ran() << " (had energy)" << std::endl;
     std::cout << "  Correct predictions: " << correct << "/" << loop.cycles_that_ran() << " = "
@@ -87,18 +96,17 @@ int main() {
     std::cout << "  Real bugs detected by oracle: " << real_bugs << std::endl;
     std::cout << "  Bugs claimed by strategy: " << strategy_bugs << std::endl;
     std::cout << "  Final energy budget: " << loop.energy_budget().current_budget() << " units" << std::endl;
-
-    SelfModel& self_model = loop.self_model();
-    std::cout << "  Self-model prediction: " << std::fixed << std::setprecision(2)
+    std::cout << "  Final self-model μ: " << std::fixed << std::setprecision(2)
               << self_model.predict_success(0) * 100 << "%" << std::endl;
     std::cout << "  Empirical success rate: " << std::fixed << std::setprecision(2)
               << self_model.get_empirical_success_rate(0) * 100 << "%" << std::endl;
-    std::cout << "  Calibration error: " << std::fixed << std::setprecision(2)
+    std::cout << "  Final calibration error: " << std::fixed << std::setprecision(2)
               << self_model.get_calibration_error(0) << std::endl;
 
-    std::cout << std::endl << "Oracle Type: REAL (semantic analysis)" << std::endl;
+    std::cout << std::endl << "Oracle Type: Static heuristics (pattern-based token analysis)" << std::endl;
     std::cout << "Checks: undefined dereference, use-after-free, uninitialized, "
               << "buffer overflow, memory leak, type errors" << std::endl;
+    std::cout << "Limitation: Does NOT compile or execute code (next step: true external oracle)" << std::endl;
 
     return 0;
 }

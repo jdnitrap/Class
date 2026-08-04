@@ -6,22 +6,26 @@
 
 namespace fungal::core {
 
-// REAL ORACLE: Uses deterministic code analysis and compilation checking
-// Instead of hardcoded lookup tables, performs actual semantic analysis
+// REAL ORACLE: Deterministic static heuristics for C++ bug detection
+// NOT actual compilation or runtime checking.
 //
-// Purpose: Provide ground truth by actually compiling and checking code
-// for real C++ bugs, not pattern matching.
+// Purpose: Provide better-grounded labels than TestOracle by using
+// pattern-based token analysis for common real C++ bugs.
+// Independent of PatternMatcherStrategy to avoid false convergence.
+// Next step: true external oracle (compile/run or real analyzer).
 
 class RealOracle : public Oracle {
 public:
     RealOracle();
 
-    // Check if code snippet contains a real bug
-    // Uses: compilation errors, undefined behavior patterns, semantic issues
+    // Check if code snippet contains a potential bug via static heuristics
+    // Uses: token pattern analysis for undefined deref, UAF, uninitialized,
+    //       buffer overflow, memory leak, type error
+    // Does NOT compile or execute code
     bool has_bug(const std::string& code_snippet) override;
 
 private:
-    // Semantic checkers for real C++ bugs (deterministic, not heuristic)
+    // Static heuristic checkers for potential C++ bugs (pattern-based, not compilation)
     bool has_undefined_dereference(const std::string& code);
     bool has_use_after_free(const std::string& code);
     bool has_uninitialized_use(const std::string& code);
