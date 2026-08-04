@@ -30,6 +30,10 @@ set(SAFETY_SOURCES
     src/monitor.cpp
 )
 
+set(LEARNING_SOURCES
+    src/learning.cpp
+)
+
 set(LAYER1_SOURCES
     src/layer1/tokenizer.cpp
     src/layer1/analyzer.cpp
@@ -78,6 +82,7 @@ set(LAYER2_SOURCES
 set(ALL_SOURCES
     ${FOUNDATION_SOURCES}
     ${SAFETY_SOURCES}
+    ${LEARNING_SOURCES}
     src/fungal_system.cpp
     ${LAYER1_SOURCES}
     ${LAYER2_SOURCES}
