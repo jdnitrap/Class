@@ -14,8 +14,11 @@ make -j4
 
 ### Run
 ```bash
-# Interactive Terminal UI (recommended)
+# Interactive Terminal UI (hands-on exploration)
 ./fungal_tui
+
+# Simulation Mode (automated testing)
+./fungal_sim
 
 # Demo application
 ./fungal
@@ -24,27 +27,54 @@ make -j4
 ctest --output-on-failure
 ```
 
-## Interactive Terminal UI
+## Interaction Modes
 
-The **Fungal TUI** provides an interactive interface to interact with the system:
+### 🎮 Interactive Terminal UI
+
+The **Fungal TUI** for real-time interaction:
 
 ```bash
 cd fungal/build
 ./fungal_tui
 ```
 
-Features:
-- **Create & Manage Nodes** - Create autonomous agents with custom goals
-- **Run Cycles** - Execute node reasoning cycles in real-time
-- **Send Signals** - Broadcast messages through the shared substrate
-- **Audit Trail** - View complete decision history
-- **Learning Tracking** - Monitor strategy performance and source trustworthiness
-- **Safety Dashboard** - View constraints and alignment status
-- **Neural Network** - Visualize hybrid reasoning and network state
-- **Strategy Management** - Add, remove, and modify node strategies
-- **Color-Coded Output** - Enhanced readability with ANSI colors
+**Features:**
+- Create & manage autonomous nodes
+- Run cycles in real-time
+- Send signals through substrate
+- View audit trails and decision history
+- Track learning and strategy performance
+- View safety constraints and alignment
+- Visualize neural network outputs
+- Manage strategies dynamically
 
-See [fungal/docs/TUI_GUIDE.md](fungal/docs/TUI_GUIDE.md) for detailed instructions.
+**See:** [fungal/docs/TUI_GUIDE.md](fungal/docs/TUI_GUIDE.md)
+
+### 🧪 Simulation Mode
+
+Automated testing for learning and safety:
+
+```bash
+cd fungal/build
+./fungal_sim
+```
+
+**Measures:**
+- Learning convergence speed
+- Strategy adaptation
+- Success rates across scenarios
+- Constraint compliance
+- Safety metrics
+- Anomaly handling
+
+**Generates:**
+- Node performance reports
+- Source trustworthiness ranking
+- Strategy effectiveness scores
+- Safety compliance verification
+- System health conclusions
+
+**See:** [fungal/docs/SIMULATION_GUIDE.md](fungal/docs/SIMULATION_GUIDE.md)
 
 ## What This System Is
 

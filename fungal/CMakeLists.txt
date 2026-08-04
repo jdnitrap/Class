@@ -100,6 +100,9 @@ target_link_libraries(fungal fungal_lib)
 add_executable(fungal_tui src/tui_app.cpp)
 target_link_libraries(fungal_tui fungal_lib)
 
+add_executable(fungal_sim src/simulation_mode.cpp)
+target_link_libraries(fungal_sim fungal_lib)
+
 if(GTest_FOUND OR GTEST_FOUND)
     if(GTEST_FOUND)
         include_directories(${GTEST_INCLUDE_DIRS})

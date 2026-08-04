@@ -17,6 +17,9 @@ make -j4
 # Interactive Terminal UI (RECOMMENDED - START HERE!)
 ./fungal_tui
 
+# Automated Simulation Mode (test learning and safety)
+./fungal_sim
+
 # Demo application
 ./fungal
 
@@ -24,7 +27,9 @@ make -j4
 ctest --output-on-failure
 ```
 
-**👉 [Read TUI_GUIDE.md first!](TUI_GUIDE.md) - It has everything you need to interact with the system.**
+**👉 Choose your mode:**
+- **[TUI_GUIDE.md](TUI_GUIDE.md)** - Interactive exploration and testing
+- **[SIMULATION_GUIDE.md](SIMULATION_GUIDE.md)** - Automated testing and metrics
 
 ## What This System Is
 
@@ -143,8 +148,9 @@ System knows:
 
 ## Documentation Structure
 
-### Getting Started
-- **[TUI_GUIDE.md](TUI_GUIDE.md)** - Interactive Terminal UI (START HERE!)
+### User Guides (Start Here!)
+- **[TUI_GUIDE.md](TUI_GUIDE.md)** - Interactive Terminal UI for hands-on exploration
+- **[SIMULATION_GUIDE.md](SIMULATION_GUIDE.md)** - Automated testing and measurement
 
 ### Technical Reference
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** - Detailed system design with 6 segments
