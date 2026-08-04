@@ -24,6 +24,12 @@ set(FOUNDATION_SOURCES
     src/self_model.cpp
 )
 
+set(SAFETY_SOURCES
+    src/constraints.cpp
+    src/alignment.cpp
+    src/monitor.cpp
+)
+
 set(LAYER1_SOURCES
     src/layer1/tokenizer.cpp
     src/layer1/analyzer.cpp
@@ -71,6 +77,7 @@ set(LAYER2_SOURCES
 
 set(ALL_SOURCES
     ${FOUNDATION_SOURCES}
+    ${SAFETY_SOURCES}
     src/fungal_system.cpp
     ${LAYER1_SOURCES}
     ${LAYER2_SOURCES}
