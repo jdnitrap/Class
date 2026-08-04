@@ -32,6 +32,7 @@ set(SAFETY_SOURCES
 
 set(LEARNING_SOURCES
     src/learning.cpp
+    src/self_improvement.cpp
 )
 
 set(LAYER1_SOURCES
