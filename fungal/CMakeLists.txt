@@ -21,6 +21,7 @@ set(FOUNDATION_SOURCES
     src/substrate.cpp
     src/introspection.cpp
     src/autonomous_node.cpp
+    src/self_model.cpp
 )
 
 set(LAYER1_SOURCES
