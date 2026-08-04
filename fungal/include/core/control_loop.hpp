@@ -74,6 +74,9 @@ private:
     int successful_predictions_ = 0;
     int cycles_that_ran_ = 0;
 
+    // Hardware-aware scaling
+    double energy_cost_scale_ = 1.0;  // multiplier for per-cycle energy cost
+
     // The main cycle steps
     double sense_and_predict(int task_type_id);
     StrategyResult generate_and_evaluate(const std::string& code_snippet);

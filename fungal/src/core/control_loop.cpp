@@ -14,7 +14,9 @@ CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
     double predicted_success = sense_and_predict(task_type_id);
 
     // 2. CHECK ENERGY: can we afford to run?
-    int energy_cost = 10;  // base cost
+    // Hardware-aware cost scaling: scarce resources = higher per-cycle cost
+    int energy_cost = static_cast<int>(10 * energy_cost_scale_);
+    if (energy_cost < 1) energy_cost = 1;  // minimum cost
     bool has_energy = energy_budget_.spend_for_cycle(energy_cost);
 
     CycleResult result{
@@ -100,11 +102,9 @@ void ControlLoop::initialize_from_hardware() {
     // Set energy budget based on hardware
     energy_budget_.set_budget_from_hardware(profile);
 
-    // Compute batch parameters (for future use with multiple tasks)
+    // Compute batch parameters and store energy cost scale for per-cycle use
     TaskBatchParameters params = hardware_scheduler_.compute_batch_parameters(profile);
-
-    // Store for monitoring
-    (void)params;  // unused in v1
+    energy_cost_scale_ = params.energy_cost_scale;
 }
 
 void ControlLoop::reset() {
