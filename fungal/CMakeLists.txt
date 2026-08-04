@@ -8,6 +8,42 @@ enable_testing()
 
 find_package(GTest QUIET)
 
+if(NOT GTest_FOUND)
+    find_package(PkgConfig QUIET)
+    if(PkgConfig_FOUND)
+        pkg_check_modules(GTEST gtest)
+        pkg_check_modules(GTEST_MAIN gtest_main)
+    endif()
+endif()
+
+set(FOUNDATION_SOURCES
+    src/hardware.cpp
+    src/substrate.cpp
+    src/introspection.cpp
+    src/autonomous_node.cpp
+    src/self_model.cpp
+)
+
+set(SAFETY_SOURCES
+    src/constraints.cpp
+    src/alignment.cpp
+    src/monitor.cpp
+)
+
+set(LEARNING_SOURCES
+    src/learning.cpp
+    src/self_improvement.cpp
+    src/neural_integration.cpp
+)
+
+set(CORE_LOOP_SOURCES
+    src/core/hardware_aware_scheduler.cpp
+    src/core/self_model.cpp
+    src/core/strategy.cpp
+    src/core/energy_budget.cpp
+    src/core/control_loop.cpp
+    src/core/test_oracle.cpp
+)
 set(LAYER1_SOURCES
     src/layer1/tokenizer.cpp
     src/layer1/analyzer.cpp
@@ -55,6 +91,7 @@ set(LAYER2_SOURCES
 
 set(ALL_SOURCES
     src/fungal_system.cpp
+    ${CORE_LOOP_SOURCES}
     ${LAYER1_SOURCES}
     ${LAYER2_SOURCES}
     ${BRIDGE_SOURCES}
