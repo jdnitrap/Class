@@ -104,6 +104,9 @@ target_include_directories(fungal_lib PUBLIC include)
 add_executable(fungal src/main.cpp)
 target_link_libraries(fungal fungal_lib)
 
+add_executable(fungal_loop_demo src/core/control_loop_demo.cpp)
+target_link_libraries(fungal_loop_demo fungal_lib)
+
 if(GTest_FOUND)
     add_executable(test_tokenizer tests/unit/test_tokenizer.cpp)
     target_link_libraries(test_tokenizer fungal_lib gtest_main)
