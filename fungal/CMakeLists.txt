@@ -8,6 +8,14 @@ enable_testing()
 
 find_package(GTest QUIET)
 
+if(NOT GTest_FOUND)
+    find_package(PkgConfig QUIET)
+    if(PkgConfig_FOUND)
+        pkg_check_modules(GTEST gtest)
+        pkg_check_modules(GTEST_MAIN gtest_main)
+    endif()
+endif()
+
 set(LAYER1_SOURCES
     src/layer1/tokenizer.cpp
     src/layer1/analyzer.cpp
@@ -66,25 +74,29 @@ target_include_directories(fungal_lib PUBLIC include)
 add_executable(fungal src/main.cpp)
 target_link_libraries(fungal fungal_lib)
 
-if(GTest_FOUND)
+if(GTest_FOUND OR GTEST_FOUND)
+    if(GTEST_FOUND)
+        include_directories(${GTEST_INCLUDE_DIRS})
+    endif()
+
     add_executable(test_tokenizer tests/unit/test_tokenizer.cpp)
-    target_link_libraries(test_tokenizer fungal_lib gtest_main)
+    target_link_libraries(test_tokenizer fungal_lib GTest::gtest_main)
     add_test(NAME test_tokenizer COMMAND test_tokenizer LABELS "unit")
 
     add_executable(test_analyzer tests/unit/test_analyzer.cpp)
-    target_link_libraries(test_analyzer fungal_lib gtest_main)
+    target_link_libraries(test_analyzer fungal_lib GTest::gtest_main)
     add_test(NAME test_analyzer COMMAND test_analyzer LABELS "unit")
 
     add_executable(test_phases tests/unit/test_phases.cpp)
-    target_link_libraries(test_phases fungal_lib gtest_main)
+    target_link_libraries(test_phases fungal_lib GTest::gtest_main)
     add_test(NAME test_phases COMMAND test_phases LABELS "unit")
 
     add_executable(test_system_integration tests/integration/test_system.cpp)
-    target_link_libraries(test_system_integration fungal_lib gtest_main)
+    target_link_libraries(test_system_integration fungal_lib GTest::gtest_main)
     add_test(NAME test_system_integration COMMAND test_system_integration LABELS "integration")
 
     add_executable(test_stress tests/system/test_stress.cpp)
-    target_link_libraries(test_stress fungal_lib gtest_main)
+    target_link_libraries(test_stress fungal_lib GTest::gtest_main)
     add_test(NAME test_stress COMMAND test_stress LABELS "system")
 
     message(STATUS "GTest found - building tests")
