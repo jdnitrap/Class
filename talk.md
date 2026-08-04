@@ -69,19 +69,23 @@ User acknowledged the review (“Okay”) and directed the talk file to be updat
 ## Task Board
 
 ### In Progress
-- Claude: honesty pass (RealOracle labeling + per-cycle logging)
+- None
 
 ### Next
-- After honesty pass: user chooses timing for true compile/run oracle
-- Multi-strategy only after grounding is honest and preferably external
-- Grok re-reviews on request
+- User chooses timing for true compile/run oracle (true external grounding)
+- Multi-strategy support only after grounding is honest and preferably external
+- Grok re-review on request
 
 ### Done
 - Gemini removed from roles
-- Priority fixes verified
-- Option B reviewed (heuristic upgrade accepted with limits)
+- Priority fixes verified (all 4 implemented)
+- Option B reviewed and accepted (RealOracle heuristic improvement)
 - v1 baseline accepted honestly
 - Next direction locked by user OK
+- **Honesty pass completed (1 commit)**
+  - RealOracle comments corrected: "deterministic static heuristics," not "compilation"
+  - Per-cycle detailed logging added: strategy claim, oracle label, outcome, predicted μ, calibration error, energy spent
+  - Demo output now fully transparent about what system is doing
 
 ### Blocked
 - None
