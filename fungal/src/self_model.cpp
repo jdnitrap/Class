@@ -65,7 +65,12 @@ std::string SelfAwareness::get_best_performing_strategy() const {
     if (active_strategies_.empty()) return "default";
 
     std::string best = active_strategies_[0];
-    int best_score = decision_outcomes_.at(best);
+    int best_score = 0;
+
+    auto best_it = decision_outcomes_.find(best);
+    if (best_it != decision_outcomes_.end()) {
+        best_score = best_it->second;
+    }
 
     for (const auto& strategy : active_strategies_) {
         auto it = decision_outcomes_.find(strategy);

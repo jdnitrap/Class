@@ -122,6 +122,10 @@ if(GTest_FOUND OR GTEST_FOUND)
     target_link_libraries(test_stress fungal_lib GTest::gtest_main)
     add_test(NAME test_stress COMMAND test_stress LABELS "system")
 
+    add_executable(test_self_aware tests/system/test_self_aware_system.cpp)
+    target_link_libraries(test_self_aware fungal_lib)
+    add_test(NAME test_self_aware COMMAND test_self_aware LABELS "system")
+
     message(STATUS "GTest found - building tests")
 else()
     message(WARNING "GTest not found - tests skipped. Install libgtest-dev or set GTEST_INCLUDE_DIRS")
