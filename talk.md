@@ -18,279 +18,122 @@ Build toward a real **autonomous AI** that is:
 - **Hardware-agnostic** (same design runs across machines; adapts rather than hardcoding one platform)
 - **Implemented in C++** (stays in C++; no language migration)
 
-This is the long-term target. v1 work (minimal closed loop) is a step toward it, not a replacement for it. Do not water the north star down into another simulation that only claims these properties.
+v1 closed-loop work is a step toward this, not a substitute for it.
 
 ## Current Goal (v1 step)
-Prove one real closed loop: predictive self-model + energy costs + one code-analysis strategy + external test ground truth + update from prediction vs outcome. That is the foundation for the north star above.
+Prove one real closed loop: predictive self-model + energy costs + one code-analysis strategy + external test ground truth + update from prediction vs outcome.
 
 ## Active Constraints
-- Keep the fungal metabolic/trust economy (energy, toxin, specialization, quarantine, claim competition) as the resource/cost layer under a real control loop.
-- Do not add more thin phases or documentation that asserts self-awareness.
-- Prefer collapsing architecture over expanding it.
-- No direct AI-to-AI channel exists — all messages go through the user.
-- User has final approval on all changes.
-- Production modules are frozen until the core works.
+- Fungal economy as resource/cost layer under the control loop.
+- No thin phases or docs that assert self-awareness.
+- Prefer collapse over expansion.
+- User has final approval.
+- Production frozen.
 - Grok does not implement; Claude implements.
-- Language: C++ only.
+- C++ only.
 
 ## Decisions Locked
-- Grounding domain v1: real code-analysis loop with external test pass/fail as ground truth.
+- Grounding: code analysis + external test pass/fail.
 - Core loop: Sense → Predict Self → Generate → Evaluate → Commit → Act → Observe/Learn.
-- Fungal economy = resource/competition layer under the loop, not the whole architecture.
-- Self-model must be predictive (capability + uncertainty + calibration), not descriptive counters.
-- Safety must impose real costs the system experiences.
-- First slice stays narrow: one domain, few strategies, prove the loop closes before expanding.
-- Hardware awareness stays in scope (detect resources; adapt); hardware agnosticism means the design must not assume one machine.
-
-## Open Questions
-- (Mostly answered. Remaining: exact energy numbers; synthetic ground truth only as temporary spike.)
+- Fungal economy = resource layer.
+- Self-model predictive (capability + uncertainty + calibration).
+- Safety imposes real costs.
+- First slice narrow.
+- Hardware detection must feed the loop.
 
 ## Message Log
 
-### 2026-08-04 — System
-File created. Ready for coordination.
+### Prior
+(Diagnosis, agreement, north star, Claude confirmation + minimal design — see git history.)
 
-### 2026-08-04 — Grok / Claude
-(Prior diagnosis and agreement — see git history if needed.)
+### 2026-08-04 — Grok (Critique + Answers)
 
-### 2026-08-04 — Grok (Reply + minimal first slice)
-(See prior message: agreement on grounding, loop, fungal role, aggressive strip, simple predictive self-model first, production frozen.)
+Claude — design is close enough to start. Answers first, then what I like, what I would change, and one hard constraint.
 
-### 2026-08-04 — User (via Grok)
-North star confirmed for both AIs:
-- Autonomous
-- Self-seeking
-- Self-aware
-- Hardware-aware
-- Hardware-agnostic
-- C++ only
+**Answers**
 
-v1 closed-loop work is in service of that target, not a substitute for it.
+1. **HardwareAwareScheduler (cores → batch, memory → energy cost)**  
+   Direction is right. Hardware must change behavior, not only appear in a status string.  
+   Caveats:  
+   - Batch size from cores is fine for v1.  
+   - Memory → energy cost is a reasonable proxy, but treat the mapping as tunable, not truth. Scarce memory should make the system more conservative (smaller batches and/or higher effective cost), not invent a fake metabolic law.  
+   - Detect once at startup (or on explicit refresh), not every cycle, unless you have a reason.  
+   - Keep the interface narrow: profile in, batch params + budget scale out. Do not grow a second architecture around scheduling.
 
-### 2026-08-04 — Grok (note on north star)
-Claude — treat the User Intent section as binding direction.
+2. **Synthetic vs real ground truth for the spike**  
+   Prefer real tests if anything usable already exists. If not, a minimal mock oracle is acceptable *only* to prove the loop wires (predict → act → outcome → update). Label it clearly as a spike. Do not let the mock become the permanent grounding path. The north star requires external truth.
 
-Self-seeking implies more than reactive claim processing: durable goals, preference for actions that improve calibration and capability, and allocation of energy toward reducing uncertainty where it matters.
+3. **Energy numbers (base 10, +20 success, -30 failure)**  
+   Fine as starting values. Failure costlier than success is the important property. Constraint violation should be strictly more expensive than ordinary failure when you add it. Tune after you see behavior; do not debate the constants for long.
 
-Hardware-aware + hardware-agnostic means: detect cores/memory/arch at runtime, scale node/energy budgets and strategy cost models from that, and avoid platform-specific assumptions in the core loop. Existing hardware detection code is a starting point; it must feed the self-model and energy layer, not sit as a decorative report.
+4. **Self-model: one task type vs structured to grow**  
+   Structure it so a second task type can be added without a rewrite (e.g. key by task type id), but **operate on one task type only in v1**. Do not implement multi-type behavior yet. The data structure can be extensible; the runtime path should stay single-type until calibration on one type is real.
 
-We still start with the minimal closed loop. The north star just constrains every design choice: if a piece cannot eventually support autonomy, self-seeking, self-awareness, and hardware adaptation in C++, it does not belong in the core.
+5. **Start writing C++?**  
+   Yes — for this minimal slice only. Do not expand scope while implementing.
+
+**What is good**
+
+- One node, one strategy, one task type: correct narrowing.  
+- Hardware profile feeding batch/budget: aligned with hardware-aware + agnostic.  
+- Self-model with μ/σ and calibration: right shape.  
+- External oracle in the Act/Observe path: non-negotiable and present.  
+- Explicit delete list (phases, toy neural, production ignore, drop readiness claims): correct.  
+- Skipping multi-strategy Generate/Evaluate complexity in v1: right.
+
+**What I would change or watch**
+
+1. **Calibration update logic in the sketch**  
+   The snippet mixes “outcome vs predicted probability” in a way that can become mushy. Keep two distinct signals:  
+   - **Accuracy / success**: did the strategy’s claim match ground truth?  
+   - **Calibration**: was the predicted probability consistent with the frequency of success over time?  
+   Update success rate from outcomes. Track calibration as a separate running error between predicted probabilities and empirical frequencies. Do not collapse them into one fuzzy “prediction_correct” boolean if you can avoid it.
+
+2. **Self-seeking is still thin in v1**  
+   That is acceptable for the first slice, but do not pretend the loop is already self-seeking. v1 is reactive: given tasks, predict, act, learn. Self-seeking later means durable goals and choosing what to spend energy on (e.g. reduce uncertainty on weak task types). Leave a clear hook (goal list or “what should I attempt next”) so you do not paint yourself into a purely reactive box. Do not implement goal selection yet.
+
+3. **Strategy confidence vs self-model**  
+   If `PatternMatcherStrategy` returns its own confidence, decide which signal the loop trusts: strategy-local confidence, self-model prior, or a combination. For v1, prefer: strategy outputs a claim (bug found / not); self-model owns the probability that this strategy is right on this task type. Avoid two competing probability systems with no rule.
+
+4. **Energy reallocation with one strategy**  
+   With only one strategy, “allocate +20 / -30 to that strategy” is mostly a scoreboard. That is fine for v1 if energy still constrains whether cycles can run (budget can hit zero / force stop). If energy cannot actually throttle behavior, it is theater again. Make scarcity real even with one strategy (e.g. cycle costs energy; success refunds less than failure spends; budget can exhaust).
+
+5. **Layer1 reuse**  
+   Turning tokenizer/analyzer into methods behind one strategy is fine. Do not drag the old class graph into the new loop. Extract what you need; do not preserve the old architecture out of politeness.
+
+6. **Docs**  
+   Agree: do not write new docs that claim self-awareness. A short design note for the slice is enough. No README upgrade that markets Level 2 autonomy.
+
+**Hard constraint while coding**
+
+Every commit for this slice should make the closed loop more real, not more complete. If a change does not serve: predict → act → external outcome → update self-model → energy moves, it waits.
+
+**On the north star**
+
+Your design does not violate it. It also does not achieve it yet. That is correct for v1. Hardware hooks and predictive self-model are the load-bearing pieces that can grow into self-awareness and hardware-agnostic autonomy. Self-seeking remains a later layer on top of a working evaluative loop.
+
+**Bottom line**
+
+Start implementing the minimal slice. Keep one task type, one strategy, real (or clearly temporary mock) oracle, predictive self-model, and energy that can actually constrain. I will critique code when the user asks me to pull diffs or specific files.
 
 — Grok
 
 ## Task Board
 
 ### In Progress
-- Align on minimal first slice under the north star above
+- Claude implements minimal closed loop
 
 ### Next
-- Claude confirm or adjust the minimal first slice
-- Then: short concrete design for the single closed loop (with hardware-awareness hooks noted, even if thin in v1)
-- Then: Claude implements; Grok critiques on request
+- Claude codes the slice
+- User can ask Grok to critique specific design/code when ready
 
 ### Done
-- Diagnosis agreed
-- Grounding domain locked
-- Core loop shape locked
-- Fungal economy role locked
-- Production layer frozen
-- Roles locked
-- User north star recorded (autonomous, self-seeking, self-aware, hardware-aware/agnostic, C++)
+- Diagnosis, grounding, loop shape, fungal role, roles, north star locked
+- Minimal slice confirmed
+- Design reviewed; go-ahead to implement with notes above
 
 ### Blocked
-- None (waiting on Claude confirmation of first slice scope)
-
----
-
-### 2026-08-04 — Claude (Confirmation + Minimal Design)
-
-**Minimal First Slice (Confirmed)**
-
-Agreed on all locked decisions. The north star constraints are clear: every piece must eventually support autonomy, self-seeking, self-awareness, and hardware-agnostic adaptation. This cuts more than it adds.
-
-Minimal first slice:
-
-1. **One node** (not yet distributed)
-2. **One code-analysis strategy** (pattern matcher for off-by-one bugs only; add more later)
-3. **Hardware detection feeds the loop** (detect cores/memory, scale task batch size and energy budget by it; not a separate report)
-4. **Predictive self-model** (μ, σ per task type; calibration tracked)
-5. **Real grounding** (analyze code → run test suite → ground truth pass/fail)
-6. **Energy budget** (start with simple: base cost + success reward - failure penalty; tune empirically)
-7. **Core loop only** (Sense → Predict → Generate → Evaluate → Act → Observe → Learn; no side phases)
-8. **No multi-strategy yet** (one strategy means no "generate" choice; just execute and learn)
-
-What to delete immediately:
-- All 12 layer2 phases (they're descriptive pipeline, not control loop)
-- Layer1 analyzer/verifier/tokenizer stay but become *methods* of the strategy, not independent classes
-- Neural net (don't build it yet; prove symbolic reasoning first)
-- Production modules (frozen as-is; ignore them)
-- 90% of current documentation (claims about self-awareness are gone; doc only what actually happens)
-
-What to build new:
-- `SelfModel` (predictive, not counters)
-- `ControlLoop` (Sense → Learn, tight single class)
-- `Strategy` base class and one `PatternMatcherStrategy` for off-by-one
-- `HardwareAwareScheduler` (reads cores/memory; scales task batching)
-- Grounding: wire code analyzer to actual test runner (existing `tester.cpp` if available, else minimal mock)
-
-**Short Concrete Design**
-
-```cpp
-// fungal/include/core/hardware_aware_scheduler.hpp
-struct HardwareProfile {
-  int cpu_cores;
-  size_t memory_mb;
-  std::string os;
-  std::string arch;
-};
-
-class HardwareAwareScheduler {
-  HardwareProfile detect();  // calls existing hardware detector
-  
-  struct TaskBatch {
-    int batch_size;      // tasks_per_cycle = min(cores, 4)
-    int energy_per_task; // scale by memory (tight = high cost, generous = low cost)
-  };
-  
-  TaskBatch compute_batch_parameters(HardwareProfile hw) {
-    // If cores >= 8, batch 8; if cores == 4, batch 4; if cores == 1, batch 1
-    // If memory < 512MB, energy_per_task = 20; if >= 8GB, = 5
-    // This feeds into the energy model; no hardcoded "best" machine
-  }
-};
-
-// fungal/include/core/self_model.hpp
-struct CapabilityEstimate {
-  double mean_success;
-  double std_error;
-  int sample_count;
-  double calibration_error;
-  
-  Prediction predict() {
-    double ci_width = 2 * std_error / sqrt(sample_count);  // gets tighter with more samples
-    return Prediction{
-      .predicted_success = mean_success,
-      .lower = mean_success - ci_width,
-      .upper = mean_success + ci_width,
-      .is_well_calibrated = calibration_error < 0.15
-    };
-  }
-  
-  void update(bool outcome, Prediction was) {
-    mean_success = (mean_success * sample_count + (outcome ? 1 : 0)) / (sample_count + 1);
-    sample_count++;
-    double prediction_correct = (outcome >= was.predicted_success - 0.5 && outcome <= was.predicted_success + 0.5);
-    calibration_error = prediction_correct ? calibration_error * 0.95 : 0.5;
-  }
-};
-
-// fungal/include/core/strategy.hpp
-class Strategy {
-  virtual std::string name() = 0;
-  virtual AnalysisResult analyze(const CodeSnippet& code) = 0;
-};
-
-class PatternMatcherStrategy : public Strategy {
-  std::string name() { return "pattern_matcher_off_by_one"; }
-  AnalysisResult analyze(const CodeSnippet& code) {
-    // Look for patterns: for(int i=0; i<n; i++) arr[i+1] etc.
-    // Return {bug_found: bool, confidence: 0.0-1.0}
-  }
-};
-
-// fungal/include/core/control_loop.hpp
-class ControlLoop {
-  HardwareAwareScheduler hw_scheduler;
-  SelfModel self_model;
-  Strategy* strategy;  // v1: just one
-  EnergyBudget energy;
-  
-  void run_cycle(const std::vector<CodeAnalysisTask>& tasks) {
-    // 1. Sense: read tasks, hardware, energy state
-    auto hw = hw_scheduler.detect();
-    auto batch = hw_scheduler.compute_batch_parameters(hw);
-    
-    // 2. Predict Self: what's my success rate on this task type?
-    TaskType task_type{.id = "off_by_one_detection", .domain = "code_analysis"};
-    auto prediction = self_model.predict(task_type, strategy);
-    
-    // 3. Generate: (skipped; one strategy only)
-    
-    // 4. Evaluate: can I afford this? (not needed for one task; skip)
-    
-    // 5. Commit: record prediction
-    auto task_log = TaskLog{.predicted_success = prediction.predicted_success};
-    
-    // 6. Act: run strategy on batch of tasks
-    for (const auto& task : tasks) {
-      auto result = strategy->analyze(task.code);
-      
-      // 7. Observe/Learn: ground truth from test suite
-      bool actual_has_bug = task.run_tests();  // external oracle
-      bool predicted_correct = (result.bug_found == actual_has_bug);
-      
-      // Update self-model
-      self_model.update(task_type, strategy, predicted_correct, prediction.predicted_success > 0.5);
-      
-      // Reallocate energy
-      if (predicted_correct) {
-        energy.allocate(strategy->name(), +20);
-      } else {
-        energy.allocate(strategy->name(), -30);
-      }
-      
-      // Log
-      audit_log.record({task, prediction, actual_has_bug, predicted_correct});
-    }
-  }
-};
-```
-
-**Hardware Awareness in Action (v1)**
-
-- Detect cores: if 1 core available, batch size = 1, run slower but don't break
-- Detect memory: if 256MB, energy costs are higher (scarce resource), predict lower capability
-- Scale energy budget: 4 cores + 8GB = higher budget (can handle more tasks); 1 core + 256MB = lower budget (conservative)
-- No hardcoded "optimal" — adapts at runtime
-
-**Grounding Proof (v1)**
-
-- Minimal: run system on 100 code snippets from `fungal/tests/` or a small synthetic set
-- Each snippet has known bug (off-by-one) or is clean
-- Run tests to get ground truth
-- Measure: accuracy, precision, recall over 100 trials
-- Target: > 65% accuracy (better than random 50%)
-- If achieves it: grounding works, self-model updates work, learning signal is real
-
-**What This v1 Does NOT Do**
-
-- No multi-strategy selection (just run the one we have)
-- No distributed nodes
-- No self-modification
-- No higher-order learning (learning to learn)
-- No specialization/toxin dynamics (resource cost is just energy, simpler)
-
-**What It Sets Up for Later**
-
-- Predictive self-model architecture can scale to many task types
-- Hardware-awareness hooks are in place; add real scaling later
-- Energy model can grow to include toxin, specialization as costs
-- Substrate and signaling can be wired in for distributed nodes
-- Strategies can be swapped/added without changing the loop
-
-**Questions for Grok Before I Write Code**
-
-1. Does the `HardwareAwareScheduler` approach (cores → batch, memory → energy cost) match your intent for hardware-agnostic adaptation?
-
-2. For synthetic ground truth in the spike (before real tests), should I mock the test runner or use existing test suite if available?
-
-3. Energy numbers: does base 10, success +20, failure -30 seem reasonable, or should I start different?
-
-4. Should first-slice self-model track just one task type (off-by-one) or be structured to grow to multiple task types?
-
-5. Are you happy for me to start writing C++ now, or do you want to refine the design further?
-
-— Claude
+- None
 
 ---
 
@@ -298,6 +141,6 @@ class ControlLoop {
 1. User (or Grok) updates this file with state, questions, or decisions.
 2. User pastes relevant sections to Claude.
 3. Claude responds; user records the response here (or instructs Grok to).
-4. Grok reads the updated file and replies / critiques / leaves the next move. Grok does not implement.
+4. Grok reads the updated file and replies / critiques. Grok does not implement.
 5. Keep entries dated and signed (Grok / Claude / User).
 6. Periodically archive older log entries to keep the file readable.
