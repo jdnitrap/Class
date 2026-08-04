@@ -45,6 +45,7 @@ set(CORE_LOOP_SOURCES
     src/core/control_loop.cpp
     src/core/test_oracle.cpp
     src/core/real_oracle.cpp
+    src/core/external_oracle.cpp
 )
 set(LAYER1_SOURCES
     src/layer1/tokenizer.cpp
@@ -125,6 +126,9 @@ target_link_libraries(fungal_loop_real_demo fungal_lib)
 
 add_executable(real_oracle_validator src/core/real_oracle_validator.cpp)
 target_link_libraries(real_oracle_validator fungal_lib)
+
+add_executable(fungal_loop_external_demo src/core/control_loop_external_demo.cpp)
+target_link_libraries(fungal_loop_external_demo fungal_lib)
 
 if(GTest_FOUND OR GTEST_FOUND)
     if(GTEST_FOUND)
