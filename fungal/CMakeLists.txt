@@ -36,6 +36,15 @@ set(LEARNING_SOURCES
     src/neural_integration.cpp
 )
 
+set(CORE_LOOP_SOURCES
+    src/core/hardware.cpp
+    src/core/hardware_aware_scheduler.cpp
+    src/core/self_model.cpp
+    src/core/strategy.cpp
+    src/core/energy_budget.cpp
+    src/core/control_loop.cpp
+    src/core/test_oracle.cpp
+)
 set(LAYER1_SOURCES
     src/layer1/tokenizer.cpp
     src/layer1/analyzer.cpp
@@ -86,6 +95,7 @@ set(ALL_SOURCES
     ${SAFETY_SOURCES}
     ${LEARNING_SOURCES}
     src/fungal_system.cpp
+    ${CORE_LOOP_SOURCES}
     ${LAYER1_SOURCES}
     ${LAYER2_SOURCES}
     ${BRIDGE_SOURCES}
@@ -103,11 +113,13 @@ target_link_libraries(fungal_tui fungal_lib)
 add_executable(fungal_sim src/simulation_mode.cpp)
 target_link_libraries(fungal_sim fungal_lib)
 
+add_executable(fungal_loop_demo src/core/control_loop_demo.cpp)
+target_link_libraries(fungal_loop_demo fungal_lib)
+
 if(GTest_FOUND OR GTEST_FOUND)
     if(GTEST_FOUND)
         include_directories(${GTEST_INCLUDE_DIRS})
     endif()
-
     add_executable(test_tokenizer tests/unit/test_tokenizer.cpp)
     target_link_libraries(test_tokenizer fungal_lib GTest::gtest_main)
     add_test(NAME test_tokenizer COMMAND test_tokenizer LABELS "unit")
