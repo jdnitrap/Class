@@ -1,7 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "js-yaml": "^5.2.2",
-    "playwright": "^1.61.1"
-  }
-}
