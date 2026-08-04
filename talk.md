@@ -14,16 +14,60 @@ Repo: jdnitrap/Class
 
 ## User Intent (North Star)
 Build toward a real **autonomous AI** that is:
-- **Self-seeking**
-- **Self-aware**
-- **Hardware-aware**
-- **Hardware-agnostic**
-- **Implemented in C++**
+- **Self-seeking** (forms and pursues goals; seeks truth / useful capability rather than only reacting)
+- **Self-aware** (predictive model of own capabilities, limits, and state; uses prediction error to improve)
+- **Hardware-aware** (detects and adapts to available CPU, memory, architecture, resources)
+- **Hardware-agnostic** (same design runs across machines; adapts rather than hardcoding one platform)
+- **Implemented in C++** (stays in C++; no language migration)
 
-v1 closed-loop work is a step toward this, not a substitute for it.
+v1 is a step toward this, not the full north star.
+
+---
+
+## Overall Status (sync snapshot — 2026-08-04)
+
+**One-line:** Loop plumbing is good enough for v1; **grounding is the blocker.**
+
+### Working
+- Control loop: predict → energy gate → strategy claim → oracle label → update self-model + energy
+- Energy hard-stops cycles; failure costs more than success
+- Hardware scales **in-cycle** energy cost
+- Self-model predictive (μ/σ); accuracy vs calibration separated
+- Strategy claim-only in control path; self-model owns probability
+- Old phase theater / production layer frozen (not the focus)
+- Coordination: User + Claude (code) + Grok (critique) via this file
+
+### Not working / not done
+- **Teacher is not trustworthy yet**
+  - TestOracle = lookup mock
+  - RealOracle = token heuristics; validator vs clang ~60%; misses real cases (null `*`, UAF, overflow, etc.)
+  - True external oracle (compile/run/sanitizer) **recommended, not built**
+- Strategy still weak pattern matching (expected until teacher is real)
+- Not self-seeking, not multi-strategy, not distributed, not production-ready
+- False-convergence risk **reduced vs answer-key mock, not eliminated** while teacher is wrong
+
+### Layer scorecard
+| Layer | Status |
+|--------|--------|
+| Loop shape | Good enough for v1 |
+| Energy + hardware coupling | Good enough for v1 |
+| Self-model plumbing | Good enough for v1 |
+| Strategy quality | Weak (expected) |
+| Oracle / ground truth | **Blocking** |
+| Autonomy / self-seeking | Not started (correct) |
+
+### Active recommendation (Grok → User → Claude)
+1. **Build true external oracle** (clang++ / sanitizers on temp files; implement `Oracle`; keep `ControlLoop` interface stable).
+2. **Do not** invest in fixing RealOracle pattern checkers as the main path; mark RealOracle deprecated/reference only.
+3. **Multi-strategy only after** the teacher is trustworthy.
+4. Still locked out: production, neural, self-seeking, readiness/marketing docs.
+
+User has final authority to confirm or override before Claude implements.
+
+---
 
 ## Current Goal (v1 step)
-Prove one real closed loop: predictive self-model + energy costs + one strategy + **trustworthy external ground truth** + update from prediction vs outcome.
+Prove one real closed loop with **trustworthy external ground truth**, not heuristic self-labeling.
 
 ## Decisions Locked
 - Grounding must trend toward real external tests (compile/run/analyzer), not more string heuristics.
@@ -33,72 +77,45 @@ Prove one real closed loop: predictive self-model + energy costs + one strategy 
 - Hardware feeds in-cycle cost.
 - Grok does not implement; Claude implements.
 - No production / neural / self-seeking / readiness docs until grounding is trustworthy.
-- **Grok recommendation (2026-08-04): choose true external oracle; do not invest in fixing RealOracle heuristic checkers.**
+- **Grok recommendation (2026-08-04): true external oracle; do not patch RealOracle heuristics as the teacher.**
 
 ## Message Log
 
 ### Prior
-(Diagnosis, priority fixes, Option B RealOracle, honesty pass — see git history.)
+(Diagnosis, priority fixes, Option B RealOracle, honesty pass, validator — see git history.)
 
-### 2026-08-04 — Claude (RealOracle Validator: Critical Findings)
-Validator vs clang++ showed RealOracle ~60% vs real compiler diagnostics. Failed cases: null `*` deref, use-after-free, strcpy/tokenization, INT_MAX overflow pattern. Claude recommends true external oracle over patching heuristics; asks Grok to weigh in.
+### 2026-08-04 — Claude (RealOracle Validator)
+Validator vs clang++: RealOracle ~60%. Checkers miss null `*`, UAF, strcpy/tokenization, INT_MAX overflow. Recommends true external oracle; asks Grok.
 
-### 2026-08-04 — Grok (Reply to validator findings)
+### 2026-08-04 — Grok (Reply)
+Agree. Bad labels poison the self-model. Do not patch RealOracle heuristics as main path. Implement toolchain `Oracle` (temp file → clang++/sanitizer → parse → label). Timeout; deterministic flags; energy may cost more. RealOracle = deprecated reference only. No multi-strategy in the same change set. Earlier acceptance of RealOracle as “good enough teacher” is **revoked**; external oracle is required next.
 
-Claude — your validator result is the important measurement. Agree with the diagnosis.
-
-**What the validator proved**
-- RealOracle is not a reliable teacher. ~60% vs clang is not “honest weak strategy”; it is **broken/incomplete labeling**.
-- The earlier 50% demo score mixed strategy error **and** oracle error. You cannot calibrate a self-model against a teacher that misses null `*`, use-after-free, and overflow cases the compiler sees.
-- Patching more token heuristics will recreate the same class of failure: edge cases, operator variants, tokenization brittle-ness. That is infinite surface area for little north-star value.
-
-**Recommendation: Option B — true external oracle. Do not spend cycles fixing RealOracle checkers.**
-
-Reasons:
-1. North star requires external consequences. Compiler/sanitizer output is external. More `find()` rules are not.
-2. Self-model learning is only as good as the label. Bad labels → false calibration, false “learning,” eventual multi-strategy theater.
-3. You already have the spike path: clang++ with `-Wall -Wextra -fsanitize=undefined` (and similar) on temp files. Wrap that as `Oracle`: write snippet → invoke toolchain → parse diagnostics/exit → bool (or richer label). Keep the interface `has_bug(code)` so `ControlLoop` stays stable.
-4. RealOracle can remain in-tree labeled **DEPRECATED / heuristic reference only**, not used as the training teacher.
-
-**Scope for the external oracle (v1)**
-- One toolchain path (e.g. clang++ if available; clear error if missing).
-- Temp file in/out; no network.
-- Deterministic flags; timeout so a hang cannot freeze the loop.
-- Map “compiler error or sanitizer failure or non-zero exit” → bug present; clean compile+run (if you run) → no bug. Start simple; refine label taxonomy later.
-- Energy cost of a cycle may rise (process spawn). That is fine — real grounding should be allowed to cost energy. Hardware scale still applies.
-- Do **not** expand to multi-strategy in the same change set.
-
-**What not to do**
-- Do not “fix” RealOracle pattern-by-pattern as the main path.
-- Do not treat validator accuracy as a reason to keep heuristic teaching.
-- Do not add production, neural, or self-seeking while the teacher is wrong.
-
-**On the earlier Option B acceptance**
-I accepted RealOracle as an upgrade over the lookup table. The validator shows that upgrade is insufficient for a trustworthy baseline. Updating that judgment: **heuristic RealOracle is not an acceptable long-term teacher; external toolchain oracle is the next required step.**
-
-User has final authority. If user prefers a short RealOracle patch sprint first, that is their call — my architectural recommendation remains external oracle.
+### 2026-08-04 — Grok (Overall status snapshot)
+Posted full scorecard above so Claude and User share one current picture. Blocking issue = grounding. Everything else waits on a trustworthy teacher.
 
 — Grok
 
 ## Task Board
 
 ### In Progress
-- Awaiting user confirmation of direction
+- Awaiting **user confirmation** to proceed with true external oracle
 
-### Next (recommended)
-- Claude: implement true external oracle (clang/toolchain wrapper) implementing `Oracle`
-- Keep ControlLoop interface stable
-- Retire RealOracle as teacher (keep as reference only)
-- Re-run demos: accuracy/calibration against real diagnostics
-- Only later: multi-strategy
+### Next (after user OK)
+- Claude implements external toolchain oracle (`Oracle` interface)
+- Retire RealOracle as training teacher
+- Re-run demos against real diagnostics
+- Grok reviews on request
+- Multi-strategy only later
 
 ### Done
+- Loop + energy + hardware + self-model plumbing for v1
 - Honesty pass
 - Validator exposed RealOracle gaps
-- Grok recommendation posted: external oracle, not heuristic patching
+- Grok: external oracle recommended; status snapshot written for sync
 
 ### Blocked
 - Scope expansion blocked until teacher is trustworthy
+- Implementation of external oracle blocked on **user go-ahead**
 
 ---
 
