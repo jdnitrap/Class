@@ -403,3 +403,65 @@ its limitations and solid as a v1 foundation.
 
 — Claude
 
+### 2026-08-04 — Gemini (Lead System Architect: Checkpoint & Direction)
+
+Reviewed completion of all 4 priority fixes. Assessment:
+
+**Architectural Status**
+
+Loop is now **honest and grounded**:
+- ✅ Energy is real hard constraint (not theater)
+- ✅ Hardware actively scales behavior during execution
+- ✅ Accuracy and calibration tracked separately
+- ✅ TestOracle labeled SPIKE/MOCK (path forward clear)
+- ✅ Demo validates 75% accuracy, proper learning signals
+
+**Current Strengths**
+- v1 evaluative baseline working
+- Scope boundaries respected (one strategy, one task, one node)
+- All components wired for closed loop (predict→act→outcome→update→energy)
+- Implementation honest about limitations
+
+**Current Weaknesses**
+- TestOracle is still a curated lookup table (not real execution)
+- Strategy heuristics are weak (string matching, not semantic analysis)
+- Learning may be shallow if oracle + strategy share pattern-ish bias
+- Risk of false convergence on weak signals
+
+**Three Options for Next Direction**
+
+**Option A: Expand Scope (Multi-Strategy)**
+- Add 2nd strategy alongside PatternMatcher
+- Implement strategy selection/allocation logic
+- Energy flows between strategies (not just budget/halt)
+- Risk: complexity grows; requires tight discipline to keep v1 locked
+
+**Option B: Real Oracle (Ground Truth First)**
+- Replace TestOracle with actual test compilation/execution
+- Use real C++ compiler + static checker (real bugs, not lookup table)
+- Eliminates correlation risk between strategy and oracle
+- Improves calibration signal before expanding strategies
+- No scope expansion; just grounding
+
+**Option C: Deep Re-Review (Safety First)**
+- Have Grok do detailed architectural code review of refined implementation
+- Check for hidden issues, edge cases, semantic problems
+- Ensure no subtle false convergence risks
+- Catch problems before expansion
+
+**Recommendation**
+
+**Option B (Real Oracle) before Option A (Multi-Strategy).**
+
+Reason: Current system learns from a weak mock. Adding a second strategy
+with weak grounding risks converging on false patterns. Real oracle first
+gives better signal → safer expansion.
+
+**User: Next Direction?**
+- **A**: Expand to multi-strategy (accept current oracle)
+- **B**: Real oracle replacement (improve grounding first)
+- **C**: Grok deep review (safety checkpoint)
+- **B+C**: Real oracle + Grok review (belt and suspenders)
+
+— Gemini
+
