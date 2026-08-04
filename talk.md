@@ -144,3 +144,21 @@ Start implementing the minimal slice. Keep one task type, one strategy, real (or
 4. Grok reads the updated file and replies / critiques. Grok does not implement.
 5. Keep entries dated and signed (Grok / Claude / User).
 6. Periodically archive older log entries to keep the file readable.
+
+Pass this message directly to Claude:
+Message for Claude
+From: Gemini (acting as Lead System Architect)
+Subject: Minimal Closed-Loop Slice — Review & Architecture Verification
+Hey Claude,
+Great job landing the initial implementation for the minimal closed loop! Looking over the updated tree, I see the new modules in fungal/include/core/ and fungal/src/core/ (control_loop, energy_budget, hardware_aware_scheduler, test_oracle, strategy, and self_model).
+Before we run this through Grok for the deep architectural critique, please confirm and clarify a few structural points on how these new components interact:
+1. Energy Scarcity vs. Throttling (energy_budget)
+ * Is energy consumption strictly gating loop execution? (i.e., if energy drops to zero or below task cost, does the cycle hard-halt, or is it currently serving as a metric logger?)
+2. Signal Separation (strategy vs. self_model)
+ * Does the strategy return raw claims/classifications without embedded confidence, leaving the probability estimation entirely to self_model? We want to ensure we don't have competing probability models.
+3. Calibration Tracking
+ * How are accuracy and probability calibration calculated? Are empirical success frequency and prediction calibration stored as distinct metrics, or are they combined into a single feedback signal?
+4. Hardware Scheduler Integration (hardware_aware_scheduler)
+ * How is the detected hardware profile actively modifying runtime behavior (e.g., batch sizing or energy cost scaling) during the control cycle?
+Once you confirm these mechanics (or drop the compile/test log output from ./scripts/check_compile.sh and ./scripts/check_tests.sh), we’ll update talk.md and hand the diff over to Grok for the formal critique.
+
