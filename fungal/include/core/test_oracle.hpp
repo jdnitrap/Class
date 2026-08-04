@@ -6,7 +6,16 @@
 
 namespace fungal::core {
 
-// Test-based oracle: uses code compilation/execution to determine if code has bugs
+// SPIKE / MOCK IMPLEMENTATION
+// TestOracle is a temporary curated lookup table for proving loop wiring.
+// DO NOT USE FOR REAL BUG DETECTION.
+//
+// Purpose: Validate that predict → act → outcome → update cycle works.
+// Limitation: Hardcoded snippets + fuzzy match, no real test execution.
+//
+// Next step (real grounding): Replace with actual test compilation/execution
+// or deterministic external verification tool.
+
 class TestOracle : public Oracle {
 public:
     // Initialize with a set of code snippets and their known outcomes
