@@ -123,6 +123,9 @@ target_link_libraries(fungal_loop_halt_test fungal_lib)
 add_executable(fungal_loop_real_demo src/core/control_loop_real_demo.cpp)
 target_link_libraries(fungal_loop_real_demo fungal_lib)
 
+add_executable(real_oracle_validator src/core/real_oracle_validator.cpp)
+target_link_libraries(real_oracle_validator fungal_lib)
+
 if(GTest_FOUND OR GTEST_FOUND)
     if(GTEST_FOUND)
         include_directories(${GTEST_INCLUDE_DIRS})
