@@ -37,6 +37,7 @@ set(LEARNING_SOURCES
 )
 
 set(CORE_LOOP_SOURCES
+    src/core/hardware.cpp
     src/core/hardware_aware_scheduler.cpp
     src/core/self_model.cpp
     src/core/strategy.cpp

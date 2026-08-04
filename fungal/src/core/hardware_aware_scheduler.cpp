@@ -1,5 +1,5 @@
 #include "core/hardware_aware_scheduler.hpp"
-#include "hardware.hpp"
+#include "core/hardware.hpp"
 #include <algorithm>
 
 namespace fungal::core {
@@ -8,7 +8,7 @@ HardwareAwareScheduler::HardwareAwareScheduler() = default;
 
 HardwareProfile HardwareAwareScheduler::detect_hardware() {
     // Use existing hardware detector
-    auto hw_info = fungal::HardwareDetector::detect();
+    auto hw_info = HardwareDetector::detect();
 
     current_profile_ = HardwareProfile{
         .cpu_cores = static_cast<int>(hw_info.cpu_cores),
