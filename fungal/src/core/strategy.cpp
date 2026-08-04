@@ -48,9 +48,34 @@ bool PatternMatcherStrategy::has_null_dereference_pattern(const std::string& cod
 
 bool PatternMatcherStrategy::has_uninitialized_var_pattern(const std::string& code) {
     // Simple heuristic: variable used before assignment
-    // Pattern: declaration of pointer/ref without initialization
-    return (code.find("int* ") != std::string::npos && code.find("= nullptr") == std::string::npos) ||
-           (code.find("char* ") != std::string::npos && code.find("= nullptr") == std::string::npos);
+    // Pattern: declaration of variable without assignment, then use
+    // e.g., "int x; int y = x + 5;" - x used before init
+
+    // Look for pattern: "type name;" (no assignment) followed by use
+    bool has_decl_without_init = false;
+
+    // Check for int/char declared without = assignment
+    if ((code.find("int ") != std::string::npos || code.find("char ") != std::string::npos) &&
+        code.find(";") != std::string::npos) {
+        // Check if there's a declaration without immediate initialization
+        // Simple heuristic: find semicolon that's not preceded by =
+        size_t semi = code.find(";");
+        if (semi != std::string::npos && semi > 0) {
+            // Look back for = (assignment)
+            bool has_assign = false;
+            for (size_t i = 0; i < semi; ++i) {
+                if (code[i] == '=') {
+                    has_assign = true;
+                    break;
+                }
+            }
+            if (!has_assign && (code[0] == 'i' || code[0] == 'c')) {
+                has_decl_without_init = true;
+            }
+        }
+    }
+
+    return has_decl_without_init;
 }
 
 bool PatternMatcherStrategy::has_off_by_one_pattern(const std::string& code) {
