@@ -14,12 +14,37 @@ make -j4
 
 ### Run
 ```bash
+# Interactive Terminal UI (recommended)
+./fungal_tui
+
 # Demo application
 ./fungal
 
 # Run tests
 ctest --output-on-failure
 ```
+
+## Interactive Terminal UI
+
+The **Fungal TUI** provides an interactive interface to interact with the system:
+
+```bash
+cd fungal/build
+./fungal_tui
+```
+
+Features:
+- **Create & Manage Nodes** - Create autonomous agents with custom goals
+- **Run Cycles** - Execute node reasoning cycles in real-time
+- **Send Signals** - Broadcast messages through the shared substrate
+- **Audit Trail** - View complete decision history
+- **Learning Tracking** - Monitor strategy performance and source trustworthiness
+- **Safety Dashboard** - View constraints and alignment status
+- **Neural Network** - Visualize hybrid reasoning and network state
+- **Strategy Management** - Add, remove, and modify node strategies
+- **Color-Coded Output** - Enhanced readability with ANSI colors
+
+See [fungal/docs/TUI_GUIDE.md](fungal/docs/TUI_GUIDE.md) for detailed instructions.
 
 ## What This System Is
 

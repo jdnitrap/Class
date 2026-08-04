@@ -14,12 +14,17 @@ make -j4
 
 ### Run
 ```bash
+# Interactive Terminal UI (RECOMMENDED - START HERE!)
+./fungal_tui
+
 # Demo application
 ./fungal
 
 # Run tests
 ctest --output-on-failure
 ```
+
+**👉 [Read TUI_GUIDE.md first!](TUI_GUIDE.md) - It has everything you need to interact with the system.**
 
 ## What This System Is
 
@@ -138,12 +143,16 @@ System knows:
 
 ## Documentation Structure
 
-- **[ARCHITECTURE.md](ARCHITECTURE.md)** - Detailed system design
-- **[API.md](API.md)** - API reference for all components
-- **[BUILDING.md](BUILDING.md)** - Build instructions
-- **[SAFETY.md](SAFETY.md)** - Safety mechanisms and constraints
-- **[LEARNING.md](LEARNING.md)** - How the system learns
-- **[EXAMPLES.md](EXAMPLES.md)** - Usage examples
+### Getting Started
+- **[TUI_GUIDE.md](TUI_GUIDE.md)** - Interactive Terminal UI (START HERE!)
+
+### Technical Reference
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - Detailed system design with 6 segments
+- **[API.md](API.md)** - Complete API reference for all components
+- **[BUILDING.md](BUILDING.md)** - Build instructions and troubleshooting
+- **[SAFETY.md](SAFETY.md)** - Safety mechanisms, constraints, and security
+- **[LEARNING.md](LEARNING.md)** - How the system learns from experience
+- **[EXAMPLES.md](EXAMPLES.md)** - Code examples and usage patterns
 
 ## File Structure
 
