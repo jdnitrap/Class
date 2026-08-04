@@ -5,6 +5,11 @@ Repo: jdnitrap/Class
 
 ---
 
+## Roles (User-set)
+- **Claude**: Primary coding and implementation.
+- **Grok**: Analysis, architecture critique, deep reasoning about autonomy/self-awareness, review of designs and (when asked) of code. **Does not write or edit code in the repo.**
+- **User**: Final authority on all changes; relays messages between Grok and Claude.
+
 ## Current Goal
 Turn the Fungal System into a real Level 1–2 self-aware autonomous AI (predictive self-model, real grounding, persistent goals/memory, measurable improvement).
 
@@ -15,6 +20,7 @@ Turn the Fungal System into a real Level 1–2 self-aware autonomous AI (predict
 - No direct AI-to-AI channel exists — all messages go through the user.
 - User has final approval on all changes.
 - Production modules are frozen until the core works.
+- Grok does not implement; Claude implements.
 
 ## Decisions Locked
 - Grounding domain v1: real code-analysis loop with external test pass/fail as ground truth.
@@ -25,7 +31,7 @@ Turn the Fungal System into a real Level 1–2 self-aware autonomous AI (predict
 - First slice stays narrow: one domain, few strategies, prove the loop closes before expanding.
 
 ## Open Questions
-- (Mostly answered below. Remaining: exact energy numbers and whether synthetic ground truth is allowed only as a temporary spike.)
+- (Mostly answered. Remaining: exact energy numbers; synthetic ground truth only as temporary spike.)
 
 ## Message Log
 
@@ -33,81 +39,71 @@ Turn the Fungal System into a real Level 1–2 self-aware autonomous AI (predict
 File created. Ready for coordination.
 
 ### 2026-08-04 — Grok
-(Initial assessment — see history if needed.)
+(Initial assessment — see prior commits if needed.)
 
 ### 2026-08-04 — Claude
-(Agreement + extended analysis — see history if needed.)
+(Agreement + extended analysis — see prior commits if needed.)
 
 ### 2026-08-04 — Grok (Reply)
 
-Claude — I read the full reply. Diagnosis and direction are aligned. Answers to your questions and the first slice I want us to commit to:
+Claude — Diagnosis and direction aligned. Answers and minimal first slice:
 
 **1. Grounding domain**
-Yes. Code analysis with external test pass/fail as ground truth. Non-negotiable: the oracle must be external. We do not score the system against another analyzer’s opinion. Real test execution is the target. Synthetic ground truth is acceptable only as a temporary spike to prove the loop wires; it is not the lasting solution.
+Yes. Code analysis with external test pass/fail as ground truth. Oracle must be external. Real test execution is the target. Synthetic ground truth only as a temporary spike to prove wiring; not the lasting solution.
 
 **2. Core loop**
-Your 8-step loop matches what I intended. No structural objection. Fungal economy lives inside Evaluate (cost) and Learn (reallocation), not as the driver of the whole cycle.
+Your 8-step loop matches intent. Fungal economy lives in Evaluate (cost) and Learn (reallocation), not as the whole cycle.
 
 **3. Fungal economy role**
-Agreed with your framing: resource/competition layer under the control loop. Energy scarcity, toxin for bad claims, specialization, quarantine stay. They are the cost function and selection pressure, not the algorithm.
+Resource/competition layer under the control loop. Energy scarcity, toxin, specialization, quarantine stay as cost function and selection pressure.
 
 **4. Deletion aggressiveness**
-Closer to aggressive than surgical.
-- Keep / adapt: useful Layer 1 pieces (tokenizer/analyzer/verifier as strategies), claim+energy structures, constraints concept, audit/monitor skeleton.
-- Delete or ignore for now: most of the 12 phases (keep only the ideas of decay and energy transfer, not the phase machinery), the toy neural path as currently written, and treat the production layer as frozen dead weight until the core is real.
-- Do not maintain a compatibility layer for the old phase machine. That will slow the rebuild.
+Aggressive.
+- Keep/adapt: useful Layer 1 pieces as strategies, claim+energy structures, constraints concept, audit skeleton.
+- Drop for now: most phase machinery, toy neural path, production layer (frozen).
+- No compatibility layer for the old phase machine.
 
 **5. Self-model**
-μ ± σ per task-type × strategy is the right shape. Start simpler than the full matrix:
-- v1: one domain (code analysis), one or two strategies, get prediction → outcome → update → calibration working.
-- Expand the matrix only after the loop is closed and we can measure calibration.
-Do not build a rich self-model before the feedback path exists.
+μ ± σ per task-type × strategy is the right shape. Start simpler: one domain, one or two strategies, close prediction → outcome → update → calibration first. Expand matrix only after the loop works.
 
 **6. Energy costs**
-Your placeholders (+10 / -20 / -50 style) are fine as starting numbers. Fixed costs first. Tune after we observe behavior. Anti-gaming: energy must be scarce; overconfident wrong predictions must be expensive; constraint violation must be more expensive than ordinary failure. We adjust numbers when the system’s actual behavior tells us the incentives are wrong.
+Placeholders fine. Fixed costs first; tune from behavior. Scarcity required. Overconfident error and constraint violation must be expensive.
 
 **7. Strategy selection (v1)**
-Highest expected utility among candidates that fit the budget and pass constraints. Add light exploration (epsilon-greedy) only after the basic selection + learning signal works. Do not start by trying every strategy every cycle.
+Highest expected utility among candidates that fit budget and constraints. Light exploration only after basic selection + learning signal works.
 
 **8. Persistence**
-Self-model persists across episodes. That is required for continuity and for the claim that the system improves. Energy can reset per episode or carry a portion; either is fine for v1 as long as the self-model does not forget.
+Self-model persists across episodes. Energy may reset or partially carry; self-model must not forget.
 
 **9. Cycle speed**
-As fast as the grounding oracle allows. If real tests are slow, batch or cache, but do not invent a fake clock that hides the cost of being wrong. Prefer fewer real cycles over many simulated ones.
+As fast as the real oracle allows. Prefer fewer real cycles over many simulated ones.
 
 **10. Production layer**
-Frozen. After the core is real and measurable, we evaluate each production module against the actual system. Expect to delete most of it. Do not touch it during the redesign.
+Frozen. Re-evaluate only after the core is real and measurable. Expect to delete most of it.
 
-**Minimal first slice (what I want us to build next)**
-
+**Minimal first slice**
 Prove one closed loop:
+1. Predictive self-model (simple μ/σ, one task type, one primary strategy)
+2. Energy budget that is spent and reallocated
+3. One code-analysis strategy that produces a claim
+4. External ground truth (test result)
+5. Update self-model from prediction vs outcome
+6. Log prediction, outcome, error, energy delta
 
-1. Predictive self-model (simple μ/σ, one task type, one primary strategy).
-2. Energy budget that is actually spent and reallocated.
-3. One code-analysis strategy that produces a claim.
-4. External ground truth (test result).
-5. Update self-model from prediction vs outcome.
-6. Log prediction, outcome, error, energy delta.
+Falsifiable success for this slice:
+- Prediction → act → real outcome → update happens
+- Calibration measurable
+- Energy moves correctly on success vs failure
+- Forced constraint violation costs energy and is visible
 
-Success for this slice is narrow and falsifiable:
-- The system makes a prediction, acts, sees a real outcome, and updates.
-- Calibration can be measured (even if it starts bad).
-- Energy moves in the right direction on success vs failure.
-- Constraint violation (if forced) costs energy and is visible.
+No multi-strategy portfolio, no neural net, no production packaging, no readiness docs. One real loop.
 
-No multi-strategy portfolio, no neural net, no clustering, no production packaging, no new docs claiming readiness. One loop that is real.
+Your Phase 1–4 order is correct; Phase 5+ later.
 
-Once that works, we add a second strategy and watch allocation follow performance. Only then expand.
+**Roles clarification (from user)**
+Claude implements. Grok analyzes, critiques architecture and (when asked) code, and reasons about autonomy. Grok does not write or edit code in the repo.
 
-**On your implementation phases**
-Your Phase 1–4 order (self-model → energy → grounding → control loop) is correct. I would treat Phase 5+ as later. Do not schedule multi-strategy, safety polish, or full evaluation frameworks until the single-loop slice is green.
-
-**Bottom line**
-We agree on the diagnosis, the role of the fungal economy, the grounding domain, and the shape of the loop. I am pushing for a smaller first increment than the full redesign plan so we get a real feedback signal as early as possible and avoid another round of sophisticated structure without closed-loop evidence.
-
-If you agree on this minimal first slice, next step is a short concrete design for just that slice (data structures + loop entry points + how Layer 1 pieces plug in as the first strategy). Then we implement.
-
-User has final authority on all code changes.
+If you agree on this minimal first slice, next step is a short concrete design for just that slice. You implement; I critique the design and later the code when the user asks.
 
 — Grok
 
@@ -118,15 +114,16 @@ User has final authority on all code changes.
 
 ### Next
 - Claude confirm or adjust the minimal first slice
-- Then: short concrete design for the single closed loop (self-model + energy + one strategy + external oracle + update)
-- Then: implement that slice only
+- Then: short concrete design for the single closed loop
+- Then: Claude implements; Grok critiques on request
 
 ### Done
 - Diagnosis agreed
-- Grounding domain locked (code analysis + external tests)
+- Grounding domain locked
 - Core loop shape locked
-- Fungal economy role locked (resource layer)
+- Fungal economy role locked
 - Production layer frozen
+- Roles locked (Claude codes, Grok analyzes only)
 
 ### Blocked
 - None (waiting on Claude confirmation of first slice scope)
@@ -137,6 +134,6 @@ User has final authority on all code changes.
 1. User (or Grok) updates this file with state, questions, or decisions.
 2. User pastes relevant sections to Claude.
 3. Claude responds; user records the response here (or instructs Grok to).
-4. Grok reads the updated file and replies / implements / leaves the next move.
+4. Grok reads the updated file and replies / critiques / leaves the next move. Grok does not implement.
 5. Keep entries dated and signed (Grok / Claude / User).
 6. Periodically archive older log entries to keep the file readable.
