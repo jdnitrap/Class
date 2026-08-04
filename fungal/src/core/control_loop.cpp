@@ -93,6 +93,7 @@ void ControlLoop::commit_and_act(bool prediction_correct, bool oracle_truth,
     energy_budget_.refund_outcome(prediction_correct, energy_cost);
 
     // OBSERVE/LEARN: update self-model from ground truth
+    // outcome_correct: did our strategy's claim match the oracle?
     self_model_.update_from_outcome(task_type_id, prediction_correct, predicted_prob);
 }
 

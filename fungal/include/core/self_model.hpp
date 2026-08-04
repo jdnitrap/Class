@@ -41,9 +41,9 @@ public:
     double get_uncertainty(int task_type_id) const;
 
     // Update after observing ground truth
-    // ground_truth: true if strategy's claim matched reality
+    // outcome_correct: true if strategy's claim matched oracle (accuracy signal)
     // predicted_prob: what probability did we assign? (for calibration tracking)
-    void update_from_outcome(int task_type_id, bool ground_truth, double predicted_prob);
+    void update_from_outcome(int task_type_id, bool outcome_correct, double predicted_prob);
 
     // Get calibration error (are predicted probabilities justified?)
     double get_calibration_error(int task_type_id) const;
