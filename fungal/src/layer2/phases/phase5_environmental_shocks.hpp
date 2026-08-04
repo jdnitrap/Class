@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../include/interfaces.hpp"
+#include "interfaces.hpp"
 
 namespace fungal {
 

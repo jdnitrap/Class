@@ -8,6 +8,8 @@
 
 namespace fungal {
 
+class BridgeIntegration;
+
 class FungalSystem {
 public:
     FungalSystem();
@@ -27,7 +29,7 @@ public:
 private:
     std::unique_ptr<Layer1System> layer1;
     std::unique_ptr<Layer2System> layer2;
-    BridgeIntegration bridge;
+    std::unique_ptr<BridgeIntegration> bridge;
 };
 
 }  // namespace fungal

@@ -64,13 +64,4 @@ public:
     virtual FungalNetwork load_state(const std::string& filename) = 0;
 };
 
-class BridgeIntegration {
-public:
-    virtual ~BridgeIntegration() = default;
-    virtual void import_foundational_claims(
-        FungalNetwork& network,
-        const std::vector<Claim>& foundational_claims) = 0;
-    virtual std::vector<Claim> export_verified_claims(const FungalNetwork& network) = 0;
-};
-
 }  // namespace fungal

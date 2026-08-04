@@ -8,7 +8,8 @@ extern Layer2System* create_layer2_system();
 
 FungalSystem::FungalSystem()
     : layer1(create_layer1_system()),
-      layer2(create_layer2_system()) {
+      layer2(create_layer2_system()),
+      bridge(std::make_unique<BridgeIntegration>()) {
 }
 
 FungalSystem::~FungalSystem() = default;
@@ -21,7 +22,7 @@ void FungalSystem::initialize() {
 void FungalSystem::analyze_code(const std::string& code) {
     layer1->analyze_code(code);
     auto foundational_claims = layer1->get_foundational_claims();
-    bridge.import_foundational_claims(layer2->get_network(), foundational_claims);
+    bridge->import_foundational_claims(layer2->get_network(), foundational_claims);
 }
 
 void FungalSystem::run_reasoning_cycle(int num_phases) {
@@ -30,11 +31,11 @@ void FungalSystem::run_reasoning_cycle(int num_phases) {
 
 void FungalSystem::apply_measurement_feedback(const CodeStats& stats) {
     auto& network = layer2->get_network();
-    bridge.provide_measurement_feedback(stats, network.claims);
+    bridge->provide_measurement_feedback(stats, network.claims);
 }
 
 std::vector<Claim> FungalSystem::get_verified_claims() const {
-    return bridge.export_verified_claims(layer2->get_network());
+    return bridge->export_verified_claims(layer2->get_network());
 }
 
 FungalNetwork& FungalSystem::get_network() {

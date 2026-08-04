@@ -6,9 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 enable_testing()
 
-include(FetchContent)
-FetchContent_Declare(googletest URL https://github.com/google/googletest/archive/release-1.12.1.zip)
-FetchContent_MakeAvailable(googletest)
+find_package(GTest QUIET)
 
 set(LAYER1_SOURCES
     src/layer1/tokenizer.cpp
@@ -68,22 +66,28 @@ target_include_directories(fungal_lib PUBLIC include)
 add_executable(fungal src/main.cpp)
 target_link_libraries(fungal fungal_lib)
 
-add_executable(test_tokenizer tests/unit/test_tokenizer.cpp)
-target_link_libraries(test_tokenizer fungal_lib gtest_main)
-add_test(NAME test_tokenizer COMMAND test_tokenizer LABELS "unit")
+if(GTest_FOUND)
+    add_executable(test_tokenizer tests/unit/test_tokenizer.cpp)
+    target_link_libraries(test_tokenizer fungal_lib gtest_main)
+    add_test(NAME test_tokenizer COMMAND test_tokenizer LABELS "unit")
 
-add_executable(test_analyzer tests/unit/test_analyzer.cpp)
-target_link_libraries(test_analyzer fungal_lib gtest_main)
-add_test(NAME test_analyzer COMMAND test_analyzer LABELS "unit")
+    add_executable(test_analyzer tests/unit/test_analyzer.cpp)
+    target_link_libraries(test_analyzer fungal_lib gtest_main)
+    add_test(NAME test_analyzer COMMAND test_analyzer LABELS "unit")
 
-add_executable(test_phases tests/unit/test_phases.cpp)
-target_link_libraries(test_phases fungal_lib gtest_main)
-add_test(NAME test_phases COMMAND test_phases LABELS "unit")
+    add_executable(test_phases tests/unit/test_phases.cpp)
+    target_link_libraries(test_phases fungal_lib gtest_main)
+    add_test(NAME test_phases COMMAND test_phases LABELS "unit")
 
-add_executable(test_system_integration tests/integration/test_system.cpp)
-target_link_libraries(test_system_integration fungal_lib gtest_main)
-add_test(NAME test_system_integration COMMAND test_system_integration LABELS "integration")
+    add_executable(test_system_integration tests/integration/test_system.cpp)
+    target_link_libraries(test_system_integration fungal_lib gtest_main)
+    add_test(NAME test_system_integration COMMAND test_system_integration LABELS "integration")
 
-add_executable(test_stress tests/system/test_stress.cpp)
-target_link_libraries(test_stress fungal_lib gtest_main)
-add_test(NAME test_stress COMMAND test_stress LABELS "system")
+    add_executable(test_stress tests/system/test_stress.cpp)
+    target_link_libraries(test_stress fungal_lib gtest_main)
+    add_test(NAME test_stress COMMAND test_stress LABELS "system")
+
+    message(STATUS "GTest found - building tests")
+else()
+    message(WARNING "GTest not found - tests skipped. Install libgtest-dev or set GTEST_INCLUDE_DIRS")
+endif()

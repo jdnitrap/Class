@@ -1,4 +1,4 @@
-#include "include/fungal_system.hpp"
+#include "fungal_system.hpp"
 #include <iostream>
 #include <string>
 
