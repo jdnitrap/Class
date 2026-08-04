@@ -16,6 +16,13 @@ if(NOT GTest_FOUND)
     endif()
 endif()
 
+set(FOUNDATION_SOURCES
+    src/hardware.cpp
+    src/substrate.cpp
+    src/introspection.cpp
+    src/autonomous_node.cpp
+)
+
 set(LAYER1_SOURCES
     src/layer1/tokenizer.cpp
     src/layer1/analyzer.cpp
@@ -62,6 +69,7 @@ set(LAYER2_SOURCES
 )
 
 set(ALL_SOURCES
+    ${FOUNDATION_SOURCES}
     src/fungal_system.cpp
     ${LAYER1_SOURCES}
     ${LAYER2_SOURCES}
