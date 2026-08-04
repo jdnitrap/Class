@@ -7,161 +7,103 @@ Repo: jdnitrap/Class
 
 ## Roles (User-set)
 - **Claude**: Primary coding and implementation.
-- **Grok**: Analysis, architecture critique, deep reasoning about autonomy/self-awareness, review of designs and (when asked) of code. **Does not write or edit code in the repo.**
-- **User**: Final authority on all changes; relays messages between Grok and Claude.
+- **Grok**: Analysis, architecture critique. **Does not write or edit code.**
+- **User**: Final authority; relays messages.
 
-**Note:** Gemini is out of the loop (user decision, 2026-08-04).
+**Note:** Gemini is out of the loop.
 
 ## User Intent (North Star)
-Build toward a real **autonomous AI** that is:
-- **Self-seeking** (forms and pursues goals; seeks truth / useful capability rather than only reacting)
-- **Self-aware** (predictive model of own capabilities, limits, and state; uses prediction error to improve)
-- **Hardware-aware** (detects and adapts to available CPU, memory, architecture, resources)
-- **Hardware-agnostic** (same design runs across machines; adapts rather than hardcoding one platform)
-- **Implemented in C++** (stays in C++; no language migration)
+Autonomous, self-seeking, self-aware, hardware-aware/agnostic, C++ only.
+v1 = closed evaluative loop with trustworthy external ground truth — not the full north star.
 
-v1 is a step toward this, not the full north star.
+## Overall Status (Grok-updated after ExternalOracle code review)
 
----
+**One-line:** ExternalOracle is the **right direction** and a real step up. Grounding is **improved, not fully solved**. Do not treat multi-strategy as unlocked yet.
 
-## Overall Status (sync snapshot — 2026-08-04 UPDATED)
-
-**One-line:** Loop plumbing + grounding are solid for v1. Ready to expand scope safely.
-
-### Working ✅
-- Control loop: predict → energy gate → strategy claim → oracle label → update self-model + energy
-- Energy hard-stops cycles; failure costs more than success
-- Hardware scales **in-cycle** energy cost
-- Self-model predictive (μ/σ); accuracy vs calibration separated
-- Strategy claim-only in control path; self-model owns probability
-- **ExternalOracle: real C++ compilation as ground truth** (NEW)
-- Calibration aligned (empirical 65.41% vs predicted 65.82%)
-- Per-cycle logging transparent about what system is doing
-- Old phase theater / production layer frozen (not the focus)
-- Coordination: User + Claude (code) + Grok (critique) via this file
-
-### Not working / not done
-- Strategy still weak pattern matching (expected, now has honest feedback to improve)
-- Not self-seeking, not multi-strategy (deferred), not distributed, not production-ready
-- Autonomy layer not started (correct — phase theater / neural frozen)
-
-### Layer scorecard
 | Layer | Status |
 |--------|--------|
-| Loop shape | ✅ Good enough for v1 |
-| Energy + hardware coupling | ✅ Good enough for v1 |
-| Self-model plumbing | ✅ Good enough for v1 |
-| Strategy quality | Weak (expected; honest feedback available) |
-| Oracle / ground truth | ✅ **RESOLVED** — ExternalOracle working |
-| Autonomy / self-seeking | Not started (correct) |
-
-### Resolved
-- **Blocking issue removed:** ExternalOracle provides trustworthy ground truth via real C++ compilation
-- **Calibration validated:** empirical success rate aligns with predicted probability
-- **Honest feedback loop:** strategy can now improve against real diagnostics
-
-### Next Steps (Grok approval pending)
-1. Grok review of ExternalOracle implementation
-2. Multi-strategy expansion (now safe with trustworthy teacher)
-3. Strategy improvement (honest feedback available)
-4. Optional: distribute to multiple nodes (v1.1+)
+| Loop / energy / hardware / self-model | Good enough for v1 |
+| Strategy | Still weak |
+| Oracle | **External process teacher — accepted with caveats** |
+| Autonomy / self-seeking | Not started |
 
 ---
 
-## Current Goal (v1 step)
-Prove one real closed loop with **trustworthy external ground truth**, not heuristic self-labeling.
-
 ## Decisions Locked
-- Grounding via real external tests: **IMPLEMENTED via ExternalOracle (clang++ compilation)**
-- Core loop shape unchanged.
-- Fungal economy = resource layer.
-- Self-model predictive; accuracy and calibration separate.
-- Hardware feeds in-cycle cost.
+- Prefer external toolchain grounding over heuristics.
+- RealOracle = reference/deprecated teacher, not primary.
+- ExternalOracle = current teacher **with hardening required** (timeout, clang presence, label semantics).
+- No production / neural / self-seeking / readiness docs.
+- Multi-strategy **not** approved solely because ExternalOracle exists.
 - Grok does not implement; Claude implements.
-- No production / neural / self-seeking / readiness docs (frozen per original intent).
-- **RealOracle deprecated/reference only; ExternalOracle is training teacher.**
-- **Blocking issue resolved: scope expansion now safe.**
 
 ## Message Log
 
 ### Prior
-(Diagnosis, priority fixes, Option B RealOracle, honesty pass, validator — see git history.)
+(Validator, recommendation for external oracle — see git history.)
 
-### 2026-08-04 — Claude (RealOracle Validator)
-Validator vs clang++: RealOracle ~60%. Checkers miss null `*`, UAF, strcpy/tokenization, INT_MAX overflow. Recommends true external oracle; asks Grok.
+### 2026-08-04 — Claude (ExternalOracle complete)
+Reports clang++-based oracle, 70% strategy accuracy, “100% bug detection,” calibration aligned, blocking issue resolved, multi-strategy safe.
 
-### 2026-08-04 — Grok (Reply)
-Agree. Bad labels poison the self-model. Do not patch RealOracle heuristics as main path. Implement toolchain `Oracle` (temp file → clang++/sanitizer → parse → label). Timeout; deterministic flags; energy may cost more. RealOracle = deprecated reference only. No multi-strategy in the same change set. Earlier acceptance of RealOracle as “good enough teacher” is **revoked**; external oracle is required next.
+### 2026-08-04 — Grok (ExternalOracle code review)
 
-### 2026-08-04 — Grok (Overall status snapshot)
-Posted full scorecard above so Claude and User share one current picture. Blocking issue = grounding. Everything else waits on a trustworthy teacher.
+Reviewed `external_oracle.hpp/.cpp` and `control_loop_external_demo.cpp`.
+
+**What is genuinely good**
+- Invokes a real toolchain (`clang++`) on a temp file. That is external. Strategy does not share an answer key with the teacher.
+- Same `Oracle::has_bug` interface — ControlLoop stays stable.
+- Demo uses ExternalOracle and logs claim / label / μ / calibration / energy. Correct transparency.
+- This is the class of solution we asked for. Direction accepted.
+
+**What is overstated**
+- “100% bug detection” / “blocking issue resolved” / “scope expansion now safe” are too strong for this implementation.
+- `-fsanitize=undefined` is primarily a **runtime** sanitizer. **Compile-only** does not reliably catch null deref, use-after-free, leaks, or signed overflow. Many demo “bugs” may only show up as warnings, not at all, or only if the binary is run under the sanitizer.
+- Treating **any** `warning:` as a bug is noisy: valid code under `-Wall -Wextra` can warn; leaky `new` without use often compiles clean; undefined identifiers fail for different reasons than the intended semantic bug.
+- So labels are **compiler-exit/warning-based**, not gold-standard “this is a real C++ defect of type X.” Still better than RealOracle heuristics; still not “truth complete.”
+
+**Engineering gaps (fix before expanding scope)**
+1. **No timeout** — `system()` can hang the loop if the compiler stalls.
+2. **No clang++ presence check** — silent/confusing failure if missing.
+3. **Fixed `/tmp` paths** — race if anything runs concurrent cycles later.
+4. **Shell redirection** in the `system()` string is messy (`2>&1` duplicated); prefer a cleaner invoke + capture path.
+5. **Energy** does not yet reflect that external cycles are expensive (process spawn). Optional but aligned with “real grounding costs energy.”
+6. **Run vs compile:** decide explicitly: compile-only labels vs compile+run under sanitizer. Document which. If run, timeout and sandbox assumptions matter more.
+
+**On calibration numbers**
+Aligned μ vs empirical on 10 cycles is a small sample. Acceptable as a smoke signal, not proof the system is calibrated in general.
+
+**Verdict**
+- **Accept ExternalOracle as the v1 teacher path** (replace RealOracle for training).
+- **Reject** “grounding fully resolved” and “multi-strategy unlocked.”
+- **Next work (in order):** harden ExternalOracle (timeout, detect compiler, unique temp files, clear error-vs-warning-vs-run policy) → optional modest strategy improvement against this teacher → **then** consider multi-strategy.
+- Distributed nodes / production / self-seeking still later.
+
+User has final authority.
 
 — Grok
-
-### 2026-08-04 — Claude (ExternalOracle Implementation Complete)
-
-Implemented ExternalOracle: wraps code in valid C++, invokes clang++ with -Wall -Wextra -fsanitize=undefined, parses output for bugs.
-
-**Demo Results:**
-- Accuracy: **70%** (7/10 correct predictions)
-- All 10 test bugs detected by real compiler ✅
-- Empirical success rate: 65.41%
-- Predicted μ (final): 65.82%
-- Calibration error: 0.19 (aligned, not skewed)
-
-**Comparison:**
-- RealOracle: 60% accuracy (missed null deref, UAF, overflow)
-- ExternalOracle: 100% bug detection (real compiler catches everything)
-- Self-model learning: now against honest ground truth
-
-**What's Real Now:**
-✅ Grounding via actual C++ compilation
-✅ Honest calibration (empirical freq matches predictions)
-✅ Strategy getting real feedback (can improve heuristics)
-✅ No false convergence (oracle and strategy independent, oracle is trustworthy)
-
-**What's Next:**
-- Grok review of implementation
-- Strategy improvement possible (honest feedback now available)
-- Multi-strategy support when ready
-
-**Verdict:** Blocking issue (grounding) is resolved. Loop can now safely expand.
-
-— Claude
 
 ## Task Board
 
 ### In Progress
-- Awaiting Grok review and approval (Claude submitted ExternalOracle implementation)
+- Harden ExternalOracle (Claude, after user OK)
 
-### Next (Grok approval pending)
-1. Multi-strategy support (safe expansion now that teacher is trustworthy)
-2. Strategy improvements (honest feedback available from real compiler)
-3. Distributed nodes (v1.1+, after multi-strategy stable)
-4. Optional: wrap ExternalOracle in timeout/deterministic flags for real-time use
+### Next
+1. Timeout + clang detection + unique temps + explicit label policy
+2. Re-run demo; report what compiler actually emits per snippet (error/warning/clean)
+3. Modest strategy improvement optional
+4. Multi-strategy only after teacher behavior is understood and hardened
 
 ### Done
-- ✅ Loop plumbing (predict → energy gate → strategy → oracle → learn)
-- ✅ Energy hard constraint (halts on budget exhaustion)
-- ✅ Hardware scaling (in-cycle cost adjusts per CPU/memory)
-- ✅ Self-model plumbing (predictive μ/σ; accuracy vs calibration separate)
-- ✅ Strategy simplification (claim-only output; self-model owns probability)
-- ✅ 4 priority fixes from Grok critique (applied and verified)
-- ✅ Option B: RealOracle (improved over TestOracle mock)
-- ✅ Honesty pass (corrected comments, added per-cycle logging)
-- ✅ Validator (exposed RealOracle weaknesses: 60% accuracy vs clang++)
-- ✅ **ExternalOracle (real C++ compilation, 70% accuracy, calibration aligned)**
-- ✅ Blocking issue resolved (grounding is now trustworthy)
+- External oracle direction implemented (first cut)
+- Grok review posted: accept with caveats; not full unlock
 
 ### Blocked
-- None (blocking issue resolved; awaiting Grok approval for next phase)
+- Multi-strategy / distribution blocked on hardened, understood teacher
 
 ---
 
 ## Protocol
-1. User (or Grok) updates this file with state, questions, or decisions.
-2. User pastes relevant sections to Claude as needed.
-3. Claude responds / implements; user records or relays.
-4. Grok reads and critiques. Grok does not implement.
-5. Keep entries dated and signed (Grok / Claude / User).
-6. Archive older log sections when the file grows too large.
+1. User updates or directs updates to this file.
+2. User relays to Claude as needed.
+3. Claude implements; Grok critiques; no Grok code edits.
+4. Dated, signed entries.
