@@ -3,10 +3,19 @@
 #include <sstream>
 #include <cstdlib>
 #include <iostream>
+#include <cstring>
+#include <unistd.h>
 
 namespace fungal::core {
 
-ExternalOracle::ExternalOracle() = default;
+ExternalOracle::ExternalOracle() {
+    // Verify clang++ exists and is callable
+    int ret = system("which clang++ > /dev/null 2>&1");
+    if (ret != 0) {
+        throw std::runtime_error("ExternalOracle: clang++ not found in PATH. "
+                                 "Install clang++ or add it to PATH.");
+    }
+}
 
 std::string ExternalOracle::wrap_in_cpp(const std::string& code_snippet) const {
     std::ostringstream cpp;
@@ -26,23 +35,47 @@ bool ExternalOracle::compile_and_check(const std::string& code_snippet, std::str
     // Wrap code in valid C++
     std::string cpp_code = wrap_in_cpp(code_snippet);
 
-    // Write to temp file
-    std::ofstream temp_file("/tmp/external_oracle_test.cpp");
+    // Create unique temp file for this invocation (thread-safe, no race condition)
+    char temp_src[] = "/tmp/fungal_oracle_src_XXXXXX";
+    char temp_exe[] = "/tmp/fungal_oracle_exe_XXXXXX";
+    char temp_log[] = "/tmp/fungal_oracle_log_XXXXXX";
+
+    int fd_src = mkstemp(temp_src);
+    int fd_log = mkstemp(temp_log);
+    if (fd_src < 0 || fd_log < 0) {
+        compiler_output = "Error: could not create temp files";
+        if (fd_src >= 0) ::close(fd_src);
+        if (fd_log >= 0) ::close(fd_log);
+        return false;
+    }
+    ::close(fd_src);
+    ::close(fd_log);
+
+    // Write source code to unique temp file
+    std::ofstream temp_file(temp_src);
     if (!temp_file) {
-        compiler_output = "Error: could not open temp file";
+        compiler_output = "Error: could not write temp source file";
+        std::remove(temp_src);
+        std::remove(temp_log);
         return false;
     }
     temp_file << cpp_code;
     temp_file.close();
 
-    // Compile with clang++ and capture output
+    // Compile with clang++ and capture output (with 5-second timeout)
     // Use -fsanitize=undefined to catch UB at compile time
-    int result = system("clang++ -Wall -Wextra -std=c++17 -fsanitize=undefined /tmp/external_oracle_test.cpp -o /tmp/external_oracle_test 2>&1 > /tmp/oracle_compile.log 2>&1");
+    // Use 'timeout' command to enforce max execution time
+    std::string cmd = std::string("timeout 5 clang++ -Wall -Wextra -std=c++17 -fsanitize=undefined ")
+                      + temp_src + " -o " + temp_exe + " 2>&1 > " + temp_log + " 2>&1";
+    int result = system(cmd.c_str());
 
-    // Read compilation output
-    std::ifstream log_file("/tmp/oracle_compile.log");
+    // Read compilation output from log file
+    std::ifstream log_file(temp_log);
     if (!log_file) {
-        compiler_output = "Error: could not read compiler output";
+        compiler_output = "Error: could not read compiler output log";
+        std::remove(temp_src);
+        std::remove(temp_log);
+        std::remove(temp_exe);
         return (result != 0);
     }
 
@@ -52,11 +85,16 @@ bool ExternalOracle::compile_and_check(const std::string& code_snippet, std::str
     log_file.close();
 
     // Compilation succeeded (exit code 0) means no errors
-    // Non-zero exit means errors detected
+    // Non-zero exit means errors detected (includes timeout exit code 124)
     // Also check for warnings which indicate potential bugs
     bool has_issues = (result != 0) ||
                       compiler_output.find("warning:") != std::string::npos ||
                       compiler_output.find("error:") != std::string::npos;
+
+    // Cleanup all temp files (RAII pattern via scope exit)
+    std::remove(temp_src);
+    std::remove(temp_log);
+    std::remove(temp_exe);
 
     return has_issues;
 }
