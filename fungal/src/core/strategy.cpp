@@ -7,10 +7,7 @@ namespace fungal::core {
 PatternMatcherStrategy::PatternMatcherStrategy() = default;
 
 StrategyResult PatternMatcherStrategy::apply(const std::string& code_snippet) {
-    // Base energy cost for running this strategy
     int energy_cost = 10;
-
-    // Count detected patterns
     int pattern_count = 0;
 
     if (has_null_dereference_pattern(code_snippet)) {
@@ -23,9 +20,8 @@ StrategyResult PatternMatcherStrategy::apply(const std::string& code_snippet) {
         pattern_count++;
     }
 
-    // Claim: if patterns detected, likely a bug
     bool claim = pattern_count > 0;
-    double confidence = compute_confidence(pattern_count, code_snippet.length());
+    double confidence = compute_confidence(pattern_count, static_cast<int>(code_snippet.length()));
 
     std::string reasoning = claim ?
         "Found " + std::to_string(pattern_count) + " bug pattern(s) in code" :
@@ -40,68 +36,88 @@ StrategyResult PatternMatcherStrategy::apply(const std::string& code_snippet) {
 }
 
 bool PatternMatcherStrategy::has_null_dereference_pattern(const std::string& code) {
-    // Simple heuristic: look for pointer dereference without null check
-    // Pattern: "->" or "*" followed by variable access without nearby if/check
-    return code.find("->") != std::string::npos ||
-           (code.find("*") != std::string::npos && code.find("if") == std::string::npos);
+    // Prefer explicit dereference patterns over any '*', which false-positives on multiplication.
+    const bool has_arrow = code.find("->") != std::string::npos;
+    const bool has_star_deref =
+        code.find("*p") != std::string::npos ||
+        code.find("* p") != std::string::npos ||
+        code.find("*ptr") != std::string::npos ||
+        code.find("* ptr") != std::string::npos;
+
+    if (!has_arrow && !has_star_deref) {
+        return false;
+    }
+
+    // If there is a nearby null/guard check, treat as safer.
+    const bool has_guard =
+        code.find("if (p)") != std::string::npos ||
+        code.find("if(p)") != std::string::npos ||
+        code.find("if (ptr)") != std::string::npos ||
+        code.find("if(ptr)") != std::string::npos ||
+        code.find("nullptr") != std::string::npos && code.find("if") != std::string::npos;
+
+    // nullptr assignment + dereference without guard remains suspicious.
+    if (code.find("nullptr") != std::string::npos && (has_arrow || has_star_deref) &&
+        code.find("if") == std::string::npos) {
+        return true;
+    }
+
+    return (has_arrow || has_star_deref) && !has_guard;
 }
 
 bool PatternMatcherStrategy::has_uninitialized_var_pattern(const std::string& code) {
-    // Simple heuristic: variable used before assignment
-    // Pattern: declaration of variable without assignment, then use
-    // e.g., "int x; int y = x + 5;" - x used before init
+    // Look for a simple "type name;" declaration without '=' before first ';'
+    // then a later use. This remains heuristic, not a real parser.
+    const bool has_typed_decl =
+        code.find("int ") != std::string::npos ||
+        code.find("char ") != std::string::npos;
 
-    // Look for pattern: "type name;" (no assignment) followed by use
-    bool has_decl_without_init = false;
+    if (!has_typed_decl) {
+        return false;
+    }
 
-    // Check for int/char declared without = assignment
-    if ((code.find("int ") != std::string::npos || code.find("char ") != std::string::npos) &&
-        code.find(";") != std::string::npos) {
-        // Check if there's a declaration without immediate initialization
-        // Simple heuristic: find semicolon that's not preceded by =
-        size_t semi = code.find(";");
-        if (semi != std::string::npos && semi > 0) {
-            // Look back for = (assignment)
-            bool has_assign = false;
-            for (size_t i = 0; i < semi; ++i) {
-                if (code[i] == '=') {
-                    has_assign = true;
-                    break;
-                }
-            }
-            if (!has_assign && (code[0] == 'i' || code[0] == 'c')) {
-                has_decl_without_init = true;
-            }
+    size_t semi = code.find(';');
+    if (semi == std::string::npos || semi == 0) {
+        return false;
+    }
+
+    bool has_assign_before_first_semi = false;
+    for (size_t i = 0; i < semi; ++i) {
+        if (code[i] == '=') {
+            has_assign_before_first_semi = true;
+            break;
         }
     }
 
-    return has_decl_without_init;
+    if (has_assign_before_first_semi) {
+        return false;
+    }
+
+    // Require a second statement that likely uses a variable (another ';' or '=')
+    // after the first declaration.
+    return code.find(';', semi + 1) != std::string::npos;
 }
 
 bool PatternMatcherStrategy::has_off_by_one_pattern(const std::string& code) {
-    // Simple heuristic: loop bounds that might be off
-    // Pattern: for loop with < or <= and array access with same bound
-    return code.find("for") != std::string::npos &&
-           (code.find("[i]") != std::string::npos || code.find("[i+1]") != std::string::npos) &&
-           (code.find("size") != std::string::npos || code.find("length") != std::string::npos);
+    // Focus on classic inclusive upper-bound loop over an array.
+    const bool has_for = code.find("for") != std::string::npos;
+    const bool has_inclusive = code.find("<=" ) != std::string::npos;
+    const bool has_index =
+        code.find("[i]") != std::string::npos ||
+        code.find("[i + 1]") != std::string::npos ||
+        code.find("[i+1]") != std::string::npos;
+
+    return has_for && has_inclusive && has_index;
 }
 
 double PatternMatcherStrategy::compute_confidence(int pattern_count, int code_length) {
-    // Confidence scales with pattern count, scales down with code length
-    // (fewer patterns in larger code = less confidence)
     if (pattern_count == 0) {
-        return 0.2;  // even if no patterns, can't be 100% sure there's no bug
+        return 0.2;
     }
 
-    // Base confidence from pattern count
     double base_confidence = std::min(0.9, 0.3 + (pattern_count * 0.25));
-
-    // Adjust for code length
-    // Short code with patterns = high confidence
-    // Long code with patterns = more room for false negatives, lower confidence
     double length_factor = 1.0 / (1.0 + (code_length / 100.0));
     double confidence = base_confidence * (0.7 + 0.3 * length_factor);
-
     return std::min(0.95, std::max(0.05, confidence));
 }
 

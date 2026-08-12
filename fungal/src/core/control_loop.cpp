@@ -36,11 +36,25 @@ bool ControlLoop::initialize_stage1(std::string& error) {
         stage1_state_.identity = stage1_identity_;
     }
 
+    // Preserve budget_min from checkpoint (default 10 if unset/invalid).
+    if (stage1_state_.survival.budget_min <= 0) {
+        stage1_state_.survival.budget_min = 10;
+    }
+
     stage1_safe_mode_ = false;
     return true;
 }
 
 void ControlLoop::sync_stage1_from_live() {
+    // Preserve fields that capture_state_from_live does not source from live objects.
+    const int preserved_budget_min = stage1_state_.survival.budget_min > 0
+        ? stage1_state_.survival.budget_min
+        : 10;
+    const bool preserved_alive = stage1_state_.survival.alive;
+    const int preserved_skipped = stage1_state_.counters.skipped_no_energy;
+    const int preserved_blocked = stage1_state_.counters.blocked_by_legibility;
+    const std::uint64_t preserved_seq = stage1_state_.survival.checkpoint_seq;
+
     stage1_state_ = capture_state_from_live(
         stage1_identity_,
         energy_budget_,
@@ -49,14 +63,13 @@ void ControlLoop::sync_stage1_from_live() {
             total_cycles_,
             cycles_that_ran_,
             successful_predictions_,
-            stage1_state_.counters.skipped_no_energy,
-            stage1_state_.counters.blocked_by_legibility
+            preserved_skipped,
+            preserved_blocked
         },
-        stage1_state_.survival.checkpoint_seq);
-    stage1_state_.survival.budget_min = stage1_state_.survival.budget_min > 0
-        ? stage1_state_.survival.budget_min
-        : 10;
-    stage1_state_.survival.alive = true;
+        preserved_seq);
+
+    stage1_state_.survival.budget_min = preserved_budget_min;
+    stage1_state_.survival.alive = preserved_alive;
 }
 
 bool ControlLoop::persist_stage1_after_cycle(const AuditEvent& post_template, std::string& error) {
@@ -82,19 +95,26 @@ bool ControlLoop::persist_stage1_after_cycle(const AuditEvent& post_template, st
     return true;
 }
 
+bool ControlLoop::persist_stage1_counters_only(std::string& error) {
+    // Persist skip/block counters without requiring a successful action cycle.
+    sync_stage1_from_live();
+    stage1_state_.survival.checkpoint_seq += 1;
+    sync_stage1_from_live();
+    return stage1_store_.save_checkpoint(stage1_state_, error);
+}
+
 CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
     total_cycles_++;
 
-    // 1. SENSE & PREDICT: what should we expect?
+    // 1. SENSE & PREDICT
     int task_type_id = 0;  // v1: single task type
     double predicted_success = sense_and_predict(task_type_id);
 
-    // 2. CHECK ENERGY: can we afford to run?
-    // Hardware-aware cost scaling: scarce resources = higher per-cycle cost
+    // 2. Energy cost for this cycle (hardware-scaled)
     int energy_cost = static_cast<int>(10 * energy_cost_scale_);
-    if (energy_cost < 1) energy_cost = 1;  // minimum cost
+    if (energy_cost < 1) energy_cost = 1;
 
-    // Stage1 precheck (optional path). When disabled, preserve original behavior.
+    // Stage1 precheck (optional). When disabled, preserve original behavior.
     if (stage1_enabled_) {
         if (stage1_safe_mode_) {
             CycleResult blocked{};
@@ -127,7 +147,7 @@ CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
 
         if (!gate.allowed) {
             if (gate.blocked_by == GoalGate::Survive &&
-                gate.reason == "insufficient_energy") {
+                (gate.reason == "insufficient_energy" || gate.reason == "below_budget_min")) {
                 pre.outcome = CycleOutcome::SkippedNoEnergy;
                 stage1_state_.counters.skipped_no_energy += 1;
             } else if (gate.blocked_by == GoalGate::Legible) {
@@ -152,6 +172,11 @@ CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
         }
 
         if (!gate.allowed) {
+            // Persist skip/block counters so restarts do not lose them.
+            std::string persist_err;
+            if (!persist_stage1_counters_only(persist_err)) {
+                stage1_safe_mode_ = true;
+            }
             CycleResult blocked{};
             blocked.code_snippet = code_snippet;
             blocked.predicted_success = predicted_success;
@@ -175,14 +200,16 @@ CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
     };
 
     if (!has_energy) {
-        // Budget exhausted: cannot run this cycle
         if (stage1_enabled_) {
             stage1_state_.counters.skipped_no_energy += 1;
             AuditEvent post{};
+            post.ts = Stage1Store::now_iso8601();
             post.cycle_id = static_cast<std::uint64_t>(total_cycles_);
+            post.phase = AuditPhase::Postcheck;
             post.action = "run_cycle";
             post.input_ref = std::to_string(std::hash<std::string>{}(code_snippet));
             post.energy_before = energy_budget_.current_budget();
+            post.energy_after = post.energy_before;
             post.energy_spent = 0;
             post.goal_gate = GoalGate::Survive;
             post.allowed = false;
@@ -190,28 +217,28 @@ CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
             post.outcome = CycleOutcome::SkippedNoEnergy;
             post.notes = "spend_failed_after_precheck";
             std::string err;
-            // Best-effort audit; still no learning update.
             stage1_store_.append_audit(post, err);
+            if (!persist_stage1_counters_only(err)) {
+                stage1_safe_mode_ = true;
+            }
         }
         return result;
     }
 
     cycles_that_ran_++;
 
-    // 3. GENERATE & EVALUATE: what does the strategy claim?
+    // 3. GENERATE & EVALUATE
     StrategyResult strategy_result = generate_and_evaluate(code_snippet);
     result.strategy_claim = strategy_result.claim;
-    // NOTE: strategy_confidence is internal to strategy only; self-model owns all probabilities
-    result.strategy_confidence = strategy_result.strategy_confidence;  // for logging only, not control
-    // Keep spent energy as the gated cost; strategy may report its own internal cost for refunds.
-    int refund_cost = strategy_result.energy_cost > 0 ? strategy_result.energy_cost : energy_cost;
+    result.strategy_confidence = strategy_result.strategy_confidence;
+    // Refund must be based on energy actually spent, not strategy-reported internal cost.
     result.energy_spent = energy_cost;
 
-    // 4. COMMIT: get oracle ground truth
+    // 4. Oracle ground truth
     bool oracle_truth = oracle_->has_bug(code_snippet);
     result.oracle_ground_truth = oracle_truth;
 
-    // 5. EVALUATE: was prediction correct?
+    // 5. Evaluate claim vs truth
     bool claim_matches_truth = (strategy_result.claim == oracle_truth);
     result.prediction_correct = claim_matches_truth;
 
@@ -219,8 +246,9 @@ CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
         successful_predictions_++;
     }
 
-    // 6. ACT & OBSERVE: update self-model and energy
-    commit_and_act(claim_matches_truth, oracle_truth, refund_cost,
+    // 6. Learn + energy outcome using the same cost that was spent
+    const int energy_before_refund = energy_budget_.current_budget();
+    commit_and_act(claim_matches_truth, oracle_truth, energy_cost,
                    task_type_id, predicted_success);
 
     if (stage1_enabled_ && !stage1_safe_mode_) {
@@ -228,7 +256,7 @@ CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
         post.cycle_id = static_cast<std::uint64_t>(total_cycles_);
         post.action = "run_cycle";
         post.input_ref = std::to_string(std::hash<std::string>{}(code_snippet));
-        post.energy_before = energy_budget_.current_budget() + /* approximate */ 0;
+        post.energy_before = energy_before_refund;
         post.energy_spent = energy_cost;
         post.goal_gate = GoalGate::None;
         post.allowed = true;
@@ -239,12 +267,9 @@ CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
         post.outcome = claim_matches_truth ? CycleOutcome::Success : CycleOutcome::Fail;
         post.notes = "cycle_complete";
 
-        // energy_before for postcheck: after refund; pre energy is less important than after.
-        post.energy_before = energy_budget_.current_budget();
-
         std::string err;
         if (!persist_stage1_after_cycle(post, err)) {
-            // safe_mode set inside persist; result still returned for visibility
+            // safe_mode set inside persist
         }
     }
 
@@ -253,6 +278,7 @@ CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
 
 std::vector<CycleResult> ControlLoop::run_cycles(const std::vector<std::string>& snippets) {
     std::vector<CycleResult> results;
+    results.reserve(snippets.size());
     for (const auto& snippet : snippets) {
         results.push_back(run_cycle(snippet));
     }
@@ -260,37 +286,30 @@ std::vector<CycleResult> ControlLoop::run_cycles(const std::vector<std::string>&
 }
 
 double ControlLoop::sense_and_predict(int task_type_id) {
-    // SENSE: current state = self-model state
-    // PREDICT: what's our predicted success probability?
     return self_model_.predict_success(task_type_id);
 }
 
 StrategyResult ControlLoop::generate_and_evaluate(const std::string& code_snippet) {
-    // GENERATE: apply strategy
-    // EVALUATE: get strategy's claim and confidence
     return strategy_->apply(code_snippet);
 }
 
 void ControlLoop::commit_and_act(bool prediction_correct, bool /*oracle_truth*/,
                                   int energy_cost, int task_type_id, double predicted_prob) {
-    // ACT: energy refund/penalty based on outcome
     energy_budget_.refund_outcome(prediction_correct, energy_cost);
-
-    // OBSERVE/LEARN: update self-model from ground truth
-    // outcome_correct: did our strategy's claim match the oracle?
     self_model_.update_from_outcome(task_type_id, prediction_correct, predicted_prob);
 }
 
 void ControlLoop::initialize_from_hardware() {
-    // Detect hardware
     HardwareProfile profile = hardware_scheduler_.detect_hardware();
 
-    // Set energy budget based on hardware
-    energy_budget_.set_budget_from_hardware(profile);
-
-    // Compute batch parameters and store energy cost scale for per-cycle use
+    // Always update cost scaling from hardware.
     TaskBatchParameters params = hardware_scheduler_.compute_batch_parameters(profile);
     energy_cost_scale_ = params.energy_cost_scale;
+
+    // Do not clobber a Stage1-restored budget. Stage1 owns durable energy state.
+    if (!stage1_enabled_) {
+        energy_budget_.set_budget_from_hardware(profile);
+    }
 }
 
 void ControlLoop::reset() {
@@ -299,7 +318,7 @@ void ControlLoop::reset() {
     cycles_that_ran_ = 0;
     energy_budget_.reset();
     self_model_ = SelfModel();
-    // Stage1 counters in memory reset; durable file is not wiped automatically.
+    // In-memory Stage1 counters reset; durable checkpoint is not wiped automatically.
     stage1_state_.counters = CounterState{};
     stage1_safe_mode_ = false;
 }
