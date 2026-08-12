@@ -1,176 +1,102 @@
 # Modular Fungal System - Implementation Summary
 
-**Date:** August 4, 2026  
-**Status:** ✅ COMPLETE & TESTED  
-**Build:** ✅ Compiles Successfully  
-**Tests:** ✅ Unit Tests Ready (GTest optional)  
+**Date:** August 12, 2026  
+**Status:** Core modular system present; **Stage1 survival path added on main**  
+**Build:** CMake research/demo path updated for Stage1 + nlohmann_json  
+**Tests:** Unit tests ready (GTest optional); Stage1 requires local demo verification  
 
 ## What Was Built
 
-A complete modular C++ architecture with **30 files** organized into **3 layers** plus **safeguards**.
+A modular C++ architecture with Layer1/Layer2/bridge, foundation/safety/learning segments, core control loop, and **Stage1 durable survival state**.
 
-### Layer 1: Knowledge Builder (6 modules + headers)
-- **Tokenizer** (`tokenizer.hpp/.cpp`): Parses code into tokens
-- **Analyzer** (`analyzer.hpp/.cpp`): Measures code properties (nesting depth, branches, functions)
-- **Dictionary** (`dictionary.hpp/.cpp`): Concept definitions with prerequisites
-- **Verifier** (`verifier.hpp/.cpp`): Tests hypotheses against measurements
-- **Builder** (`builder.hpp/.cpp`): Generates learning templates
-- **Orchestrator** (`layer1.cpp`): Coordinates L1 components
+### Core Loop + Stage1 (current research spine)
 
-### Layer 2: Reasoning Network (17 modules)
+- **ControlLoop**: sense → predict → spend → strategy → oracle → learn
+- **EnergyBudget**: scarcity constraint; `load_state` for durable restore
+- **SelfModel**: success mean/uncertainty + accuracy vs calibration signals; export/import
+- **Stage1Store**: atomic checkpoint, JSONL audit, integrity hash, precheck gates
+- **Goal stack**: survive > human_legible > seek_truth
+- **Demo**: `fungal_stage1_demo`
 
-**Core Modules (3):**
-- Node Manager: Creates/manages network nodes with energy and specialization
-- Substrate Manager: Handles environmental conditions (toxins, nutrients)
-- Energy Manager: Distributes energy based on claim confidence
+Stage1 is **opt-in**. Default ControlLoop behavior remains non-persistent for older demos.
 
-**12 Phases (24 files - header + implementation):**
-1. **Claim Decay** - Reduces confidence over time
-2. **Energy Transfer** - Distributes energy between nodes
-3. **Quarantine** - Isolates nodes with trust violations
-4. **Removal** - Deletes long-quarantined nodes
-5. **Environmental Shocks** - Handles toxin/nutrient events
-6. **Asymmetric Trust** - Directional trust relationships
-7. **Specialization** - Nodes develop domain expertise
-8. **Substrate Learning** - Adapts environmental parameters
-9. **Claim Refinement** - Updates claims based on consensus
-10. **Multi-Network Learning** - Transfers insights between networks
-11. **Measurement Uncertainty** - Reduces confidence under noise
-12. **Hardware Constraints** - Enforces resource limits
+### Layer 1: Knowledge Builder
+- Tokenizer, Analyzer, Dictionary, Verifier, Builder, Layer1 orchestrator
 
-**Voting System (2):**
-- Consensus mechanisms
-- Voting and confidence propagation
+### Layer 2: Reasoning Network
+- Node / Substrate / Energy core
+- 12 phases (claim decay → hardware constraints)
+- Voting system
 
-**Layer 2 Orchestrator:**
-- Manages phase execution cycle
-- Integrates all 12 phases
+### Bridge
+- L1 → L2 claim import / export glue
 
-### Bridge: Layer Integration (2 modules)
-- Import foundational claims from Layer 1
-- Create nodes for imported claims
-- Export verified claims after reasoning
-- Provide measurement feedback
+### Foundation / Safety / Learning (parallel track)
+- Hardware, substrate, introspection, autonomous nodes
+- Constraints, alignment, monitor/killswitch
+- Learning, self-improvement, neural integration
 
-### Main System & Tests
-- **FungalSystem** (`fungal_system.hpp/.cpp`): Unified API
-- **Tests** (5+ files):
-  - Unit: Tokenizer, Analyzer, Phases
-  - Integration: Layer 1→2 flow
-  - System: Stress testing
+These segments exist in-tree; they are **not fully fused** into the Stage1 ControlLoop path yet.
 
-### Safeguards (5 + CI/CD)
+### Production shell (separate)
+- Config, logger, metrics, API, cluster, backup, etc.
+- Built via production CMake path; not required to run Stage1
 
-**Pre-commit Checks:**
-1. ✅ Compilation: Verify code compiles
-2. ✅ Unit Tests: Run test suite
-3. ✅ File Size: Max 400 lines per file
-4. ✅ Interfaces: Critical types unchanged
-5. ✅ Debug Code: No TODO/FIXME/console output
+## File Organization (high level)
 
-**GitHub CI/CD:**
-- Automated tests on every push
-- Workflow in `.github/workflows/test.yml`
-
-## File Organization
-
-```
+```text
 fungal/
-├── include/
-│   ├── types.hpp (all data structures)
-│   ├── interfaces.hpp (base classes)
-│   └── fungal_system.hpp (main API)
-│
-├── src/
-│   ├── layer1/ (6 + orchestrator)
-│   ├── layer2/
-│   │   ├── core/ (3 modules)
-│   │   ├── phases/ (12 phases × 2 files)
-│   │   └── voting/ (2 modules)
-│   ├── bridge/ (2 modules)
-│   └── main.cpp (demo application)
-│
-├── tests/
-│   ├── unit/ (3+ tests)
-│   ├── integration/ (system flow tests)
-│   └── system/ (stress tests)
-│
-├── scripts/ (5 pre-commit checks)
-├── docs/ (architecture guide)
-├── .github/workflows/ (CI/CD)
-├── .pre-commit-config.yaml
-├── CMakeLists.txt
-└── .gitignore
+├── include/core/          # control loop, energy, self-model, stage1, strategy, oracles
+├── src/core/              # implementations + demos (incl. stage1 demo)
+├── src/layer1/            # knowledge builder
+├── src/layer2/            # claim/energy network + phases
+├── src/bridge/            # L1↔L2
+├── include/ + src/        # foundation, safety, learning segments
+├── include/production/    # enterprise shell headers
+├── docs/                  # architecture, safety, Stage1, guides
+└── CMakeLists.txt         # research/demo build (includes Stage1)
 ```
 
-## Build & Run
+## Build & Run Stage1
 
 ```bash
 cd fungal
-mkdir build
-cd build
+mkdir -p build && cd build
 cmake ..
-make
-
-# Run the system
-./fungal
-
-# Run tests (requires GTest)
-ctest -L unit
+make -j4 fungal_stage1_demo
+./fungal_stage1_demo
 ```
 
-**Output:**
-```
-=== Fungal System - Modular Architecture ===
-Analyzing code...
-Running reasoning cycle...
-
-System Status:
-  Cycles completed: 1
-  Active nodes: 1
-  Average claim confidence: 0.655
-  Verified claims: 0
-
-✓ System Complete
-```
+Writes:
+- `state/checkpoint.json`
+- `state/audit.jsonl`
 
 ## Key Design Principles
 
-1. **Modularity**: 30 files, max 400 lines each
-2. **Single Responsibility**: Each module has one clear purpose
-3. **No Circular Dependencies**: Clean import hierarchy
-4. **C++ Only**: No JSON/serialization bridges
-5. **Testable**: Each module can be tested independently
-6. **Extensible**: New phases follow proven template
+1. **Scarcity first**: energy is a real gate, not a decorative counter
+2. **Legibility first after survival**: if audit/checkpoint fail, stop acting
+3. **Truth after that**: oracle feedback drives refunds and self-model updates
+4. **Opt-in durability**: Stage1 does not silently change old demos
+5. **No Stage1 anti-operator behaviors**: no anti-kill, self-copy, or hide
 
-## Verification
+## Verification status
 
-✅ **Compilation:** System builds without errors  
-✅ **Execution:** Main executable runs successfully  
-✅ **Analysis:** Code analysis works end-to-end  
-✅ **Reasoning:** System executes reasoning cycles  
-✅ **Safeguards:** Pre-commit checks prevent regression  
+| Item | Status |
+|---|---|
+| Stage1 code on `main` | ✅ |
+| Docs updated for Stage1 | ✅ (this pass) |
+| Local compile/run proof | ⏳ operator machine |
+| Full L1/L2/Stage1 fusion | ❌ not done |
+| Full autonomy / self-seeking | ❌ not started |
 
-## Next Steps (Testing)
+## Next Steps
 
-Run extended tests to measure:
-- **Stability**: 100+ cycles without degradation
-- **Performance**: Cycle time with various network sizes
-- **Convergence**: How claims reach consensus
-- **Environmental Response**: Toxin/nutrient shock handling
-- **Specialization**: Node expertise development
-- **Energy Dynamics**: Proper energy distribution
-- **Measurement Feedback**: Claim adjustment accuracy
-- **Consensus**: Voting system effectiveness
+1. Run `fungal_stage1_demo` locally and confirm reload path
+2. Multi-strategy support under honest oracle feedback
+3. Fuse useful foundation/safety pieces into Stage1 path carefully
+4. Only then consider self-seeking experiments
 
-See ARCHITECTURE.md for implementation details.
-See docs/TESTING.md for test categories.
-
----
-
-**Architecture Pattern:** 3-layer (L1→Bridge→L2) with 12-phase reasoning cycle  
-**Language:** C++17  
-**Build System:** CMake 3.10+  
-**Testing:** GTest (optional)  
-**Repository:** jdnitrap/Class  
-**Branch:** claude/repo-access-editing-kvg7xh & fungal-architecture
+See also:
+- [docs/STAGE1.md](docs/STAGE1.md)
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- [../talk.md](../talk.md)
