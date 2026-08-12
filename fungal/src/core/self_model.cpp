@@ -73,6 +73,9 @@ double SelfModel::get_empirical_success_rate(int task_type_id) const {
 }
 
 TaskTypeStats& SelfModel::get_or_create(int task_type_id) {
+    if (task_type_id < 0) {
+        task_type_id = 0;
+    }
     if (task_type_id >= static_cast<int>(models_.size())) {
         models_.resize(task_type_id + 1, TaskTypeStats{});
     }
@@ -80,10 +83,22 @@ TaskTypeStats& SelfModel::get_or_create(int task_type_id) {
 }
 
 TaskTypeStats SelfModel::get_stats(int task_type_id) const {
-    if (task_type_id >= static_cast<int>(models_.size())) {
+    if (task_type_id < 0 || task_type_id >= static_cast<int>(models_.size())) {
         return TaskTypeStats{};
     }
     return models_[task_type_id];
+}
+
+std::vector<TaskTypeStats> SelfModel::export_all() const {
+    return models_;
+}
+
+void SelfModel::import_all(const std::vector<TaskTypeStats>& stats) {
+    if (stats.empty()) {
+        models_.assign(1, TaskTypeStats{});
+        return;
+    }
+    models_ = stats;
 }
 
 void SelfModel::update_belief(TaskTypeStats& stats, bool outcome_correct) {

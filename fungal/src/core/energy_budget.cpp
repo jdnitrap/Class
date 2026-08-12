@@ -13,6 +13,9 @@ bool EnergyBudget::can_afford_cycle() const {
 }
 
 bool EnergyBudget::spend_for_cycle(int amount) {
+    if (amount < 0) {
+        return false;
+    }
     if (current_budget_ < amount) {
         return false;
     }
@@ -22,6 +25,9 @@ bool EnergyBudget::spend_for_cycle(int amount) {
 }
 
 void EnergyBudget::refund_outcome(bool success, int cost_paid) {
+    if (cost_paid < 0) {
+        cost_paid = 0;
+    }
     if (success) {
         // Partial refund on success (system was right, reward it)
         int refund = static_cast<int>(cost_paid * SUCCESS_REFUND_RATIO / 100.0);
@@ -32,7 +38,22 @@ void EnergyBudget::refund_outcome(bool success, int cost_paid) {
         int penalty = FAILURE_PENALTY;
         current_budget_ -= penalty;
         total_spent_ += penalty;
+        // Keep budget from drifting into nonsense for Stage1 continuity checks.
+        // Economic pressure remains: failures still hurt more than successes help.
+        if (current_budget_ < 0) {
+            current_budget_ = 0;
+        }
     }
+}
+
+void EnergyBudget::load_state(int current, int initial, int spent, int refunded) {
+    initial_budget_ = initial > 0 ? initial : 0;
+    current_budget_ = current;
+    if (current_budget_ < 0) {
+        current_budget_ = 0;
+    }
+    total_spent_ = spent >= 0 ? spent : 0;
+    total_refunded_ = refunded >= 0 ? refunded : 0;
 }
 
 void EnergyBudget::set_budget_from_hardware(const HardwareProfile& profile) {
@@ -58,6 +79,8 @@ void EnergyBudget::set_budget_from_hardware(const HardwareProfile& profile) {
     int scaled_budget = static_cast<int>(base_budget * core_multiplier * memory_multiplier);
     initial_budget_ = scaled_budget;
     current_budget_ = scaled_budget;
+    total_spent_ = 0;
+    total_refunded_ = 0;
 }
 
 void EnergyBudget::reset() {

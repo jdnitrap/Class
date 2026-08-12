@@ -21,7 +21,7 @@ struct TaskTypeStats {
     // from success rate itself
     int total_predictions = 0;
     int accurate_predictions = 0;   // predictions matched outcome
-    double empirical_success_rate = 0.5;  // rolling window of actual success
+    double empirical_success_rate = 0.5;  // rolling average of actual success
     double calibration_error = 0.0; // divergence between predicted and empirical
 
     // Capability scores (used for strategy selection)
@@ -57,6 +57,10 @@ public:
     // Get or create stats for task type
     TaskTypeStats& get_or_create(int task_type_id);
     TaskTypeStats get_stats(int task_type_id) const;
+
+    // Stage1 checkpoint support
+    std::vector<TaskTypeStats> export_all() const;
+    void import_all(const std::vector<TaskTypeStats>& stats);
 
 private:
     std::vector<TaskTypeStats> models_;

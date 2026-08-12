@@ -1,6 +1,7 @@
 #pragma once
 
 #include "core/hardware_aware_scheduler.hpp"
+#include <string>
 
 namespace fungal::core {
 
@@ -26,6 +27,12 @@ public:
 
     // Current budget level
     int current_budget() const { return current_budget_; }
+    int initial_budget() const { return initial_budget_; }
+    int total_spent() const { return total_spent_; }
+    int total_refunded() const { return total_refunded_; }
+
+    // Restore durable counters without fake spend/refund side effects
+    void load_state(int current, int initial, int spent, int refunded);
 
     // Set budget from hardware profile
     void set_budget_from_hardware(const HardwareProfile& profile);
@@ -35,6 +42,8 @@ public:
 
     // Get status string for logging
     std::string status_string() const;
+
+    static constexpr int cycle_base_cost() { return CYCLE_BASE_COST; }
 
 private:
     int initial_budget_;
