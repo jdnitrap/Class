@@ -1,5 +1,6 @@
 #include "core/stage1_state.hpp"
 
+#include <algorithm>
 #include <chrono>
 #include <cstdint>
 #include <filesystem>
@@ -15,8 +16,8 @@ using json = nlohmann::json;
 namespace fungal::core {
 namespace {
 
-// Portable SHA-256 (public-domain style compact implementation).
-// Used for local checkpoint integrity, not as a security boundary against the operator.
+// Portable SHA-256 for local checkpoint integrity (corruption detection).
+// Not a security boundary against the operator.
 class Sha256 {
 public:
     Sha256() { reset(); }
@@ -40,17 +41,11 @@ public:
     std::string final_hex() {
         uint8_t hash[32];
         pad();
-        for (int i = 0; i < 4; ++i) {
-            for (int j = 0; j < 8; ++j) {
-                hash[i * 8 + j] = (state_[i] >> (24 - j * 8)) & 0xff;
-            }
-        }
-        // Fix: standard SHA256 packs all 8 state words
         for (int i = 0; i < 8; ++i) {
-            hash[i * 4 + 0] = (state_[i] >> 24) & 0xff;
-            hash[i * 4 + 1] = (state_[i] >> 16) & 0xff;
-            hash[i * 4 + 2] = (state_[i] >> 8) & 0xff;
-            hash[i * 4 + 3] = (state_[i] >> 0) & 0xff;
+            hash[i * 4 + 0] = static_cast<uint8_t>((state_[i] >> 24) & 0xff);
+            hash[i * 4 + 1] = static_cast<uint8_t>((state_[i] >> 16) & 0xff);
+            hash[i * 4 + 2] = static_cast<uint8_t>((state_[i] >> 8) & 0xff);
+            hash[i * 4 + 3] = static_cast<uint8_t>((state_[i] >> 0) & 0xff);
         }
         std::ostringstream oss;
         for (int i = 0; i < 32; ++i) {
@@ -94,7 +89,10 @@ private:
 
         uint32_t m[64];
         for (int i = 0, j = 0; i < 16; ++i, j += 4) {
-            m[i] = (data_[j] << 24) | (data_[j + 1] << 16) | (data_[j + 2] << 8) | (data_[j + 3]);
+            m[i] = (static_cast<uint32_t>(data_[j]) << 24) |
+                   (static_cast<uint32_t>(data_[j + 1]) << 16) |
+                   (static_cast<uint32_t>(data_[j + 2]) << 8) |
+                   (static_cast<uint32_t>(data_[j + 3]));
         }
         for (int i = 16; i < 64; ++i) {
             uint32_t s0 = rotr(m[i - 15], 7) ^ rotr(m[i - 15], 18) ^ (m[i - 15] >> 3);
@@ -122,7 +120,7 @@ private:
     }
 
     void pad() {
-        uint64_t i = datalen_;
+        uint32_t i = datalen_;
         if (datalen_ < 56) {
             data_[i++] = 0x80;
             while (i < 56) data_[i++] = 0x00;
@@ -132,15 +130,15 @@ private:
             transform();
             std::fill(std::begin(data_), std::begin(data_) + 56, 0);
         }
-        bitlen_ += datalen_ * 8;
-        data_[63] = bitlen_;
-        data_[62] = bitlen_ >> 8;
-        data_[61] = bitlen_ >> 16;
-        data_[60] = bitlen_ >> 24;
-        data_[59] = bitlen_ >> 32;
-        data_[58] = bitlen_ >> 40;
-        data_[57] = bitlen_ >> 48;
-        data_[56] = bitlen_ >> 56;
+        bitlen_ += static_cast<uint64_t>(datalen_) * 8;
+        data_[63] = static_cast<uint8_t>(bitlen_);
+        data_[62] = static_cast<uint8_t>(bitlen_ >> 8);
+        data_[61] = static_cast<uint8_t>(bitlen_ >> 16);
+        data_[60] = static_cast<uint8_t>(bitlen_ >> 24);
+        data_[59] = static_cast<uint8_t>(bitlen_ >> 32);
+        data_[58] = static_cast<uint8_t>(bitlen_ >> 40);
+        data_[57] = static_cast<uint8_t>(bitlen_ >> 48);
+        data_[56] = static_cast<uint8_t>(bitlen_ >> 56);
         transform();
     }
 };
@@ -380,7 +378,6 @@ bool Stage1Store::write_checkpoint_atomic(const std::string& payload, std::strin
                           fs::copy_options::overwrite_existing);
         }
 
-        // Portable replace: remove destination then rename.
         if (fs::exists(paths_.checkpoint_file)) {
             fs::remove(paths_.checkpoint_file);
         }
@@ -439,7 +436,7 @@ bool Stage1Store::load_or_bootstrap(Stage1State& out, std::string& error) {
         ev.outcome = CycleOutcome::Ran;
         ev.notes = "bootstrap_new_state";
         std::string audit_err;
-        append_audit(ev, audit_err);  // best effort
+        append_audit(ev, audit_err);
         return true;
     }
 
@@ -474,7 +471,7 @@ bool Stage1Store::load_or_bootstrap(Stage1State& out, std::string& error) {
         ev.outcome = CycleOutcome::Ran;
         ev.notes = "loaded";
         std::string audit_err;
-        append_audit(ev, audit_err);  // best effort
+        append_audit(ev, audit_err);
         return true;
     } catch (const std::exception& e) {
         error = std::string("load_or_bootstrap failed: ") + e.what();
