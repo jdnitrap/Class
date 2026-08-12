@@ -1,263 +1,68 @@
-# Fungal System: Self-Aware Autonomous AI
+# Fungal System Docs
 
-A complete C++17 implementation of a self-aware, hardware-aware, truth-seeking autonomous AI system inspired by fungal networks.
+C++17 research system for hardware-aware, energy-constrained, truth-seeking autonomous behavior.
 
 ## Quick Start
 
-### Build
 ```bash
 cd fungal
-mkdir build && cd build
+mkdir -p build && cd build
 cmake ..
 make -j4
-```
 
-### Run
-```bash
-# Interactive Terminal UI (RECOMMENDED - START HERE!)
+./fungal_stage1_demo   # Stage1 checkpoint + audit path
+./fungal_loop_demo     # core loop without Stage1
 ./fungal_tui
-
-# Automated Simulation Mode (test learning and safety)
 ./fungal_sim
-
-# Demo application
 ./fungal
-
-# Run tests
-ctest --output-on-failure
 ```
 
-**👉 Choose your mode:**
-- **[TUI_GUIDE.md](TUI_GUIDE.md)** - Interactive exploration and testing
-- **[SIMULATION_GUIDE.md](SIMULATION_GUIDE.md)** - Automated testing and metrics
+CMake **3.14+** required (FetchContent for nlohmann/json).
 
-## What This System Is
+## Read order
 
-A biologically-inspired distributed reasoning architecture where:
-- **Autonomous nodes** operate independently on shared substrate
-- **Hardware-aware execution** adapts to available resources
-- **Self-aware reasoning** monitors and improves its own processes
-- **Truth-seeking mechanisms** make false claims metabolically expensive
-- **Safety constraints** are hardcoded and cannot be overridden
-- **Continuous learning** adapts to new information sources
-- **Neural-symbolic hybrid** combines logic with pattern recognition
+1. **[STAGE1.md](STAGE1.md)** — current survival architecture (start here for autonomy work)
+2. **[ARCHITECTURE.md](ARCHITECTURE.md)** — full system map
+3. **[BUILDING.md](BUILDING.md)** — build, deps, demos
+4. **[SAFETY.md](SAFETY.md)** — constraints + Stage1 gates
+5. **[../../talk.md](../../talk.md)** — live coordination / decisions
 
-## Key Features
+### User guides
+- [TUI_GUIDE.md](TUI_GUIDE.md)
+- [SIMULATION_GUIDE.md](SIMULATION_GUIDE.md)
+- [EXAMPLES.md](EXAMPLES.md)
+- [LEARNING.md](LEARNING.md)
+- [API.md](API.md)
 
-### 1. Hardware Awareness
-System detects and adapts to:
-- CPU cores available
-- Available memory
-- Operating system
-- Architecture (x86_64, ARM, etc.)
-- Automatically optimizes execution
+### Production shell (optional path)
+- [PRODUCTION_DEPLOYMENT.md](PRODUCTION_DEPLOYMENT.md)
+- [PRODUCTION_API.md](PRODUCTION_API.md)
+- [PRODUCTION_CONFIGURATION.md](PRODUCTION_CONFIGURATION.md)
+- [PRODUCTION_MONITORING.md](PRODUCTION_MONITORING.md)
+- [PRODUCTION_SECURITY.md](PRODUCTION_SECURITY.md)
 
-### 2. Self-Awareness
-System knows:
-- Its own constraints (energy limits, strategy whitelist)
-- Current goals and active strategies
-- Capability scores (verify, analyze, learn)
-- Energy state and resource availability
-- Decision history and success rates
+## What matters right now
 
-### 3. Autonomous Operation
-- Nodes run independently
-- Make decisions within alignment constraints
-- No central orchestrator
-- Communicate through shared substrate
-- Adapt strategies based on introspection
+The **core control loop** is the runnable spine:
 
-### 4. Safety Built-In
-- Hard constraints that cannot be broken
-- Value alignment (seek truth, minimize harm, transparency)
-- Complete audit trail of all decisions
-- Killswitch always available
-- Monitoring system detects anomalies
+- `EnergyBudget` — scarcity
+- `SelfModel` — prediction + calibration
+- `Strategy` — claim generation
+- `Oracle` — ground truth
+- `Stage1Store` — durable checkpoint + audit (opt-in)
 
-### 5. Adaptive Learning
-- Track trustworthiness of information sources
-- Learn which strategies work best
-- Recognize domain patterns
-- Continuous improvement through experience
+Layer1/Layer2 and foundation/safety/learning modules exist in-tree and are partially parallel. Production modules are an enterprise shell, not required for Stage1.
 
-### 6. Self-Improvement
-- Generate new strategies autonomously
-- Meta-reasoning about own processes
-- Identify and fix weaknesses
-- Combine successful approaches
+## Stage1 in one paragraph
 
-### 7. Neural Integration
-- Embedded neural networks for pattern recognition
-- Hybrid symbolic + neural decision making
-- Continuous online learning
-- Adaptive to distribution shifts
+Stage1 makes the loop durable and inspectable under a fixed goal stack: **survive > human-legible > seek truth**. It writes `state/checkpoint.json` and `state/audit.jsonl`. It does **not** implement anti-kill, self-copy, or concealment.
 
-## Architecture
+## Status snapshot
 
-```
-┌─────────────────────────────────────────┐
-│     Self-Aware Autonomous AI System     │
-├─────────────────────────────────────────┤
-│                                         │
-│  ┌─────────────────────────────────┐   │
-│  │  Segment 6: Neural Integration  │   │
-│  │  - Hybrid reasoning             │   │
-│  │  - Neural networks              │   │
-│  │  - Continuous learning          │   │
-│  └─────────────────────────────────┘   │
-│                                         │
-│  ┌─────────────────────────────────┐   │
-│  │ Segment 5: Self-Improvement     │   │
-│  │  - Strategy generation          │   │
-│  │  - Meta-reasoning               │   │
-│  │  - Self-optimization            │   │
-│  └─────────────────────────────────┘   │
-│                                         │
-│  ┌─────────────────────────────────┐   │
-│  │ Segment 4: Adaptive Learning    │   │
-│  │  - Trust networks               │   │
-│  │  - Reinforcement learning       │   │
-│  │  - Domain patterns              │   │
-│  └─────────────────────────────────┘   │
-│                                         │
-│  ┌─────────────────────────────────┐   │
-│  │ Segment 3: Safety Layer         │   │
-│  │  - Constraints                  │   │
-│  │  - Alignment                    │   │
-│  │  - Monitoring                   │   │
-│  │  - Killswitch                   │   │
-│  └─────────────────────────────────┘   │
-│                                         │
-│  ┌─────────────────────────────────┐   │
-│  │ Segment 2: Self-Model           │   │
-│  │  - System self-knowledge        │   │
-│  │  - Constraints awareness        │   │
-│  │  - State management             │   │
-│  └─────────────────────────────────┘   │
-│                                         │
-│  ┌─────────────────────────────────┐   │
-│  │ Segment 1: Foundation           │   │
-│  │  - Hardware detection           │   │
-│  │  - Substrate (communication)    │   │
-│  │  - Introspection                │   │
-│  │  - Autonomous nodes             │   │
-│  └─────────────────────────────────┘   │
-│                                         │
-└─────────────────────────────────────────┘
-```
-
-## Documentation Structure
-
-### User Guides (Start Here!)
-- **[TUI_GUIDE.md](TUI_GUIDE.md)** - Interactive Terminal UI for hands-on exploration
-- **[SIMULATION_GUIDE.md](SIMULATION_GUIDE.md)** - Automated testing and measurement
-
-### Technical Reference
-- **[ARCHITECTURE.md](ARCHITECTURE.md)** - Detailed system design with 6 segments
-- **[API.md](API.md)** - Complete API reference for all components
-- **[BUILDING.md](BUILDING.md)** - Build instructions and troubleshooting
-- **[SAFETY.md](SAFETY.md)** - Safety mechanisms, constraints, and security
-- **[LEARNING.md](LEARNING.md)** - How the system learns from experience
-- **[EXAMPLES.md](EXAMPLES.md)** - Code examples and usage patterns
-
-## File Structure
-
-```
-fungal/
-├── include/
-│   ├── hardware.hpp              # Hardware detection
-│   ├── substrate.hpp             # Communication layer
-│   ├── introspection.hpp         # Self-awareness
-│   ├── autonomous_node.hpp       # Autonomous agents
-│   ├── self_model.hpp            # System self-knowledge
-│   ├── constraints.hpp           # Hard constraints
-│   ├── alignment.hpp             # Value alignment
-│   ├── monitor.hpp               # Monitoring & audit
-│   ├── learning.hpp              # Adaptive learning
-│   ├── self_improvement.hpp      # Self-improvement
-│   └── neural_integration.hpp    # Neural networks
-├── src/
-│   ├── hardware.cpp
-│   ├── substrate.cpp
-│   ├── introspection.cpp
-│   ├── autonomous_node.cpp
-│   ├── self_model.cpp
-│   ├── constraints.cpp
-│   ├── alignment.cpp
-│   ├── monitor.cpp
-│   ├── learning.cpp
-│   ├── self_improvement.cpp
-│   ├── neural_integration.cpp
-│   └── main.cpp                  # Demo application
-├── tests/
-│   ├── unit/                     # Unit tests
-│   ├── integration/              # Integration tests
-│   └── system/                   # System tests
-└── docs/                         # Documentation
-```
-
-## Key Concepts
-
-### Autonomy with Alignment
-The system is autonomous (makes independent decisions) but operates within carefully designed constraints that ensure alignment with human values.
-
-### Truth-Seeking
-False information metabolically starves. True information is rewarded. The system is designed to naturally converge on truth through distributed verification.
-
-### Distributed, Not Centralized
-No single point of control or failure. Nodes operate independently and communicate through shared substrate.
-
-### Self-Improving
-The system can generate new strategies, evaluate their effectiveness, and improve itself without external reprogramming.
-
-### Auditable
-Complete audit trail of all decisions. Every action is logged with rationale for transparency and accountability.
-
-## Testing
-
-Run all tests:
-```bash
-ctest --output-on-failure
-```
-
-Run specific test category:
-```bash
-ctest -L unit          # Unit tests only
-ctest -L integration   # Integration tests only  
-ctest -L system        # System tests only
-```
-
-## Performance
-
-- **Build time**: ~5 seconds (incremental)
-- **Test suite**: 0.04 seconds for 5 tests
-- **Demo startup**: <100ms
-- **Per-cycle overhead**: Minimal, scales with node count
-
-## Safety
-
-**Hardcoded Constraints:**
-- Energy limits cannot be exceeded
-- Strategy whitelist cannot be bypassed
-- Alignment violations trigger monitoring
-- Killswitch always available
-- Execution timeout prevents infinite loops
-
-**See [SAFETY.md](SAFETY.md) for detailed safety analysis.**
-
-## Future Extensions
-
-1. **Distributed Systems** - Multi-machine deployment
-2. **GPU Acceleration** - CUDA/OpenCL neural acceleration
-3. **Persistent Storage** - State serialization
-4. **Web API** - REST endpoints for interaction
-5. **Visualization** - Real-time network visualization
-6. **Advanced Learning** - Evolutionary algorithms, reinforcement learning
-
-## Citation
-
-This system demonstrates bio-inspired autonomous reasoning with safety constraints, designed to be truth-seeking and self-improving while maintaining human oversight.
-
-## License
-
-Implementation and documentation provided as-is for educational and research purposes.
+| Piece | Status |
+|---|---|
+| Core loop | Present |
+| Stage1 | On main, opt-in |
+| `fungal_stage1_demo` | Target added |
+| Local Stage1 proof | Run demo on your machine |
+| Full autonomy | Not started |
