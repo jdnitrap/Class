@@ -193,7 +193,7 @@ CycleResult ControlLoop::run_cycle(const std::string& code_snippet) {
         .predicted_success = predicted_success,
         .strategy_claim = false,
         .strategy_confidence = 0.0,
-        .energy_spent = energy_cost,
+        .energy_spent = has_energy ? energy_cost : 0,
         .oracle_ground_truth = false,
         .prediction_correct = false,
         .system_had_energy = has_energy

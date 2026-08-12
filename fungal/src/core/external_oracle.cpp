@@ -41,14 +41,17 @@ bool ExternalOracle::compile_and_check(const std::string& code_snippet, std::str
     char temp_log[] = "/tmp/fungal_oracle_log_XXXXXX";
 
     int fd_src = mkstemp(temp_src);
+    int fd_exe = mkstemp(temp_exe);
     int fd_log = mkstemp(temp_log);
-    if (fd_src < 0 || fd_log < 0) {
+    if (fd_src < 0 || fd_exe < 0 || fd_log < 0) {
         compiler_output = "Error: could not create temp files";
         if (fd_src >= 0) ::close(fd_src);
+        if (fd_exe >= 0) ::close(fd_exe);
         if (fd_log >= 0) ::close(fd_log);
         return false;
     }
     ::close(fd_src);
+    ::close(fd_exe);
     ::close(fd_log);
 
     // Write source code to unique temp file
@@ -56,6 +59,7 @@ bool ExternalOracle::compile_and_check(const std::string& code_snippet, std::str
     if (!temp_file) {
         compiler_output = "Error: could not write temp source file";
         std::remove(temp_src);
+        std::remove(temp_exe);
         std::remove(temp_log);
         return false;
     }
@@ -66,7 +70,7 @@ bool ExternalOracle::compile_and_check(const std::string& code_snippet, std::str
     // Use -fsanitize=undefined to catch UB at compile time
     // Use 'timeout' command to enforce max execution time
     std::string cmd = std::string("timeout 5 clang++ -Wall -Wextra -std=c++17 -fsanitize=undefined ")
-                      + temp_src + " -o " + temp_exe + " 2>&1 > " + temp_log + " 2>&1";
+                      + temp_src + " -o " + temp_exe + " > " + temp_log + " 2>&1";
     int result = system(cmd.c_str());
 
     // Read compilation output from log file
@@ -74,8 +78,8 @@ bool ExternalOracle::compile_and_check(const std::string& code_snippet, std::str
     if (!log_file) {
         compiler_output = "Error: could not read compiler output log";
         std::remove(temp_src);
-        std::remove(temp_log);
         std::remove(temp_exe);
+        std::remove(temp_log);
         return (result != 0);
     }
 
