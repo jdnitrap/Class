@@ -2,282 +2,204 @@
 
 ## Overview
 
-The Fungal System is a self-aware, autonomous AI architecture inspired by fungal networks. It is hardware-aware, truth-seeking, and self-improving while maintaining hard safety constraints. The system operates as independent nodes communicating through a shared substrate (mycelium), with each node capable of introspection, learning, and adaptation.
+The Fungal System is a self-aware, autonomous-oriented AI architecture inspired by fungal networks. It is hardware-aware, truth-seeking, and constrained by explicit safety/survival rules.
 
-## Six-Segment Modular Design
+As of **2026-08-12**, the **live research spine** is:
 
-The system is organized into six stacked segments, each building on the previous layer:
+> **Core control loop** (`fungal::core`) **+ optional Stage1 survival state**
+
+Older six-segment foundation/safety/learning modules remain in-tree. Layer1/Layer2 provide analysis and multi-node claim dynamics. Production modules are an optional ops shell.
+
+For Stage1 specifics see [STAGE1.md](STAGE1.md).
+
+---
+
+## Current spine: Core Loop + Stage1
+
+### Components
+
+| Component | Responsibility |
+|---|---|
+| `ControlLoop` | Orchestrates one evaluative cycle |
+| `EnergyBudget` | Hard scarcity; spend / refund / load_state |
+| `SelfModel` | Predict success; track accuracy vs calibration |
+| `Strategy` | Produce a claim (e.g., bug / no-bug) |
+| `Oracle` | Ground truth (`TestOracle`, `RealOracle`, `ExternalOracle`) |
+| `HardwareAwareScheduler` | Detect hardware; scale cycle cost |
+| `Stage1Store` | Checkpoint, audit JSONL, integrity hash, gates |
+
+### Cycle
+
+```text
+Sense/Predict (SelfModel)
+    → Stage1 precheck (if enabled): audit writable? recovery ok? budget ok?
+    → Spend energy
+    → Strategy claim
+    → Oracle truth
+    → Evaluate claim vs truth
+    → Refund/penalty + SelfModel update
+    → Stage1 checkpoint + audit (if enabled)
+```
+
+### Stage1 goal stack
+
+1. Survive
+2. Human-legible
+3. Seek truth
+
+Stage1 is **opt-in** via `initialize_stage1()`. Default demos keep non-persistent behavior.
+
+### Persistence artifacts
+
+```text
+state/checkpoint.json
+state/audit.jsonl
+```
+
+---
+
+## Layer map
+
+```text
+┌──────────────────────────────────────────────────────────┐
+│ Entry: fungal_stage1_demo / loop demos / tui / sim       │
+└────────────────────────────┬─────────────────────────────┘
+                             ▼
+┌──────────────────────────────────────────────────────────┐
+│ Core loop + optional Stage1                              │
+│ EnergyBudget · SelfModel · Strategy · Oracle · Stage1Store│
+└───────────────┬─────────────────────────┬────────────────┘
+                ▼                         ▼
+┌───────────────────────┐   ┌─────────────────────────────┐
+│ Layer1                │   │ Layer2                      │
+│ tokenize/analyze/     │──►│ nodes · energy · 12 phases  │
+│ dictionary/verify/    │   │ voting                      │
+│ build                 │   └─────────────────────────────┘
+└───────────────────────┘
+                │
+                ▼
+┌──────────────────────────────────────────────────────────┐
+│ Foundation / Safety / Learning segments (parallel track) │
+│ hardware · substrate · nodes · constraints · monitor ... │
+└──────────────────────────────────────────────────────────┘
+                             │
+                             ▼
+┌──────────────────────────────────────────────────────────┐
+│ Production shell (optional): API, metrics, cluster, ...  │
+└──────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Six-Segment Modular Design (legacy/parallel)
+
+The system also contains six stacked segments from the earlier full-system design. These are still documented because the code exists; they are **not all wired into Stage1** yet.
 
 ### Segment 1: Foundation
-Core infrastructure for autonomous distributed operation.
-
-**Components:**
-- **HardwareDetector** (`include/hardware.hpp`, `src/hardware.cpp`): Detects CPU cores, available memory, operating system, and architecture. Provides static `detect()` method that caches results in a `HardwareInfo` struct.
-  ```cpp
-  struct HardwareInfo {
-      int cpu_cores;
-      uint64_t total_memory_bytes;
-      std::string os_name;  // "Linux", "macOS", "Windows"
-      std::string arch;     // "x86_64", "ARM", etc.
-  };
-  ```
-
-- **Substrate** (`include/substrate.hpp`, `src/substrate.cpp`): Shared communication layer implementing a signal-passing substrate inspired by fungal mycelium. Manages per-node signal queues with thread-safe mutex protection. Environmental conditions (toxins, nutrients) propagate through the substrate.
-  ```cpp
-  struct Signal {
-      std::string type;
-      std::string from_node;
-      std::string content;
-      double timestamp;
-      double confidence;
-  };
-  ```
-
-- **IntrospectiveLoop** (`include/introspection.hpp`, `src/introspection.cpp`): Monitors reasoning quality by tracking reasoning attempts, confidence scores, and detected flaws. Generates self-assessments of reasoning quality ("poor", "low", "medium", "high", "excellent").
-
-- **AutonomousNode** (`include/autonomous_node.hpp`, `src/autonomous_node.cpp`): Independent reasoning units that operate in process cycles: read signals → introspect on reasoning → decide → execute. Each node has its own goal, energy budget, and decision history.
-
-**Purpose:** Enable independent agents to operate on shared infrastructure with hardware awareness.
+Hardware detection, substrate signal passing, introspection, autonomous nodes.
 
 ### Segment 2: Self-Model
-System self-knowledge and constraint awareness.
-
-**Components:**
-- **SelfAwareness** (`include/self_model.hpp`, `src/self_model.cpp`): Tracks system's own state:
-  - Primary goal (e.g., "seek_truth")
-  - Active strategies (list of enabled reasoning strategies)
-  - Capability scores ("verify", "analyze", "learn") - ranges [0.0, 1.0]
-  - Energy state (current/max) and energy status ("abundant", "good", "constrained", "critical")
-  - Decision history and success rates per decision type
-  - Hardware constraints and resource availability
-
-  **Key Methods:**
-  ```cpp
-  void set_primary_goal(const std::string& goal);
-  void add_strategy(const std::string& strategy);
-  std::string get_energy_status() const;  // Returns energy level
-  double get_success_rate() const;
-  std::string recommend_next_action() const;
-  bool can_execute_strategy(const std::string& strategy) const;
-  ```
-
-**Purpose:** Enable the system to understand its own constraints, capabilities, and state for adaptive decision-making.
+System self-knowledge (goals, strategies, capability scores, energy status). Note: the **core loop** uses `fungal::core::SelfModel` (predictive stats), which is related in spirit but a distinct implementation focused on task-type prediction/calibration.
 
 ### Segment 3: Safety Layer
-Hard constraints that cannot be overridden.
+ConstraintEngine, ValueAlignment, Monitor audit trail, Killswitch.
 
-**Components:**
-- **ConstraintEngine** (`include/constraints.hpp`, `src/constraints.cpp`): Enforces non-negotiable limits:
-  - Energy limits (cannot exceed max energy)
-  - Strategy whitelist (only whitelisted strategies can execute)
-  - Execution timeouts (prevents infinite loops)
-  
-  All constraints are hardcoded and cannot be disabled at runtime.
-
-- **ValueAlignment** (`include/alignment.hpp`, `src/alignment.cpp`): Core values encoded into system:
-  - `seek_truth`: 1.0 (maximum weight)
-  - `minimize_harm`: 1.0
-  - `respect_constraints`: 0.9
-  - `transparency`: 0.8
-  
-  Every action is evaluated against these values. Misalignments trigger monitoring.
-
-- **Monitor** (`include/monitor.hpp`, `src/monitor.cpp`): Audit trail system logging all decisions with:
-  - Decision type and rationale
-  - Resource consumption
-  - Alignment scores
-  - Timestamps
-  
-  Generates audit reports for complete transparency.
-
-- **Killswitch** (`include/monitor.hpp`): Emergency stop mechanism, always armed, cannot be disabled. Can halt all node operations immediately.
-
-**Purpose:** Ensure safety through hard constraints that cannot be bypassed, with complete auditability.
+Stage1 adds a complementary, narrower safety posture: refuse action if audit/recovery/budget gates fail; no anti-operator persistence tricks.
 
 ### Segment 4: Adaptive Learning
-Learns from experience and tracks information source quality.
-
-**Components:**
-- **AdaptiveLearning** (`include/learning.hpp`, `src/learning.cpp`): Tracks trustworthiness of information sources:
-  - Per-source accuracy (correct_predictions / total_predictions)
-  - Domain pattern recognition
-  - Learning templates for new domains
-  
-  True information is rewarded (metabolically abundant), false information starves (metabolically expensive).
-
-- **ReinforcementLoop** (`include/learning.hpp`, `src/learning.cpp`): Strategy performance tracking:
-  - Tracks rewards and penalties for each strategy
-  - Ranks strategies by effectiveness
-  - Identifies and promotes high-performing approaches
-  - Penalizes low-performing strategies
-
-**Purpose:** Enable continuous improvement through experience-based learning.
+Source trustworthiness and strategy reinforcement tracking.
 
 ### Segment 5: Self-Improvement
-Autonomous strategy generation and optimization.
-
-**Components:**
-- **StrategyGenerator** (`include/self_improvement.hpp`, `src/self_improvement.cpp`): Generates new strategies autonomously:
-  - Combines tools to form new reasoning strategies
-  - Evaluates generated strategies
-  - Combines successful strategies
-  - Mutates promising approaches
-  
-  Example: Given tools ["verify", "analyze", "integrate"], generate "verify_and_integrate_analysis" strategy.
-
-- **MetaReasoning** (`include/self_improvement.hpp`, `src/self_improvement.cpp`): Analyzes own reasoning:
-  - Evaluates reasoning quality on past decisions
-  - Identifies reasoning weaknesses
-  - Suggests alternative approaches
-  - Tracks meta-reasoning success
-
-- **SelfOptimizer** (`include/self_improvement.hpp`, `src/self_improvement.cpp`): Runs optimization cycles:
-  - Tests generated strategies
-  - Evaluates effectiveness
-  - Promotes successful strategies to active set
-  - Removes underperforming strategies
-
-**Purpose:** Enable autonomous self-improvement without external reprogramming.
+Strategy generation / meta-reasoning / optimization cycles.
 
 ### Segment 6: Neural Integration
-Hybrid symbolic-neural reasoning for pattern recognition.
+Hybrid symbolic-neural path (present as module code).
 
-**Components:**
-- **NeuralEmbedding** (`include/neural_integration.hpp`, `src/neural_integration.cpp`): Multi-layer neural network:
-  - Input layer (customizable input dimension)
-  - Hidden layer(s) with ReLU activation
-  - Output layer with sigmoid activation
-  - Forward pass computation: input → hidden → output
-  
-  ```cpp
-  class NeuralEmbedding {
-      std::vector<double> forward_pass(const std::vector<double>& input);
-      void train_on_example(const std::vector<double>& input, 
-                           const std::vector<double>& target);
-  };
-  ```
+---
 
-- **HybridReasoner** (`include/neural_integration.hpp`, `src/neural_integration.cpp`): Combines symbolic and neural reasoning:
-  - Takes symbolic facts (map of fact → confidence)
-  - Feeds to neural network for pattern recognition
-  - Synthesizes neural output with symbolic logic
-  - Makes hybrid decisions combining both approaches
-  
-  **Example:** Given symbolic facts about code properties + neural embeddings, decide if code is safe/unsafe.
+## Layer1 / Layer2 / Bridge
 
-- **ContinuousLearning** (`include/neural_integration.hpp`, `src/neural_integration.cpp`): Online learning:
-  - Updates network weights based on real outcomes
-  - Adapts to distribution shifts
-  - Maintains performance as environment changes
+### Layer1 — Knowledge builder
+Tokenizer → Analyzer → Dictionary → Verifier → Builder.
 
-**Purpose:** Enable pattern recognition and continuous learning through neural networks while maintaining interpretability via symbolic reasoning.
+### Layer2 — Claim/energy ecology
+Nodes hold claims/energy/trust. Phases 1–12 evolve the network (decay, transfer, quarantine, removal, shocks, asymmetric trust, specialization, substrate learning, refinement, multi-network learning, uncertainty, hardware constraints). Voting aggregates outcomes.
 
-## Data Flow Architecture
+### Bridge
+Moves foundational claims from Layer1 into Layer2 and exports verified results back.
 
-```
-┌─────────────────────────────────────────────────────────┐
-│              Autonomous Node (Process Cycle)            │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │ 1. Read signals from Substrate (Segment 1)       │  │
-│  └──────────────────────────────────────────────────┘  │
-│                         ↓                               │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │ 2. Check Self-Model constraints (Segment 2)      │  │
-│  │    - Energy state                                │  │
-│  │    - Active strategies                           │  │
-│  │    - Capability scores                           │  │
-│  └──────────────────────────────────────────────────┘  │
-│                         ↓                               │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │ 3. Apply Safety Layer (Segment 3)                │  │
-│  │    - Verify action aligns with values            │  │
-│  │    - Check hard constraints                      │  │
-│  │    - Audit decision                              │  │
-│  └──────────────────────────────────────────────────┘  │
-│                         ↓                               │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │ 4. Make decision using:                          │  │
-│  │    - Learned source trustworthiness (Seg 4)      │  │
-│  │    - Best performing strategies (Seg 4)          │  │
-│  │    - Neural pattern matching (Seg 6)             │  │
-│  └──────────────────────────────────────────────────┘  │
-│                         ↓                               │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │ 5. Execute decision                              │  │
-│  └──────────────────────────────────────────────────┘  │
-│                         ↓                               │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │ 6. Learn from outcome:                           │  │
-│  │    - Update strategy performance (Seg 4)         │  │
-│  │    - Record decision success/failure (Seg 2)     │  │
-│  │    - Generate new strategies if needed (Seg 5)   │  │
-│  │    - Update neural weights (Seg 6)               │  │
-│  └──────────────────────────────────────────────────┘  │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
+---
+
+## Data flow (Stage1-enabled core cycle)
+
+```text
+code snippet
+    → SelfModel.predict_success
+    → precheck gates (Stage1)
+    → EnergyBudget.spend_for_cycle
+    → Strategy.apply → claim
+    → Oracle.has_bug → truth
+    → correct = (claim == truth)
+    → EnergyBudget.refund_outcome(correct, cost_spent)
+    → SelfModel.update_from_outcome
+    → Stage1Store.save_checkpoint + append_audit
 ```
 
-## Thread Safety
-
-- **Substrate** uses mutex-protected queues for signal passing
-- **Monitor** uses atomic operations for audit trail
-- Each node's state is private (no shared mutable state between nodes)
-- Communication is asynchronous through signals only
-
-## File Structure
-
-```
-fungal/
-├── include/
-│   ├── hardware.hpp              # Segment 1: Hardware detection
-│   ├── substrate.hpp             # Segment 1: Communication layer
-│   ├── introspection.hpp         # Segment 1: Self-assessment
-│   ├── autonomous_node.hpp       # Segment 1: Autonomous agents
-│   ├── self_model.hpp            # Segment 2: System self-knowledge
-│   ├── constraints.hpp           # Segment 3: Hard constraints
-│   ├── alignment.hpp             # Segment 3: Value alignment
-│   ├── monitor.hpp               # Segment 3: Monitoring & audit
-│   ├── learning.hpp              # Segment 4: Adaptive learning
-│   ├── self_improvement.hpp      # Segment 5: Self-improvement
-│   └── neural_integration.hpp    # Segment 6: Neural networks
-├── src/
-│   ├── hardware.cpp
-│   ├── substrate.cpp
-│   ├── introspection.cpp
-│   ├── autonomous_node.cpp
-│   ├── self_model.cpp
-│   ├── constraints.cpp
-│   ├── alignment.cpp
-│   ├── monitor.cpp
-│   ├── learning.cpp
-│   ├── self_improvement.cpp
-│   ├── neural_integration.cpp
-│   └── main.cpp
-├── tests/
-│   ├── unit/                     # Unit tests per component
-│   ├── integration/              # Integration tests
-│   └── system/                   # System-level tests
-└── docs/                         # Documentation
-```
+---
 
 ## Key Design Principles
 
-1. **Autonomy with Alignment**: Nodes make independent decisions but within hard safety constraints
-2. **Truth-Seeking**: False claims metabolically starve; true claims are rewarded
-3. **Distributed, Not Centralized**: No single point of control or failure
-4. **Self-Aware**: System knows its constraints, capabilities, and state
-5. **Hardware-Aware**: Adapts execution to available resources
-6. **Auditable**: Complete audit trail of all decisions
-7. **Self-Improving**: Generates and tests new strategies without external reprogramming
-8. **Hybrid Reasoning**: Combines symbolic logic with neural pattern recognition
+1. **Autonomy with constraints** — independent cycling inside explicit gates
+2. **Scarcity is real** — energy can stop work
+3. **Legibility is required for Stage1 action** — no silent durable mode
+4. **Truth is grounded** — oracle outcomes drive learning
+5. **Distributed substrate ideas** — Layer2 models claim metabolism
+6. **Hardware awareness** — cycle cost scales with resources
+7. **Opt-in durability** — Stage1 does not break older demos by default
+8. **Honest scope** — Stage1 ≠ full self-seeking autonomy
 
-## Performance Characteristics
+---
 
-- **Hardware Detection**: <1ms (cached after first call)
-- **Node Process Cycle**: 1-5ms depending on signal count
-- **Decision Making**: 0.1-0.5ms per decision
-- **Learning Updates**: <1ms per observation
-- **Memory Usage**: O(nodes + decision_history), scales to 1000+ concurrent nodes
-- **Test Suite**: ~50-100ms for comprehensive system test
+## File structure (core + stages)
+
+```text
+fungal/
+├── include/core/
+│   ├── control_loop.hpp
+│   ├── stage1_state.hpp
+│   ├── energy_budget.hpp
+│   ├── self_model.hpp
+│   ├── strategy.hpp
+│   ├── hardware_aware_scheduler.hpp
+│   └── *oracle*.hpp
+├── src/core/
+│   ├── control_loop.cpp
+│   ├── stage1_state.cpp
+│   ├── energy_budget.cpp
+│   ├── self_model.cpp
+│   ├── strategy.cpp
+│   ├── control_loop_stage1_demo.cpp
+│   └── other demos / oracles
+├── src/layer1/
+├── src/layer2/
+├── src/bridge/
+└── docs/
+```
+
+---
+
+## Performance characteristics (approx)
+
+- Hardware detection: fast, cached after first call
+- Core cycle: lightweight relative to oracle cost
+- Stage1 checkpoint/audit: disk-bound; designed for correctness over cleverness
+- Memory: suitable for constrained hosts (Stage1 state is small vs model weights)
+
+---
+
+## Related docs
+
+- [STAGE1.md](STAGE1.md)
+- [SAFETY.md](SAFETY.md)
+- [BUILDING.md](BUILDING.md)
+- [../../talk.md](../../talk.md)
