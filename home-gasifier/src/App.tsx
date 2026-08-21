@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, Component } from 'react';
 import React from 'react';
 import { Outlet, createBrowserRouter, type RouteObject } from 'react-router';
 import { RouterProvider } from 'react-router/dom';
@@ -9,9 +9,11 @@ import RootLayout from './layouts/RootLayout';
 import Spinner from './components/Spinner';
 import { routes } from './routes';
 
+console.log('✅ App.tsx loaded successfully');
+
 const CookieBanner = lazy(() =>
   import('@/components/CookieBanner').catch((error) => {
-    console.warn('Failed to load CookieBanner:', error);
+    console.warn('⚠️ Failed to load CookieBanner:', error);
     return { default: (() => null) as unknown as () => React.ReactElement };
   })
 );
@@ -30,16 +32,6 @@ const rootElement = (
   </Suspense>
 );
 
-// Wrap the agent-editable flat `routes` array in a layout route so ScrollRestoration
-// + shared chrome live once above every page. Keeping the wrap here (instead of
-// in routes.tsx) preserves the agent's simple flat-route contract. The dev
-// boundary must live inside the route element so React Router doesn't replace it
-// with its default route error UI before our boundary can catch render errors.
-//
-// `captureGlobalErrors={false}`: the ROOT boundary in main.tsx owns the global
-// window.onerror/unhandledrejection handlers. This inner boundary only catches
-// route render errors via componentDidCatch — installing window handlers here
-// too would double-forward async errors and stack a second overlay.
 const routeTree: RouteObject[] = [
   {
     element:
@@ -52,22 +44,66 @@ const routeTree: RouteObject[] = [
   },
 ];
 
-const router = createBrowserRouter(routeTree);
+let router: any;
+try {
+  console.log('Creating browser router...');
+  router = createBrowserRouter(routeTree);
+  console.log('✅ Router created successfully');
+} catch (err) {
+  console.error('❌ Failed to create router:', err);
+  throw err;
+}
+
+interface AppProps {}
+interface AppState {
+  hasError: boolean;
+  error: Error | null;
+}
+
+class AppErrorBoundary extends Component<{ children: React.ReactNode }, AppState> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: { componentStack: string }) {
+    console.error('❌ App error caught:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{
+          padding: '40px',
+          fontFamily: 'monospace',
+          backgroundColor: '#ffe6e6',
+          color: '#cc0000',
+          minHeight: '100vh'
+        }}>
+          <h2>Error Loading Application</h2>
+          <pre style={{ whiteSpace: 'pre-wrap' }}>{this.state.error?.message}</pre>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
 
 export default function App() {
+  console.log('Rendering App component...');
   return (
-    <>
+    <AppErrorBoundary>
       <RouterProvider router={router} />
-      {/*
-        CookieBanner reads document.cookie and subscribes to browser events.
-        App.tsx is client-only (entry-server.tsx renders the route tree
-        directly without importing App), so no SSR gate is needed here.
-      */}
       <CookieBannerErrorBoundary>
         <Suspense fallback={null}>
           <CookieBanner />
         </Suspense>
       </CookieBannerErrorBoundary>
-    </>
+    </AppErrorBoundary>
   );
 }

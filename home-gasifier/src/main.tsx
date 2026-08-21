@@ -6,11 +6,20 @@ import AiroErrorBoundary from '../export-plugins/AiroErrorBoundary';
 import App from './App';
 import './styles/globals.css';
 
+// Global error handler for debugging
 if (import.meta.env.MODE === 'development') {
   const meta = document.createElement('meta');
   meta.name = 'robots';
   meta.content = 'noindex, nofollow';
   document.head.appendChild(meta);
+
+  window.addEventListener('error', (event) => {
+    console.error('❌ Global error:', event.error);
+  });
+
+  window.addEventListener('unhandledrejection', (event) => {
+    console.error('❌ Unhandled promise rejection:', event.reason);
+  });
 }
 
 const queryClient = new QueryClient({
@@ -26,41 +35,36 @@ const queryClient = new QueryClient({
 });
 
 const rootElement = document.getElementById('app');
-if (!rootElement) throw new Error('Root element not found');
+if (!rootElement) {
+  document.body.innerHTML = '<div style="color:red;padding:20px;font-family:monospace">ERROR: Root element #app not found</div>';
+  throw new Error('Root element not found');
+}
 
-const providers = (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <App />
-    </QueryClientProvider>
-  </HelmetProvider>
-);
+try {
+  const providers = (
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
+    </HelmetProvider>
+  );
 
-// Root-level dev error boundary. The inner boundary in App.tsx lives
-// inside the route element (so it can catch route render errors before
-// React Router swaps in its own error UI), which leaves everything
-// OUTSIDE the router uncaught: provider crashes, errors in App itself,
-// and render errors in components mounted as siblings of <RouterProvider>
-// (e.g. an analytics loader calling useLocation() outside the router).
-// Those throw on first render before the inner boundary ever mounts, so
-// only an ancestor boundary above the providers can catch them. This
-// boundary also owns the global window.onerror/unhandledrejection
-// handlers (the inner one opts out via captureGlobalErrors={false}).
-const tree = (
-  <StrictMode>
-    {import.meta.env.MODE === 'development' ? (
-      <AiroErrorBoundary>{providers}</AiroErrorBoundary>
-    ) : (
-      providers
-    )}
-  </StrictMode>
-);
+  const tree = (
+    <StrictMode>
+      {import.meta.env.MODE === 'development' ? (
+        <AiroErrorBoundary>{providers}</AiroErrorBoundary>
+      ) : (
+        providers
+      )}
+    </StrictMode>
+  );
 
-// SSR markup is detected via a child element inside the #app root. hydrateRoot
-// reattaches to the server-rendered tree; createRoot mounts fresh for dev/
-// pre-SSR fallback.
-if (rootElement.firstElementChild) {
-  hydrateRoot(rootElement, tree);
-} else {
-  createRoot(rootElement).render(tree);
+  if (rootElement.firstElementChild) {
+    hydrateRoot(rootElement, tree);
+  } else {
+    createRoot(rootElement).render(tree);
+  }
+} catch (err) {
+  console.error('❌ Failed to mount React:', err);
+  rootElement.innerHTML = `<div style="color:red;padding:20px;font-family:monospace;white-space:pre-wrap">ERROR mounting app:<br/>${err instanceof Error ? err.message : String(err)}</div>`;
 }
