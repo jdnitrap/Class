@@ -1,0 +1,292 @@
+{
+  "hero": {
+    "eyebrow": "What goes in the hopper",
+    "heading": "Fuel Types & Efficiency",
+    "subheading": "The fuel you choose determines your gas quality, tar levels, and how often you're cleaning filters. Here's everything you need to pick the right feedstock and prepare it properly."
+  },
+  "intro": {
+    "heading": "Fuel is half the system",
+    "body": "A perfectly built gasifier running on wet, oversized, or contaminated fuel will produce poor gas and clog constantly. Conversely, a modest gasifier fed with properly dried, correctly sized hardwood will run cleanly for hours. Understanding your fuel is just as important as understanding your reactor."
+  },
+  "fuels": [
+    {
+      "id": "fuel-hardwood",
+      "name": "Hardwood Chunks",
+      "rating": 5,
+      "bestFor": "Downdraft gasifiers, engine-grade gas",
+      "moistureTarget": "Under 15%",
+      "sizeTarget": "1–2 inch chunks",
+      "description": "Oak, hickory, maple, ash, and beech are the gold standard for gasification. Dense hardwoods produce high-energy syngas with low tar content when properly dried. They gasify slowly and evenly, giving stable reactor temperatures.",
+      "pros": [
+        "Highest energy density",
+        "Low tar when dry",
+        "Stable combustion",
+        "Widely available"
+      ],
+      "cons": [
+        "Requires proper drying time (6–12 months)",
+        "Harder to size consistently",
+        "Heavier to handle"
+      ],
+      "notes": "Split to consistent 1–2 inch chunks and dry under cover for at least 6 months. Freshly cut hardwood can be 50%+ moisture — it needs time."
+    },
+    {
+      "id": "fuel-softwood",
+      "name": "Softwood & Pine",
+      "rating": 3,
+      "bestFor": "Heat applications, updraft gasifiers",
+      "moistureTarget": "Under 15%",
+      "sizeTarget": "1–2 inch chunks",
+      "description": "Pine, spruce, fir, and cedar work but produce more resin and tar than hardwoods. The higher resin content means more filter maintenance. Acceptable for heat applications; marginal for engines without excellent filtration.",
+      "pros": [
+        "Dries faster than hardwood (3–6 months)",
+        "Widely available in forested areas",
+        "Lower density means easier handling"
+      ],
+      "cons": [
+        "Higher tar and resin content",
+        "More frequent filter cleaning required",
+        "Lower energy density than hardwood"
+      ],
+      "notes": "If softwood is your only option, run a robust two-stage filter and expect to clean it more often. Avoid pine with heavy pitch pockets."
+    },
+    {
+      "id": "fuel-wood-chips",
+      "name": "Wood Chips & Pellets",
+      "rating": 4,
+      "bestFor": "Automated or semi-automated systems",
+      "moistureTarget": "Under 12%",
+      "sizeTarget": "1/2–1 inch chips, standard pellets",
+      "description": "Chipped wood and compressed wood pellets offer consistent sizing and can be sourced commercially. Pellets are especially convenient — they're already dried to 8–10% moisture. Chips work well in downdraft gasifiers with a properly sized throat.",
+      "pros": [
+        "Consistent sizing improves gas quality",
+        "Pellets are pre-dried",
+        "Easy to store and handle",
+        "Good for automated feed systems"
+      ],
+      "cons": [
+        "Commercial pellets add ongoing cost",
+        "Chips can bridge in the hopper if too fine",
+        "Pellets may swell if exposed to moisture"
+      ],
+      "notes": "Wood pellets are arguably the best fuel for a home gasifier — consistent, dry, and sized perfectly. The cost is offset by the reduction in maintenance."
+    },
+    {
+      "id": "fuel-charcoal",
+      "name": "Charcoal",
+      "rating": 4,
+      "bestFor": "Simple gasifiers, high-quality gas output",
+      "moistureTarget": "Naturally low",
+      "sizeTarget": "3/4–1-1/2 inch lumps",
+      "description": "Charcoal has already been through pyrolysis, so a charcoal gasifier skips the drying and pyrolysis zones entirely. The result is very clean, low-tar gas. Charcoal gasifiers are simpler to build and operate, but you need a supply of charcoal — which you can make yourself.",
+      "pros": [
+        "Very clean gas, minimal tar",
+        "Simpler reactor design",
+        "No moisture concerns",
+        "Can be made from any biomass"
+      ],
+      "cons": [
+        "Requires a separate charcoal-making step",
+        "Lower energy density than wood per volume",
+        "More frequent refueling"
+      ],
+      "notes": "Making your own charcoal from scrap wood is straightforward with a retort kiln. The two-step process (char then gasify) adds complexity but delivers excellent gas quality."
+    },
+    {
+      "id": "fuel-agricultural",
+      "name": "Agricultural Residues",
+      "rating": 2,
+      "bestFor": "Updraft gasifiers, heat only",
+      "moistureTarget": "Under 20%",
+      "sizeTarget": "Varies — pelletize if possible",
+      "description": "Corn cobs, rice husks, straw, and other crop residues can be gasified but present challenges. High ash content, variable density, and bridging in hoppers make them difficult to use in standard downdraft designs. Best pelletized or used in purpose-built updraft systems.",
+      "pros": [
+        "Free or very low cost on farms",
+        "Abundant in agricultural areas",
+        "Sustainable use of waste material"
+      ],
+      "cons": [
+        "High ash content clogs grates quickly",
+        "Bridges in hoppers",
+        "Variable quality and moisture",
+        "Not suitable for most downdraft designs"
+      ],
+      "notes": "If you're on a farm with abundant crop residues, consider a purpose-built updraft gasifier designed for that feedstock rather than adapting a standard design."
+    }
+  ],
+  "moisture": {
+    "heading": "Why moisture content is everything",
+    "body": "Water in your fuel doesn't just reduce energy content — it actively steals heat from the gasification process. Every pound of water that enters the reactor must be vaporized before any useful chemistry can happen. At 30% moisture, you're spending roughly 20% of your fuel's energy just evaporating water.",
+    "targets": [
+      {
+        "id": "mc-1",
+        "label": "Ideal for engines",
+        "range": "Under 12%",
+        "status": "ideal"
+      },
+      {
+        "id": "mc-2",
+        "label": "Acceptable for engines",
+        "range": "12–18%",
+        "status": "good"
+      },
+      {
+        "id": "mc-3",
+        "label": "Marginal — heat only",
+        "range": "18–25%",
+        "status": "marginal"
+      },
+      {
+        "id": "mc-4",
+        "label": "Too wet — do not use",
+        "range": "Over 25%",
+        "status": "bad"
+      }
+    ],
+    "tips": [
+      {
+        "id": "mt-1",
+        "tip": "Buy a wood moisture meter ($15–$30). It's the single most useful tool for gasifier operators."
+      },
+      {
+        "id": "mt-2",
+        "tip": "Stack split wood under a roof with good airflow. Ground contact causes moisture wicking — use pallets."
+      },
+      {
+        "id": "mt-3",
+        "tip": "In humid climates, a simple solar kiln can cut drying time from 12 months to 6–8 weeks."
+      },
+      {
+        "id": "mt-4",
+        "tip": "Pellets and commercial wood chips are usually pre-dried. Store them in a dry location to maintain low moisture."
+      }
+    ]
+  },
+  "sizing": {
+    "heading": "Getting the size right",
+    "body": "Particle size affects how air and gas flow through the fuel bed. Too large and you get channeling — gas takes the path of least resistance and bypasses unreacted fuel. Too small and the bed packs tightly, restricting flow and causing pressure drop.",
+    "table": [
+      {
+        "id": "sz-1",
+        "gasifier": "Downdraft (Imbert)",
+        "idealSize": "1–2 inch chunks",
+        "avoid": "Sawdust, chips under 1/2 inch"
+      },
+      {
+        "id": "sz-2",
+        "gasifier": "FEMA Emergency",
+        "idealSize": "3/4–1-1/2 inch chips or chunks",
+        "avoid": "Large logs, fine sawdust"
+      },
+      {
+        "id": "sz-3",
+        "gasifier": "Updraft",
+        "idealSize": "Flexible — 3/4–3 inches",
+        "avoid": "Very fine material without pelletizing"
+      },
+      {
+        "id": "sz-4",
+        "gasifier": "Charcoal gasifier",
+        "idealSize": "3/4–1-1/2 inch lumps",
+        "avoid": "Charcoal dust or fines"
+      }
+    ]
+  },
+  "sourcing": {
+    "heading": "Where home builders actually get fuel",
+    "intro": "The best fuel is the fuel you can get consistently, dry reliably, and size correctly. Here's where home builders find it — and what to avoid.",
+    "sources": [
+      {
+        "id": "src-1",
+        "title": "Local sawmills and lumber yards",
+        "quality": "Excellent",
+        "notes": "Sawmill offcuts and slabs are often free or very cheap. The wood is already cut to manageable sizes and has usually been air-drying in the mill yard. Call ahead — many mills are happy to let you haul away material they'd otherwise chip or burn.",
+        "watch_out": "Avoid pressure-treated, painted, or chemically dried lumber. Ask specifically for green or air-dried natural wood."
+      },
+      {
+        "id": "src-2",
+        "title": "Tree service companies",
+        "quality": "Good",
+        "notes": "Arborists and tree removal companies generate enormous amounts of wood that they pay to dispose of. Many will deliver a load of chips or rounds to your property for free. Hardwood from tree work is excellent gasifier fuel once dried.",
+        "watch_out": "Freshly cut tree service wood is typically 40–60% moisture. Plan for 6–12 months of drying before use. Chips dry faster than rounds."
+      },
+      {
+        "id": "src-3",
+        "title": "Your own property",
+        "quality": "Excellent",
+        "notes": "If you have even a small woodlot, you can sustainably harvest enough fuel for a home gasifier. A half-acre of mixed hardwood managed on a 10-year rotation can produce 1–2 cords per year — more than enough for part-time operation.",
+        "watch_out": "Freshly cut wood needs time. Cut in fall, split in spring, use the following fall. Build a 2-year fuel inventory if you rely on your own land."
+      },
+      {
+        "id": "src-4",
+        "title": "Commercial wood pellets",
+        "quality": "Excellent",
+        "notes": "Bagged wood pellets from farm supply or hardware stores are pre-dried to 8–10% moisture and consistently sized. They cost more than free wood but eliminate all the drying and sizing work. For a home builder who values reliability over cost, pellets are hard to beat.",
+        "watch_out": "Store pellets in a dry location — they absorb moisture quickly. A 40 lb bag left in a damp shed can go from 8% to 20% moisture in a few weeks."
+      },
+      {
+        "id": "src-5",
+        "title": "Fallen branches and storm debris",
+        "quality": "Fair",
+        "notes": "Branches from your property or neighbors (with permission) are free and often already partially dried. Hardwood branches under 4 inches in diameter split easily and dry quickly. A good source for supplemental fuel.",
+        "watch_out": "Avoid wood that's been on the ground — it absorbs moisture and may have begun to rot. Rot reduces energy content and increases ash."
+      }
+    ],
+    "avoid": {
+      "heading": "What not to use",
+      "items": [
+        { "id": "av-1", "text": "Pallets — most are chemically treated or made from mixed unknown species. The chemicals produce toxic gas." },
+        { "id": "av-2", "text": "Painted or stained wood — the coatings produce toxic combustion products." },
+        { "id": "av-3", "text": "Pressure-treated lumber (green-tinted wood) — contains copper, chromium, and arsenic compounds." },
+        { "id": "av-4", "text": "Plywood, MDF, or particleboard — adhesives and resins produce toxic gas and clog filters rapidly." },
+        { "id": "av-5", "text": "Wet wood over 25% moisture — it won't gasify properly and will produce excessive tar." }
+      ]
+    },
+    "storage": {
+      "heading": "Storing and drying your fuel",
+      "tips": [
+        { "id": "st-1", "tip": "Stack split wood in rows with airflow between rows. A single-row stack dries faster than a pile." },
+        { "id": "st-2", "tip": "Cover the top but leave the sides open. A tarp over the top with open sides is better than a fully enclosed stack." },
+        { "id": "st-3", "tip": "Elevate off the ground on pallets or rails. Ground contact wicks moisture into the bottom layer." },
+        { "id": "st-4", "tip": "South-facing stacks in full sun dry significantly faster than shaded stacks." },
+        { "id": "st-5", "tip": "Keep a 2-season inventory: this year's fuel and next year's fuel drying. Never run on freshly cut wood." },
+        { "id": "st-6", "tip": "A simple solar kiln (a clear plastic-covered frame) can cut drying time from 12 months to 6–8 weeks in most climates." }
+      ]
+    }
+  },
+  "efficiency": {
+    "heading": "Maximizing efficiency",
+    "items": [
+      {
+        "id": "eff-1",
+        "title": "Dry your fuel properly",
+        "description": "Going from 20% to 12% moisture can increase effective energy output by 15–20%. No other single change has as much impact."
+      },
+      {
+        "id": "eff-2",
+        "title": "Size consistently",
+        "description": "Consistent particle size means even airflow through the fuel bed. A mix of large and small pieces creates hot spots and channeling."
+      },
+      {
+        "id": "eff-3",
+        "title": "Insulate the reactor",
+        "description": "Heat loss through the reactor walls reduces efficiency. Even a simple ceramic fiber wrap can improve cold-start performance and steady-state efficiency."
+      },
+      {
+        "id": "eff-4",
+        "title": "Preheat incoming air",
+        "description": "Routing incoming air through a heat exchanger around the hot gas outlet recovers waste heat and improves combustion zone temperatures."
+      },
+      {
+        "id": "eff-5",
+        "title": "Match fuel to gasifier type",
+        "description": "Using the right fuel for your design is more important than optimizing any single variable. A downdraft gasifier on hardwood chunks will always outperform the same gasifier on wet softwood."
+      },
+      {
+        "id": "eff-6",
+        "title": "Clean filters regularly",
+        "description": "A clogged filter increases backpressure, reduces gas flow, and forces the reactor to run hotter than optimal. Clean filters = better gas = better efficiency."
+      }
+    ]
+  }
+}

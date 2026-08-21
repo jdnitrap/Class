@@ -1,0 +1,208 @@
+{
+  "hero": {
+    "eyebrow": "Stories from real builders",
+    "heading": "Real Home Builds",
+    "subheading": "Five home builders. Five different approaches. These are their stories — what they built, what they learned, and what they'd do differently. I find these accounts some of the most useful material on the site."
+  },
+  "intro": {
+    "heading": "Real experience is the best teacher",
+    "body": "I haven't built a gasifier yet — so the accounts from people who have are genuinely valuable to me. These stories come from builders who shared their experiences in forums and communities. Seeing what real people built in real garages and backyards — with real budgets and real constraints — is what turns 'maybe I could do this' into 'I'm going to try this.'"
+  },
+  "builds": [
+    {
+      "id": "build-1",
+      "builder": "Tom R.",
+      "location": "Rural Ohio",
+      "type": "FEMA Emergency Gasifier",
+      "slug": "fema",
+      "tagColor": "primary",
+      "timeToComplete": "3 weekends",
+      "totalCost": "$85",
+      "purpose": "Emergency backup power for well pump",
+      "summary": "Tom built his first gasifier from a 55-gallon drum and scrap pipe after a week-long ice storm left his well pump without power. He wanted something he could build fast from materials on hand.",
+      "story": [
+        {
+          "id": "s1-p1",
+          "text": "I had the drum, I had the pipe, and I had the FEMA manual printed out. Three weekends later I had something that made gas. It wasn't pretty and it wasn't efficient, but it ran my well pump for 4 hours on a single load of wood."
+        },
+        {
+          "id": "s1-p2",
+          "text": "The biggest surprise was how much tar I got the first few runs. I was using green wood from a tree I'd cut the previous fall — nowhere near dry enough. Once I switched to wood I'd had stacked under the barn roof for two years, the tar dropped dramatically."
+        }
+      ],
+      "lessons": [
+        {
+          "id": "l1-1",
+          "text": "Dry fuel is not optional. I wasted two weekends chasing tar problems that disappeared when I fixed my fuel."
+        },
+        {
+          "id": "l1-2",
+          "text": "The FEMA design is genuinely buildable by anyone who can weld. Don't overthink it."
+        },
+        {
+          "id": "l1-3",
+          "text": "Build a bigger condensate trap than you think you need. Mine filled up in 45 minutes the first run."
+        }
+      ],
+      "performance": "4–5 hours per load of hardwood chunks, enough to run a 1.5 HP well pump continuously",
+      "would_do_differently": "Add a proper cyclone separator before the filter. The packed bed filter alone wasn't enough for the first 10 minutes of operation."
+    },
+    {
+      "id": "build-2",
+      "builder": "Sarah & Mike D.",
+      "location": "Northern Vermont",
+      "type": "Downdraft Imbert",
+      "slug": "downdraft",
+      "tagColor": "secondary",
+      "timeToComplete": "8 weeks part-time",
+      "totalCost": "$340",
+      "purpose": "Backup generator power for off-grid cabin",
+      "summary": "A husband-and-wife team who built a full Imbert downdraft gasifier to power their off-grid cabin during cloudy stretches when their solar panels underperform.",
+      "story": [
+        {
+          "id": "s2-p1",
+          "text": "We live off-grid and solar covers most of our needs, but Vermont winters mean weeks of overcast skies. We needed a backup that didn't depend on propane deliveries. Wood gas made sense — we have 40 acres of hardwood forest."
+        },
+        {
+          "id": "s2-p2",
+          "text": "The Imbert design took real fabrication work. Mike does welding professionally, which helped. The throat geometry is critical and we had to remake it once when the first version caused channeling. Second attempt ran clean from the first fire."
+        }
+      ],
+      "lessons": [
+        {
+          "id": "l2-1",
+          "text": "The throat diameter is not a suggestion. Get it right for your target fuel size or you'll fight channeling forever."
+        },
+        {
+          "id": "l2-2",
+          "text": "A two-stage filter (cyclone + packed bed) is worth the extra build time. Our gas is clean enough to run a small engine with no visible exhaust."
+        },
+        {
+          "id": "l2-3",
+          "text": "Pellets are a game-changer for consistent operation. We use them when we need reliable power; chunks when we're just experimenting."
+        }
+      ],
+      "performance": "6–8 hours per load, powers a 3kW generator at 70% load",
+      "would_do_differently": "Design the ash removal port to be accessible without moving the whole unit. Ours requires awkward positioning to clean."
+    },
+    {
+      "id": "build-3",
+      "builder": "James K.",
+      "location": "Central Texas",
+      "type": "Updraft Heat Gasifier",
+      "slug": "updraft",
+      "tagColor": "accent",
+      "timeToComplete": "5 weekends",
+      "totalCost": "$210",
+      "purpose": "Shop heating during winter",
+      "summary": "James built an updraft gasifier specifically for heating his 1,200 sq ft workshop, using mesquite and cedar from land clearing on his property.",
+      "story": [
+        {
+          "id": "s3-p1",
+          "text": "I had a mountain of mesquite from clearing fence lines and no good way to use it. Burning it in a regular stove worked but felt wasteful. A gasifier connected to a purpose-built burner heats my shop faster and uses less wood."
+        },
+        {
+          "id": "s3-p2",
+          "text": "The updraft design is more forgiving of fuel quality than a downdraft. I've run it on wood that was probably 25% moisture and it still worked, just with more tar in the flue. For heat-only applications, that's acceptable."
+        }
+      ],
+      "lessons": [
+        {
+          "id": "l3-1",
+          "text": "For heat-only, the updraft design is significantly easier to build and operate than a downdraft. Don't overbuild for your application."
+        },
+        {
+          "id": "l3-2",
+          "text": "Mesquite and cedar work fine but produce more tar than oak or hickory. Plan your flue cleaning schedule accordingly."
+        },
+        {
+          "id": "l3-3",
+          "text": "A simple flame arrestor between the gasifier and burner is cheap insurance. I added one after a minor backfire during startup."
+        }
+      ],
+      "performance": "Heats 1,200 sq ft shop from 40°F to 65°F in about 45 minutes",
+      "would_do_differently": "Add a secondary air injection port to the burner for cleaner combustion. The current setup works but produces more visible exhaust than I'd like."
+    },
+    {
+      "id": "build-4",
+      "builder": "Dave P.",
+      "location": "Pacific Northwest",
+      "type": "Charcoal Gasifier",
+      "slug": "charcoal",
+      "tagColor": "primary",
+      "timeToComplete": "2 weekends",
+      "totalCost": "$55",
+      "purpose": "Learning project, small engine experiments",
+      "summary": "Dave started with a simple charcoal gasifier as a low-risk learning project before committing to a full wood gasifier build. He makes his own charcoal from alder and maple scrap.",
+      "story": [
+        {
+          "id": "s4-p1",
+          "text": "I wanted to understand gasification before spending real money on a full system. A charcoal gasifier is simpler — no drying zones, no tar problems, just clean gas. I built mine from a 5-gallon metal bucket and ran a small lawnmower engine on it the first weekend."
+        },
+        {
+          "id": "s4-p2",
+          "text": "Making charcoal is its own project, but I had a lot of scrap wood from a deck rebuild. A simple retort from a 55-gallon drum made enough charcoal in one afternoon to run the gasifier for 6 hours."
+        }
+      ],
+      "lessons": [
+        {
+          "id": "l4-1",
+          "text": "If you're new to gasification, start with charcoal. The gas is cleaner, the design is simpler, and you'll learn the fundamentals without fighting tar."
+        },
+        {
+          "id": "l4-2",
+          "text": "The two-step process (make charcoal, then gasify) sounds like more work but the total time is comparable once you account for all the tar management a wood gasifier requires."
+        },
+        {
+          "id": "l4-3",
+          "text": "Alder makes excellent charcoal. Don't overlook local species — you don't need oak for charcoal production."
+        }
+      ],
+      "performance": "Runs a 5 HP engine at full load for 2–3 hours per charge of charcoal",
+      "would_do_differently": "Build a larger charcoal retort from the start. The 55-gallon drum works but a purpose-built retort would be more efficient."
+    },
+    {
+      "id": "build-5",
+      "builder": "Linda & Frank O.",
+      "location": "Appalachian Kentucky",
+      "type": "Downdraft + Solar Hybrid",
+      "slug": "hybrid",
+      "tagColor": "secondary",
+      "timeToComplete": "12 weeks",
+      "totalCost": "$520",
+      "purpose": "Year-round off-grid power with seasonal flexibility",
+      "summary": "A retired couple who integrated a downdraft gasifier with their existing solar setup, using wood gas to cover winter months when solar output drops below their needs.",
+      "story": [
+        {
+          "id": "s5-p1",
+          "text": "We've been off-grid for 11 years. Solar handles spring through fall easily. Winter is the problem — short days, heavy cloud cover, and our highest power demand for heating. We added the gasifier as a winter supplement, not a replacement."
+        },
+        {
+          "id": "s5-p2",
+          "text": "The integration with our battery bank was the most complex part. We worked with a local electrician to make sure the generator output from the gasifier charged the batteries safely alongside the solar charge controller. It took three iterations to get the charging logic right."
+        }
+      ],
+      "lessons": [
+        {
+          "id": "l5-1",
+          "text": "Hybrid systems are more complex than standalone. Budget extra time for integration, not just the gasifier itself."
+        },
+        {
+          "id": "l5-2",
+          "text": "Having a wood lot on your property changes the economics entirely. Our fuel cost is essentially zero — just labor for cutting and splitting."
+        },
+        {
+          "id": "l5-3",
+          "text": "After 3 years of operation, the gasifier has needed two weld repairs and one refractory patch. That's it. These systems are durable when maintained."
+        }
+      ],
+      "performance": "Provides 4–6 kWh per run, covers 60–70% of winter power needs alongside solar",
+      "would_do_differently": "Install a remote monitoring system from day one. We added temperature and pressure sensors in year two and wish we'd had that data from the start."
+    }
+  ],
+  "submit_cta": {
+    "heading": "Built your own gasifier?",
+    "body": "We'd love to feature your build. Send us your story, a few photos, and what you learned — we'll add it to this page.",
+    "email": "builds@homegasifier.com"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "hero": {
+    "headline": "Power Your Home with Wood Gas",
+    "subheadline": "Gasification turns wood and biomass into clean, usable fuel — right in your backyard. No grid required. No complicated chemistry. Just fire, science, and a little DIY spirit.",
+    "cta1Label": "How It Works",
+    "cta1Href": "/how-it-works",
+    "cta2Label": "Browse Build Guides",
+    "cta2Href": "/build-guides"
+  },
+  "intro": {
+    "eyebrow": "What is gasification?",
+    "heading": "Turn Wood into Fuel — It's Simpler Than You Think",
+    "body": [
+      {
+        "id": "intro-p1",
+        "text": "Gasification is the process of converting solid biomass — like wood chips, sawdust, or agricultural waste — into a combustible gas called syngas (or wood gas). That gas can power engines, generators, and heating systems."
+      },
+      {
+        "id": "intro-p2",
+        "text": "People have been doing this for over a century. During World War II, hundreds of thousands of vehicles ran on wood gas when petroleum was scarce. Today, off-grid builders and DIY experimenters are rediscovering this technology — and I find myself fascinated by it."
+      },
+      {
+        "id": "intro-p3",
+        "text": "I haven't built one yet — but I'm working toward it, and this site is where I'm collecting and organizing everything I've learned from research, manuals, and the people who have. A simple design can reportedly be completed in a weekend; a reliable working system typically takes 4–8 weeks of part-time effort according to experienced builders."
+      }
+    ]
+  },
+  "topics": [
+    {
+      "id": "topic-1",
+      "title": "How It Works",
+      "description": "Understand the science behind gasification — the zones, the chemistry, and how syngas is produced from raw biomass.",
+      "href": "/how-it-works",
+      "featured": true
+    },
+    {
+      "id": "topic-2",
+      "title": "Build Guides",
+      "description": "Step-by-step instructions for building your own gasifier — from a simple FEMA design to a full downdraft system.",
+      "href": "/build-guides",
+      "featured": true
+    },
+    {
+      "id": "topic-3",
+      "title": "Fuel Types & Efficiency",
+      "description": "Not all biomass is equal. Learn which fuels work best, how moisture content affects output, and how to maximize efficiency.",
+      "href": "/fuel-types",
+      "featured": false
+    },
+    {
+      "id": "topic-4",
+      "title": "Safety & FAQs",
+      "description": "Carbon monoxide, tar buildup, pressure — we cover the real risks and how to manage them safely. Plus answers to the most common beginner questions.",
+      "href": "/safety-faqs",
+      "featured": false
+    }
+  ],
+  "benefits": [
+    {
+      "id": "benefit-1",
+      "stat": "100% Renewable",
+      "label": "Energy independence",
+      "description": "Wood gas is carbon-neutral when sourced sustainably. Grow your own fuel on your own land."
+    },
+    {
+      "id": "benefit-2",
+      "stat": "~$0.50/gal*",
+      "label": "Equivalent fuel cost",
+      "description": "Wood gas can significantly cut energy costs using biomass you source or grow yourself. *Estimate assumes low-cost local biomass; actual costs vary by system, labor, and location."
+    },
+    {
+      "id": "benefit-3",
+      "stat": "Off-grid ready",
+      "label": "No grid required",
+      "description": "Run generators, water pumps, and small engines entirely on biomass. Keep the lights on when the grid goes down."
+    }
+  ],
+  "expectations": {
+    "eyebrow": "Honest assessment",
+    "heading": "What home gasification is actually good for",
+    "intro": "From everything I've read and researched, this technology works — but it works best for specific things. Here's an honest look at where it seems to deliver, and where it doesn't.",
+    "items": [
+      {
+        "id": "exp-1",
+        "verdict": "yes",
+        "use_case": "Emergency backup power",
+        "detail": "A gasifier running a generator during a grid outage is one of the most practical home applications according to experienced builders. You control the fuel supply, the system is relatively simple, and a few hours of run time covers most emergency needs."
+      },
+      {
+        "id": "exp-2",
+        "verdict": "yes",
+        "use_case": "Off-grid supplemental power",
+        "detail": "Paired with solar or wind, a gasifier can cover the gaps — cloudy weeks, high-demand periods, winter months. It's a natural complement to intermittent renewables when you have a wood supply."
+      },
+      {
+        "id": "exp-3",
+        "verdict": "yes",
+        "use_case": "Shop and space heating",
+        "detail": "An updraft gasifier connected to a purpose-built burner is reported to be an excellent, controllable heat source. Simpler than an engine setup, lower maintenance, and effective for workshops and outbuildings."
+      },
+      {
+        "id": "exp-4",
+        "verdict": "yes",
+        "use_case": "Learning and skill-building",
+        "detail": "Building and operating a gasifier teaches thermochemistry, fabrication, fluid dynamics, and engine tuning in a hands-on way. Honestly, this is a big part of why I started this site — the learning value alone is compelling."
+      },
+      {
+        "id": "exp-5",
+        "verdict": "no",
+        "use_case": "Daily primary power source",
+        "detail": "Continuous operation means continuous fuel loading, ash removal, filter maintenance, and monitoring. Most home builders report this is unsustainable as a daily routine. Part-time operation is the realistic expectation."
+      },
+      {
+        "id": "exp-6",
+        "verdict": "no",
+        "use_case": "Significant cost savings vs. grid power",
+        "detail": "When you account for equipment cost, maintenance, and your time, the economics are marginal compared to grid electricity. Build this for resilience and independence — not primarily to cut your power bill."
+      }
+    ],
+    "closing": "The builders who seem to get the most from this technology are the ones who go in with realistic expectations: a reliable backup system, a supplemental off-grid power source, or a deeply satisfying build project. That's what I'm trying to help with here."
+  },
+  "cta": {
+    "heading": "Ready to dig in?",
+    "body": "Whether you're just curious or seriously planning a build, the guides are here. I'm learning alongside you — and I've tried to organize everything in a way that makes the research easier.",
+    "buttonLabel": "Explore Build Guides",
+    "buttonHref": "/build-guides"
+  },
+  "newsletter": {
+    "eyebrow": "Stay in the loop",
+    "heading": "New guides and updates — straight to your inbox",
+    "body": "No spam. Just a heads-up when I add new content. Unsubscribe any time.",
+    "placeholder": "your@email.com",
+    "buttonLabel": "Subscribe",
+    "successMessage": "You're in! I'll let you know when new content drops."
+  }
+}

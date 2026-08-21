@@ -1,0 +1,272 @@
+{
+  "meta": {
+    "title": "Gasification Glossary – Key Terms Explained | Home Gasifier",
+    "description": "Plain-language definitions for gasification terms — syngas, tar, pyrolysis, equivalence ratio, reduction zone, and 50+ more. The reference guide for DIY gasifier builders."
+  },
+  "hero": {
+    "eyebrow": "Reference",
+    "title": "Gasification Glossary",
+    "subtitle": "Plain-language definitions for every term you'll encounter when building, running, or reading about wood gasifiers."
+  },
+  "intro": {
+    "body": "Gasification literature mixes engineering jargon, chemistry shorthand, and DIY slang. This glossary cuts through the confusion with clear, practical definitions aimed at home builders."
+  },
+  "categories": [
+    {
+      "id": "cat-process",
+      "name": "Process & Chemistry",
+      "terms": [
+        {
+          "id": "t-gasification",
+          "term": "Gasification",
+          "definition": "A thermochemical process that converts solid carbon-based fuel into a combustible gas (syngas) by reacting it with a controlled amount of oxygen and/or steam at high temperatures. Unlike combustion, gasification is intentionally oxygen-starved."
+        },
+        {
+          "id": "t-syngas",
+          "term": "Syngas (Synthesis Gas)",
+          "definition": "The combustible gas produced by gasification, primarily a mixture of carbon monoxide (CO), hydrogen (H₂), methane (CH₄), carbon dioxide (CO₂), and nitrogen (N₂). Typical energy content is 4–6 MJ/m³, roughly 15–25% of natural gas."
+        },
+        {
+          "id": "t-pyrolysis",
+          "term": "Pyrolysis",
+          "definition": "Thermal decomposition of biomass in the absence of oxygen, occurring at 200–500°C. Produces char, condensable liquids (tars and oils), and non-condensable gases. The second zone in a downdraft gasifier."
+        },
+        {
+          "id": "t-combustion-zone",
+          "term": "Combustion Zone",
+          "definition": "The hottest zone in a gasifier (800–1200°C) where partial oxidation occurs. Provides the heat energy that drives pyrolysis above and reduction below. Also called the oxidation zone."
+        },
+        {
+          "id": "t-reduction-zone",
+          "term": "Reduction Zone",
+          "definition": "The zone below the combustion zone where CO₂ and H₂O react with hot charcoal to produce CO and H₂. Reactions are endothermic (heat-absorbing) and typically occur at 700–900°C."
+        },
+        {
+          "id": "t-drying-zone",
+          "term": "Drying Zone",
+          "definition": "The topmost zone in a downdraft gasifier where incoming fuel is heated to 100–200°C, driving off moisture before the fuel descends into the pyrolysis zone."
+        },
+        {
+          "id": "t-boudouard",
+          "term": "Boudouard Reaction",
+          "definition": "The key reduction reaction: CO₂ + C → 2CO. Carbon dioxide reacts with hot charcoal to produce carbon monoxide. Favored above 700°C and the primary source of CO in syngas."
+        },
+        {
+          "id": "t-water-gas",
+          "term": "Water-Gas Reaction",
+          "definition": "H₂O + C → CO + H₂. Steam reacts with hot charcoal to produce carbon monoxide and hydrogen. A major source of H₂ in syngas, especially when fuel has moderate moisture content."
+        },
+        {
+          "id": "t-equivalence-ratio",
+          "term": "Equivalence Ratio (ER)",
+          "definition": "The ratio of actual air supplied to the stoichiometric air required for complete combustion. Gasifiers typically operate at ER = 0.25–0.35. Too low produces tar; too high produces CO₂ instead of CO."
+        },
+        {
+          "id": "t-stoichiometric",
+          "term": "Stoichiometric",
+          "definition": "The theoretically perfect air-to-fuel ratio for complete combustion with no excess oxygen. Gasification deliberately operates below stoichiometric (oxygen-starved) to produce CO rather than CO₂."
+        }
+      ]
+    },
+    {
+      "id": "cat-design",
+      "name": "Gasifier Design & Components",
+      "terms": [
+        {
+          "id": "t-downdraft",
+          "term": "Downdraft Gasifier",
+          "definition": "A gasifier design where fuel and gas both move downward through the reactor. Air enters at the sides through nozzles (tuyeres) and gas exits at the bottom. Produces the cleanest gas with lowest tar content. Best for engine applications."
+        },
+        {
+          "id": "t-updraft",
+          "term": "Updraft Gasifier (Countercurrent)",
+          "definition": "A gasifier where air enters at the bottom and gas exits at the top, moving in opposite directions to the descending fuel. Simple to build and highly efficient, but produces high-tar gas unsuitable for engines without extensive cleaning."
+        },
+        {
+          "id": "t-crossdraft",
+          "term": "Crossdraft Gasifier",
+          "definition": "Air enters from one side and gas exits from the opposite side at the same level. Fast response time and simple construction, but sensitive to fuel quality and produces moderate tar levels."
+        },
+        {
+          "id": "t-imbert",
+          "term": "Imbert Gasifier",
+          "definition": "A specific downdraft design with a constricted throat (venturi) that concentrates heat and ensures all tars pass through the high-temperature combustion zone. Named after Georges Imbert, widely used in WWII Europe."
+        },
+        {
+          "id": "t-throat",
+          "term": "Throat / Constriction",
+          "definition": "The narrowed section in an Imbert-style downdraft gasifier that creates a high-temperature hot spot. Ensures tar vapors are cracked before exiting. Throat diameter determines maximum gas output rate."
+        },
+        {
+          "id": "t-tuyere",
+          "term": "Tuyere (Nozzle)",
+          "definition": "The air inlet nozzle(s) that introduce air into the combustion zone. In downdraft designs, multiple tuyeres are arranged around the throat. Tuyere angle, diameter, and position critically affect gas quality."
+        },
+        {
+          "id": "t-grate",
+          "term": "Grate",
+          "definition": "A perforated plate or grid at the bottom of the reactor that supports the fuel and char bed while allowing ash to fall through and air to pass upward. Must withstand high temperatures and be periodically shaken to prevent clogging."
+        },
+        {
+          "id": "t-hopper",
+          "term": "Hopper",
+          "definition": "The fuel storage vessel above the reactor. Fuel feeds by gravity into the reaction zones. Hopper design affects bridging tendency, fuel residence time, and drying efficiency."
+        },
+        {
+          "id": "t-cyclone",
+          "term": "Cyclone Separator",
+          "definition": "A conical gas-cleaning device that uses centrifugal force to remove particulates (ash, char dust) from the gas stream. Usually the first cleaning stage after the gasifier, operating at elevated temperatures."
+        },
+        {
+          "id": "t-scrubber",
+          "term": "Scrubber",
+          "definition": "A wet gas-cleaning device that removes tar, particulates, and water-soluble contaminants by passing gas through a liquid (usually water). Produces contaminated wastewater that requires proper disposal."
+        },
+        {
+          "id": "t-filter",
+          "term": "Filter / Packed Bed Filter",
+          "definition": "A dry gas-cleaning stage using media such as wood chips, gravel, or fabric to capture fine particulates and remaining tar aerosols. Final cleaning stage before gas enters an engine."
+        },
+        {
+          "id": "t-condensate-trap",
+          "term": "Condensate Trap",
+          "definition": "A vessel in the gas cooling train that collects liquid condensate (water and dissolved tars) as hot gas cools. Must be drained regularly to prevent liquid carryover into the engine."
+        }
+      ]
+    },
+    {
+      "id": "cat-fuel",
+      "name": "Fuel & Feedstock",
+      "terms": [
+        {
+          "id": "t-feedstock",
+          "term": "Feedstock",
+          "definition": "Any solid biomass material used as fuel in a gasifier. Common feedstocks include hardwood chunks, wood chips, pellets, charcoal, and agricultural residues such as corn cobs or rice husks."
+        },
+        {
+          "id": "t-moisture-content",
+          "term": "Moisture Content (MC)",
+          "definition": "The percentage of water in fuel, measured on a wet-weight basis. Ideal range for gasification is 10–20%. High moisture (>25%) reduces gas quality, lowers temperatures, and dramatically increases tar production."
+        },
+        {
+          "id": "t-bulk-density",
+          "term": "Bulk Density",
+          "definition": "The mass of fuel per unit volume including air spaces between pieces. Higher bulk density means more energy per hopper load. Hardwood has higher bulk density than softwood or agricultural residues."
+        },
+        {
+          "id": "t-ash-content",
+          "term": "Ash Content",
+          "definition": "The non-combustible mineral residue remaining after complete combustion, expressed as a percentage of dry fuel weight. Low-ash fuels (hardwood: 0.5–1%) are preferred. High-ash fuels (rice husks: 15–20%) cause clinker problems."
+        },
+        {
+          "id": "t-volatile-matter",
+          "term": "Volatile Matter",
+          "definition": "The portion of fuel that vaporizes when heated, excluding moisture. High volatile matter (wood: 70–80%) means more pyrolysis products and potentially more tar if not properly cracked."
+        },
+        {
+          "id": "t-fixed-carbon",
+          "term": "Fixed Carbon",
+          "definition": "The solid carbon remaining in fuel after volatile matter is driven off. Charcoal is almost entirely fixed carbon (85–95%). Fixed carbon is the primary reactant in the reduction zone."
+        },
+        {
+          "id": "t-charcoal",
+          "term": "Charcoal",
+          "definition": "Wood that has been pre-pyrolyzed to remove most volatile matter, leaving nearly pure carbon. Produces very clean syngas with minimal tar, making it ideal for simple gasifier designs and engine applications."
+        },
+        {
+          "id": "t-clinker",
+          "term": "Clinker",
+          "definition": "Fused, glassy ash formed when mineral impurities in fuel melt and solidify. Clinkers block the grate and restrict airflow. Common with high-mineral feedstocks or excessively high combustion temperatures."
+        },
+        {
+          "id": "t-hog-fuel",
+          "term": "Hog Fuel",
+          "definition": "Coarsely ground wood waste including bark, chips, and sawdust. Inexpensive and widely available but variable in moisture and size, requiring careful preparation before gasification."
+        }
+      ]
+    },
+    {
+      "id": "cat-gas",
+      "name": "Gas Quality & Measurement",
+      "terms": [
+        {
+          "id": "t-tar",
+          "term": "Tar",
+          "definition": "Condensable organic compounds produced during pyrolysis that remain in the gas stream. At temperatures below ~350°C, tars condense into sticky liquids that foul engines, pipes, and filters. Tar reduction is the central challenge of gasifier design."
+        },
+        {
+          "id": "t-tar-cracking",
+          "term": "Tar Cracking",
+          "definition": "The thermal decomposition of tar molecules into lighter, non-condensable gases by passing them through a high-temperature zone (>900°C). The primary mechanism for tar reduction in downdraft gasifiers."
+        },
+        {
+          "id": "t-lhv",
+          "term": "Lower Heating Value (LHV)",
+          "definition": "The energy content of a gas or fuel assuming water produced during combustion remains as vapor. The standard measure for syngas energy content, typically 4–6 MJ/m³ for wood-derived syngas."
+        },
+        {
+          "id": "t-producer-gas",
+          "term": "Producer Gas",
+          "definition": "An older term for syngas produced by air-blown gasification, emphasizing its use as a fuel gas for engines and burners. Synonymous with syngas in the context of biomass gasification."
+        },
+        {
+          "id": "t-cold-gas-efficiency",
+          "term": "Cold Gas Efficiency (CGE)",
+          "definition": "The ratio of chemical energy in the produced syngas to the chemical energy in the input fuel. Well-designed gasifiers achieve 70–80% CGE. Losses include heat, tar, and unconverted char."
+        },
+        {
+          "id": "t-specific-gasification-rate",
+          "term": "Specific Gasification Rate (SGR)",
+          "definition": "The mass of fuel gasified per unit time per unit of throat cross-sectional area (kg/h·cm²). Used to size the throat diameter for a target gas output. Typical values: 0.1–0.3 kg/h·cm²."
+        },
+        {
+          "id": "t-flammability-limit",
+          "term": "Flammability Limits",
+          "definition": "The range of gas concentrations in air that will support combustion. Syngas has a wide flammability range (roughly 5–75% in air) making it both useful as a fuel and hazardous if it accumulates in enclosed spaces."
+        }
+      ]
+    },
+    {
+      "id": "cat-safety",
+      "name": "Safety Terms",
+      "terms": [
+        {
+          "id": "t-co",
+          "term": "Carbon Monoxide (CO)",
+          "definition": "A colorless, odorless, highly toxic gas that makes up 15–30% of syngas. Binds to hemoglobin 200× more strongly than oxygen, causing rapid incapacitation at concentrations above 200 ppm. The primary safety hazard of gasification."
+        },
+        {
+          "id": "t-twl",
+          "term": "Time-Weighted Average (TWA)",
+          "definition": "The average exposure concentration over an 8-hour workday. OSHA TWA for CO is 50 ppm. Relevant for anyone operating a gasifier for extended periods."
+        },
+        {
+          "id": "t-lel",
+          "term": "Lower Explosive Limit (LEL)",
+          "definition": "The minimum concentration of a flammable gas in air that will ignite. For syngas, the LEL is approximately 5%. Gas detectors typically alarm at 10–25% of LEL as an early warning."
+        },
+        {
+          "id": "t-purging",
+          "term": "Purging",
+          "definition": "Flushing the gasifier and gas lines with air or inert gas before startup or after shutdown to remove residual syngas and prevent explosive mixtures from forming. A critical safety procedure."
+        },
+        {
+          "id": "t-flashback",
+          "term": "Flashback",
+          "definition": "Flame propagation back through the gas line toward the gasifier, occurring when gas velocity drops below the flame speed. Prevented by flame arrestors and maintaining adequate gas flow rates."
+        },
+        {
+          "id": "t-flame-arrestor",
+          "term": "Flame Arrestor",
+          "definition": "A device installed in gas lines that allows gas flow but stops flame propagation by quenching the flame front. Required on any gas line that could be exposed to an ignition source."
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "heading": "Want to Go Deeper?",
+    "body": "The Resources page has links to foundational manuals, design calculators, and community forums where you can ask questions and learn from experienced builders.",
+    "linkLabel": "Browse Resources",
+    "linkHref": "/resources"
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "hero": {
+    "eyebrow": "DIY build plans",
+    "heading": "Build Your Own Gasifier",
+    "subheading": "Three designs documented from research, manuals, and the experiences of builders who have actually done it. I haven't built one yet — but when I do, these are the guides I'll be working from."
+  },
+  "guides": [
+    {
+      "id": "guide-fema",
+      "slug": "fema",
+      "tag": "Beginner",
+      "tagColor": "green",
+      "title": "FEMA Emergency Gasifier",
+      "subtitle": "The fastest path from zero to wood gas",
+      "difficulty": "Beginner",
+      "timeEstimate": "1–2 weekends",
+      "costEstimate": "$50–$150",
+      "bestFor": "Emergency backup power, learning the basics",
+      "description": "The FEMA gasifier design was published by the US Federal Emergency Management Agency in 1989 as a wartime contingency plan. It's the simplest gasifier you can build — two nested metal containers, some pipe fittings, and a weekend of work. Output quality is lower than a downdraft design, but it's the best way to understand gasification hands-on.",
+      "materials": [
+        {
+          "id": "fema-m1",
+          "item": "55-gallon steel drum (outer vessel)",
+          "qty": "1"
+        },
+        {
+          "id": "fema-m2",
+          "item": "5-gallon steel bucket (inner combustion chamber)",
+          "qty": "1"
+        },
+        {
+          "id": "fema-m3",
+          "item": "2\" black iron pipe, various lengths",
+          "qty": "~6 ft"
+        },
+        {
+          "id": "fema-m4",
+          "item": "2\" pipe fittings (elbows, tees, nipples)",
+          "qty": "Assorted"
+        },
+        {
+          "id": "fema-m5",
+          "item": "Sheet metal screws and high-temp sealant",
+          "qty": "As needed"
+        },
+        {
+          "id": "fema-m6",
+          "item": "Grate material (expanded steel or rebar)",
+          "qty": "1 piece"
+        },
+        {
+          "id": "fema-m7",
+          "item": "High-temp paint or coating (optional)",
+          "qty": "1 can"
+        }
+      ],
+      "tools": [
+        "Angle grinder or jigsaw",
+        "Drill with metal bits",
+        "Pipe wrench",
+        "Welder (optional but helpful)",
+        "Tape measure and marker"
+      ],
+      "steps": [
+        {
+          "id": "fema-s1",
+          "step": 1,
+          "title": "Prepare the outer drum",
+          "description": "Clean the 55-gallon drum thoroughly — remove any residue or coatings. Cut a 6\" access hole in the side near the bottom for ash removal. Drill a 2\" hole near the top for the gas outlet pipe."
+        },
+        {
+          "id": "fema-s2",
+          "step": 2,
+          "title": "Build the inner combustion chamber",
+          "description": "Drill 8–12 evenly spaced 3/8\" air holes around the lower third of the 5-gallon bucket. These are your tuyeres — they admit air to the combustion zone. The spacing and size affect gas quality significantly."
+        },
+        {
+          "id": "fema-s3",
+          "step": 3,
+          "title": "Install the grate",
+          "description": "Fabricate a grate from expanded steel or rebar that sits inside the inner bucket, about 4\" from the bottom. This supports the char bed and allows ash to fall through. Weld or bolt it in place."
+        },
+        {
+          "id": "fema-s4",
+          "step": 4,
+          "title": "Assemble the vessel",
+          "description": "Place the inner bucket inside the outer drum, centered. The gap between them forms the fuel hopper — wood chips feed down around the outside of the inner bucket into the combustion zone below."
+        },
+        {
+          "id": "fema-s5",
+          "step": 5,
+          "title": "Install gas outlet and lid",
+          "description": "Thread the 2\" pipe into the outlet hole at the top of the outer drum. Fabricate a lid with a central fuel feed opening. Seal all joints with high-temp sealant. The lid should be removable for refueling."
+        },
+        {
+          "id": "fema-s6",
+          "step": 6,
+          "title": "Build a basic filter",
+          "description": "Connect a simple filter downstream — a 5-gallon bucket packed with wood chips works for initial testing. This removes the coarsest tars and particulates before the gas reaches an engine."
+        },
+        {
+          "id": "fema-s7",
+          "step": 7,
+          "title": "First fire and testing",
+          "description": "Load the hopper with dry wood chips (under 20% moisture). Light a small fire through the ash door to ignite the char bed. Once glowing, close the door and connect a blower or engine to draw gas. Test for combustibility before connecting to any load."
+        }
+      ],
+      "tips": [
+        {
+          "id": "fema-t1",
+          "tip": "Use hardwood chips about 1–1½ inches in size for best results. Avoid sawdust — it packs too tightly and restricts airflow."
+        },
+        {
+          "id": "fema-t2",
+          "tip": "The FEMA design produces more tar than a downdraft gasifier. Always run gas through a filter before an engine."
+        },
+        {
+          "id": "fema-t3",
+          "tip": "Operate outdoors only. Carbon monoxide output is significant during startup and shutdown."
+        }
+      ]
+    },
+    {
+      "id": "guide-downdraft",
+      "slug": "downdraft",
+      "tag": "Intermediate",
+      "tagColor": "amber",
+      "title": "Downdraft (Imbert) Gasifier",
+      "subtitle": "The gold standard for engine-grade wood gas",
+      "difficulty": "Intermediate",
+      "timeEstimate": "2–4 weekends",
+      "costEstimate": "$200–$600",
+      "bestFor": "Running engines, generators, and vehicles",
+      "description": "The Imbert downdraft gasifier is the most widely used design for powering internal combustion engines. Gas flows downward through the combustion zone, cracking most tars before they exit. The result is a cleaner gas that engines can tolerate with minimal filtering. This is the design to build if you want to run a generator or vehicle long-term.",
+      "materials": [
+        {
+          "id": "dd-m1",
+          "item": "8\" or 10\" steel pipe (reactor body), 24\" long",
+          "qty": "1"
+        },
+        {
+          "id": "dd-m2",
+          "item": "Steel plate, 1/4\" thick (for flanges and grate)",
+          "qty": "~4 sq ft"
+        },
+        {
+          "id": "dd-m3",
+          "item": "Stainless steel tuyere nozzles (5/8\" ID)",
+          "qty": "5–7"
+        },
+        {
+          "id": "dd-m4",
+          "item": "Refractory cement or castable ceramic",
+          "qty": "5–10 lbs"
+        },
+        {
+          "id": "dd-m5",
+          "item": "2\" black iron pipe for gas outlet",
+          "qty": "~4 ft"
+        },
+        {
+          "id": "dd-m6",
+          "item": "Cyclone separator (fabricated or purchased)",
+          "qty": "1"
+        },
+        {
+          "id": "dd-m7",
+          "item": "Packed bed filter (pipe + wood chips)",
+          "qty": "1"
+        },
+        {
+          "id": "dd-m8",
+          "item": "High-temp gasket material",
+          "qty": "As needed"
+        }
+      ],
+      "tools": [
+        "MIG or stick welder",
+        "Angle grinder",
+        "Drill press",
+        "Plasma cutter (helpful)",
+        "Pipe threading kit",
+        "Refractory mixing tools"
+      ],
+      "steps": [
+        {
+          "id": "dd-s1",
+          "step": 1,
+          "title": "Design and layout",
+          "description": "Sketch your reactor dimensions based on your target output. The throat diameter (the narrowest point where tuyeres converge) determines maximum gas output. Use the Imbert sizing charts: a 2-inch (5 cm) throat supports roughly 5–8 kW of engine power."
+        },
+        {
+          "id": "dd-s2",
+          "step": 2,
+          "title": "Fabricate the reactor body",
+          "description": "Cut the main pipe to length and weld flanged end caps. The upper section is the fuel hopper; the lower section houses the combustion and reduction zones. Weld a constriction ring (the throat) inside the pipe at the correct height."
+        },
+        {
+          "id": "dd-s3",
+          "step": 3,
+          "title": "Install tuyere nozzles",
+          "description": "Drill evenly spaced holes around the reactor at the tuyere ring height. Weld in stainless steel nozzles angled slightly downward toward the throat. Tuyere placement is critical — they must converge at the throat centerline."
+        },
+        {
+          "id": "dd-s4",
+          "step": 4,
+          "title": "Apply refractory lining",
+          "description": "Line the combustion zone (below the tuyeres) with refractory cement to protect the steel from the 1800°F+ (1000°C+) temperatures. Allow to cure fully before firing — follow the cement manufacturer's cure schedule."
+        },
+        {
+          "id": "dd-s5",
+          "step": 5,
+          "title": "Fabricate and install the grate",
+          "description": "Build a rotating or shaker grate from 1/4\" steel plate with slots or holes. It should be removable for ash cleaning. Weld a handle or mechanism to shake it without opening the reactor."
+        },
+        {
+          "id": "dd-s6",
+          "step": 6,
+          "title": "Build the gas cleaning train",
+          "description": "Connect the gas outlet to a cyclone separator (removes char dust), then to a packed bed filter (removes tars and fine particles). For engine use, add a final fabric or paper filter. Cool the gas before the engine — a simple coil of pipe works."
+        },
+        {
+          "id": "dd-s7",
+          "step": 7,
+          "title": "First fire and tuning",
+          "description": "Load with pre-dried hardwood chunks (1–2 inches / 3–5 cm). Light through the ash door and draw air with a blower until the char bed is established (15–20 minutes). Test gas quality by igniting at the outlet — a clean blue-yellow flame indicates good gas. Adjust tuyere sizing if needed."
+        }
+      ],
+      "tips": [
+        {
+          "id": "dd-t1",
+          "tip": "Throat diameter is the most critical dimension. Too small and you'll starve the reaction; too large and tar production increases. Use the Imbert sizing tables."
+        },
+        {
+          "id": "dd-t2",
+          "tip": "Pre-dry all fuel to under 15% moisture for engine-grade gas. A simple wood moisture meter costs under $20 and is worth every penny."
+        },
+        {
+          "id": "dd-t3",
+          "tip": "Run the gasifier for 10–15 minutes before connecting to an engine. This establishes the char bed and purges startup tars from the system."
+        }
+      ]
+    },
+    {
+      "id": "guide-updraft",
+      "slug": "updraft",
+      "tag": "Advanced",
+      "tagColor": "red",
+      "title": "Updraft Gasifier (for Heat)",
+      "subtitle": "High-efficiency heat production from wet biomass",
+      "difficulty": "Advanced",
+      "timeEstimate": "3–5 weekends",
+      "costEstimate": "$300–$800",
+      "bestFor": "Space heating, water heating, industrial heat processes",
+      "description": "In an updraft gasifier, air enters at the bottom and gas exits at the top — opposite to the downdraft design. This makes it highly efficient for heat applications and tolerant of wet or variable fuels. However, the gas contains significant tar, making it unsuitable for engines without extensive cleaning. Build this if your goal is heat, not power.",
+      "materials": [
+        {
+          "id": "up-m1",
+          "item": "12\" steel pipe or pressure vessel (reactor)",
+          "qty": "1"
+        },
+        {
+          "id": "up-m2",
+          "item": "Air distribution manifold (pipe + fittings)",
+          "qty": "1"
+        },
+        {
+          "id": "up-m3",
+          "item": "Steel plate for base and top flanges",
+          "qty": "~6 sq ft"
+        },
+        {
+          "id": "up-m4",
+          "item": "Refractory brick or castable cement",
+          "qty": "20–30 lbs"
+        },
+        {
+          "id": "up-m5",
+          "item": "3\" pipe for gas outlet",
+          "qty": "~6 ft"
+        },
+        {
+          "id": "up-m6",
+          "item": "Burner nozzle for direct combustion",
+          "qty": "1"
+        },
+        {
+          "id": "up-m7",
+          "item": "Insulation (ceramic fiber blanket)",
+          "qty": "~10 sq ft"
+        }
+      ],
+      "tools": [
+        "MIG or stick welder",
+        "Angle grinder",
+        "Masonry tools for refractory",
+        "Drill press",
+        "Pipe bender (optional)",
+        "Infrared thermometer"
+      ],
+      "steps": [
+        {
+          "id": "up-s1",
+          "step": 1,
+          "title": "Size the reactor for your heat load",
+          "description": "Updraft gasifiers are sized by cross-sectional area and desired throughput. Calculate your heat demand first — a well-insulated 1,500 sq ft home needs roughly 10–15 kW of heat. Size the reactor to match."
+        },
+        {
+          "id": "up-s2",
+          "step": 2,
+          "title": "Fabricate the reactor vessel",
+          "description": "Build a vertical cylindrical vessel with a sealed bottom and removable top lid for fuel loading. Weld a flanged air inlet manifold at the base — this distributes air evenly across the grate."
+        },
+        {
+          "id": "up-s3",
+          "step": 3,
+          "title": "Install refractory lining",
+          "description": "Line the entire interior with refractory brick or castable cement. The updraft design runs hotter at the base, so the lower third needs the heaviest lining. Allow full cure time before first fire."
+        },
+        {
+          "id": "up-s4",
+          "step": 4,
+          "title": "Build the grate and ash system",
+          "description": "Install a robust fixed or rotating grate at the base. Updraft gasifiers produce more ash than downdraft designs — build a generous ash collection chamber below the grate with easy cleanout access."
+        },
+        {
+          "id": "up-s5",
+          "step": 5,
+          "title": "Install gas outlet and burner",
+          "description": "The gas outlet exits near the top of the reactor. For direct heat use, connect to a purpose-built burner nozzle. The high-tar gas burns well in a flame but must never be used in an engine without a full tar-cracking system."
+        },
+        {
+          "id": "up-s6",
+          "step": 6,
+          "title": "Insulate the exterior",
+          "description": "Wrap the reactor body with ceramic fiber insulation and a sheet metal jacket. This dramatically improves efficiency and reduces surface temperatures to safe levels."
+        },
+        {
+          "id": "up-s7",
+          "step": 7,
+          "title": "Commission and tune",
+          "description": "Start with a small fire at the base and gradually increase fuel load. Monitor outlet temperature and gas quality. Adjust air flow to find the optimal operating point — typically indicated by a steady, clean-burning flame at the burner."
+        }
+      ],
+      "tips": [
+        {
+          "id": "up-t1",
+          "tip": "Updraft gasifiers tolerate fuel moisture up to 50% — a major advantage over downdraft designs. You can use freshly split wood if needed."
+        },
+        {
+          "id": "up-t2",
+          "tip": "Never use updraft gas in an engine without a full tar-cracking and condensing system. The tar content will destroy engine components within hours."
+        },
+        {
+          "id": "up-t3",
+          "tip": "Insulation is not optional — it's what makes the updraft design efficient. A bare steel reactor loses 30–40% of its energy to the surroundings."
+        }
+      ]
+    }
+  ],
+  "tools_overview": {
+    "heading": "Tools you'll need for any build",
+    "items": [
+      {
+        "id": "tool-1",
+        "name": "Angle grinder",
+        "note": "For cutting and grinding steel"
+      },
+      {
+        "id": "tool-2",
+        "name": "Welder (MIG or stick)",
+        "note": "Essential for structural joints"
+      },
+      {
+        "id": "tool-3",
+        "name": "Drill + metal bits",
+        "note": "For tuyere holes and fittings"
+      },
+      {
+        "id": "tool-4",
+        "name": "Pipe wrench set",
+        "note": "For threaded fittings"
+      },
+      {
+        "id": "tool-5",
+        "name": "Moisture meter",
+        "note": "Test fuel before every run"
+      },
+      {
+        "id": "tool-6",
+        "name": "CO detector",
+        "note": "Non-negotiable safety item"
+      }
+    ]
+  }
+}

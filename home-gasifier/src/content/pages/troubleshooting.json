@@ -1,0 +1,451 @@
+{
+  "meta": {
+    "title": "Gasifier Troubleshooting Guide – Fix Common Problems | Home Gasifier",
+    "description": "Diagnose and fix the most common wood gasifier problems — tar in gas, poor power output, hard starting, overheating, and more. Step-by-step solutions for DIY builders."
+  },
+  "hero": {
+    "eyebrow": "Troubleshooting guide",
+    "title": "Fix Your Gasifier",
+    "subtitle": "Something not running right? Work through these common problems and solutions to get your system back on track."
+  },
+  "intro": {
+    "heading": "Start Here Before You Dig In",
+    "body": [
+      {
+        "id": "intro-p1",
+        "text": "From what I've read and gathered from experienced builders, most gasifier problems fall into a handful of categories: fuel quality, air leaks, tar buildup, and improper temperatures. Before chasing exotic causes, the advice is consistent — rule out the basics first. Moisture in your fuel and air leaks account for the majority of reported problems."
+      },
+      {
+        "id": "intro-p2",
+        "text": "Work through each problem systematically. Note what changed before the issue appeared — a new fuel batch, recent modifications, or a long idle period are common culprits according to builders who have dealt with these issues."
+      }
+    ]
+  },
+  "problems": [
+    {
+      "id": "prob-1",
+      "category": "Gas Quality",
+      "title": "Tar in the Gas Line",
+      "severity": "high",
+      "symptoms": [
+        {
+          "id": "s1-1",
+          "text": "Sticky brown or black residue in gas lines or filter"
+        },
+        {
+          "id": "s1-2",
+          "text": "Engine misfires or runs rough"
+        },
+        {
+          "id": "s1-3",
+          "text": "Visible smoke or oily condensate at gas outlet"
+        }
+      ],
+      "causes": [
+        {
+          "id": "c1-1",
+          "text": "Fuel moisture above 20%"
+        },
+        {
+          "id": "c1-2",
+          "text": "Insufficient combustion zone temperature"
+        },
+        {
+          "id": "c1-3",
+          "text": "Oversized fuel pieces bypassing the reduction zone"
+        },
+        {
+          "id": "c1-4",
+          "text": "Air leaks diluting the combustion zone"
+        }
+      ],
+      "solutions": [
+        {
+          "id": "sol1-1",
+          "text": "Dry fuel to below 15–20% moisture content before use"
+        },
+        {
+          "id": "sol1-2",
+          "text": "Check and seal all gaskets, flanges, and access ports for air leaks"
+        },
+        {
+          "id": "sol1-3",
+          "text": "Reduce fuel chunk size to match your gasifier's throat diameter spec"
+        },
+        {
+          "id": "sol1-4",
+          "text": "Clean tar from gas lines and filter media before restarting"
+        },
+        {
+          "id": "sol1-5",
+          "text": "Verify nozzle or tuyere is not blocked or eroded"
+        }
+      ]
+    },
+    {
+      "id": "prob-2",
+      "category": "Performance",
+      "title": "Low Power Output or Weak Gas",
+      "severity": "medium",
+      "symptoms": [
+        {
+          "id": "s2-1",
+          "text": "Engine lacks power compared to gasoline baseline"
+        },
+        {
+          "id": "s2-2",
+          "text": "Gas flame burns orange or yellow instead of blue"
+        },
+        {
+          "id": "s2-3",
+          "text": "Low CO and H₂ readings on gas analyzer"
+        }
+      ],
+      "causes": [
+        {
+          "id": "c2-1",
+          "text": "Bridging or channeling in the fuel hopper"
+        },
+        {
+          "id": "c2-2",
+          "text": "Reduction zone too cool (below 1290°F / 700°C)"
+        },
+        {
+          "id": "c2-3",
+          "text": "Charcoal bed too thin or depleted"
+        },
+        {
+          "id": "c2-4",
+          "text": "Fuel with low carbon content (high ash biomass)"
+        }
+      ],
+      "solutions": [
+        {
+          "id": "sol2-1",
+          "text": "Stir or agitate the fuel bed to break up bridges"
+        },
+        {
+          "id": "sol2-2",
+          "text": "Add more charcoal to the reduction zone to build up the bed"
+        },
+        {
+          "id": "sol2-3",
+          "text": "Increase draw rate slightly to raise zone temperatures"
+        },
+        {
+          "id": "sol2-4",
+          "text": "Switch to denser hardwood or charcoal feedstock"
+        },
+        {
+          "id": "sol2-5",
+          "text": "Check that the air nozzle is correctly positioned at the throat"
+        }
+      ]
+    },
+    {
+      "id": "prob-3",
+      "category": "Starting",
+      "title": "Difficult or Failed Cold Start",
+      "severity": "medium",
+      "symptoms": [
+        {
+          "id": "s3-1",
+          "text": "Gasifier won't ignite or takes many attempts"
+        },
+        {
+          "id": "s3-2",
+          "text": "Flame extinguishes shortly after lighting"
+        },
+        {
+          "id": "s3-3",
+          "text": "No gas flow detected at outlet"
+        }
+      ],
+      "causes": [
+        {
+          "id": "c3-1",
+          "text": "Wet or green fuel in the ignition zone"
+        },
+        {
+          "id": "c3-2",
+          "text": "Insufficient kindling or starter charcoal"
+        },
+        {
+          "id": "c3-3",
+          "text": "Blocked ash grate restricting airflow"
+        },
+        {
+          "id": "c3-4",
+          "text": "Gas outlet valve closed or filter clogged"
+        }
+      ],
+      "solutions": [
+        {
+          "id": "sol3-1",
+          "text": "Pre-load the ignition zone with dry kindling and a small charcoal bed"
+        },
+        {
+          "id": "sol3-2",
+          "text": "Clear the ash grate and remove accumulated ash before starting"
+        },
+        {
+          "id": "sol3-3",
+          "text": "Open all valves and verify gas path is clear before ignition"
+        },
+        {
+          "id": "sol3-4",
+          "text": "Use a heat gun or torch to pre-warm the combustion zone in cold weather"
+        },
+        {
+          "id": "sol3-5",
+          "text": "Replace or clean filter media if airflow is restricted"
+        }
+      ]
+    },
+    {
+      "id": "prob-4",
+      "category": "Temperature",
+      "title": "Overheating or Glowing Reactor Walls",
+      "severity": "high",
+      "symptoms": [
+        {
+          "id": "s4-1",
+          "text": "Visible red or orange glow on gasifier body"
+        },
+        {
+          "id": "s4-2",
+          "text": "Combustion zone temperature above 1100°C"
+        },
+        {
+          "id": "s4-3",
+          "text": "Rapid fuel consumption with little gas output"
+        }
+      ],
+      "causes": [
+        {
+          "id": "c4-1",
+          "text": "Air-to-fuel ratio too high (too much air)"
+        },
+        {
+          "id": "c4-2",
+          "text": "Nozzle or tuyere positioned too close to reactor wall"
+        },
+        {
+          "id": "c4-3",
+          "text": "Fuel bridging forcing air through a narrow channel"
+        }
+      ],
+      "solutions": [
+        {
+          "id": "sol4-1",
+          "text": "Reduce air intake by partially closing the air valve"
+        },
+        {
+          "id": "sol4-2",
+          "text": "Shut down and allow to cool before inspecting nozzle position"
+        },
+        {
+          "id": "sol4-3",
+          "text": "Check for and break up any fuel bridges in the hopper"
+        },
+        {
+          "id": "sol4-4",
+          "text": "Verify reactor wall thickness and refractory lining integrity"
+        }
+      ]
+    },
+    {
+      "id": "prob-5",
+      "category": "Gas Quality",
+      "title": "High Carbon Monoxide in Exhaust",
+      "severity": "high",
+      "symptoms": [
+        {
+          "id": "s5-1",
+          "text": "CO detector alarm triggered near gasifier"
+        },
+        {
+          "id": "s5-2",
+          "text": "Headache, dizziness, or nausea in operators"
+        },
+        {
+          "id": "s5-3",
+          "text": "Incomplete combustion smell from exhaust"
+        }
+      ],
+      "causes": [
+        {
+          "id": "c5-1",
+          "text": "Gas leak at fittings, gaskets, or welds"
+        },
+        {
+          "id": "c5-2",
+          "text": "Incomplete combustion in the engine or flare"
+        },
+        {
+          "id": "c5-3",
+          "text": "Operating in an enclosed or poorly ventilated space"
+        }
+      ],
+      "solutions": [
+        {
+          "id": "sol5-1",
+          "text": "Immediately move to fresh air if symptoms occur — do not re-enter"
+        },
+        {
+          "id": "sol5-2",
+          "text": "Shut down the system and perform a full leak test with soapy water"
+        },
+        {
+          "id": "sol5-3",
+          "text": "Never operate a gasifier indoors or in partially enclosed spaces"
+        },
+        {
+          "id": "sol5-4",
+          "text": "Inspect and replace all gaskets and seals before restarting"
+        },
+        {
+          "id": "sol5-5",
+          "text": "Install a CO detector at operator height within 3 meters of the unit"
+        }
+      ]
+    },
+    {
+      "id": "prob-6",
+      "category": "Fuel Feed",
+      "title": "Fuel Bridging in the Hopper",
+      "severity": "low",
+      "symptoms": [
+        {
+          "id": "s6-1",
+          "text": "Gas output drops suddenly despite full hopper"
+        },
+        {
+          "id": "s6-2",
+          "text": "Fuel level does not drop over time"
+        },
+        {
+          "id": "s6-3",
+          "text": "Hollow cavity visible when hopper is opened"
+        }
+      ],
+      "causes": [
+        {
+          "id": "c6-1",
+          "text": "Irregular or oversized fuel chunks"
+        },
+        {
+          "id": "c6-2",
+          "text": "High moisture causing fuel to clump"
+        },
+        {
+          "id": "c6-3",
+          "text": "Hopper walls too steep or too smooth"
+        }
+      ],
+      "solutions": [
+        {
+          "id": "sol6-1",
+          "text": "Use a long rod or poker to break up the bridge from the top"
+        },
+        {
+          "id": "sol6-2",
+          "text": "Size fuel pieces consistently — aim for 3–5 cm chunks for most designs"
+        },
+        {
+          "id": "sol6-3",
+          "text": "Dry fuel thoroughly before loading the hopper"
+        },
+        {
+          "id": "sol6-4",
+          "text": "Consider adding a mechanical agitator or vibrator to the hopper"
+        }
+      ]
+    },
+    {
+      "id": "prob-7",
+      "category": "Ash & Clinker",
+      "title": "Clinker Formation Blocking the Grate",
+      "severity": "medium",
+      "symptoms": [
+        {
+          "id": "s7-1",
+          "text": "Airflow drops progressively during a run"
+        },
+        {
+          "id": "s7-2",
+          "text": "Hard fused ash chunks found on the grate"
+        },
+        {
+          "id": "s7-3",
+          "text": "Gasifier runs hot but gas quality drops"
+        }
+      ],
+      "causes": [
+        {
+          "id": "c7-1",
+          "text": "High-ash or high-mineral feedstock (agricultural residues, bark)"
+        },
+        {
+          "id": "c7-2",
+          "text": "Combustion zone temperatures exceeding ash fusion point"
+        },
+        {
+          "id": "c7-3",
+          "text": "Infrequent ash removal allowing buildup"
+        }
+      ],
+      "solutions": [
+        {
+          "id": "sol7-1",
+          "text": "Shake or agitate the grate regularly during operation"
+        },
+        {
+          "id": "sol7-2",
+          "text": "Remove ash more frequently — every 2–4 hours of operation"
+        },
+        {
+          "id": "sol7-3",
+          "text": "Switch to lower-ash feedstock such as hardwood or pellets"
+        },
+        {
+          "id": "sol7-4",
+          "text": "Reduce air intake to lower peak combustion temperatures"
+        }
+      ]
+    }
+  ],
+  "tips": {
+    "heading": "General Diagnostic Tips",
+    "items": [
+      {
+        "id": "tip-1",
+        "text": "Keep a run log — note fuel type, moisture reading, temperatures, and any issues each session."
+      },
+      {
+        "id": "tip-2",
+        "text": "Perform a cold leak test before every startup using soapy water on all joints."
+      },
+      {
+        "id": "tip-3",
+        "text": "Measure fuel moisture with a pin-type meter before every batch — don't guess."
+      },
+      {
+        "id": "tip-4",
+        "text": "Let the gasifier reach steady-state temperature (15–20 minutes) before connecting to an engine load."
+      },
+      {
+        "id": "tip-5",
+        "text": "Clean filters and condensate traps after every 4–8 hours of operation."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Still Stuck?",
+    "body": "Check the Safety & FAQs page for more beginner guidance, or visit the Resources page for community forums where experienced builders can help diagnose unusual problems.",
+    "link1Label": "Safety & FAQs",
+    "link1Href": "/safety-faqs",
+    "link2Label": "Resources & Community",
+    "link2Href": "/resources"
+  }
+}

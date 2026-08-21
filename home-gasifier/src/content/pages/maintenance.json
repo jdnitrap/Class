@@ -1,0 +1,296 @@
+{
+  "hero": {
+    "eyebrow": "Keep it running right",
+    "heading": "Maintenance & Off-Season Guide",
+    "subheading": "Based on what experienced builders recommend: a home gasifier runs part-time, not continuously. That means scheduled maintenance, proper shutdown procedures, and a startup checklist that catches problems before they become failures."
+  },
+  "intro": {
+    "heading": "Part-time operation demands deliberate maintenance",
+    "body": [
+      {
+        "id": "intro-p1",
+        "text": "Unlike a car you drive daily, a home gasifier might sit idle for weeks between runs. According to builders who have run these systems, that idle time is when corrosion sets in, tar hardens in filters, and small leaks go unnoticed. A simple maintenance routine — 15 minutes after each run, a monthly inspection, and a proper seasonal shutdown — is what keeps a system reliable."
+      },
+      {
+        "id": "intro-p2",
+        "text": "The schedules below are based on typical home-scale operation as described in the literature: 4–8 hours per run, 1–3 runs per week during active season. Adjust intervals based on your actual run time and fuel quality."
+      }
+    ]
+  },
+  "schedules": [
+    {
+      "id": "sched-after-run",
+      "title": "After every run",
+      "timing": "Within 1 hour of shutdown",
+      "color": "primary",
+      "icon": "flame",
+      "tasks": [
+        {
+          "id": "ar-1",
+          "task": "Allow the reactor to cool with the air inlet open — never seal a hot reactor",
+          "critical": true
+        },
+        {
+          "id": "ar-2",
+          "task": "Check the condensate drain and empty if more than half full",
+          "critical": true
+        },
+        {
+          "id": "ar-3",
+          "task": "Note any unusual smells, sounds, or performance changes while memory is fresh",
+          "critical": false
+        },
+        {
+          "id": "ar-4",
+          "task": "Check the gas outlet for tar drips — wipe clean before they harden",
+          "critical": false
+        },
+        {
+          "id": "ar-5",
+          "task": "Log run time, fuel used, and any observations in your maintenance log",
+          "critical": false
+        }
+      ]
+    },
+    {
+      "id": "sched-between-runs",
+      "title": "Between runs",
+      "timing": "Before each startup",
+      "color": "secondary",
+      "icon": "wrench",
+      "tasks": [
+        {
+          "id": "br-1",
+          "task": "Inspect and clean the filter — check pressure drop, replace media if clogged",
+          "critical": true
+        },
+        {
+          "id": "br-2",
+          "task": "Check all gas line connections for leaks using soapy water",
+          "critical": true
+        },
+        {
+          "id": "br-3",
+          "task": "Inspect the reactor grate — shake or poke to confirm ash isn't bridging",
+          "critical": false
+        },
+        {
+          "id": "br-4",
+          "task": "Verify CO detector is functional — press test button",
+          "critical": true
+        },
+        {
+          "id": "br-5",
+          "task": "Check fuel supply — confirm moisture under 20% with a meter",
+          "critical": false
+        },
+        {
+          "id": "br-6",
+          "task": "Inspect the hopper lid seal — replace if cracked or brittle",
+          "critical": false
+        }
+      ]
+    },
+    {
+      "id": "sched-monthly",
+      "title": "Monthly inspection",
+      "timing": "Once per month during active season",
+      "color": "accent",
+      "icon": "calendar",
+      "tasks": [
+        {
+          "id": "mo-1",
+          "task": "Inspect all welds for cracks, especially around the tuyere and grate area",
+          "critical": true
+        },
+        {
+          "id": "mo-2",
+          "task": "Check refractory lining for cracks or spalling — patch with refractory cement",
+          "critical": true
+        },
+        {
+          "id": "mo-3",
+          "task": "Inspect the ash removal port seal and gasket",
+          "critical": false
+        },
+        {
+          "id": "mo-4",
+          "task": "Clean the condensate collection system thoroughly — flush with water",
+          "critical": false
+        },
+        {
+          "id": "mo-5",
+          "task": "Replace CO detector batteries if not on a sealed unit",
+          "critical": true
+        },
+        {
+          "id": "mo-6",
+          "task": "Check all bolted connections — thermal cycling loosens fasteners over time",
+          "critical": false
+        },
+        {
+          "id": "mo-7",
+          "task": "Inspect the gas cooling section for tar accumulation",
+          "critical": false
+        }
+      ]
+    },
+    {
+      "id": "sched-shutdown",
+      "title": "Seasonal shutdown",
+      "timing": "End of operating season",
+      "color": "muted",
+      "icon": "snowflake",
+      "tasks": [
+        {
+          "id": "sd-1",
+          "task": "Run the reactor until the fuel bed is fully consumed — don't store with char in the reactor",
+          "critical": true
+        },
+        {
+          "id": "sd-2",
+          "task": "Allow to cool completely — at least 24 hours — before any storage prep",
+          "critical": true
+        },
+        {
+          "id": "sd-3",
+          "task": "Remove all ash and char from the reactor, grate, and ash pit",
+          "critical": true
+        },
+        {
+          "id": "sd-4",
+          "task": "Flush the condensate system and dispose of tar condensate as hazardous waste",
+          "critical": true
+        },
+        {
+          "id": "sd-5",
+          "task": "Remove and clean all filter media — store dry in a sealed container",
+          "critical": false
+        },
+        {
+          "id": "sd-6",
+          "task": "Cover all inlets and outlets with weatherproof caps to prevent moisture and pest ingress",
+          "critical": false
+        },
+        {
+          "id": "sd-7",
+          "task": "Apply a light coat of high-temp anti-rust spray to exposed metal surfaces",
+          "critical": false
+        },
+        {
+          "id": "sd-8",
+          "task": "Store the unit under cover — a tarp is minimum; a shed is better",
+          "critical": false
+        },
+        {
+          "id": "sd-9",
+          "task": "Document any issues to address before spring startup",
+          "critical": false
+        }
+      ]
+    },
+    {
+      "id": "sched-startup",
+      "title": "Spring startup",
+      "timing": "Before first run of the season",
+      "color": "secondary",
+      "icon": "sun",
+      "tasks": [
+        {
+          "id": "su-1",
+          "task": "Inspect all welds and the reactor body for winter corrosion or damage",
+          "critical": true
+        },
+        {
+          "id": "su-2",
+          "task": "Check refractory lining — freeze-thaw cycles can crack even well-cured refractory",
+          "critical": true
+        },
+        {
+          "id": "su-3",
+          "task": "Replace CO detector if more than 5 years old — electrochemical sensors degrade",
+          "critical": true
+        },
+        {
+          "id": "su-4",
+          "task": "Install fresh filter media — don't reuse media stored over winter",
+          "critical": true
+        },
+        {
+          "id": "su-5",
+          "task": "Check all gas line connections and replace any cracked hoses or fittings",
+          "critical": true
+        },
+        {
+          "id": "su-6",
+          "task": "Verify the pressure relief valve moves freely and hasn't corroded shut",
+          "critical": true
+        },
+        {
+          "id": "su-7",
+          "task": "Do a cold leak test before lighting — pressurize with air and check all joints",
+          "critical": false
+        },
+        {
+          "id": "su-8",
+          "task": "Run a short test fire (15–20 min) before connecting any load",
+          "critical": false
+        }
+      ]
+    }
+  ],
+  "consumables": {
+    "heading": "Consumables and what they cost",
+    "intro": "A home gasifier has a short list of parts that wear out or need periodic replacement. Budget roughly $100–$200 per year for a system running 200–400 hours annually.",
+    "items": [
+      {
+        "id": "con-1",
+        "item": "Filter media (wood chips, gravel, or commercial media)",
+        "interval": "Every 4–8 hours of operation",
+        "cost": "$5–$20 per change"
+      },
+      {
+        "id": "con-2",
+        "item": "CO detector replacement",
+        "interval": "Every 5–7 years",
+        "cost": "$25–$60"
+      },
+      {
+        "id": "con-3",
+        "item": "Refractory cement (patch repairs)",
+        "interval": "As needed, typically annually",
+        "cost": "$15–$40 per bag"
+      },
+      {
+        "id": "con-4",
+        "item": "High-temp gasket material",
+        "interval": "Annually or when leaking",
+        "cost": "$10–$25"
+      },
+      {
+        "id": "con-5",
+        "item": "Condensate disposal (hazardous waste facility)",
+        "interval": "Each season",
+        "cost": "Free–$30 depending on locality"
+      },
+      {
+        "id": "con-6",
+        "item": "Anti-rust spray (high-temp)",
+        "interval": "Annually at shutdown",
+        "cost": "$8–$15"
+      }
+    ]
+  },
+  "log_tip": {
+    "heading": "Keep a maintenance log",
+    "body": "A simple notebook or spreadsheet tracking run hours, fuel used, filter changes, and any observations is worth more than any single maintenance task. Patterns in your log — increasing tar, rising pressure drop, more frequent ash removal — tell you what's changing before it becomes a problem. Date every entry."
+  },
+  "cta": {
+    "heading": "Ready to build the system you'll maintain?",
+    "body": "Understanding maintenance before you build helps you design for serviceability — access panels, easy filter changes, and cleanout ports in the right places.",
+    "link1Label": "Browse Build Guides",
+    "link1Href": "/build-guides",
+    "link2Label": "Troubleshooting Guide",
+    "link2Href": "/troubleshooting"
+  }
+}

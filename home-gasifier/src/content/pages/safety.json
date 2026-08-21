@@ -1,0 +1,221 @@
+{
+  "hero": {
+    "eyebrow": "Before your first fire",
+    "heading": "Safety & FAQs",
+    "subheading": "Wood gasification produces carbon monoxide, operates at high temperatures, and demands real respect. I've tried to compile everything the research and experienced builders say about staying safe."
+  },
+  "warning_banner": {
+    "headline": "Carbon monoxide is invisible and odorless.",
+    "body": "A gasifier running indoors or in an enclosed space can kill within minutes. Always operate outdoors or with full mechanical ventilation and a calibrated CO detector."
+  },
+  "hazards": [
+    {
+      "id": "haz-co",
+      "icon": "wind",
+      "level": "critical",
+      "title": "Carbon Monoxide (CO)",
+      "description": "Syngas is roughly 20% carbon monoxide by volume. CO binds to hemoglobin 200× more effectively than oxygen — you can lose consciousness before you notice symptoms. This is the primary cause of gasifier fatalities.",
+      "rules": [
+        "Never operate a gasifier indoors, in a garage, or in any enclosed space",
+        "Install a calibrated CO detector within 3 meters of the operating unit",
+        "Test your CO detector monthly — replace batteries annually",
+        "If the alarm sounds, evacuate immediately and do not re-enter until ventilated"
+      ]
+    },
+    {
+      "id": "haz-fire",
+      "icon": "flame",
+      "level": "critical",
+      "title": "Fire & High Temperature",
+      "description": "The combustion zone reaches 1800–2200°F (1000–1200°C). External surfaces of an uninsulated reactor can exceed 750°F (400°C). Syngas is flammable across a wide concentration range (6–70% in air).",
+      "rules": [
+        "Keep a Class ABC fire extinguisher within arm's reach during operation",
+        "Maintain a 3-meter clearance from combustible materials",
+        "Never open the reactor while it is pressurized or hot",
+        "Allow the unit to cool completely before maintenance — at least 4 hours after shutdown",
+        "Insulate the reactor exterior to reduce surface temperatures"
+      ]
+    },
+    {
+      "id": "haz-pressure",
+      "icon": "gauge",
+      "level": "serious",
+      "title": "Pressure & Backfire",
+      "description": "If the gas path becomes blocked — by tar buildup, a clogged filter, or a closed valve — pressure can build in the reactor. A sudden pressure release or backfire can expel hot char and gas.",
+      "rules": [
+        "Never close the gas outlet while the reactor is running",
+        "Install a pressure relief valve rated for your operating pressure",
+        "Check filters before every run — a clogged filter is a pressure hazard",
+        "Stand clear of the gas outlet during startup until stable gas flow is confirmed"
+      ]
+    },
+    {
+      "id": "haz-tar",
+      "icon": "droplets",
+      "level": "moderate",
+      "title": "Tar & Condensate",
+      "description": "Gasifier tar is a complex mixture of polycyclic aromatic hydrocarbons (PAHs), many of which are carcinogenic. Condensate from the gas cleaning train is hazardous waste.",
+      "rules": [
+        "Wear nitrile gloves when handling filters, condensate, or tar-contaminated components",
+        "Do not pour tar condensate down drains — dispose of as hazardous waste",
+        "Wash hands thoroughly after any contact with tar or condensate",
+        "Replace filter media in a well-ventilated area"
+      ]
+    },
+    {
+      "id": "haz-ash",
+      "icon": "layers",
+      "level": "low",
+      "title": "Ash & Char Dust",
+      "description": "Fine char and ash particles are a respiratory irritant. Hot ash can remain ignition-capable for hours after shutdown.",
+      "rules": [
+        "Wear an N95 or P100 respirator when cleaning ash",
+        "Allow ash to cool completely before removal — at least 24 hours",
+        "Wet ash before disposal to prevent dust and suppress any residual heat",
+        "Store ash in a metal container with a tight-fitting lid"
+      ]
+    }
+  ],
+  "ppe": {
+    "heading": "Personal protective equipment",
+    "items": [
+      {
+        "id": "ppe-1",
+        "item": "CO detector (calibrated)",
+        "when": "Every run — non-negotiable"
+      },
+      {
+        "id": "ppe-2",
+        "item": "Heat-resistant gloves (rated 570°F / 300°C+)",
+        "when": "Any time near the reactor"
+      },
+      {
+        "id": "ppe-3",
+        "item": "Safety glasses or face shield",
+        "when": "Startup, shutdown, maintenance"
+      },
+      {
+        "id": "ppe-4",
+        "item": "N95 or P100 respirator",
+        "when": "Ash cleaning, filter changes"
+      },
+      {
+        "id": "ppe-5",
+        "item": "Nitrile gloves",
+        "when": "Handling tar, condensate, filters"
+      },
+      {
+        "id": "ppe-6",
+        "item": "Class ABC fire extinguisher",
+        "when": "Within reach during all operation"
+      }
+    ]
+  },
+  "mistakes": {
+    "heading": "Most common beginner mistakes",
+    "items": [
+      {
+        "id": "mis-1",
+        "title": "Using wet fuel",
+        "description": "The single most common cause of poor gas quality, excessive tar, and filter clogging. Check moisture before every run. If it's over 20%, don't use it."
+      },
+      {
+        "id": "mis-2",
+        "title": "Skipping the filter",
+        "description": "Running syngas directly into an engine without filtration will coat the intake, valves, and cylinder walls with tar within hours. Always filter, always cool the gas before the engine."
+      },
+      {
+        "id": "mis-3",
+        "title": "Connecting to an engine too early",
+        "description": "The first 10–15 minutes of operation produce the worst gas — high in tar and low in combustibles. Run the gasifier standalone until you have a clean, stable flame at the outlet before connecting any load."
+      },
+      {
+        "id": "mis-4",
+        "title": "Ignoring backpressure",
+        "description": "A clogged filter or partially closed valve creates backpressure that forces hot gas out of unintended gaps. Monitor pressure drop across your filter and clean it on schedule."
+      },
+      {
+        "id": "mis-5",
+        "title": "Building without a pressure relief",
+        "description": "A pressure relief valve is cheap insurance. Without one, a blockage can turn your reactor into a pressure vessel with no safe outlet."
+      },
+      {
+        "id": "mis-6",
+        "title": "Operating alone",
+        "description": "During your first several runs, have someone else present who knows the shutdown procedure. CO incapacitation happens fast — a second person can save your life."
+      }
+    ]
+  },
+  "faq_featured": [
+    {
+      "id": "ffaq-1",
+      "question": "Is it legal to build and run a gasifier at home?",
+      "answer": "In most U.S. counties and many international jurisdictions, yes — for personal use on your own property. But regulations vary significantly. Check your county zoning code for open combustion or air quality rules, and contact your local fire marshal about permits for combustion equipment. Most rural and semi-rural areas allow it with no permit required. Urban areas are more restrictive. When in doubt, a 10-minute call to your county planning office will tell you exactly where you stand.",
+      "action_label": "See full legal guidance",
+      "action_href": "/legal-regulatory"
+    },
+    {
+      "id": "ffaq-2",
+      "question": "Can I run a gasifier indoors or in a garage?",
+      "answer": "No. Full stop. Even with ventilation fans running, CO can accumulate to lethal levels faster than you can react. Gasifiers must be operated outdoors or in a fully open structure with no walls that can trap gas. A three-sided shed with open sides is acceptable. A closed garage with a window cracked open is not. This is the rule that kills people when ignored.",
+      "action_label": null,
+      "action_href": null
+    },
+    {
+      "id": "ffaq-3",
+      "question": "How often do I need to clean the filter?",
+      "answer": "Every 2–4 hours of operation with dry hardwood fuel. With wet or resinous wood, you may need to clean after every run. A clogged filter creates backpressure that forces hot gas out of unintended gaps — it's both a performance problem and a safety hazard. Monitor the pressure drop across your filter; when it rises noticeably, stop and clean it. Don't wait until the engine starts struggling.",
+      "action_label": null,
+      "action_href": null
+    },
+    {
+      "id": "ffaq-4",
+      "question": "Will my homeowner's insurance cover a gasifier?",
+      "answer": "Most standard homeowner policies do not automatically cover home-built combustion equipment. Tell your insurance agent before you build — not after an incident. Some insurers will add a rider or accept it with documentation; others will not. Operating undisclosed combustion equipment that causes a fire or injury could void your entire policy. A 15-minute conversation with your agent is worth it.",
+      "action_label": null,
+      "action_href": null
+    }
+  ],
+  "faq": [
+    {
+      "id": "faq-1",
+      "question": "How do I know if my gas is good enough for an engine?",
+      "answer": "Hold a lighter or match at the gas outlet — clean syngas burns with a blue-yellow flame and doesn't produce heavy smoke or soot. If the flame is orange, smoky, or sputters, your gas quality is poor. A combustible gas analyzer gives you precise readings, but the flame test is a reliable field check."
+    },
+    {
+      "id": "faq-2",
+      "question": "What do I do with the tar condensate?",
+      "answer": "Tar condensate contains PAHs and must be treated as hazardous waste. Do not pour it down drains or on the ground. Contact your local hazardous waste disposal facility. Some operators re-inject small amounts back into the combustion zone to burn off, but this requires careful design."
+    },
+    {
+      "id": "faq-3",
+      "question": "Can I use a gasifier to heat my home directly?",
+      "answer": "Yes — an updraft gasifier connected to a purpose-built burner can provide excellent space heating. The gas burns cleanly in a flame and the heat output is controllable. This is simpler than running an engine and avoids the filtration requirements for engine-grade gas."
+    },
+    {
+      "id": "faq-4",
+      "question": "What's the minimum safe distance from buildings?",
+      "answer": "Most fire codes require at least 10 feet (3 meters) from any combustible structure. We recommend 15–20 feet (5–6 meters) minimum for a home build, with the gas outlet pointed away from structures. Check your local fire code for specific requirements."
+    },
+    {
+      "id": "faq-5",
+      "question": "How long does it take to start up?",
+      "answer": "A cold start typically takes 15–25 minutes to establish a stable char bed and produce usable gas. Subsequent starts on a warm reactor with an established char bed can be as fast as 5–10 minutes. Don't rush startup — premature loading is the most common cause of poor performance."
+    },
+    {
+      "id": "faq-6",
+      "question": "Can I leave a gasifier running unattended?",
+      "answer": "Not during your first year of operation. Once you know your system's behavior intimately — how it responds to fuel changes, how quickly filters clog, how it behaves at different loads — you can consider automated monitoring. But early on, stay with it."
+    },
+    {
+      "id": "faq-7",
+      "question": "Can I run it 24/7 for continuous power?",
+      "answer": "Technically yes, but practically it's not ideal for home use. Continuous operation means continuous fuel loading, ash removal, filter maintenance, and CO monitoring. Most home builders run their gasifier for specific tasks — charging batteries, running a generator during outages, or heating during winter — rather than as a primary 24/7 power source. Plan for part-time operation and your system will last longer and be safer."
+    },
+    {
+      "id": "faq-8",
+      "question": "Where can I find a community of other builders?",
+      "answer": "The Drive On Wood forum and the Gasification.com community are the most active English-language resources. YouTube channels from experienced builders like Gary Gilmore and Ben Peterson have documented hundreds of hours of real-world operation. The FEMA gasifier manual is freely available online and is still an excellent starting reference."
+    }
+  ]
+}

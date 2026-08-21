@@ -1,0 +1,217 @@
+{
+  "hero": {
+    "eyebrow": "Go deeper",
+    "heading": "Resources & References",
+    "subheading": "The best books, manuals, forums, videos, and tools the gasification community has produced. Everything here is tried-and-tested by real builders."
+  },
+  "categories": [
+    {
+      "id": "cat-manuals",
+      "icon": "book-open",
+      "title": "Foundational Manuals",
+      "description": "The documents every gasifier builder should read before picking up a grinder.",
+      "links": [
+        {
+          "id": "lnk-fema",
+          "title": "FEMA Gasifier Manual (1989)",
+          "description": "The original emergency gasifier document from the Federal Emergency Management Agency. Freely available, battle-tested design, and still the best starting point for beginners.",
+          "url": "https://archive.org/details/fema-gasifier-manual",
+          "tag": "Free PDF"
+        },
+        {
+          "id": "lnk-gengas",
+          "title": "Gengas — The Swedish Wartime Gasifier Book",
+          "description": "Translated from Swedish, this 1950 document covers the engineering of vehicle gasifiers in extraordinary depth. Dense but invaluable for understanding Imbert-style downdraft designs.",
+          "url": "https://archive.org/details/gengas",
+          "tag": "Free PDF"
+        },
+        {
+          "id": "lnk-fao",
+          "title": "FAO Forestry Paper 72 — Wood Gas as Engine Fuel",
+          "description": "A thorough technical overview from the Food and Agriculture Organization of the United Nations. Covers design principles, gas quality, and engine integration.",
+          "url": "https://www.fao.org/3/t0512e/t0512e00.htm",
+          "tag": "Free Online"
+        },
+        {
+          "id": "lnk-nrel",
+          "title": "NREL Biomass Gasification Technology Assessment",
+          "description": "A modern technical assessment from the National Renewable Energy Laboratory covering gasification chemistry, reactor types, and syngas cleanup.",
+          "url": "https://www.nrel.gov/docs/fy13osti/57085.pdf",
+          "tag": "Free PDF"
+        }
+      ]
+    },
+    {
+      "id": "cat-forums",
+      "icon": "users",
+      "title": "Communities & Forums",
+      "description": "Where active builders share builds, troubleshoot problems, and push the technology forward.",
+      "links": [
+        {
+          "id": "lnk-dow",
+          "title": "Drive On Wood Forum",
+          "description": "The most active English-language gasification community. Thousands of build threads, troubleshooting discussions, and years of accumulated knowledge from experienced operators.",
+          "url": "https://www.driveonwood.com/forum",
+          "tag": "Forum"
+        },
+        {
+          "id": "lnk-gasification",
+          "title": "r/Gasification — Reddit Community",
+          "description": "An active Reddit community where builders share projects, ask questions, and discuss everything from beginner FEMA builds to advanced Imbert designs.",
+          "url": "https://www.reddit.com/r/gasification/",
+          "tag": "Forum"
+        },
+        {
+          "id": "lnk-permies",
+          "title": "Permies — Rocket Stoves & Gasification",
+          "description": "The permaculture-focused Permies community has an active gasification subforum with a strong DIY and off-grid angle.",
+          "url": "https://permies.com/f/73/rocket-stoves",
+          "tag": "Forum"
+        }
+      ]
+    },
+    {
+      "id": "cat-video",
+      "icon": "play-circle",
+      "title": "Video Channels & Documentaries",
+      "description": "Watching experienced builders work is one of the fastest ways to learn.",
+      "links": [
+        {
+          "id": "lnk-gary",
+          "title": "Gary Gilmore — All Power Labs",
+          "description": "Gary's YouTube channel documents hundreds of hours of real-world gasifier operation, testing, and engineering. His GEK (Gasifier Experimenter's Kit) work is some of the most rigorous open-source gasification engineering available.",
+          "url": "https://www.youtube.com/@AllPowerLabs",
+          "tag": "YouTube"
+        },
+        {
+          "id": "lnk-ben",
+          "title": "Ben Peterson — Wood Gas Videos",
+          "description": "Ben has been running wood gas vehicles for decades. His videos cover practical vehicle conversion, fuel preparation, and long-distance driving on syngas.",
+          "url": "https://www.youtube.com/@woodgas",
+          "tag": "YouTube"
+        },
+        {
+          "id": "lnk-viktor",
+          "title": "Viktor Zupancic — Gasifier Builds",
+          "description": "Detailed build documentation from a European builder with a focus on clean, well-engineered designs. Excellent for understanding filter and cooling train construction.",
+          "url": "https://www.youtube.com/results?search_query=viktor+zupancic+gasifier",
+          "tag": "YouTube"
+        }
+      ]
+    },
+    {
+      "id": "cat-tools",
+      "icon": "wrench",
+      "title": "Calculators & Design Tools",
+      "description": "Online tools to help size your reactor, estimate gas output, and plan your build.",
+      "links": [
+        {
+          "id": "lnk-gek",
+          "title": "All Power Labs GEK Wiki (via Archive)",
+          "description": "The open-source GEK gasifier wiki includes design spreadsheets, throat sizing calculators, and detailed build documentation for the most thoroughly documented open gasifier design. Hosted via Internet Archive.",
+          "url": "https://web.archive.org/web/2024*/https://wiki.gekgasifier.com/",
+          "tag": "Wiki"
+        },
+        {
+          "id": "lnk-throat",
+          "title": "Imbert Throat Sizing — Drive On Wood Library",
+          "description": "A community-maintained resource for calculating the correct throat diameter, hearth diameter, and nozzle sizing for a downdraft Imbert gasifier based on your target engine power.",
+          "url": "https://www.driveonwood.com/library",
+          "tag": "Calculator"
+        },
+        {
+          "id": "lnk-biomass",
+          "title": "Biomass Energy Data Book (ORNL)",
+          "description": "Oak Ridge National Laboratory's comprehensive reference for biomass energy content, moisture relationships, and feedstock properties. Essential for fuel selection and sizing calculations.",
+          "url": "https://info.ornl.gov/sites/publications/files/Pub31202.pdf",
+          "tag": "Free PDF"
+        }
+      ]
+    },
+    {
+      "id": "cat-books",
+      "icon": "library",
+      "title": "Books Worth Buying",
+      "description": "A short list of print resources that go deeper than anything freely available online.",
+      "links": [
+        {
+          "id": "lnk-book-imbert",
+          "title": "\"Wood Gasification\" by Alexis Belonio",
+          "description": "A practical engineering guide focused on rice husk and biomass gasification in developing-world contexts. Excellent coverage of updraft designs and agricultural feedstocks.",
+          "url": "https://www.amazon.com/s?k=alexis+belonio+gasification",
+          "tag": "Book"
+        },
+        {
+          "id": "lnk-book-reed",
+          "title": "\"Handbook of Biomass Downdraft Gasifier Engine Systems\" — Reed & Das",
+          "description": "The definitive engineering reference for downdraft gasifier design. Written by researchers at SERI (now NREL). Out of print but available as a free PDF from NREL.",
+          "url": "https://www.nrel.gov/docs/legosti/old/3022.pdf",
+          "tag": "Free PDF"
+        },
+        {
+          "id": "lnk-book-stassen",
+          "title": "\"Small-Scale Biomass Gasifiers for Heat and Power\" — Stassen",
+          "description": "A World Bank technical paper covering the economics and engineering of small-scale gasification. Particularly useful for understanding system efficiency and cost analysis.",
+          "url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/773101468766505287",
+          "tag": "Free Online"
+        }
+      ]
+    }
+  ],
+  "glossary": {
+    "heading": "Quick glossary",
+    "intro": "New to gasification? These are the terms you'll encounter most often.",
+    "terms": [
+      {
+        "id": "gl-1",
+        "term": "Syngas",
+        "definition": "Synthesis gas — the combustible gas mixture (primarily CO, H₂, and CH₄) produced by gasification. Also called producer gas or wood gas."
+      },
+      {
+        "id": "gl-2",
+        "term": "Pyrolysis zone",
+        "definition": "The upper zone of a downdraft gasifier where biomass is heated in the absence of oxygen, releasing volatile gases and leaving char."
+      },
+      {
+        "id": "gl-3",
+        "term": "Oxidation zone",
+        "definition": "The combustion zone where air is introduced and partial combustion occurs, generating the heat that drives the process."
+      },
+      {
+        "id": "gl-4",
+        "term": "Reduction zone",
+        "definition": "The char bed below the oxidation zone where CO₂ and H₂O react with hot char to produce CO and H₂ — the useful combustible gases."
+      },
+      {
+        "id": "gl-5",
+        "term": "Throat",
+        "definition": "The constriction in an Imbert-style downdraft gasifier that concentrates heat and ensures all gas passes through the high-temperature oxidation zone."
+      },
+      {
+        "id": "gl-6",
+        "term": "Tar",
+        "definition": "Complex organic compounds produced during pyrolysis that condense at lower temperatures. Tar in syngas is the primary cause of engine fouling."
+      },
+      {
+        "id": "gl-7",
+        "term": "Equivalence ratio (ER)",
+        "definition": "The ratio of actual air supplied to the stoichiometric air required for complete combustion. Gasifiers typically operate at ER 0.2–0.4."
+      },
+      {
+        "id": "gl-8",
+        "term": "Cold gas efficiency (CGE)",
+        "definition": "The ratio of the energy content of the syngas produced to the energy content of the fuel consumed. A well-designed downdraft gasifier achieves 70–80% CGE."
+      },
+      {
+        "id": "gl-9",
+        "term": "Hearth load",
+        "definition": "The volumetric flow rate of gas through the gasifier per unit of hearth cross-sectional area. A key design parameter for sizing the reactor."
+      },
+      {
+        "id": "gl-10",
+        "term": "Moisture content (MC)",
+        "definition": "The percentage of water in fuel by weight. Wet basis MC = (water weight / total weight) × 100. Gasifiers require fuel below 20% MC; below 15% is ideal."
+      }
+    ]
+  }
+}

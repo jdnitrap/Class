@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "badge": "Work in progress — more features coming",
+    "title": "Gasifier Syngas Simulator",
+    "description": "Estimate syngas composition, heating value, and engine power potential based on your gasifier type, fuel, and operating conditions. Results use a simplified equilibrium model — treat them as indicative, not design specifications."
+  },
+  "inputs": {
+    "heading": "Inputs",
+    "gasifierTypeLabel": "Gasifier type",
+    "fuelTypeLabel": "Primary fuel",
+    "blendToggleLabel": "Blend two fuels",
+    "blendToggleHelp": "Mix two fuel species by mass fraction to simulate co-gasification (e.g. charcoal + wood chips).",
+    "secondFuelLabel": "Secondary fuel",
+    "blendRatioLabel": "Primary fuel fraction",
+    "blendRatioHelp": "Percentage of primary fuel in the blend by dry mass.",
+    "moistureLabel": "Moisture content",
+    "moistureDryLabel": "0% (bone dry)",
+    "moistureLimitLabel": "25% limit",
+    "moistureMaxLabel": "40%",
+    "fuelSizeLabel": "Average fuel size",
+    "erLabel": "Equivalence ratio (ER)",
+    "erRichLabel": "0.20 (rich)",
+    "erTypicalLabel": "0.30 (typical)",
+    "erLeanLabel": "0.45 (lean)",
+    "erHelp": "ER is the ratio of actual air supplied to stoichiometric air. Most gasifiers run 0.25–0.35.",
+    "engineToggleLabel": "Engine matching",
+    "engineToggleHelp": "Enter your engine's displacement and RPM to see how well it matches this syngas — including derating, fuel feed rate, and shaft power estimate.",
+    "engineDisplacementLabel": "Engine displacement",
+    "engineDisplacementHelp": "Total swept volume of all cylinders. Common genset engines: 400–800 cc (small), 1000–2000 cc (medium), 3000+ cc (large).",
+    "engineRpmLabel": "Operating RPM",
+    "runButton": "Run Simulation",
+    "runningButton": "Calculating…"
+  },
+  "enginePresets": [
+    { "id": "lister_cs", "label": "Lister CS 6/1 (600 cc, 650 RPM)", "cc": 600, "rpm": 650 },
+    { "id": "honda_gx390", "label": "Honda GX390 (389 cc, 3600 RPM)", "cc": 389, "rpm": 3600 },
+    { "id": "briggs_vanguard", "label": "Briggs Vanguard 18 (570 cc, 3600 RPM)", "cc": 570, "rpm": 3600 },
+    { "id": "kohler_ch740", "label": "Kohler CH740 (725 cc, 3600 RPM)", "cc": 725, "rpm": 3600 },
+    { "id": "kubota_d902", "label": "Kubota D902 (898 cc, 3000 RPM)", "cc": 898, "rpm": 3000 },
+    { "id": "custom", "label": "Custom…", "cc": 0, "rpm": 0 }
+  ],
+  "gasifierTypes": [
+    {
+      "id": "downdraft",
+      "label": "Downdraft (Imbert)"
+    },
+    {
+      "id": "fema",
+      "label": "FEMA Emergency"
+    },
+    {
+      "id": "updraft",
+      "label": "Updraft"
+    }
+  ],
+  "fuelTypes": [
+    {
+      "id": "hardwood",
+      "label": "Hardwood"
+    },
+    {
+      "id": "softwood",
+      "label": "Softwood"
+    },
+    {
+      "id": "woodchips",
+      "label": "Wood Chips"
+    },
+    {
+      "id": "charcoal",
+      "label": "Charcoal"
+    },
+    {
+      "id": "corn_cobs",
+      "label": "Corn Cobs"
+    }
+  ],
+  "compare": {
+    "heading": "Multi-fuel comparison",
+    "subheading": "Run all fuels at the same conditions and see how they rank.",
+    "runButton": "Compare All Fuels",
+    "runningButton": "Comparing…",
+    "rankLabel": "Rank",
+    "fuelLabel": "Fuel",
+    "lhvLabel": "LHV (MJ/Nm³)",
+    "cgeLabel": "CGE (%)",
+    "tarLabel": "Tar (g/Nm³)",
+    "powerLabel": "Power (kW/kg·h⁻¹)",
+    "engineSafeLabel": "Engine safe",
+    "bestBadge": "Best",
+    "summaryHeading": "Summary"
+  },
+  "results": {
+    "emptyHeading": "Set your parameters and click",
+    "emptyHighlight": "Run Simulation",
+    "emptyTail": "to see results.",
+    "compositionHeading": "Dry syngas composition",
+    "compositionNote": "CO + H₂ are the combustible components. N₂ is inert diluent from air.",
+    "lhvLabel": "Heating value (LHV)",
+    "lhvUnit": "MJ/Nm³",
+    "lhvSub": "Dry syngas basis",
+    "cgeLabel": "Cold gas efficiency",
+    "cgeUnit": "%",
+    "cgeSub": "Syngas / fuel energy",
+    "yieldLabel": "Specific gas yield",
+    "yieldUnit": "Nm³/kg",
+    "yieldSub": "Per kg dry fuel",
+    "powerLabel": "Engine power",
+    "powerUnit": "kW",
+    "powerSub": "Per kg/h fuel feed"
+  },
+  "methodology": {
+    "heading": "About this simulator — work in progress",
+    "body1": "This tool uses a simplified two-reaction equilibrium model based on the Boudouard reaction and water-gas shift, with fuel properties drawn from the FAO Forestry Paper 72 and FEMA emergency gasifier documentation.",
+    "body1Bold": "simplified two-reaction equilibrium model",
+    "body2": "Real gasifiers deviate from equilibrium due to reaction kinetics, channeling, tar formation, and heat losses.",
+    "body2Bold": "Do not use these numbers for engineering design.",
+    "body2Tail": "They are useful for understanding how changes in moisture, fuel type, and equivalence ratio affect syngas quality — not for sizing components or predicting exact output.",
+    "body3": "Planned additions: pressure drop, char burnout fraction, engine derating factors, and a fuel drying energy calculator."
+  }
+}

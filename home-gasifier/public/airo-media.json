@@ -1,0 +1,684 @@
+{
+  "pages/home/build-guides": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "warm,bold",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/478290066",
+    "searchQuery": "hands working metal fabrication DIY workshop tools",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1500839418",
+      "https://img1.wsimg.com/isteam/getty/1016283944",
+      "https://img1.wsimg.com/isteam/getty/873997320"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:33:18.957Z",
+    "lastUpdated": "2026-08-19T11:33:18.957Z",
+    "gettyId": "478290066",
+    "alternativeGettyIds": [
+      "1500839418",
+      "1016283944",
+      "873997320"
+    ]
+  },
+  "pages/home/safety": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "warm,dramatic",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1744292415",
+    "searchQuery": "fire flame burning wood campfire warm glow",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2286028596",
+      "https://img1.wsimg.com/isteam/getty/2254827736",
+      "https://img1.wsimg.com/isteam/getty/2243788479"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:33:20.231Z",
+    "lastUpdated": "2026-08-19T11:33:20.231Z",
+    "gettyId": "1744292415",
+    "alternativeGettyIds": [
+      "2286028596",
+      "2254827736",
+      "2243788479"
+    ]
+  },
+  "pages/home/hero": {
+    "requestedSize": {
+      "width": 1920,
+      "height": 1080,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "compositions": "wide_shot",
+    "moods": "warm,natural",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1836651663",
+    "searchQuery": "wood gasifier biomass energy system rural homestead",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2285794463",
+      "https://img1.wsimg.com/isteam/getty/2262082436",
+      "https://img1.wsimg.com/isteam/getty/2234958853",
+      "https://img1.wsimg.com/isteam/getty/2273228177"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:33:20.969Z",
+    "lastUpdated": "2026-08-19T11:33:20.969Z",
+    "gettyId": "1836651663",
+    "alternativeGettyIds": [
+      "2285794463",
+      "2262082436",
+      "2234958853",
+      "2273228177"
+    ]
+  },
+  "pages/home/intro": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "warm,natural",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2282188143",
+    "searchQuery": "wood logs biomass fuel pile rustic outdoor",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1402854849",
+      "https://img1.wsimg.com/isteam/getty/1180684420",
+      "https://img1.wsimg.com/isteam/getty/2288318446"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:33:21.911Z",
+    "lastUpdated": "2026-08-19T11:33:21.911Z",
+    "gettyId": "2282188143",
+    "alternativeGettyIds": [
+      "1402854849",
+      "1180684420",
+      "2288318446"
+    ]
+  },
+  "pages/home/fuel-types": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "natural,warm",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1303278508",
+    "searchQuery": "wood chips biomass fuel renewable energy",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2233633893",
+      "https://img1.wsimg.com/isteam/getty/2157481996",
+      "https://img1.wsimg.com/isteam/getty/2236752137"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:33:24.257Z",
+    "lastUpdated": "2026-08-19T11:33:24.257Z",
+    "gettyId": "1303278508",
+    "alternativeGettyIds": [
+      "2233633893",
+      "2157481996",
+      "2236752137"
+    ]
+  },
+  "pages/home/cta-bg": {
+    "requestedSize": {
+      "width": 1200,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "natural,warm",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1368650819",
+    "searchQuery": "rural homestead off-grid cabin forest clearing",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1698896342",
+      "https://img1.wsimg.com/isteam/getty/2169116069",
+      "https://img1.wsimg.com/isteam/getty/1659436631"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:33:25.406Z",
+    "lastUpdated": "2026-08-19T11:33:25.406Z",
+    "gettyId": "1368650819",
+    "alternativeGettyIds": [
+      "1698896342",
+      "2169116069",
+      "1659436631"
+    ]
+  },
+  "logo/horizontal": {
+    "mediaType": "logo",
+    "currentUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-transparent-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png",
+    "searchQuery": "A bold, craft-inspired wordmark logo for \"Home Gasifier\" — features a stylized f",
+    "alternatives": [],
+    "solidUrlMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-transparent-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-original-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png"
+    },
+    "mockupUrlMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-transparent-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-transparent-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png"
+    },
+    "landscapeMockupUrlMap": {},
+    "logoSourceMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-transparent-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png": {
+        "sessionId": "7a75d873-e02d-4ffd-afb4-d3f312e21c4b",
+        "logoId": "2e82d688-b779-4c23-9fc2-b6129ec3e5f8",
+        "groupId": "ee0ed0eb-a139-4f13-b540-bd9f9f3b275a"
+      }
+    },
+    "productMockupsMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-transparent-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png": [
+        {
+          "type": "mug",
+          "label": "Mug",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-mockup-mug-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png"
+        },
+        {
+          "type": "card",
+          "label": "Business Card",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-mockup-card-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png"
+        },
+        {
+          "type": "tshirt",
+          "label": "T-Shirt",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-mockup-tshirt-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png"
+        },
+        {
+          "type": "box",
+          "label": "Packaging",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-mockup-box-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png"
+        }
+      ]
+    },
+    "productMockups": [
+      {
+        "type": "mug",
+        "label": "Mug",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-mockup-mug-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png"
+      },
+      {
+        "type": "card",
+        "label": "Business Card",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-mockup-card-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png"
+      },
+      {
+        "type": "tshirt",
+        "label": "T-Shirt",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-mockup-tshirt-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png"
+      },
+      {
+        "type": "box",
+        "label": "Packaging",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-mockup-box-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png"
+      }
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:34:20.452Z",
+    "lastUpdated": "2026-08-19T11:35:00.763Z",
+    "surfaceMode": "dark",
+    "generatedForSurfaceColor": "#1A1612",
+    "darkSurfaceUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/7a75d873-e02d-4ffd-afb4-d3f312e21c4b/horizontal-transparent-2e82d688-b779-4c23-9fc2-b6129ec3e5f8/logo-logo.png",
+    "logoGroupId": "ee0ed0eb-a139-4f13-b540-bd9f9f3b275a"
+  },
+  "logo/favicon": {
+    "mediaType": "logo",
+    "currentUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/1e8365e3-80b6-47d3-a1c4-7da98b18abb7/favicon-transparent-d311a47a-c86f-4870-b8ec-66cf11ecf648/logo-logo.png",
+    "searchQuery": "favicon",
+    "alternatives": [],
+    "logoSourceMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/1e8365e3-80b6-47d3-a1c4-7da98b18abb7/favicon-transparent-d311a47a-c86f-4870-b8ec-66cf11ecf648/logo-logo.png": {
+        "sessionId": "1e8365e3-80b6-47d3-a1c4-7da98b18abb7",
+        "logoId": "d311a47a-c86f-4870-b8ec-66cf11ecf648",
+        "groupId": "ee0ed0eb-a139-4f13-b540-bd9f9f3b275a"
+      }
+    },
+    "logoGroupId": "ee0ed0eb-a139-4f13-b540-bd9f9f3b275a",
+    "userModified": false,
+    "createdAt": "2026-08-19T11:34:39.433Z",
+    "lastUpdated": "2026-08-19T11:35:00.913Z",
+    "surfaceMode": "dark",
+    "generatedForSurfaceColor": "#1A1612",
+    "darkSurfaceUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/03297b99-2b7b-4375-bd90-4e4c950d12db/session/1e8365e3-80b6-47d3-a1c4-7da98b18abb7/favicon-transparent-d311a47a-c86f-4870-b8ec-66cf11ecf648/logo-logo.png"
+  },
+  "pages/how-it-works/hero": {
+    "requestedSize": {
+      "width": 1920,
+      "height": 1080,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "warm,natural",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1185016105",
+    "searchQuery": "industrial combustion chamber fire heat energy production",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1442909982",
+      "https://img1.wsimg.com/isteam/getty/157373983",
+      "https://img1.wsimg.com/isteam/getty/2260323141"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:38:43.881Z",
+    "lastUpdated": "2026-08-19T11:38:43.881Z",
+    "gettyId": "1185016105",
+    "alternativeGettyIds": [
+      "1442909982",
+      "157373983",
+      "2260323141"
+    ]
+  },
+  "pages/how-it-works/syngas": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "warm,bold",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2280996410",
+    "searchQuery": "gas flame blue burning clean energy close up",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2260509452",
+      "https://img1.wsimg.com/isteam/getty/2252579374",
+      "https://img1.wsimg.com/isteam/getty/2187742839"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:38:49.501Z",
+    "lastUpdated": "2026-08-19T11:38:49.501Z",
+    "gettyId": "2280996410",
+    "alternativeGettyIds": [
+      "2260509452",
+      "2252579374",
+      "2187742839"
+    ]
+  },
+  "pages/how-it-works/biomass": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "natural,warm",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/182233604",
+    "searchQuery": "wood chips sawdust biomass organic material close up texture",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2280033626",
+      "https://img1.wsimg.com/isteam/getty/2264653344",
+      "https://img1.wsimg.com/isteam/getty/2237863933"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:38:56.200Z",
+    "lastUpdated": "2026-08-19T11:38:56.200Z",
+    "gettyId": "182233604",
+    "alternativeGettyIds": [
+      "2280033626",
+      "2264653344",
+      "2237863933"
+    ]
+  },
+  "pages/build-guides/hero": {
+    "requestedSize": {
+      "width": 1920,
+      "height": 1080,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "warm,bold",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/966264652",
+    "searchQuery": "metal fabrication welding workshop steel pipe construction",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1148411134",
+      "https://img1.wsimg.com/isteam/getty/1181381733",
+      "https://img1.wsimg.com/isteam/getty/1016283944"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:42:23.260Z",
+    "lastUpdated": "2026-08-19T11:42:23.260Z",
+    "gettyId": "966264652",
+    "alternativeGettyIds": [
+      "1148411134",
+      "1181381733",
+      "1016283944"
+    ]
+  },
+  "pages/build-guides/updraft": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "warm,natural",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2187513450",
+    "searchQuery": "off-grid generator power homestead rural electricity",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2279415210",
+      "https://img1.wsimg.com/isteam/getty/2251190595",
+      "https://img1.wsimg.com/isteam/getty/2259318796"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:42:25.169Z",
+    "lastUpdated": "2026-08-19T11:42:25.169Z",
+    "gettyId": "2187513450",
+    "alternativeGettyIds": [
+      "2279415210",
+      "2251190595",
+      "2259318796"
+    ]
+  },
+  "pages/build-guides/fema": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "warm,natural",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1502990327",
+    "searchQuery": "DIY metal barrel drum repurposed workshop project",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2285278234",
+      "https://img1.wsimg.com/isteam/getty/2252607940",
+      "https://img1.wsimg.com/isteam/getty/1249543345"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:42:26.593Z",
+    "lastUpdated": "2026-08-19T11:42:26.593Z",
+    "gettyId": "1502990327",
+    "alternativeGettyIds": [
+      "2285278234",
+      "2252607940",
+      "1249543345"
+    ]
+  },
+  "pages/build-guides/downdraft": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "bold,natural",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2175526665",
+    "searchQuery": "steel pipe welding fabrication industrial construction close up",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2266236589",
+      "https://img1.wsimg.com/isteam/getty/2239760601",
+      "https://img1.wsimg.com/isteam/getty/2263991474"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T11:42:27.763Z",
+    "lastUpdated": "2026-08-19T11:42:27.763Z",
+    "gettyId": "2175526665",
+    "alternativeGettyIds": [
+      "2266236589",
+      "2239760601",
+      "2263991474"
+    ]
+  },
+  "pages/fuel-types/hero": {
+    "requestedSize": {
+      "width": 1920,
+      "height": 1080,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "warm,natural",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1435335912",
+    "searchQuery": "stacked firewood logs outdoor rural homestead storage",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2280107353",
+      "https://img1.wsimg.com/isteam/getty/2265774319",
+      "https://img1.wsimg.com/isteam/getty/2257746115"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T12:06:30.551Z",
+    "lastUpdated": "2026-08-19T12:06:30.551Z",
+    "gettyId": "1435335912",
+    "alternativeGettyIds": [
+      "2280107353",
+      "2265774319",
+      "2257746115"
+    ]
+  },
+  "pages/fuel-types/moisture": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "natural",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/490925789",
+    "searchQuery": "wood moisture meter testing lumber drying",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2160304617",
+      "https://img1.wsimg.com/isteam/getty/2196936721",
+      "https://img1.wsimg.com/isteam/getty/1197176464"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T12:06:36.609Z",
+    "lastUpdated": "2026-08-19T12:06:36.609Z",
+    "gettyId": "490925789",
+    "alternativeGettyIds": [
+      "2160304617",
+      "2196936721",
+      "1197176464"
+    ]
+  },
+  "pages/fuel-types/charcoal": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "square,horizontal",
+    "moods": "bold,natural",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1872009657",
+    "searchQuery": "charcoal pieces black carbon fuel close up texture",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2278411536",
+      "https://img1.wsimg.com/isteam/getty/2261969660",
+      "https://img1.wsimg.com/isteam/getty/2227945306"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T12:06:44.058Z",
+    "lastUpdated": "2026-08-19T12:06:44.058Z",
+    "gettyId": "1872009657",
+    "alternativeGettyIds": [
+      "2278411536",
+      "2261969660",
+      "2227945306"
+    ]
+  },
+  "pages/safety/hero": {
+    "requestedSize": {
+      "width": 1920,
+      "height": 1080,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "bold,dramatic",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2175027982",
+    "searchQuery": "safety equipment protective gear workshop industrial",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2217709477",
+      "https://img1.wsimg.com/isteam/getty/1462085154",
+      "https://img1.wsimg.com/isteam/getty/1405155818"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T12:15:52.499Z",
+    "lastUpdated": "2026-08-19T12:15:52.499Z",
+    "gettyId": "2175027982",
+    "alternativeGettyIds": [
+      "2217709477",
+      "1462085154",
+      "1405155818"
+    ]
+  },
+  "pages/safety/co-detector": {
+    "requestedSize": {
+      "width": 800,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2262056426",
+    "searchQuery": "carbon monoxide detector alarm home safety device",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2236788136",
+      "https://img1.wsimg.com/isteam/getty/1768174814",
+      "https://img1.wsimg.com/isteam/getty/2254972006"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T12:16:46.575Z",
+    "lastUpdated": "2026-08-19T12:16:46.575Z",
+    "gettyId": "2262056426",
+    "alternativeGettyIds": [
+      "2236788136",
+      "1768174814",
+      "2254972006"
+    ]
+  },
+  "pages/resources/hero": {
+    "requestedSize": {
+      "width": 1920,
+      "height": 1080,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "warm,natural",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1495321240",
+    "searchQuery": "open books library shelves warm light reading reference",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/56517131",
+      "https://img1.wsimg.com/isteam/getty/2168307181",
+      "https://img1.wsimg.com/isteam/getty/2263560827"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T12:19:55.465Z",
+    "lastUpdated": "2026-08-19T12:19:55.465Z",
+    "gettyId": "1495321240",
+    "alternativeGettyIds": [
+      "56517131",
+      "2168307181",
+      "2263560827"
+    ]
+  },
+  "pages/troubleshooting/hero": {
+    "requestedSize": {
+      "width": 1400,
+      "height": 500,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "compositions": "wide_shot",
+    "moods": "warm",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2169536345",
+    "searchQuery": "mechanic troubleshooting engine repair workshop tools",
+    "alternatives": [],
+    "userModified": false,
+    "createdAt": "2026-08-19T12:40:17.790Z",
+    "lastUpdated": "2026-08-19T12:40:17.790Z",
+    "gettyId": "2169536345"
+  },
+  "pages/glossary/hero": {
+    "requestedSize": {
+      "width": 1400,
+      "height": 500,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "compositions": "wide_shot",
+    "moods": "warm",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2261670247",
+    "searchQuery": "open reference book technical manual close up warm light",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1498171474",
+      "https://img1.wsimg.com/isteam/getty/2267181162"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T12:40:19.048Z",
+    "lastUpdated": "2026-08-19T12:40:19.048Z",
+    "gettyId": "2261670247",
+    "alternativeGettyIds": [
+      "1498171474",
+      "2267181162"
+    ]
+  },
+  "pages/about/hero": {
+    "requestedSize": {
+      "width": 1400,
+      "height": 500,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "compositions": "wide_shot",
+    "moods": "warm",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2290259943",
+    "searchQuery": "off-grid homestead workshop builder craftsman working outdoors",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1367166351",
+      "https://img1.wsimg.com/isteam/getty/2277960188"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T12:54:54.051Z",
+    "lastUpdated": "2026-08-19T12:54:54.051Z",
+    "gettyId": "2290259943",
+    "alternativeGettyIds": [
+      "1367166351",
+      "2277960188"
+    ]
+  },
+  "pages/legal/hero": {
+    "requestedSize": {
+      "width": 1400,
+      "height": 500,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "compositions": "wide_shot",
+    "moods": "cool",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1332708182",
+    "searchQuery": "legal documents permit paperwork building code regulations",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1277473372",
+      "https://img1.wsimg.com/isteam/getty/2247080319"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-19T12:54:58.618Z",
+    "lastUpdated": "2026-08-19T12:54:58.618Z",
+    "gettyId": "1332708182",
+    "alternativeGettyIds": [
+      "1277473372",
+      "2247080319"
+    ]
+  }
+}

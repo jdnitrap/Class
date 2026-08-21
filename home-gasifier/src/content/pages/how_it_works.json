@@ -1,0 +1,161 @@
+{
+  "hero": {
+    "eyebrow": "The science behind wood gas",
+    "heading": "How Gasification Works",
+    "subheading": "Gasification is a century-old process that converts solid biomass into a combustible gas. This is my best attempt to explain it clearly — based on research, not personal experience building one."
+  },
+  "intro": {
+    "heading": "From Wood to Fuel Gas in Four Steps",
+    "body": "Inside a gasifier, solid biomass goes through a series of chemical reactions driven by heat and limited oxygen. The result is syngas — a mixture of hydrogen, carbon monoxide, and methane that can power engines, generators, and heating systems. The chemistry is well-documented and I've tried to explain it as clearly as I can here."
+  },
+  "zones": [
+    {
+      "id": "zone-1",
+      "number": "01",
+      "name": "Drying Zone",
+      "temp": "212–390°F (100–200°C)",
+      "description": "As biomass enters the top of the gasifier, heat from below drives off moisture. Fuel with less than 20% moisture content works best — wet wood robs energy and produces more tar.",
+      "detail": "This zone doesn't produce gas — it simply prepares the fuel. Properly dried wood chips or pellets pass through quickly and efficiently."
+    },
+    {
+      "id": "zone-2",
+      "number": "02",
+      "name": "Pyrolysis Zone",
+      "temp": "390–930°F (200–500°C)",
+      "description": "In the absence of oxygen, heat breaks down the biomass into charcoal, volatile gases, and tars. This is where the solid fuel begins its transformation into gas.",
+      "detail": "Pyrolysis produces a mix of useful gases and unwanted tars. The design of the gasifier determines how much tar makes it into the output — a well-designed downdraft gasifier cracks most tars before they exit."
+    },
+    {
+      "id": "zone-3",
+      "number": "03",
+      "name": "Combustion Zone",
+      "temp": "1290–2190°F (700–1200°C)",
+      "description": "A controlled amount of air is introduced here. The charcoal and volatile gases combust partially, generating the intense heat that drives the entire process.",
+      "detail": "This is the hottest zone. The partial combustion provides the energy for pyrolysis above and reduction below. Air-to-fuel ratio is critical — too much air burns everything; too little starves the reaction."
+    },
+    {
+      "id": "zone-4",
+      "number": "04",
+      "name": "Reduction Zone",
+      "temp": "1290–1650°F (700–900°C)",
+      "description": "Hot combustion gases pass through a bed of glowing charcoal. Carbon dioxide and steam react with the charcoal to produce hydrogen and carbon monoxide — the useful components of syngas.",
+      "detail": "This is where the magic happens. The reduction reactions are endothermic (they absorb heat), which is why maintaining the right temperature balance is key to a high-quality gas output."
+    }
+  ],
+  "syngas": {
+    "heading": "What Is Syngas?",
+    "body": "Syngas (synthesis gas or wood gas) is the output of gasification. It's a mixture of combustible gases that can be burned directly or used to power internal combustion engines.",
+    "composition": [
+      {
+        "id": "comp-1",
+        "gas": "Carbon Monoxide (CO)",
+        "percent": "18–22%",
+        "note": "Primary fuel component"
+      },
+      {
+        "id": "comp-2",
+        "gas": "Hydrogen (H₂)",
+        "percent": "15–21%",
+        "note": "High energy density"
+      },
+      {
+        "id": "comp-3",
+        "gas": "Methane (CH₄)",
+        "percent": "1–4%",
+        "note": "Bonus fuel gas"
+      },
+      {
+        "id": "comp-4",
+        "gas": "Carbon Dioxide (CO₂)",
+        "percent": "9–12%",
+        "note": "Inert diluent"
+      },
+      {
+        "id": "comp-5",
+        "gas": "Nitrogen (N₂)",
+        "percent": "45–55%",
+        "note": "From air input"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "comp-a",
+      "name": "Reactor Vessel",
+      "description": "The main chamber where gasification occurs. Usually made from steel pipe or a repurposed pressure vessel. Must withstand temperatures up to 2200°F (1200°C)."
+    },
+    {
+      "id": "comp-b",
+      "name": "Air Nozzles (Tuyeres)",
+      "description": "Introduce controlled amounts of air into the combustion zone. Placement and sizing directly affect gas quality and tar production."
+    },
+    {
+      "id": "comp-c",
+      "name": "Grate & Ash Pit",
+      "description": "Supports the char bed and allows ash to fall away. Regular ash removal keeps the gasifier running efficiently."
+    },
+    {
+      "id": "comp-d",
+      "name": "Gas Outlet",
+      "description": "Hot syngas exits here and travels to the cleaning system. Temperature at the outlet is a key indicator of gasifier health."
+    },
+    {
+      "id": "comp-e",
+      "name": "Cyclone Separator",
+      "description": "Removes coarse particulates (char dust, ash) from the gas stream using centrifugal force. First stage of gas cleaning."
+    },
+    {
+      "id": "comp-f",
+      "name": "Filter / Scrubber",
+      "description": "Removes fine tars and particulates. Can be a packed bed of wood chips, a wet scrubber, or a fabric filter depending on the application."
+    }
+  ],
+  "types": [
+    {
+      "id": "type-1",
+      "name": "Downdraft (Imbert) Gasifier",
+      "best": "Engines and generators",
+      "pros": "Low tar output, well-understood design, good for small-scale power",
+      "cons": "Sensitive to fuel moisture and size, requires consistent feedstock",
+      "recommended": true
+    },
+    {
+      "id": "type-2",
+      "name": "Updraft Gasifier",
+      "best": "Heat and industrial processes",
+      "pros": "Simple construction, handles high-moisture fuels, high efficiency",
+      "cons": "High tar output — not suitable for engines without extensive cleaning",
+      "recommended": false
+    },
+    {
+      "id": "type-3",
+      "name": "FEMA Emergency Gasifier",
+      "best": "Emergency backup power",
+      "pros": "Very simple to build, uses common materials, proven design",
+      "cons": "Higher tar, lower efficiency — best for short-term emergency use",
+      "recommended": false
+    }
+  ],
+  "faq": [
+    {
+      "id": "faq-1",
+      "question": "Is syngas dangerous?",
+      "answer": "Yes — carbon monoxide (CO) is a significant component of syngas and is odorless and toxic. Every source I've read is consistent on this: always operate gasifiers outdoors or with proper ventilation, and install CO detectors. Treat syngas with the same respect as natural gas or propane."
+    },
+    {
+      "id": "faq-2",
+      "question": "How much wood does it take to run a generator?",
+      "answer": "Based on figures from the research literature: roughly 2.2 lbs (1 kg) of dry wood produces about 70–90 cubic feet (2–2.5 m3) of syngas, which can generate roughly 1 kWh of electricity in a gasifier-engine system. A 5 kW generator running for an hour needs about 4.5–6.5 lbs (2–3 kg) of dry wood chips. Real-world results vary."
+    },
+    {
+      "id": "faq-3",
+      "question": "Can I use any type of wood?",
+      "answer": "Most hardwoods and softwoods work well according to the literature. The key factors are moisture content (under 20%) and particle size (consistent 1–2 inch chunks for downdraft gasifiers). Avoid treated wood, painted wood, or materials with high ash content like straw."
+    },
+    {
+      "id": "faq-4",
+      "question": "What is tar and why does it matter?",
+      "answer": "Tar is a mixture of condensable organic compounds produced during pyrolysis. In small amounts it's manageable, but heavy tar buildup clogs filters, damages engines, and reduces efficiency. Downdraft gasifiers minimize tar by routing gases through the hot combustion zone — this is one of the most consistently cited advantages of the downdraft design."
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "title": "Legal & Regulatory Guide for Home Gasifiers | Home Gasifier",
+    "description": "What you need to know before building a home gasifier — permits, building codes, zoning, insurance implications, and how to check regulations in your jurisdiction."
+  },
+  "hero": {
+    "eyebrow": "Legal & regulatory",
+    "title": "Know Before You Build",
+    "subtitle": "Gasification is legal in most jurisdictions — but permits, zoning, and insurance rules vary widely. Here's what to check before you break ground."
+  },
+  "intro": {
+    "heading": "The Reality Check Nobody Talks About",
+    "body": [
+      {
+        "id": "li-p1",
+        "text": "Most gasification guides skip the legal and regulatory side entirely. That's a mistake. Depending on where you live, how you use your gasifier, and how it's connected to your property, you may need permits, inspections, or specific insurance riders — and ignoring these can create real financial and legal exposure."
+      },
+      {
+        "id": "li-p2",
+        "text": "The good news: for most rural and off-grid applications, the regulatory burden is light. A standalone gasifier powering a generator in a detached outbuilding is very different from one plumbed into a home's electrical or heating system. Know which category you're in before you start."
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "title": "Is Gasification Legal?",
+      "icon": "scale",
+      "body": [
+        {
+          "id": "sec1-p1",
+          "text": "Gasification itself is not prohibited in any US state or Canadian province. However, how you use the gas — and how the system is installed — may be regulated. The key distinction is between a standalone fuel-production system (generally unregulated) and one that connects to a dwelling's mechanical, electrical, or gas systems (regulated)."
+        },
+        {
+          "id": "sec1-p2",
+          "text": "In most rural and agricultural zones, a gasifier used to power farm equipment, generators, or outbuilding systems falls under agricultural use exemptions and requires no permit. In suburban or urban zones, the picture is more complex."
+        }
+      ],
+      "checklist": [
+        {
+          "id": "sec1-c1",
+          "text": "Standalone gasifier powering portable equipment: generally no permit required"
+        },
+        {
+          "id": "sec1-c2",
+          "text": "Gasifier connected to a permanent structure's electrical system: likely requires electrical permit"
+        },
+        {
+          "id": "sec1-c3",
+          "text": "Gasifier used as a heating appliance inside a structure: likely requires mechanical/HVAC permit"
+        },
+        {
+          "id": "sec1-c4",
+          "text": "Gasifier in an agricultural zone on agricultural land: often exempt from building codes"
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "title": "Building Permits & Inspections",
+      "icon": "clipboard",
+      "body": [
+        {
+          "id": "sec2-p1",
+          "text": "Building permits are issued by your local jurisdiction — typically a county or municipal building department. Whether you need one depends on the scope of your project, your zoning classification, and local interpretations of the International Building Code (IBC) or International Residential Code (IRC)."
+        },
+        {
+          "id": "sec2-p2",
+          "text": "If your gasifier is a freestanding outdoor unit with no permanent foundation and no connection to a structure, most jurisdictions treat it like a piece of equipment rather than a building — no permit required. Add a permanent structure, a foundation, or a connection to your home's systems, and you're likely in permit territory."
+        }
+      ],
+      "checklist": [
+        {
+          "id": "sec2-c1",
+          "text": "Call your county or municipal building department before starting — a 10-minute call can save months of headaches"
+        },
+        {
+          "id": "sec2-c2",
+          "text": "Ask specifically about 'biomass energy systems' or 'alternative fuel systems' — not just 'gasifiers'"
+        },
+        {
+          "id": "sec2-c3",
+          "text": "Get any 'no permit required' determination in writing if possible"
+        },
+        {
+          "id": "sec2-c4",
+          "text": "If a permit is required, ask what inspections are needed and at what stages"
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "title": "Zoning & Land Use",
+      "icon": "map",
+      "body": [
+        {
+          "id": "sec3-p1",
+          "text": "Zoning rules govern what activities are allowed on a given parcel of land. Agricultural (A) and rural residential (RR) zones are the most permissive — energy production for on-site use is typically allowed as an accessory use. Suburban residential zones (R-1, R-2) are more restrictive and may prohibit fuel production equipment entirely."
+        },
+        {
+          "id": "sec3-p2",
+          "text": "HOA rules are separate from zoning and can be more restrictive. If your property is subject to an HOA, review the CC&Rs before building anything visible from neighboring properties."
+        }
+      ],
+      "checklist": [
+        {
+          "id": "sec3-c1",
+          "text": "Look up your parcel's zoning classification on your county assessor or GIS website"
+        },
+        {
+          "id": "sec3-c2",
+          "text": "Search your zoning code for 'accessory structures,' 'alternative energy,' and 'outdoor storage'"
+        },
+        {
+          "id": "sec3-c3",
+          "text": "Check HOA documents if applicable — CC&Rs, architectural guidelines, and board rules"
+        },
+        {
+          "id": "sec3-c4",
+          "text": "Setback requirements may apply to any permanent structure — check minimum distances from property lines"
+        }
+      ]
+    },
+    {
+      "id": "sec-4",
+      "title": "Insurance Implications",
+      "icon": "shield",
+      "body": [
+        {
+          "id": "sec4-p1",
+          "text": "Standard homeowner's insurance policies cover 'sudden and accidental' losses — but they typically exclude damage caused by equipment that was not disclosed to the insurer, or that violates local codes. A gasifier fire that results from an unpermitted installation in a jurisdiction that required a permit could result in a denied claim."
+        },
+        {
+          "id": "sec4-p2",
+          "text": "The practical step: call your insurance agent before you build. Describe the system, its location, and how it will be used. Ask whether it needs to be added as a scheduled item or endorsement. Most agents have never dealt with a gasifier before — be patient and specific."
+        }
+      ],
+      "checklist": [
+        {
+          "id": "sec4-c1",
+          "text": "Notify your homeowner's or farm insurance carrier before installing any permanent system"
+        },
+        {
+          "id": "sec4-c2",
+          "text": "Ask whether the system needs to be listed as a scheduled item or endorsement"
+        },
+        {
+          "id": "sec4-c3",
+          "text": "Ask whether operating the system affects your liability coverage"
+        },
+        {
+          "id": "sec4-c4",
+          "text": "Document the system with photos and keep records of any permits obtained"
+        },
+        {
+          "id": "sec4-c5",
+          "text": "If your carrier won't cover it, shop for a farm or specialty policy that includes alternative energy equipment"
+        }
+      ]
+    },
+    {
+      "id": "sec-5",
+      "title": "Air Quality & Environmental Rules",
+      "icon": "wind",
+      "body": [
+        {
+          "id": "sec5-p1",
+          "text": "Gasifiers produce combustion byproducts — primarily CO₂, water vapor, and small amounts of particulates and CO when operating correctly. Most small-scale residential gasifiers fall below the threshold that triggers air quality permitting, but this varies by state and air quality district."
+        },
+        {
+          "id": "sec5-p2",
+          "text": "California has the strictest air quality rules in the US — the California Air Resources Board (CARB) and local Air Quality Management Districts (AQMDs) regulate wood-burning appliances and may require registration or exemption letters for biomass combustion equipment. Other states with non-attainment areas for particulate matter (PM2.5) may have similar requirements."
+        }
+      ],
+      "checklist": [
+        {
+          "id": "sec5-c1",
+          "text": "Check your state's air quality agency website for rules on biomass combustion"
+        },
+        {
+          "id": "sec5-c2",
+          "text": "In California, contact your local AQMD before operating any biomass combustion device"
+        },
+        {
+          "id": "sec5-c3",
+          "text": "Operate the gasifier at proper temperatures to minimize particulate and CO emissions"
+        },
+        {
+          "id": "sec5-c4",
+          "text": "Never burn treated wood, plastics, or waste materials — these produce toxic emissions and are illegal to burn in most jurisdictions"
+        }
+      ]
+    }
+  ],
+  "howToCheck": {
+    "heading": "How to Check Your Jurisdiction",
+    "steps": [
+      {
+        "id": "hc-1",
+        "step": "1",
+        "title": "Find your zoning classification",
+        "body": "Search '[your county] GIS parcel viewer' or '[your county] assessor' to find your parcel's zoning designation. Note the exact code (e.g., A-1, RR-5, R-2)."
+      },
+      {
+        "id": "hc-2",
+        "step": "2",
+        "title": "Read your zoning ordinance",
+        "body": "Search '[your county/city] zoning ordinance PDF' — most are available online. Search for 'accessory use,' 'alternative energy,' 'outdoor equipment,' and 'fuel storage.'"
+      },
+      {
+        "id": "hc-3",
+        "step": "3",
+        "title": "Call your building department",
+        "body": "Describe your project: 'I want to build a wood gasifier — a biomass-to-gas conversion unit — in a detached outbuilding on agricultural land. Do I need a permit?' Get the answer in writing if possible."
+      },
+      {
+        "id": "hc-4",
+        "step": "4",
+        "title": "Call your insurance agent",
+        "body": "Describe the system and ask about coverage implications. If they're unsure, ask them to check with their underwriter."
+      },
+      {
+        "id": "hc-5",
+        "step": "5",
+        "title": "Check your state air quality agency",
+        "body": "Search '[your state] air quality biomass combustion' to find any applicable rules. In most states, small residential systems are exempt."
+      }
+    ]
+  },
+  "disclaimer": {
+    "heading": "Legal Disclaimer",
+    "body": "The information on this page is general educational guidance only and does not constitute legal advice. Regulations vary significantly by jurisdiction and change over time. Always consult your local building department, a licensed attorney, and your insurance carrier before building or operating a gasification system. Home Gasifier is not responsible for regulatory, legal, or financial outcomes resulting from the use of this information."
+  },
+  "cta": {
+    "heading": "Ready to Build?",
+    "body": "Once you've done your regulatory homework, the build guides walk you through every step of construction.",
+    "linkLabel": "Browse Build Guides"
+  }
+}
